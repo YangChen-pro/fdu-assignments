@@ -1,0 +1,71 @@
+/* ==========================================================================
+   封面页样式 - 极致简约版
+   ========================================================================== */
+
+:root {
+    --seal-red: #8b2b2b;
+    --paper-white: #fdfaf2;
+}
+
+body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    background-color: var(--paper-white);
+    overflow: hidden;
+    cursor: pointer; /* 全屏可点 */
+}
+
+.cover-container {
+    position: relative;
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* 动态水墨烟云 */
+.ink-mist {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 30% 40%, rgba(139, 43, 43, 0.03) 0%, transparent 50%);
+    filter: blur(60px);
+    animation: mist-move 15s infinite alternate ease-in-out;
+}
+
+@keyframes mist-move {
+    from { transform: translate(-5%, -5%) scale(1); }
+    to { transform: translate(5%, 5%) scale(1.2); }
+}
+
+/* 中央竖排标题 */
+.main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    user-select: none;
+}
+
+.main-title .char {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 4.2rem; /* 整体收缩 */
+    color: #333;
+    line-height: 1.05;
+    margin-bottom: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+}
+
+.main-title .sep {
+    font-size: 2.2rem; /* 对应缩小 */
+    color: var(--seal-red);
+    margin: 8px 0;
+}
+
+/* 退出时的水墨晕染动效 */
+.ink-fade-out {
+    animation: ink-fade 1.2s forwards ease-in;
+}
+
+@keyframes ink-fade {
+    to { filter: blur(40px) brightness(1.8); opacity: 0; transform: scale(1.1); }
+}

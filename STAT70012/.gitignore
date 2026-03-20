@@ -1,0 +1,29 @@
+.DS_Store
+__pycache__/
+*.pyc
+.pycache/
+.venv/
+.neo4j/
+*.log
+
+# common python tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# local env / editor
+.env
+.env.*
+.vscode/
+.idea/
+.python-version
+
+# local db / temp files
+*.sqlite
+*.sqlite3
+*.db
+*.swp
+*~

@@ -1,0 +1,137 @@
+/* ==========================================================================
+   四大名著知识图谱 - 核心样式表 (V50.0 终极整合版)
+   ========================================================================== */
+
+:root {
+    --seal-red: #8b2b2b;
+    --paper-white: #fdfaf2;
+}
+
+/* 主题配色联动 */
+.theme-dream { --seal-red: #A83E4C; }
+.theme-journey { --seal-red: #D4AF37; }
+.theme-water { --seal-red: #365C78; }
+.theme-kingdom { --seal-red: #8B2B2B; }
+
+body {
+    margin: 0; padding: 0;
+    background-color: var(--paper-white);
+    font-family: 'Noto Serif SC', serif;
+    height: 100vh; width: 100vw; overflow: hidden;
+}
+
+/* 导航栏 */
+.navbar {
+    height: 70px; padding: 0 30px; background: #fff; border-bottom: 1px solid #eee;
+    display: flex; align-items: center; justify-content: space-between;
+    position: relative; z-index: 1000;
+}
+.nav-brand-text { font-family: 'Ma Shan Zheng'; font-size: 1.8rem; color: var(--seal-red); }
+.nav-capsule { background: #f5f5f5; padding: 5px 15px; border-radius: 30px; }
+.nav-capsule .btn-link { 
+    color: #666; text-decoration: none; font-weight: bold; padding: 0 10px; 
+    border:none; background:none; cursor: pointer;
+}
+.nav-capsule .btn-link.active { color: var(--seal-red); }
+
+/* 主容器布局 */
+.main-container { position: relative; height: calc(100vh - 70px); width: 100vw; }
+
+/* 图谱层：绝对定位铺满，支持模糊滤镜 */
+.graph-area { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background: #fdfaf2; overflow: hidden; }
+#main-graph { 
+    width: 100%; height: 100%; 
+    transition: filter 1.5s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.graph-ink-blur { filter: blur(12px) contrast(1.2) brightness(0.95) !important; }
+
+/* 初始大字意境层 */
+#intro-screen {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 900; display: flex; align-items: center; justify-content: center;
+    background: transparent; cursor: pointer; transition: all 1s ease;
+}
+#intro-screen.fade-out { opacity: 0; transform: scale(2) rotate(5deg); filter: blur(20px); pointer-events: none; }
+.kong-text {
+    font-family: 'Ma Shan Zheng'; font-size: 25rem; color: var(--seal-red);
+    text-shadow: 0 0 50px rgba(0,0,0,0.05); animation: kong-pulse 5s infinite ease-in-out;
+}
+@keyframes kong-pulse { 0%, 100% { transform: scale(1); opacity: 0.9; } 50% { transform: scale(1.03); opacity: 1; } }
+
+/* 抽屉式侧边栏 - 宣纸特效版 */
+.sidebar-panel {
+    position: absolute; top: 0; left: -400px; width: 380px; height: 100%;
+    background: #fdfaf2; border-right: 1px solid #e0e0e0;
+    z-index: 500; display: flex; flex-direction: column;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1); transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sidebar-panel.active { left: 0; }
+.sidebar-bg-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.sidebar-content-layer { position: relative; z-index: 10; padding: 25px; height: 100%; display: flex; flex-direction: column; }
+.grid-lines-sidebar {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(139, 43, 43, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 43, 43, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+.effect-layer-sidebar { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* 搜索与气泡 */
+.guofeng-input { width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 8px; background: rgba(255,255,255,0.8) !important; backdrop-filter: blur(4px); }
+.chat-history { flex: 1; overflow-y: auto; margin-bottom: 15px; }
+.chat-msg { margin-bottom: 15px; padding: 12px; border-radius: 4px; max-width: 90%; font-size: 0.95rem; }
+.chat-msg.bot { background: #fdfaf2; border-left: 4px solid var(--seal-red); box-shadow: 2px 2px 10px rgba(0,0,0,0.05); }
+.chat-msg.user { background: #fff; border: 1px solid #eee; margin-left: auto; color: #333; } /* 柔和用户消息 */
+.chat-msg.deepseek { border-left-color: #5D7A76; background: #e8f5f3; } /* DeepSeek 专属柔和绿，不再突兀 */
+.chat-msg.deepseek { border-left-color: #00A67D; background: #f0fffb; } /* DeepSeek 专属绿色边框 */
+
+/* 原地回答展示框样式 */
+.answer-display-box {
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    background: #fdfaf2;
+    border-left: 4px solid var(--seal-red);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    line-height: 1.7;
+}
+.answer-display-box.deepseek-answer {
+    border-left-color: #00A67D;
+    background: #f0fffb;
+}
+
+/* 底部功能键 (大尺寸毛玻璃) */
+.graph-legend-board {
+    position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+    display: none; gap: 0; background: rgba(255,255,255,0.85); backdrop-filter: blur(12px);
+    padding: 8px 30px; border-radius: 50px; box-shadow: 0 10px 35px rgba(0,0,0,0.12); z-index: 800;
+}
+.legend-item { display: flex; align-items: center; gap: 12px; cursor: pointer; font-size: 1.1rem; font-weight: 600; padding: 10px 22px; position: relative; white-space: nowrap; }
+.legend-dot { width: 24px; height: 24px; border-radius: 50%; box-shadow: 0 3px 8px rgba(0,0,0,0.15); }
+
+/* ==========================================================================
+   详情页信筏样式 (绝对锁定)
+   ========================================================================== */
+#view-detail-overlay {
+    position: fixed; top: 0; right: 0; width: 450px; height: 100vh;
+    background: #ffffff !important; box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+    z-index: 2000; display: none; overflow-y: auto; border-left: 1px solid #ddd;
+}
+.letter-paper { position: relative; min-height: 100%; padding: 60px 40px; }
+.content-wrapper { display: flex; flex-direction: column; position: relative; z-index: 2; }
+.character-avatar-wrap { width: 150px; height: 150px; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center; }
+.character-avatar-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.character-title { font-family: 'Ma Shan Zheng'; font-size: 2.2rem; color: var(--seal-red); text-align: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+.poem-container-vertical { display: flex; flex-direction: row-reverse; justify-content: center; padding: 25px; background: #fbfbfb; border-right: 4px solid var(--seal-red); margin: 15px 0; }
+.poem-container-vertical span { writing-mode: vertical-rl; white-space: nowrap; font-size: 1.1rem; line-height: 2; margin: 0 12px; letter-spacing: 4px; }
+.poem-container-vertical.poem-compact span { font-size: 1.05rem; letter-spacing: 2px; margin: 0 8px; }
+.bio-text { background: #fbfbfb; padding: 20px; border-left: 4px solid var(--seal-red); margin: 15px 0; line-height: 1.8; text-align: justify;}
+.letter-footer { text-align: right; margin-top: 30px; color: var(--seal-red); font-family: 'Ma Shan Zheng'; opacity: 0.7; }
+
+/* 粒子动画定义 */
+.petal { position: absolute; background: #d05a6e; border-radius: 150% 0 150% 0; opacity: 0.7; pointer-events: none; }
+.snow { position: absolute; background: white; border-radius: 50%; opacity: 0.5; filter: blur(1px); }
+@keyframes fall-elegant { 0% { transform: translate(0, -10px) rotate(0); opacity: 0; } 10% { opacity: 0.8; } 100% { transform: translate(var(--x-drift), 250px) rotate(360deg); opacity: 0; } }
+@keyframes fall-snow { 0% { transform: translateY(-10px); opacity: 0; } 100% { transform: translate(var(--x-drift), 250px); opacity: 0; } }
+.dynamic-placeholder { width: 100%; height: 150px; background: #222; margin-bottom: 20px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.ink-effect { position: absolute; width: 80px; height: 80px; background: radial-gradient(circle, var(--seal-red) 0%, transparent 70%); filter: blur(15px); animation: ink-move 6s infinite alternate; opacity: 0.3; }
+@keyframes ink-move { from { transform: translate(-20%, -20%); } to { transform: translate(20%, 20%); } }

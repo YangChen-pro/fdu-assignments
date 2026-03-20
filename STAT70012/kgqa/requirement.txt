@@ -1,0 +1,7 @@
+flask
+py2neo
+beautifulsoup4
+tqdm
+
+# 说明：原项目使用 pyltp + LTP 3.x 模型做分词/词性。
+# 本仓库已改为基于 Neo4j 图谱实体 + 关系词表的解析，兼容 Python 3.12，无需 pyltp。

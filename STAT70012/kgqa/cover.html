@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>序章 - 四大名著知识图谱</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cover.css') }}">
+</head>
+<body onclick="enterProject()">
+    <div class="cover-container">
+        <!-- 动态水墨背景层 -->
+        <div class="ink-mist"></div>
+        
+        <!-- 中央竖排标题 -->
+        <div class="main-title">
+            <span class="char">四</span>
+            <span class="char">大</span>
+            <span class="char">名</span>
+            <span class="char">著</span>
+            <span class="sep">·</span>
+            <span class="char">知</span>
+            <span class="char">识</span>
+            <span class="char">图</span>
+            <span class="char">谱</span>
+        </div>
+    </div>
+
+    <script>
+        function enterProject() {
+            document.body.classList.add('ink-fade-out');
+            setTimeout(() => {
+                window.location.href = "{{ url_for('index') }}";
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

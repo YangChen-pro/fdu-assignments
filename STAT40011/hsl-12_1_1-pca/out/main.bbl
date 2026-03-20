@@ -1,0 +1,25 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Bishop%
+}{%
+Bishop%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+bishop2006prml}
+\APACinsertmetastar {%
+bishop2006prml}%
+\begin{APACrefauthors}%
+Bishop, C\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2006}.
+\newblock
+\APACrefbtitle {Pattern Recognition and Machine Learning} {Pattern recognition and machine learning}.
+\newblock
+\APACaddressPublisher{New York}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

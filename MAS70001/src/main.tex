@@ -1,0 +1,301 @@
+%!TEX program = xelatex
+% 完整编译: xelatex -> biber/bibtex -> xelatex -> xelatex
+\documentclass[lang=cn,a4paper,newtx,code=minted,codebg=light]{elegantpaper}
+
+\title{\textbf{社会经济地位、睡眠与疼痛的纵向关联及干预机制研究}\\
+\large ——基于CoLaus队列的实证分析与新研究设计建议}
+
+\author{第三小组\textsuperscript{*}{\renewcommand{\thefootnote}{}\footnote{作者贡献声明及详细分工见后文\hyperref[sec:contributions]{成员贡献}章节。}}}
+
+\date{\zhdate{2025/12/20}}
+
+% 本文档命令
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{ctex} 
+\newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+\addbibresource[location=local]{reference.bib} % 参考文献，不要删除
+
+\begin{document}
+
+\maketitle
+
+\section{第一部分：现有研究的深度评述}
+
+\subsection{研究背景与缺口}
+疼痛已成为全球老龄化背景下的重大公共卫生负担，并呈现显著的社会经济梯度。尽管既往研究已涉及行为与心理机制，但对于“睡眠”作为连接社会经济劣势与疼痛的关键路径，长期缺乏基于个体生命历程视角的纵向实证检验。
+
+现仅有两项研究受限于横断面设计及宏观指标，未能系统阐明睡眠质量与时长在社会经济不平等导致疼痛结局中的具体中介作用，这构成了当前理解该领域机制的主要知识缺口。本部分针对 Khalatbari-Soltani 等人基于 CoLaus|PsyCoLaus 队列的研究进行系统性评估\cite{khalatbari2025mediating}，深入剖析其数据构建、统计逻辑与发现细节。
+
+\subsection{研究设计：前瞻性优势与样本细节}
+\textbf{队列设计的时序优势}：该研究最显著的方法学贡献在于采用了严格的前瞻性纵向设计。研究者利用 CoLaus|PsyCoLaus 这一基于人群的队列（居住在瑞士洛桑市的欧洲裔成年人），将 2009-2012 年的第一次随访设定为基线，用于测量暴露变量（社会经济状况）和中介变量（睡眠质量与时长），并将 2014-2017 年的第二次随访作为评估疼痛结局的时间点，平均随访间隔达 3.8 年。这种设计有效地分离了暴露与结局的时间窗口，在因果推断的证据等级上显著优于横断面研究。
+
+\textbf{样本构成的精细化处理}：本研究最终纳入主分析的样本包含 1719 名同时拥有完整基线睡眠数据和随访疼痛数据的参与者（其中女性占 52.0\%，平均年龄 60.1 岁）。为了确保分析的严谨性，研究者针对不同的结果变量进行了样本调整：在分析慢性疼痛时纳入 1687 人；在分析疼痛严重程度时，仅限于随访时报告有疼痛的 699 人；而涉及自身职业地位的分析则严格限制于基线时处于在职状态的 1066 名参与者。
+
+\textbf{变量定义}：本研究所涉及的暴露变量、中介变量、结果变量以及混杂因素的详细定义与分类标准可见附录表 \ref{tab:var_def}。其中暴露变量与中介变量在第一次随访中测量，结果变量在第二次随访中测量。
+
+\subsection{统计方法论：反事实中介分析框架}
+
+\subsubsection{传统方法的局限}
+传统中介分析方法（如 Baron \& Kenny）在处理复杂因果关系时往往易因统计分析不当或研究设计不理想产生偏差。其主要局限性体现在两个方面：
+首先，传统方法往往\textbf{未充分考虑混杂因素}。例如，在评估环境噪声对心脏病的影响中，若要分析高血压的中介作用，必须同时纳入体重指数、饮食、吸烟等变量。这些变量不仅影响中介变量，同时也影响结局变量，属于必须控制的中介-结果混杂因素 (Confounder $U$)。
+其次，当存在\textbf{“暴露-中介交互”}（即暴露效应随中介水平变化而变化）时，传统方法的线性假设可能失效，从而导致结论的误导。
+
+\subsubsection{反事实框架核心定义}
+本研究采用 VanderWeele (2011) 提出的反事实中介分析框架。在此框架下，涉及的潜在结果定义如下：
+\begin{itemize}
+    \item $Y_a$：暴露水平固定为 $A = a$ 时的潜在结果；
+    \item $Y_{a^*}$：暴露水平固定为 $A = a^*$（参考水平）时的潜在结果；
+    \item $Y_{a,m}$：暴露水平为 $A = a$ 且中介水平被设定为 $M = m$ 时的潜在结果。
+\end{itemize}
+
+基于上述定义，总因果效应可分解为自然直接效应和自然间接效应：
+
+\textbf{1. 自然直接效应 (Natural Direct Effect, NDE)}
+捕捉的是 $X$ 不通过 $M$ 而直接影响 $Y$ 的路径。其定义为在中介变量 $M$ 保持在参考暴露水平 $A = a^*$ 的自然取值 $M(a^*)$ 时，将暴露从 $a^*$ 改变为 $a$ 所引起的结局变化。
+\begin{equation}
+    \text{NDE} = E\left(Y_{a,M(a^*)} - Y_{a^*,M(a^*)}\right)
+\end{equation}
+
+\textbf{2. 自然间接效应 (Natural Indirect Effect, NIE)}
+捕捉的是 $X$ 通过改变中介变量 $M$ 进而影响 $Y$ 的路径。其定义为在暴露固定为 $A = a$ 的情况下，中介变量从参考水平 $M(a^*)$ 变化为暴露水平 $M(a)$ 所引起的结局变化。
+\begin{equation}
+    \text{NIE} = E\left(Y_{a,M(a)} - Y_{a,M(a^*)}\right)
+\end{equation}
+
+\subsubsection{模型构建与效应估算}
+本研究构建了两个核心回归模型来估计上述效应：
+
+\textbf{1. 结局预测模型}：估计给定暴露、中介及协变量 ($C$) 下的结局期望 $E(Y \mid X, M, C)$。
+
+\textbf{2. 中介预测模型}：估计给定暴露及协变量下的中介变量期望 $E(M \mid X, C)$。
+
+基于回归系数，研究计算了边际总效应 (MTE)、NDE、NIE 以及中介比例 (PM)\footnote{具体计算基于 VanderWeele 提供的算法，适用于包含交互项的非线性模型。}。此外，在构建模型前，研究还利用 \textbf{Cochran–Armitage 检验}确认了 SES 指标与疼痛结局之间存在线性趋势，利用 \textbf{Wald 检验}证实了年龄与性别无效应修饰作用，并独立验证了各路径的统计显著性，保障了前提逻辑的合法性。
+
+\subsection{研究发现：社会梯度的路径差异详析}
+
+\subsubsection{关键路径验证}
+研究首先确认了三组两两关联，为中介分析奠定了基础：
+
+\textbf{1. SES 与疼痛}：较低的教育水平、职业地位和家庭收入均与疼痛发生风险、慢性疼痛风险显著相关。
+
+\textbf{2. SES 与睡眠}：社会经济条件越不利，PSQI 评分越高（睡眠越差）；低收入与短睡眠的关联最为显著。
+
+\textbf{3. 睡眠与疼痛}：睡眠质量差与疼痛发生、慢性疼痛及疼痛严重程度显著相关；短睡眠时长主要与疼痛发生及慢性化相关，但与严重程度关联不显著。
+
+\subsubsection{中介效应的具体量化}
+实证结果表明，睡眠质量差（PSQI）在社会经济不平等导致的疼痛中起到了核心中介作用，总体解释了 30\% 到 45\% 的效应。附录表 \ref{tab:mediation_results} 详细展示了不同 SES 指标下的中介比例（PM）。数据分析揭示了显著的异质性：
+\begin{itemize}
+    \item 在“家庭收入 $\rightarrow$ 疼痛”的路径中，睡眠质量的中介比例为 45\%（CI: 25--147）；
+    \item 在“父亲职业地位 $\rightarrow$ 疼痛”的跨代影响路径中，该比例甚至达到了 95\%（CI: 28--176）。
+\end{itemize}
+
+这一惊人的比例差异暗示，早期家庭背景可能通过长期的生活习惯塑造了睡眠模式，进而深远地影响成年后的健康。
+
+\textbf{短睡眠与低 SES 的双重劣势}：根据附录表 \ref{tab:mediation_results} 下半部分结果显示，短睡眠时长（$<6$ 小时）主要在教育和收入差异中发挥显著中介作用，分别解释了 31\% 的疼痛差异和 37\% 的慢性疼痛差异。更深入的分层分析揭示了低 SES 群体的双重劣势：他们不仅更容易遭遇睡眠问题，而且这些问题对其疼痛体验的“放大效应”更为显著。
+
+\section{第二部分：拟议的多维纵向研究计划}
+
+基于上述评述，原研究虽证实了“睡眠很重要”，但仍留下了机制上的“黑箱”。本小组提出一项改进的研究计划，旨在通过引入客观指标、细化心理路径及干预验证，构建更完整的因果证据链。
+
+\subsection{总体设计：三波段队列与嵌套干预}
+本研究采用 \textbf{三波段前瞻性纵向队列研究} 结合 \textbf{嵌套随机对照试验 (Nested RCT)} 的混合设计。
+
+1.  \textbf{T1 基线调查（建立档案）}：
+    全面测量 SES 指标（客观收入/职业 + 主观地位感知 SSS）、基线疼痛状态及共病情况。重点加入“经济不安全感”量表，以捕捉低 SES 带来的心理压力源，建立完整的基线队列特征。
+
+2.  \textbf{T2 机制测量（18个月后）}：
+    此阶段是研究设计的核心，我们将采用多维工具采集数据。完整的核心研究变量及对应测量工具汇总于附录表 \ref{tab:variables}。具体而言，我们将重点区分生理与心理机制：
+    \begin{itemize}
+        \item \textbf{客观睡眠}：佩戴腕式体动仪（Actigraphy）连续 7 天，提取睡眠效率（SE）和入睡后觉醒时间（WASO）指标，以及睡眠碎片化指数。
+        \item \textbf{主观心理}：同步采集 PSQI、知觉压力量表（PSS-10）及焦虑抑郁量表（GAD-7/PHQ-9）。
+    \end{itemize}
+    \textit{Nested RCT}：在 T2 阶段筛选出 PSQI $>5$ 且属于低 SES 组的参与者，随机分配至“认知行为疗法（CBT-I）干预组”与“常规护理对照组”，以直接验证改善睡眠对后续疼痛结局的因果效力。
+
+3.  \textbf{T3 结局追踪（36-48个月后）}：
+    使用简明疼痛量表（BPI）持续追踪疼痛强度与干扰度。通过长程随访，将结局变量重构为动态轨迹（Trajectory），而非单一断面的“有/无疼痛”。
+
+\subsection{统计分析策略}
+为充分利用多维数据，本研究将采用以下高级统计模型对假设进行验证：
+
+\textbf{1. 序列中介模型 (Sequential Mediation SEM)}
+构建结构方程模型，检验“SES $\rightarrow$ 经济压力 $\rightarrow$ 客观/主观睡眠 $\rightarrow$ 疼痛”的多步路径。重点比较客观指标（WASO）与主观指标（PSQI）在中介路径中的效应差异，以分离生理机制与心理机制。
+
+\textbf{2. 潜变量增长模型 (Latent Growth Curve Modeling, LGCM)}
+不同于原研究仅关注结局的静态水平，LGCM 将建模疼痛严重程度随时间变化的斜率（Slope）。我们将检验低 SES 是否显著预测了更陡峭的疼痛恶化斜率，以及 T2 阶段的睡眠干预是否能显著拉平这一曲线。
+
+\textbf{3. 潜在类别分析 (Latent Class Analysis, LCA)}
+基于纵向数据识别异质性群体，将疼痛轨迹划分为“无痛”、“恢复型”和“持续恶化型”三类。通过多项 Logit 回归分析，量化睡眠质量恶化将个体推向“持续恶化型”轨迹的风险比（Odds Ratio）。
+
+\subsection{预期成果与政策意义}
+本研究预期将首次证实：区分“生理性睡眠紊乱”与“感知到的睡眠差”在健康不平等中具有不同作用。通过揭示心理压力作为睡眠恶化的前置因素，本计划将提示干预政策不能仅停留在睡眠卫生教育，而必须优先解决低 SES 人群的生活不稳定性。此外，如果 Nested RCT 显示 CBT-I 干预能显著降低低 SES 组的疼痛恶化率，这将为公共卫生政策提供强有力的证据——即针对弱势群体的精准睡眠干预，是缓解社会健康不平等的高性价比手段。
+
+\newpage
+
+\vspace*{1.5em}
+
+\section*{成员贡献}
+\label{sec:contributions} 
+\addcontentsline{toc}{section}{成员贡献}
+
+\noindent {名单按姓名拼音首字母排序。}
+
+\vspace{1.5em}
+
+\noindent \textbf{\large 内容撰写} \\[0.8em] 
+% 耿(G) -> 侯(H) -> 廖(L) -> 王(W) -> 文(W) -> 杨(Y) -> 郑(Z) -> 朱(Z)
+耿一阳，侯名扬，廖莹，王煜祥，文杰，杨迦南，郑泠然，朱文轩
+
+\vspace{1.5em}
+
+\noindent \textbf{\large 排版与展示} \\[0.8em] 
+% 曹(C) -> 付(F) -> 杨(Y)
+曹瑞晴，付小蔓，杨晨
+
+\vspace{2em}
+
+\section*{致谢}
+
+\noindent 感谢所有小组成员的通力合作与贡献。
+
+\vspace{1.0em}
+
+\noindent 同时，特别感谢《医疗大数据高等统计方法》课程老师的悉心指导。课程中讲授的系统性统计思维与前沿分析方法，为本研究的设计思路与逻辑框架提供了坚实的理论支撑。
+
+\vspace{2em}
+
+\nocite{*}
+\printbibliography[heading=bibintoc, title=\ebibname]
+
+\appendix
+%\appendixpage
+\addappheadtotoc
+
+\clearpage
+
+\vspace*{1.5em}
+
+\section*{附录}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{变量定义表}
+    \label{tab:var_def}
+    \begin{tabularx}{\textwidth}{c c X}
+        \toprule
+        % 表头
+        变量类型 & 变量名称 & \multicolumn{1}{c}{变量分类/定义} \\
+        \midrule
+        \multirow{14}{*}{暴露变量} 
+        & \multirow{3}{*}{Father's occupational position} & 1. \textbf{High}: Higher professionals/managers, higher clerical \\
+        & & 2. \textbf{Intermediate}: Small employers, farmers, technicians \\
+        & & 3. Low: Lower clerical, skilled/unskilled worker \\
+        \cmidrule(lr){2-3} % 添加局部横线区分变量，如果不需要可删除
+        
+        & \multirow{3}{*}{Educational level} & 1. \textbf{High}: University education \\
+        & & 2. \textbf{Intermediate}: Higher secondary education \\
+        & & 3. Low: Lower secondary education or lower \\
+        \cmidrule(lr){2-3}
+        
+        & Occupational position & 同父亲职业地位分类 (High, Intermediate, Low) \\
+        \cmidrule(lr){2-3}
+        
+        & Household income & 基于月收入的 6 个类别，分析时作为有序变量处理 \\
+        \cmidrule(lr){2-3}
+        
+        & Sleep quality(Continous) & PSQI 总分(0-21)，分数越高表示睡眠质量越差 \\
+        \midrule
+        
+        % --- 第二部分：中介变量 ---
+        \multirow{5}{*}{中介变量} 
+        & \multirow{2}{*}{Sleep quality (Binary)} & \multicolumn{1}{c}{Poor sleep quality: PSQI score $> 5$} \\
+        & & \multicolumn{1}{c}{Good sleep quality: PSQI score $\le 5$} \\
+        \cmidrule(lr){2-3}
+        
+        & \multirow{3}{*}{Sleep duration} & \multicolumn{1}{c}{1. \textbf{Short}: $<6$ h/night} \\
+        & & \multicolumn{1}{c}{2. \textbf{Normal}: $6 - 8.5$ h/night} \\
+        & & \multicolumn{1}{c}{3. \textbf{Long}: $>8.5$ h/night} \\
+        \midrule
+        
+        % --- 第三部分：结果变量 ---
+        \multirow{6}{*}{结果变量} 
+        & \multirow{2}{*}{Presence of pain} & \multicolumn{1}{c}{Yes: Suffer from one or more pains felt every day} \\
+        & & \multicolumn{1}{c}{No: No daily pain} \\
+        \cmidrule(lr){2-3}
+        
+        & \multirow{2}{*}{Chronic pain} & \multicolumn{1}{c}{Yes: Pain lasting for 3 months} \\
+        & & \multicolumn{1}{c}{No: No pain or pain lasting $< 3$ months} \\
+        \cmidrule(lr){2-3}
+        
+        & Pain severity & \multicolumn{1}{c}{连续变量，范围 \textbf{0-10}} \\
+        \midrule
+        
+        % --- 第四部分：混杂因素 ---
+        \multirow{3}{*}{混杂因素} 
+        & Age & \multicolumn{1}{c}{连续变量} \\
+        & sex & \multicolumn{1}{c}{Men / Women} \\
+        & Country of birth & \multicolumn{1}{c}{Swiss-born / Non-Swiss-born} \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{核心研究变量与测量工具}
+    \label{tab:variables}
+    % 使用 tabularx 自动调整列宽，X 列会自动换行
+    \begin{tabularx}{\textwidth}{l X}
+        \toprule
+        \textbf{类别} & \textbf{测量工具 / 指标} \\
+        \midrule
+        社会经济变量 (SES) & 教育、职业、收入、主观地位量表 (SSS)、经济不安全感 \\
+        \addlinespace % 增加行间距
+        客观睡眠指标 & 腕动仪 (Actigraphy)：睡眠效率、入睡后觉醒时间 (WASO) \\
+        \addlinespace
+        主观睡眠指标 & PSQI 量表、睡眠日记 \\
+        \addlinespace
+        疼痛结果变量 & 简明疼痛量表 (BPI)：强度与干扰度、疼痛演变轨迹 \\
+        \addlinespace
+        社会心理因素 & 知觉压力量表 (PSS-10)、焦虑 (GAD-7)、抑郁 (PHQ-9) \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\vspace*{1.5em}
+
+\begin{table}[H]
+    \centering
+    \caption{睡眠质量与短睡眠时长在社会经济差异与疼痛之间的中介作用 (PM)}
+    \label{tab:mediation_results}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{l c c c}
+        \toprule
+        \multicolumn{4}{c}{\textbf{睡眠质量 (PSQI) 中介作用}} \\
+        \midrule
+        \textbf{社会经济因素} & \textbf{疼痛 (PM)} & \textbf{慢性疼痛 (PM)} & \textbf{疼痛严重程度 (PM)} \\
+        \midrule
+        父亲职业 & 95\% (CI: 28--176) & 58\% (CI: -26 to 106) & 15\% (CI: 1--93) \\
+        教育 & 30\% (CI: 1--135) & 35\% (CI: -60 to 295) & 9\% (CI: 1--24) \\
+        职业地位 & 21\% (CI: 7--54) & 20\% (CI: 5--61) & 5\% (CI: -6 to 21) \\
+        收入 & 45\% (CI: 25--147) & 51\% (CI: 22--152) & 16\% (CI: 3--37) \\
+        \midrule
+        \multicolumn{4}{c}{\textbf{短睡眠时长 ($<6$ 小时) 中介作用}} \\
+        \midrule
+        \textbf{社会经济因素} & \textbf{疼痛 (PM)} & \textbf{慢性疼痛 (PM)} & \textbf{} \\
+        \midrule
+        父亲职业 & 11\% (CI: -9 to 141) & 6\% (CI: -9 to 227) & -- \\
+        教育 & 31\% (CI: 5--94) & 36\% (CI: 1--120) & -- \\
+        职业地位 & 4\% (CI: -4 to 34) & 5\% (CI: -3 to 66) & -- \\
+        收入 & 19\% (CI: 25--147) & 37\% (CI: 5--88) & -- \\
+        \bottomrule
+    \end{tabularx}
+    \vspace{0.5em}
+    \footnotesize{\textit{注：PM (Proportion Mediated) 表示中介比例；CI 为 95\% 置信区间。空白栏表示该路径统计学不显著或未计算。}}
+\end{table}
+
+
+
+\end{document}
