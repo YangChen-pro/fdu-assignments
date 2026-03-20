@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+na}{[lang=cn]}\PYG{n+nb}{\PYGZob{}}elegantpaper\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} or}
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+na}{[cn]}\PYG{n+nb}{\PYGZob{}}elegantpaper\PYG{n+nb}{\PYGZcb{}}
+\end{MintedVerbatim}

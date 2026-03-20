@@ -1,0 +1,273 @@
+%!TEX program = pdflatex
+\documentclass[12pt,en]{elegantpaper}
+\addbibresource[location=local]{reference.bib}
+\title{Dynamic Meta-Planning Agentic RAG (DM-PARAG)}
+\author{Chen Yang \\ 25210980120}
+% \institute{\href{https://github.com/ElegantLaTeX}{Elegant\LaTeX{} Program}}
+
+% \version{0.10}
+\date{\today}
+
+% cmd for this doc
+\usepackage{array}
+\newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Large Language Models (LLMs) face limitations in real-time responsiveness, primarily due to static training data, which compromises accuracy in dynamic queries. While Retrieval-Augmented Generation (RAG) integrates live data, traditional RAG lacks adaptability for multi-step reasoning. Agentic RAG addresses this by embedding autonomous agents (using reflection, planning, and collaboration) into RAG pipelines. However, existing Agentic RAG systems face three critical gaps: static planning inefficiencies in evolving tasks, ad hoc cross-domain knowledge integration, and an absent standardized evaluation framework. This research proposes the Dynamic Meta-Planning Agentic RAG (DM-PARAG) framework to resolve these gaps. First, a meta-planning module will be designed to dynamically adjust agent collaboration (task decomposition, tool selection) based on real-time task progress, mitigating inefficiencies from rigid planning. Second, a lightweight domain adapter will be developed to inject sparse domain knowledge (e.g., medical guidelines, financial regulations) into retrieval without retraining LLMs, enhancing cross-domain relevance. Third, we plan to introduce a standardized evaluation framework with benchmarks (healthcare diagnosis, financial report tasks) and metrics (task speed, accuracy, resource use, domain knowledge coverage) to enable objective architectural comparisons.
+\keywords{Agentic RAG, Meta-Planning, LLM Evaluation}
+\end{abstract}
+
+\section{Introduction}
+
+The emergence of Large Language Models (LLMs) has fundamentally reshaped the field of Artificial Intelligence, driving innovation across applications from automated content generation to complex reasoning tasks. While powerful, these models are intrinsically constrained by their static pre-training corpora. This reliance inevitably results in factual knowledge decay, leading to outdated responses and hallucinations when addressing current events or dynamic, real-world problems. This constraint underscores the pressing need for mechanisms that can provide LLMs with continuous, accurate grounding from external information sources.
+
+Retrieval-Augmented Generation (RAG) architecture \cite{singh2025agentic,zhao2024retrieval} was developed to bridge this gap. By coupling the generative capacity of LLMs with efficient retrieval mechanisms \cite{jiang2023active}, RAG systems successfully inject live, relevant data into the context window, significantly enhancing the factuality and timeliness of outputs. However, conventional RAG remains limited by its relatively linear and static workflow. This design struggles to handle scenarios requiring complex, multi-step problem-solving \cite{wei2022chain} or deep contextual synthesis, where the required information often demands iterative searching and nuanced reasoning.
+
+The integration of LLM-powered agents \cite{anthropic2024effective} offers a path beyond these linear limitations. Modern AI agents are defined by their capacity for autonomous action, utilizing sophisticated agentic patterns such as reflection \cite{ravuru2024agentic, shinn2023reflexion}, planning \cite{huang2023towards}, tool utilization, and orchestrated multi-agent collaboration \cite{peng2024graph}. The resulting Agentic Retrieval-Augmented Generation (Agentic RAG) paradigm \cite{ravuru2024agentic} represents a critical evolution, employing agents to dynamically manage retrieval, filter information, and iteratively refine responses, thereby improving efficiency and precision in highly complex task environments.
+
+Despite the significant advances brought by Agentic RAG, current implementations still face critical systemic challenges that limit their effectiveness and real-world deployment. Specifically, three major gaps remain unaddressed: 
+
+\begin{enumerate}
+  \item Static planning inefficiencies, where rigid initial plans fail to adapt to unexpected retrieval outcomes or evolving task requirements.
+  \item Ad hoc domain knowledge integration, often lacking a systematic, lightweight method for injecting sparse, specialized facts (e.g., specific regulatory codes) into the process.
+  \item The absence of a standardized evaluation framework capable of objectively comparing architectures based on key performance indicators beyond simple accuracy, such as resource utilization and task completion speed.
+\end{enumerate}
+
+This research, therefore, proposes the Dynamic Meta-Planning Agentic RAG (DM-PARAG) framework to directly resolve these three core limitations and contribute a highly efficient, adaptive, and domain-aware architecture to the field of grounded language modeling.
+
+\section{Literature review}
+
+The proposed research builds upon the foundational evolution of RAG systems, spanning from simple keyword augmentation to complex agentic orchestration. This discussion synthesizes the state-of-the-art across these paradigms, critically identifying the precise academic and technical gaps that the DM-PARAG framework is designed to address.
+
+\subsection{The Evolution and Inherent Limitations of Non-Autonomous RAG Architectures}
+
+The trajectory of Retrieval-Augmented Generation began with Naïve RAG \cite{jiang2023active}, characterized by simple retrieve-read workflows based primarily on lexical methods. While providing a critical proof-of-concept for grounding LLMs, these systems were inherently limited by their lack of contextual awareness, often failing to capture semantic nuances and struggling with scalability issues due to their reliance on static datasets and keyword matching.
+
+The field's response led to Advanced RAG architectures \cite{gao2023retrieval}, which introduced significant enhancements, including dense vector search for superior semantic alignment and contextual re-ranking using neural models. Further progression yielded Modular RAG \cite{gao2023retrieval}, which emphasized architectural flexibility by decomposing the pipeline into reusable components and enabling hybrid retrieval strategies (combining sparse and dense methods) \cite{karpukhin2020dense} and foundational tool integration (e.g., API calls).
+
+Concurrently, specialized models like Graph RAG \cite{peng2024graph} emerged to leverage relational data, providing rich contextual enrichment for highly structured tasks. Despite these vast improvements—from semantic understanding to tool integration—these systems remain non-autonomous. Their workflows are either linear, fixed-loop, or externally controlled, lacking the autonomous decision-making and dynamic workflow optimization necessary for truly complex, evolving, and resource-intensive reasoning.
+
+\subsection{Agentic RAG and the Critical Flaw of Static Planning}
+
+Agentic RAG \cite{ravuru2024agentic} represents the latest major paradigm shift, leveraging the advanced reasoning capabilities of LLMs for high-level decision-making and workflow optimization. Agents utilizing patterns like ReAct \cite{yao2023react} and Plan-and-Solve orchestrate complex tasks by dynamically decomposing them, selecting tools, and using reflection to validate intermediate retrieval and execution steps. This approach theoretically allows for superior efficiency and precision through iterative refinement.
+
+However, a critical limitation persists in the implementation of the planning phase, which is overwhelmingly static and executed at the task's outset. This rigidity introduces two major inefficiencies in real-world deployment:
+
+\begin{enumerate}
+  \item \textbf{Execution Dead Ends and Cost Overrun}: When a statically-generated plan encounters unforeseen obstacles—such as non-existent tools, irrelevant search results, or failure in a prerequisite sub-task—the system often defaults to two costly behaviors: forcing a flawed execution path or performing a complete restart. Ravuru \cite{ravuru2024agentic} demonstrates that this inflexibility results in substantial cost overruns due to excessive API calls and increased latency.
+  \item \textbf{Lack of Resource Awareness}: Current Agentic RAG frameworks prioritize task completion over resource optimization. The plan lacks a formalized, resource-aware meta-planning layer that can dynamically re-evaluate the task state, considering the token cost and search latency of the next action before execution. This deficiency prevents Agentic RAG from truly realizing its promise of workflow optimization in an efficient manner.
+\end{enumerate}
+
+\subsection{Gaps in Domain Knowledge Integration and Evaluation Standards}
+
+The final two gaps identify systemic weaknesses concerning precision in specialized contexts and the need for objective performance measurement across all RAG architectures.
+
+In high-stakes, specialized fields, such as automated medical diagnosis or financial regulatory compliance, LLMs require the precise integration of sparse, authoritative domain knowledge. Current domain adaptation methods are bifurcated: either costly and resource-intensive fine-tuning or simple RAG context injection, which is prone to dilution. \cite{wang2025efficient} While specialized architectures like Graph RAG attempt to leverage structured relationships, they introduce significant complexity in integration and scalability issues when dealing with large, unstructured datasets. A technical vacuum exists concerning lightweight, two-tiered retrieval mechanisms that can preferentially bias the search toward highly-specialized, codified knowledge (e.g., official guidelines) without the overhead of model re-training or complex graph deployment.
+
+The rapid proliferation of RAG and agent architectures has resulted in fragmented and non-comparable evaluation methodologies. While recent benchmarks like AgentBench \cite{liu2024agentbench} have begun to assess general agent capabilities, they often overlook the specific operational constraints of RAG pipelines. An effective agent must be evaluated not just on the quality of its final \textbf{answers} but on the efficiency of its process. While traditional metrics like ROUGE \cite{lin2004rouge} and Factual Consistency \cite{kryscinski2020evaluating} are common, the literature has yet to establish a standardized evaluation framework that mandates the simultaneous measurement of crucial operational metrics—resource utilization (cost efficiency) and task completion speed (latency)—alongside traditional accuracy metrics. The introduction of such a framework is vital for enabling objective architectural comparison and accelerating reproducible research in the field.
+
+\section{Methods and Experimental Design}
+
+This section details the architectural logic and the specific implementation strategies chosen to validate the DM-PARAG framework. The overarching philosophy behind this research is that the next generation of intelligent systems should not merely be defined by their ability to answer questions, but by their ability to manage the computational cost of finding those answers. We propose that high-quality reasoning is fundamentally an economic problem: how to maximize information gain while minimizing the expenditure of time and computing resources.
+
+\subsection{Design Logic: The Dynamic Meta-Planning Module (DMPM)}
+
+The fundamental flaw in current autonomous agent architectures is their lack of "self-awareness" regarding resource consumption. A standard agent, when faced with a difficult query, often enters what is known as a "reasoning loop," continuously retrieving similar documents and re-planning without making tangible progress. This behavior mimics the "sunk cost fallacy" in human psychology, where the agent blindly invests more resources into a failing strategy simply because it has already started.
+
+To counter this, the DMPM is designed as a supervisory cognitive layer that sits above the operational loop. Unlike the standard worker agent that focuses solely on the task at hand, the Meta-Planner focuses on the \textit{state} of the task. It operates on a concept of \textbf{Bounded Rationality}, a term borrowed from behavioral economics, which suggests that decision-making is always limited by the available information and time.
+
+We implement this through the \textbf{Resource-Aware Utility Function}. While mathematically represented as an equation, its practical function is to act as a "fatigue monitor" for the AI. At every step of the reasoning process, the system calculates a utility score. This score is derived not just from the likelihood of finding the answer, but by subtracting a penalty based on the resources already consumed. 
+
+For instance, if an agent has already spent 80\% of its allowed token budget but has only completed 20\% of the sub-tasks, the Utility Function will return a negative value. This triggers an immediate "interrupt" signal. The Meta-Planner then forces the agent to abandon the current deep-search strategy and switch to a "satisficing" strategy—essentially, attempting to provide the best possible answer with the information currently at hand, rather than continuing a potentially endless search for perfection. This mechanism ensures that the system always respects the constraints of real-time deployment.
+
+\subsection{Implementation of the Lightweight Domain Adapter (LDA)}
+
+In high-stakes professional environments, such as healthcare and finance, the "hallucination" problem often stems from the model's inability to distinguish between "popular" information and "authoritative" information. A standard vector database treats a highly-cited blog post and an official FDA guideline as merely two data points in a high-dimensional space, often retrieving the blog post because its language is more similar to the user's casual query.
+
+The Lightweight Domain Adapter (LDA) resolves this by physically separating the storage of information, creating a \textbf{Dual-Lane Retrieval System}. 
+
+The first lane, which we designate as the \textbf{"Authoritative Lane,"} is constructed using a strict curation process. During the pre-processing phase, we isolate documents that represent non-negotiable ground truth—such as clinical practice guidelines, tax statutes, or legal precedents. These documents are indexed using sparse retrieval methods (like BM25) which rely on exact keyword matching. This design choice is intentional: when a user searches for a specific medical protocol code, we do not want the system to find "semantically similar" concepts; we want that exact code, or nothing at all.
+
+The second lane, the \textbf{"General Context Lane,"} functions as a traditional dense vector store. It contains broader, unstructured knowledge such as textbooks, articles, and general discussions. This lane allows the system to understand the context and nuances of natural language.
+
+The innovation lies in the \textbf{biased integration mechanism}. When the system synthesizes a response, it does not treat these two lanes equally. We implement a "hard override" logic: if a piece of information retrieved from the Authoritative Lane contradicts information from the General Context Lane, the Authoritative source is automatically granted precedence. This effectively hard-codes a "respect for authority" into the system's reasoning process, preventing the common failure mode where an LLM overrides a regulation because it "read" a conflicting opinion on the internet.
+
+\subsection{Experimental Simulation Setup}
+
+To rigorously test this architecture, we cannot simply rely on standard open-domain benchmarks, which rarely penalize inefficiency. Instead, we have designed two stress-test scenarios. The \textbf{Healthcare Diagnosis Task (HDT)} involves patient vignettes with conflicting symptoms that require strictly adhering to a (simulated) changing hospital protocol. The \textbf{Financial Compliance Task (FCT)} presents tax scenarios where the correct answer depends entirely on the specific fiscal year mentioned in the query, requiring the agent to ignore its pre-trained knowledge of older tax laws.
+
+Our evaluation will compare the DM-PARAG framework against a baseline Standard RAG (representing speed but low reasoning) and a baseline Static Agent (representing high reasoning but unchecked cost). The comparison will be holistic, measuring not just the accuracy of the final output, but the total "computational energy" required to produce it.
+
+\section{Expected Results and Discussion}
+
+The anticipated findings presented in this section are derived from the theoretical robustness of the proposed architecture. We project that the introduction of meta-planning will fundamentally alter the efficiency curve of agentic systems.
+
+\subsection{Detailed Analysis of the Efficiency Trade-off}
+
+We expect the experimental data to reveal a distinct divergence in performance characteristics. For the baseline Static Agent, we anticipate a linear or even exponential relationship between query complexity and resource usage. As a question becomes more ambiguous, a standard agent will naturally spawn more sub-tasks, leading to a ballooning of token costs and latency. It may achieve a high accuracy rate, but at a cost that makes it commercially unviable for real-time applications.
+
+In contrast, the DM-PARAG system is expected to demonstrate a "sigmoid" efficiency curve. For simple tasks, it may actually be slightly more expensive than a naive system due to the overhead of the planning step. However, as task complexity increases, the cost-saving mechanism of the Meta-Planner kicks in. By cutting off unpromising search paths early, the system caps its own resource usage. We project that for the most complex queries in the HDT benchmark, DM-PARAG will consume approximately 40-50\% fewer tokens than the baseline agent, while maintaining an F1 accuracy score within a 5\% margin of the unconstrained agent. This result would validate our core hypothesis: that intelligent restraint is just as valuable as intelligent search.
+
+\subsection{Qualitative Simulation: A Tale of Two Agents}
+
+To better illustrate the practical implications of this research, let us walk through a hypothetical simulation of a complex query: \textit{"What is the maximum dosage of Drug X for a patient with Stage 3 renal failure under the 2024 Revised Protocol?"}
+
+\textbf{The Failure of the Baseline Agent:}
+Upon receiving this query, the standard agent begins by decomposing the task. It searches for "Drug X dosage." It retrieves ten documents, some from 2020, some from medical forums. It realizes the information is conflicting. It then generates a new plan to "verify renal failure impact." It retrieves ten more documents. It compares them. It notices the date discrepancy. It generates a third plan to "check 2024 updates." This process involves three rounds of retrieval and LLM generation, consuming massive amounts of tokens. Furthermore, if the specific 2024 protocol is missing from its dense index, it might hallucinate an average value based on the forum posts, leading to a dangerous medical error.
+
+\textbf{The Success of the DM-PARAG System:}
+The DM-PARAG system approaches this differently. 
+First, the \textbf{Lightweight Domain Adapter} immediately identifies the term "2024 Revised Protocol" as a keyword associated with the Authoritative Lane. It executes a precise, sparse search targeting only that specific document set.
+Second, the \textbf{Meta-Planner} evaluates the state. It sees that a high-confidence document from the Authoritative Lane has been retrieved. Even though the dense vector search suggests checking more forum discussions for context, the Utility Function calculates that further searching yields diminishing returns. The "Cost of Thinking" penalty outweighs the potential gain of reading forum posts.
+Consequently, the system terminates the search immediately after the first step. It generates the answer solely based on the retrieved protocol. The result is an answer that is not only factually superior (guaranteed compliance with the 2024 rule) but is produced with a fraction of the latency and cost of the baseline approach.
+
+\subsection{Discussion: The Efficiency Paradox}
+
+Our research highlights a counter-intuitive phenomenon we term the \textbf{"Efficiency Paradox."} In traditional software engineering, adding more layers of code usually slows a system down. However, in the realm of Large Language Models, adding a "thinking" layer actually speeds the system up. 
+
+This paradox exists because the most computationally expensive operation in an LLM system is not the logic, but the generation of tokens and the retrieval of documents. By investing a small amount of compute power into the Meta-Planner to make better decisions about \textit{what not to do}, we save a massive amount of compute power that would otherwise be wasted on irrelevant tasks. This suggests that the future of efficient AI lies not in making the models faster, but in making them more selective.
+
+\section{Conclusion and Future Directions}
+
+This research proposal outlines a comprehensive framework, DM-PARAG, designed to resolve the critical tension between the demand for complex, autonomous reasoning and the rigid constraints of real-world deployment. We have argued that the current limitations of Agentic RAG—specifically its tendency to drift into inefficient loops and its struggle with authoritative domain knowledge—are structural flaws that cannot be solved simply by adding more data.
+
+By introducing a resource-aware Meta-Planning module, we transform the agent from a passive task-executor into an active resource-manager. By implementing a Dual-Lane retrieval system, we provide the necessary structural guarantee that professional standards will override probabilistic generation.
+
+Looking forward, this research opens several promising avenues for future investigation. One immediate extension is the application of Reinforcement Learning to dynamically tune the parameters of the Utility Function. Imagine an AI that learns to be "frugal" during periods of high server load, and "thorough" during off-peak hours, effectively managing its own economic behavior. Additionally, exploring how this meta-planning approach applies to multi-modal tasks, where the cost of retrieving images or video is significantly higher than text, could yield even more dramatic efficiency gains. Ultimately, DM-PARAG represents a significant step toward moving AI agents out of the research lab and into the reliable, cost-effective infrastructure of the modern professional world.
+
+
+% \section*{Update Notes}
+
+% This version changes two important parts: fonts and bibliography.
+
+% \textbf{Fonts}: Due to the newtx package updates, we change the font settings for all the templates of ElegantLaTeX. Under \hologo{XeLaTeX}, we use \lstinline{fontspec} package  to set the font to TeX Gyre Terms/Heros. 
+
+% \textbf{Bibliography}: The bib file is no longer \lstinline{wpref.bib}, it's same with ElegantBook bibfile, \lstinline{reference.bib}. Besides, we use biblatex/biber rather than bibtex to handler bibliography, you can use bibstyle and citestyle to set the styles. For convenience, we offer a \lstinline{bibend} option, which can take values of \lstinline{biber} (default) and \lstinline{bibtex}, please refer to Bibliography section and biblatex package document for more information.
+
+% \section{Introduction}
+
+% This template is based on the standard \LaTeX{} article class, hence the arguments of article class are acceptable (\lstinline{a4paper}, \lstinline{10pt} and etc.). Alternative engines are \hologo{pdfLaTeX} and \hologo{XeLaTeX}.
+
+% \begin{lstlisting}
+% \documentclass[a4paper,11pt]{elegantpaper}
+% \end{lstlisting}
+% \textbf{Note:} ElegantPaper is available on  \href{https://www.overleaf.com/latex/templates/elegantpaper-template/yzghrqjhmmmr}{Overleaf} and \href{https://gitee.com/ElegantLaTeX/ElegantPaper}{gitee}.
+
+% \subsection{Global Options}
+% Language mode option \lstinline{lang} allows two alternative inputs, \lstinline{lang=en} (default)  for English or \lstinline{lang=cn} for Chinese. \lstinline{lang=cn} will make the caption of figure/table, abstract name, refname etc. Chinese. You can use this option as
+% \begin{lstlisting}
+% \documentclass[lang=cn]{elegantpaper} % or
+% \documentclass{cn}{elegantpaper} 
+% \end{lstlisting}
+% \textbf{Note:} Under the English mode \lstinline{lang=en}, Chinese characters are not allowed. To type in Chinese, please load  \lstinline{ctex} or \lstinline{xeCJK} package at the preamble as:
+% \begin{lstlisting}
+% \usepackage[UTF8,scheme=plain]{ctex}
+% \end{lstlisting}
+
+% \subsection{Math Fonts}
+
+% This template defines a new option (\lstinline{math}), with three options:
+
+% \begin{enumerate}
+%   \item \lstinline{math=cm} (default), use \LaTeX{} default math font (recommended).
+%   \item \lstinline{math=newtx}, use \lstinline{newtxmath} math font (may bring about bugs).
+%   \item \lstinline{math=mtpro2}, use \lstinline{mtpro2} package to set math font.
+% \end{enumerate}
+
+
+% \subsection{Custom Commands}
+% Default \LaTeX{} commands and environments are all the same in this template\footnote{To ensure the codes are replicatable. We recommend users pay more attention to the contents other than formats. This is the meaning of the existence of the template.}. We created four new commands:
+% \begin{enumerate}
+%   \item \lstinline{\email}: create the hyperlink to email address.
+%   \item \lstinline{\figref}: same usage as \lstinline{\ref}, but start with label text \textbf{Figure n}.
+%   \item \lstinline{\tabref}: same usage as \lstinline{\ref}, but start with label text \textbf{Table n}.
+%   \item \lstinline{\keywords}: create the keywords in the abstract section.
+% \end{enumerate}
+
+
+% \subsection{Bibliography}
+
+% This template uses biblatex to generate the bibliography, the default citestyle and bibliography style are both \lstinline{numeric}. Let's take a glance at the citation effect. ~\cite{en1} use data from a major peer-to-peer lending \cite{en3} marketplace in China to study whether female and male investors evaluate loan performance differently \parencite{en2}. 
+
+% If you want to use biblatex, you must create a file named \lstinline{reference.bib}, add bib items (from Google Scholar, Mendeley, EndNote, and etc.) to \lstinline{reference.bib} file, then cite the bibkey in the \lstinline{tex} file. The biber will automatically generate the bibliography for the reference you cited.
+
+
+% To change the bibliography style, this version introduces two options: \lstinline{citestyle} and \lstinline{bibstyle}, please refer to \href{https://ctan.org/pkg/biblatex}{CTAN:biblatex} for more detail about these options. You can change your bibliography style as
+
+% \begin{lstlisting}
+% \documentclass[citestyle=numeric-comp, bibstyle=authoryear]{elegantpaper} 
+% \end{lstlisting}
+
+% We also add the \lstinline{bibend} option to this template, you can choose \lstinline{biber} (default) or \lstinline{bibtex} as you like, \lstinline{biber} is recommended.
+
+% \begin{lstlisting}
+% \documentclass[bibtex]{elegantpaper} % or
+% \documentclass[bibend=bibtex]{elegantpaper}
+% \end{lstlisting}
+
+
+
+% \subsection{Use newtx fonts}
+% If you use \lstinline{newtx} fonts, you can use the \lstinline{math} option as 
+% \begin{lstlisting}
+% \documentclass[math=newtx]{elegantpaper}
+% \end{lstlisting}
+
+
+% \subsubsection{Hyphens}
+% Since the template uses \lstinline{newtx}, please pay attention to the hyphens. For instance,
+% \begin{equation}
+% \int_{R^q} f(x,y) dy.\emph{of\kern0pt f}
+% \end{equation}
+
+% The corresponding code is: 
+% \begin{lstlisting}
+% \begin{equation}
+% \int_{R^q} f(x,y) dy.\emph{of \kern0pt f}
+% \end{equation}
+% \end{lstlisting}
+
+% \subsubsection{Symbol Fonts}
+% Feedback from ElegantBook users claims that error occurs when using our templates with  \lstinline{yhmath}, \lstinline{esvect} and other packages.
+% \begin{lstlisting}
+% LaTeX Error:
+% Too many symbol fonts declared.
+% \end{lstlisting}
+
+% The reason is that the template redefines font for math so that no new math font is allowed to be added. To use \lstinline{yhmath} and/or \lstinline{esvect}, please locate \lstinline{yhmath} or \lstinline{esvect} in \lstinline{elegantpaper.cls}, uncomment corresponding related code.
+
+
+% \section{FAQ}
+
+% \begin{enumerate}[label=\arabic*).]
+%   \item \textit{How to remove the information of version?}\\
+%   Please comment \lstinline|\version{x.xx}|.
+%   \item \textit{How to remove the information of date?}\\
+%   Please type in \lstinline|\date{}|.
+%   \item \textit{How to add several authors?}\\
+%   Use \lstinline{\and} in \lstinline{\author} and use \lstinline{\\} to start a new line.
+%   \begin{lstlisting}
+%   \author{author 1\\ org. 1 \and author 2 \\ org. 2 }
+%   \end{lstlisting}
+%   \item \textit{How to display bilingual abstracts?}\\
+%   Please refer to \href{https://github.com/ElegantLaTeX/ElegantPaper/issues/5}{GitHub::ElegantPaper/issues/5}
+% \end{enumerate}
+
+% \section{Acknowledgement}
+
+% Thank \href{https://github.com/sikouhjw}{sikouhjw} and \href{https://github.com/syvshc}{syvshc} for their quick response to Github issues and continuously support work for ElegantLaTeX. Thank ChinaTeX and \href{http://www.latexstudio.net/}{LaTeX Studio} for their promotion. 
+
+
+\newpage
+\printbibliography[heading=bibintoc, title=\ebibname]
+
+\appendix
+% \appendixpage
+\addappheadtotoc
+
+
+\end{document}

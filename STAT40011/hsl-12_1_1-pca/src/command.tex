@@ -1,0 +1,193 @@
+% !TeX root = main.tex
+% this template mostly comes from Trinkle23897
+% his github repo is https://github.com/Trinkle23897/THU-Beamer-Theme
+% thanks a lot Trinkle!
+% two color theme fdu_red and fdu_blue, choose your preference main document and switch in the menu
+% github repo https://github.com/milanmarks/FDU-Beamer-Theme
+\usepackage{ctex, hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{ulem}
+\usepackage{bbm}
+\usepackage{turnstile}
+\usepackage{amsfonts}
+\usepackage{subcaption}
+\usepackage{mathrsfs}
+% other packages
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+\usepackage[numberedbib]{apacite}
+\usepackage{natbib}
+
+\newtheorem{remark}{Remark}
+
+
+
+%%%%%%%%% Basic Information %%%%%%%%%%%%%%%%%
+\author{Chen Yang author}
+\title{12.1.1 Maximum-Variance Formulation of PCA}
+\subtitle{Pattern Recognition and Machine Learning, C.M.Bishop}
+\institute{School of Data Science, Fudan University}
+\date{$8^{th}$ December, $2025$}
+\usepackage{Tsinghua_fdured}
+
+
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+}
+
+\def \H{\mathbf{H}}
+\def \M{\mathbf{M}}
+\def \cA{\mathcal{A}}
+\def \cC{\mathcal{C}}
+\def \cF{\mathcal{F}}
+\def \cG{\mathcal{G}}
+\def \cH{\mathcal{H}}
+\def \cU{\mathcal{U}}
+\def \cV{\mathcal{V}}
+\def \cX{\mathcal{X}}
+\def \cY{\mathcal{Y}}
+\def \cZ{\mathcal{Z}}
+\def \mH{\mathcal{H}}
+\def \mC{\mathcal{C}}
+\def \mU{\mathbb{U}}
+\def \mZ{\mathbb{Z}}
+\def \mS{\mathbb{S}}
+\def \mD{\mathscr{D}}
+\def \mA{\mathcal{A}}
+\def \EY{E(\overline{Y}_n(\boldsymbol{x}^*))}
+\def \bD{\boldsymbol{D}}
+\def \bY{\boldsymbol{Y}}
+\def \bA{\boldsymbol{A}}
+\def \B{\boldsymbol{B}}
+\def \a{\boldsymbol{a}}
+\def \e{\boldsymbol{e}}
+\def \F{\boldsymbol{F}}
+\def \w{\boldsymbol{w}}
+\def \Z{\boldsymbol{Z}}
+\def \W{\boldsymbol{W}}
+\def \V{\boldsymbol{V}}
+\def \X{\boldsymbol{X}}
+\def \bx{\boldsymbol{x}}
+\def \f{\boldsymbol{f}}
+\def \bC{\boldsymbol{C}}
+\def \bc{\boldsymbol{c}}
+\def \by{\boldsymbol{y}}
+\def \bv{\boldsymbol{v}}
+\def \bw{\boldsymbol{w}}
+\def \bV{\boldsymbol{V}}
+\def \bW{\boldsymbol{W}}
+\def \bO{\boldsymbol{O}}
+\def \inde{\rotatebox[origin=c]{90}{$\models$}}
+\def \RR{\text{RR}}
+\def \mP{\mathbb{P}}
+\def \P{\mathbf{P}}
+\def \Q{\mathbf{Q}}
+\def \K{\mathbf{K}}
+\def \U{\mathbf{U}}
+\def \D{\mathbf{D}}
+\def \V{\mathbf{V}}
+\def \v{\mathbf{v}}
+\def \h{\mathbf{h}}
+\def \x{\mathbf{x}}
+\def \W{\mathbf{W}}
+\def \Y{\mathbf{Y}}
+\def \s{\mathbf{s}}
+\def \A{\mathbf{A}}
+\def \mR{\mathbb{R}}
+\def \mE{\mathbb{E}}
+\def \mI{\mathbb{I}}
+\def \bxi{\boldsymbol{\xi}}
+\def \bmu{\boldsymbol{\mu}}
+\def \bPhi{\boldsymbol{\Phi}}
+\def \bSigma{\boldsymbol{\Sigma}}
+\def \bbeta{\boldsymbol{\beta}}
+\def \bgamma{\boldsymbol{\gamma}}
+\def \bpsi{\boldsymbol{\psi}}
+\def \bfeta{\boldsymbol{\eta}}
+\def \bPsi{\boldsymbol{\Psi}}
+\def \blambda{\boldsymbol{\lambda}}
+\def \bLambda{\boldsymbol{\Lambda}}
+\def \bTheta{\boldsymbol{\Theta}}
+\def \bPi{\boldsymbol{\Pi}}
+\def \bOmega{\boldsymbol{\Omega}}
+\def \bzeta{\boldsymbol{\zeta}}
+\def \btheta{\boldsymbol{\theta}}
+\def \bsigma{\boldsymbol{\sigma}}
+\def \R{\mathbf{R}}
+\def \p{\mathbf{p}}
+\def \b{\mathbf{b}}
+\def \g{\mathbf{g}}
+\def \k{\mathbf{k}}
+\def \z{\mathbf{z}}
+\def \y{\mathbf{y}}
+\def \O{\mathcal{O}}
+\def \bZ{\boldsymbol{Z}}
+
+\def \wh{\widehat}
+\def \wt{\widetilde}
+\def\defeq{\stackrel{\mathrm{def}}{=}}  % for definitions
+
+\def \mN{\mathbb{N}}
+\def \mQ{\mathbb{Q}}
+
+\def \cA{\mathcal{A}}
+\def \cB{\mathcal{B}}
+\def \cC{\mathcal{C}}
+\def \cD{\mathcal{D}}
+\def \cE{\mathcal{E}}
+\def \cF{\mathcal{F}}
+\def \cG{\mathcal{G}}
+\def \cH{\mathcal{H}}
+\def \cK{\mathcal{K}}
+\def \cL{\mathcal{L}}
+\def \cM{\mathcal{M}}
+\def \cN{\mathcal{N}}
+\def \cO{\mathcal{O}}
+\def \cP{\mathcal{P}}
+\def \cQ{\mathcal{Q}}
+\def \cR{\mathcal{R}}
+\def \cS{\mathcal{S}}
+\def \cU{\mathcal{U}}
+\def \cW{\mathcal{W}}
+\def \cX{\mathcal{X}}
+\def \cY{\mathcal{Y}}
+\def \scrX{\mathscr{X}}
+\def \scrD{\mathscr{D}}
+\def \scrC{\mathscr{C}}
+\def \cI{\mathcal{I}}
+\def \cS{\mathcal{S}}
+\def \cT{\mathcal{T}}
+\def \scrl{\mathscr{l}}
+\def \cZ{\mathcal{Z}}
+
+\def \bcalP{\boldsymbol{\mathcal{P}}}
+\def \bpi{\boldsymbol{\pi}}
+\def \brho{\boldsymbol{\rho}}
+\def \bkappa{\boldsymbol{\kappa}}
+\def \bepsilon{\boldsymbol{\epsilon}}
+\def \f{\boldsymbol{f}}
+
+\def \E{\mathbb{E}}
+\def \zero{\mathbf{0}}
+\def \I{\mathbf{I}}
+\def \tr{\mbox{Tr}}
+\def \cov{\mbox{cov}}
+
+\def \ol{\overline}
+\def \one{\mathbf{1}} 
+\def \Var{\textup{Var}} 

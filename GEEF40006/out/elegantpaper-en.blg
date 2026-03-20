@@ -1,0 +1,15 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is '/Users/yangchen/Documents/Latex_Project/Acdemic_EN/out/elegantpaper-en.blg'
+[22] biber-darwin:340> INFO - === Tue Dec 23, 2025, 13:38:26
+[27] Biber.pm:420> INFO - Reading '/Users/yangchen/Documents/Latex_Project/Acdemic_EN/out/elegantpaper-en.bcf'
+[52] Biber.pm:994> INFO - Found 16 citekeys in bib section 0
+[56] Biber.pm:4463> INFO - Processing section 0
+[60] Biber.pm:4654> INFO - Looking for bibtex file 'reference.bib' for section 0
+[60] bibtex.pm:1713> INFO - LaTeX decoding ...
+[64] bibtex.pm:1519> INFO - Found BibTeX data source 'reference.bib'
+[130] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[130] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[130] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[130] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[135] bbl.pm:676> INFO - Writing '/Users/yangchen/Documents/Latex_Project/Acdemic_EN/out/elegantpaper-en.bbl' with encoding 'UTF-8'
+[139] bbl.pm:779> INFO - Output to /Users/yangchen/Documents/Latex_Project/Acdemic_EN/out/elegantpaper-en.bbl

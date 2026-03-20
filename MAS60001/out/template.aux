@@ -1,0 +1,75 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand*\HyPL@Entry[1]{}
+\citation{kaplan2020scaling,hoffmann2022training}
+\HyPL@Entry{0<</S/D>>}
+\@writefile{toc}{\contentsline {section}{\numberline {1}引言}{1}{section.1}\protected@file@percent }
+\newlabel{sec:introduction}{{1}{1}{引言}{section.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}研究背景}{1}{subsection.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}问题陈述}{2}{subsection.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}相关工作}{2}{section.2}\protected@file@percent }
+\newlabel{sec:related_work}{{2}{2}{相关工作}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}数据中心范式与数据质量建模}{2}{subsection.2.1}\protected@file@percent }
+\citation{broder1997resemblance}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}不平衡与多源数据的采样策略}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}去重、近似匹配与评测泄漏风险控制}{3}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}数据集特征与问题诊断}{3}{section.3}\protected@file@percent }
+\newlabel{sec:data_profile}{{3}{3}{数据集特征与问题诊断}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}规模结构与任务异构性}{3}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:scale_heterogeneity}{{3.1}{3}{规模结构与任务异构性}{subsection.3.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Affine 多任务数据集核心统计概览（数量级）}}{4}{table.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:dataset_info}{{1}{4}{Affine 多任务数据集核心统计概览（数量级）}{table.caption.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}统计口径}{4}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:protocol}{{3.2}{4}{统计口径}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}数据质量诊断}{4}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:quality_diagnosis}{{3.3}{4}{数据质量诊断}{subsection.3.3}{}}
+\citation{arrow2016apache}
+\citation{broder1997resemblance}
+\@writefile{toc}{\contentsline {section}{\numberline {4}大规模预处理与分层采样架构}{5}{section.4}\protected@file@percent }
+\newlabel{sec:pipeline}{{4}{5}{大规模预处理与分层采样架构}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}列式存储转换}{5}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:parquet}{{4.1}{5}{列式存储转换}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}流式扫描与内存预算控制}{5}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:streaming}{{4.2}{5}{流式扫描与内存预算控制}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}近似去重}{5}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:minhash}{{4.3}{5}{近似去重}{subsection.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}长度感知动态分层采样（LADS）}{6}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:lads}{{4.4}{6}{长度感知动态分层采样（LADS）}{subsection.4.4}{}}
+\newlabel{eq:lads_weight}{{2}{6}{长度感知动态分层采样（LADS）}{equation.2}{}}
+\newlabel{eq:lads_prob}{{3}{6}{长度感知动态分层采样（LADS）}{equation.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}实验设置与结果分析}{6}{section.5}\protected@file@percent }
+\newlabel{sec:experiments}{{5}{6}{实验设置与结果分析}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}实验设置}{6}{subsection.5.1}\protected@file@percent }
+\newlabel{sec:exp_setup}{{5.1}{6}{实验设置}{subsection.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}长度分布与异构性分析}{7}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:length_analysis}{{5.2}{7}{长度分布与异构性分析}{subsection.5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces 各子数据集样本长度分布对比（对数坐标）。}}{7}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:length_dist}{{1}{7}{各子数据集样本长度分布对比（对数坐标）。}{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}采样策略对比}{7}{subsection.5.3}\protected@file@percent }
+\newlabel{sec:sampling_eval}{{5.3}{7}{采样策略对比}{subsection.5.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces 不同采样策略下的数据构成与覆盖率对比（按 token 口径，token 预算对齐）}}{8}{table.caption.3}\protected@file@percent }
+\newlabel{tab:sampling_result}{{2}{8}{不同采样策略下的数据构成与覆盖率对比（按 token 口径，token 预算对齐）}{table.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}系统吞吐与 I/O 影响}{8}{subsection.5.4}\protected@file@percent }
+\newlabel{sec:system_perf}{{5.4}{8}{系统吞吐与 I/O 影响}{subsection.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}采样分配与训练信号}{9}{subsection.5.5}\protected@file@percent }
+\newlabel{sec:signal_allocation}{{5.5}{9}{采样分配与训练信号}{subsection.5.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}讨论}{9}{section.6}\protected@file@percent }
+\newlabel{sec:discussion}{{6}{9}{讨论}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}数据分配与过拟合/欠拟合的权衡}{9}{subsection.6.1}\protected@file@percent }
+\newlabel{sec:bias_variance_tradeoff}{{6.1}{9}{数据分配与过拟合/欠拟合的权衡}{subsection.6.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}预算对齐、统计复用与可解释代理}{9}{subsection.6.2}\protected@file@percent }
+\newlabel{sec:eng_recommendations}{{6.2}{9}{预算对齐、统计复用与可解释代理}{subsection.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}局限性与未来方向}{10}{subsection.6.3}\protected@file@percent }
+\newlabel{sec:limitations}{{6.3}{10}{局限性与未来方向}{subsection.6.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}结论}{10}{section.7}\protected@file@percent }
+\newlabel{sec:conclusion}{{7}{10}{结论}{section.7}{}}
+\citation{*}
+\bibstyle{unsrt}
+\bibdata{references}
+\bibcite{kaplan2020scaling}{{1}{}{{}}{{}}}
+\bibcite{hoffmann2022training}{{2}{}{{}}{{}}}
+\bibcite{broder1997resemblance}{{3}{}{{}}{{}}}
+\bibcite{arrow2016apache}{{4}{}{{}}{{}}}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers
+\gdef \@abspage@last{11}

@@ -1,0 +1,13 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}setCJKmainfont}\PYG{n+na}{[BoldFont=\PYGZob{}FZHei\PYGZhy{}B01\PYGZcb{},ItalicFont=\PYGZob{}FZKai\PYGZhy{}Z03\PYGZcb{}]}\PYG{n+nb}{\PYGZob{}}FZShuSong\PYGZhy{}Z01\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setCJKsansfont}\PYG{n+na}{[BoldFont=\PYGZob{}FZHei\PYGZhy{}B01\PYGZcb{}]}\PYG{n+nb}{\PYGZob{}}FZKai\PYGZhy{}Z03\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setCJKmonofont}\PYG{n+na}{[BoldFont=\PYGZob{}FZHei\PYGZhy{}B01\PYGZcb{}]}\PYG{n+nb}{\PYGZob{}}FZFangSong\PYGZhy{}Z02\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setCJKfamilyfont}\PYG{n+nb}{\PYGZob{}}zhsong\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}FZShuSong\PYGZhy{}Z01\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setCJKfamilyfont}\PYG{n+nb}{\PYGZob{}}zhhei\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}FZHei\PYGZhy{}B01\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setCJKfamilyfont}\PYG{n+nb}{\PYGZob{}}zhkai\PYG{n+nb}{\PYGZcb{}}[BoldFont=\PYG{n+nb}{\PYGZob{}}FZHei\PYGZhy{}B01\PYG{n+nb}{\PYGZcb{}}]\PYG{n+nb}{\PYGZob{}}FZKai\PYGZhy{}Z03\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setCJKfamilyfont}\PYG{n+nb}{\PYGZob{}}zhfs\PYG{n+nb}{\PYGZcb{}}[BoldFont=\PYG{n+nb}{\PYGZob{}}FZHei\PYGZhy{}B01\PYG{n+nb}{\PYGZcb{}}]\PYG{n+nb}{\PYGZob{}}FZFangSong\PYGZhy{}Z02\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{k}{*}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}songti}\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}CJKfamily}\PYG{n+nb}{\PYGZob{}}zhsong\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{k}{*}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}heiti}\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}CJKfamily}\PYG{n+nb}{\PYGZob{}}zhhei\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{k}{*}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}kaishu}\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}CJKfamily}\PYG{n+nb}{\PYGZob{}}zhkai\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{k}{*}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}fangsong}\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}CJKfamily}\PYG{n+nb}{\PYGZob{}}zhfs\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZcb{}}
+\end{MintedVerbatim}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四大名著知识图谱</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;600;700&family=ZCOOL+XiaoWei&family=Long+Cang&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+</head>
+<body>
+
+    <div class="desk">
+        
+        <a href="{{ url_for('project_main', book='dream') }}" class="card-link theme-dream">
+            <div class="card">
+                <div class="grid-lines"></div>
+                <div class="effect-layer" id="particles-dream"></div>
+                <div class="title">红楼梦</div>
+                <div class="poem">千红一哭局，<br>万艳同悲谱。</div>
+                <div class="seal"><span>入梦</span></div>
+            </div>
+        </a>
+
+        <a href="{{ url_for('project_main', book='journey') }}" class="card-link theme-journey">
+            <div class="card">
+                <div class="grid-lines"></div>
+                <div class="effect-layer" id="particles-journey"></div>
+                <div class="title">西游记</div>
+                <div class="poem">大千世界游，<br>神魔众生相。</div>
+                <div class="seal"><span>启程</span></div>
+            </div>
+        </a>
+
+        <a href="{{ url_for('project_main', book='water') }}" class="card-link theme-water">
+            <div class="card">
+                <div class="grid-lines"></div>
+                <div class="effect-layer" id="particles-water"></div>
+                <div class="title">水浒传</div>
+                <div class="poem">替天行道旗，<br>忠义好汉录。</div>
+                <div class="seal"><span>聚义</span></div>
+            </div>
+        </a>
+
+        <a href="{{ url_for('project_main', book='kingdom') }}" class="card-link theme-kingdom">
+            <div class="card">
+                <div class="grid-lines"></div>
+                <div class="effect-layer" id="particles-kingdom"></div>
+                <div class="title">三国演义</div>
+                <div class="poem">乱世争霸业，<br>英雄人物志。</div>
+                <div class="seal"><span>逐鹿</span></div>
+            </div>
+        </a>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "frontend-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 4173",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4174",
+    "lint": "vue-tsc --noEmit && eslint ."
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dompurify": "^3.1.6",
+    "marked": "^15.0.6",
+    "vue": "^3.5.13",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "eslint": "^9.14.0",
+    "eslint-plugin-vue": "^9.31.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vue-tsc": "^2.1.10"
+  }
+}

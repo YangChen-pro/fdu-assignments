@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图谱探索 - 四大名著知识图谱</title>
+    
+    <!-- CSS 资源 -->
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body class="{{ theme_class }}">
+
+    <!-- 顶部题跋 (Header) -->
+    <nav class="navbar d-flex align-items-center justify-content-between">
+        
+        <!-- 左侧：印章与题名 -->
+        <div class="d-flex align-items-center">
+            <!-- 印章 (回首页) -->
+            <a href="{{ url_for('index') }}" class="text-decoration-none me-3" title="返回首页">
+                <div class="seal-box" style="width: 40px; height: 40px; background: var(--seal-red); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Ma Shan Zheng'; font-size: 1.2rem; border-radius: 4px;">
+                    {{ home_seal }}
+                </div>
+            </a>
+            <!-- 题名 -->
+            <span class="nav-brand-text" id="book-title">{{ book_title }}</span>
+        </div>
+
+        <!-- 右侧：功能签 (寻 | 问 | 览) -->
+        <div class="nav-right">
+            <div class="nav-capsule">
+                <button class="btn btn-link" onclick="switchView('search')">寻 人</button>
+                <span class="text-muted opacity-25">|</span>
+                <button class="btn btn-link" onclick="switchView('qa')">问 答</button>
+                <span class="text-muted opacity-25">|</span>
+                <button class="btn btn-link active" onclick="switchView('full')">全 览</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主容器 -->
+    <div class="main-container">
+        
+        <!-- 左侧控制台 -->
+        <aside class="sidebar-panel">
+            
+            <!-- 视图 1：人物检索 -->
+            <div id="view-search">
+                <div class="sidebar-bg-layer">
+                    <div class="grid-lines-sidebar"></div>
+                    <div id="particles-search" class="effect-layer-sidebar"></div>
+                </div>
+                <div class="sidebar-content-layer">
+                    <h5 class="mb-4 fw-bold">人物检索</h5>
+                    <div class="guofeng-search-group">
+                        <input type="text" id="search-input" class="guofeng-input" placeholder="{{ search_placeholder }}">
+                    </div>
+                    
+                    <p class="text-muted small mt-4" style="font-family: 'Noto Serif SC';">常用人物</p>
+                    <div class="tag-cloud">
+                        {% for tag in tags %}
+                        <span class="tag-item">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- 视图 2：问答系统 -->
+            <div id="view-qa">
+                <div class="sidebar-bg-layer">
+                    <div class="grid-lines-sidebar"></div>
+                    <div id="particles-qa" class="effect-layer-sidebar"></div>
+                </div>
+                <div class="sidebar-content-layer">
+                    <h5 class="mb-4 fw-bold">关系问答</h5>
+                    <div class="chat-history">
+                        <div class="chat-msg bot">{{ chat_welcome }}</div>
+                    </div>
+                    <div class="guofeng-search-group mb-0">
+                        <input type="text" id="kgqa-input" class="guofeng-input" placeholder="">
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+            <!-- 右侧图谱画布 -->
+        <main class="graph-area">
+            <!-- 初始意境层 -->
+            <div id="intro-screen">
+                <div class="kong-text">{{ intro_char }}</div>
+            </div>
+            
+            <div id="main-graph" class="graph-ink-blur"></div>
+            
+            <!-- 自定义交互图例 (悬浮底部) -->
+            <div id="custom-legend" class="graph-legend-board">
+                <!-- JS 动态生成按钮 -->
+            </div>
+        </main>
+
+        <!-- 右侧详情滑窗 (新增) -->
+        <aside id="view-detail-overlay" style="display:none;">
+            <!-- 内容动态载入 -->
+        </aside>
+
+    </div>
+
+    <!-- JS 资源 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+    <!-- 核心逻辑脚本 -->
+    <script src="{{ url_for('static', filename='js/project_main.js') }}"></script>
+</body>
+</html>

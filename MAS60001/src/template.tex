@@ -1,0 +1,328 @@
+\documentclass[UTF8]{article}
+\usepackage{arxiv}
+\usepackage[fontset=fandol]{ctex}
+\usepackage[T1]{fontenc} % use 8-bit T1 fonts
+\usepackage{url} % simple URL typesetting
+\usepackage{amsfonts,amsmath,amssymb} % blackboard math symbols
+\usepackage{nicefrac} % compact symbols for 1/2, etc.
+\usepackage{microtype} % microtypography
+\usepackage{lipsum} % Can be removed after putting your text content
+\usepackage{graphicx}
+\graphicspath{{figs/}{../pic/}{pic/}}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{doi}
+\usepackage{fontspec}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{hyperref} % hyperlinks for references
+\hypersetup{
+colorlinks=true,
+linkcolor=red,
+citecolor=green
+}
+
+
+\title{在固定 Token 预算下的多源数据混合与采样}
+\author{
+    {\hspace{1mm}杨晨} \\
+    大数据学院\\
+    \texttt{yang\_c25@m.fudan.edu.cn} \\
+}
+
+
+\renewcommand{\headeright}{Report}
+\renewcommand{\shorttitle}{MAS60001 大数据中的案例实务}
+\setlength{\parindent}{2em}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+
+\begin{document}
+\maketitle
+
+
+% ============= ABSTRACT ============= %
+\begin{abstract}
+随着大语言模型从预训练阶段迈向后训练阶段，高质量、多任务的指令微调数据成为提升模型推理能力的关键。然而，现有开源数据集在规模与质量上呈现极度的长尾分布特征。本文基于 Affine 竞赛提供的大规模数据集，针对其包含的数亿级游戏逻辑数据与稀缺的专家级代码数据进行深入分析。研究首先利用大数据统计方法对 GAME、LGC、CDE 等子数据集进行分布特征画像，揭示了不同任务类型在样本规模与复杂度上的异质性。随后，针对 \texttt{GAME} 子集数亿级样本量带来的冗余曝光问题，本文提出了一种基于动态权重的分层采样策略，并通过 Python 模拟实验在固定 token 预算对齐的设定下进行对比评估。结果表明，采样策略会显著改变训练信号的暴露结构：相较于按规模比例混合（Proportional），温度采样（$\tau=0.5$）将 \texttt{SWE-PRO} 的 token 占比从 0.00415\% 提升至 1.1957\%，LADS（$\tau=0.7,\beta=0.5$）提升至 0.1470\%。本文以可复现的数据画像、去重标记与采样配比为主线，总结了在资源受限条件下更稳健的数据利用流程。
+
+\keywords{大数据分析 \and 大语言模型 \and 数据采样}
+\end{abstract}
+
+% ============= INTRODUCTION ============= %
+\section{引言}\label{sec:introduction}
+
+\subsection{研究背景}
+在大规模人工智能系统中，数据已从“训练原材料”演化为决定模型能力边界的核心要素。随着 Transformer 架构在参数规模与上下文长度上的持续扩张，大语言模型对数据的需求也从单纯的规模堆叠，转向对数据质量（高信噪比）与覆盖广度（多样性与长尾覆盖）的联合优化。经典scaling laws 指出，模型性能与参数量、数据量和计算量之间呈幂律关系，这一结论为预训练阶段提供了可操作的工程指引；然而在后训练阶段，尤其是面向特定目标与领域的监督微调与基于人类反馈的强化学习过程中，数据质量往往对最终能力更为敏感，且其影响更难通过“继续加量”来弥补。\citep{kaplan2020scaling,hoffmann2022training}
+
+在后训练的工程实践中，数据混合配比往往直接影响模型能力结构的形成：若训练数据以低难度、短上下文样本为主，优化过程可能表现为损失下降稳定、吞吐友好，但模型在长上下文理解、复杂代码推理与多步规划等能力上的提升未必显著；相反，若过度依赖极少量专家数据，则可能引发过拟合、遗忘或训练不稳定等问题。对于任务异构且呈长尾分布的数据集合，在固定 token 预算与输入输出带宽约束下，如何实现“有效信息最大化”与“能力结构可控塑形”，构成了数据工程层面可直接优化且回报显著的关键切入点。
+
+本文以 Affine 竞赛提供的多任务数据集为研究对象。该数据集呈现出典型的大规模数据特征与工程挑战：
+\begin{itemize}
+    \item \textbf{规模极大}：仅 \texttt{GAME} 单一子集样本量即达数亿级（约 $10^8$），原始 \texttt{JSONL} 文件在未压缩条件下可达 TB 级存储。
+    \item \textbf{任务异构}：覆盖抽象推理、代码生成与修复、交互式博弈等多类型任务，样本结构与难度分布差异显著。
+    \item \textbf{高价值样本稀缺}：专家级数据（如 \texttt{SWE-PRO}）通常仅数百至千级，而海量游戏数据中存在大量重复状态、低信息增量片段与分布偏置。
+    \item \textbf{吞吐与系统约束显著}：训练数据加载需持续满足 GPU 高吞吐需求，I/O 效率与采样策略的系统开销直接影响端到端训练效率。
+\end{itemize}
+
+\subsection{问题陈述}
+上述特征共同引出一个核心问题：在计算预算与系统吞吐受限的条件下，如何在数亿级普通样本与极少量高质量专家样本之间进行合理配比，使训练过程既能保持稳定与高效，又能最大化对关键能力（如长上下文理解、复杂推理与代码能力）的增益。
+
+一个直接但常见的失败模式是：若简单按样本量或 token 数进行混合，训练信号将被头部数据主导，导致模型对稀缺但高价值的尾部样本学习不足；同时，当训练目标或数据分布发生切换时，模型可能出现对已学能力的显著回退，即所谓“灾难性遗忘”。因此，需要构建一个面向超大规模数据的分析与采样框架，在可控的 token 预算与 I/O 约束下：
+\begin{enumerate}
+    \item 对多任务数据进行高效统计与质量诊断，从海量数据中识别低信息密度与高重复片段；
+    \item 设计可解释、可调控的混合采样策略，平衡任务覆盖、难度梯度与专家数据的有效曝光；
+    \item 在工程可落地的前提下提升训练的有效信息密度，从而改善模型在关键能力维度上的收益与稳定性。
+\end{enumerate}
+
+\section{相关工作}\label{sec:related_work}
+
+\subsection{数据中心范式与数据质量建模}
+相较于以模型结构创新为主线的“模型中心”路径，数据中心人工智能强调：在模型与训练流程相对稳定的前提下，通过系统性提升数据质量与数据组织方式来获得可观的性能增益。围绕大规模数据的质量改进，现有研究与工业实践通常包含三类路线：（1）\emph{规则与启发式清洗}，例如基于格式、语言、重复、毒性与噪声模式的过滤；（2）\emph{基于模型的质量评分}，利用小模型或代理模型计算困惑度、损失或一致性指标，以衡量样本对目标分布的贴合程度；（3）\emph{核心集选择与子集筛选}，通过代表性与覆盖度准则，从海量数据中挑选更“有效”的训练子集。
+
+与上述方向一致，本文关注后训练阶段面向多任务与长尾分布数据时的工程可落地问题：本研究不将“更多数据必然更好”作为前提，而是显式考虑训练系统的资源约束（I/O 吞吐、内存上限与 token 预算），并以可计算的统计特征（例如 token 长度分布、重复度、任务难度代理等）作为依据，指导数据筛选与混合配比，从而提升单位 token 的有效信息密度与训练收益。
+
+\subsection{不平衡与多源数据的采样策略}
+对于类别不平衡或多源异构数据，重采样是经典处理手段：过采样提高少数类曝光，欠采样降低多数类主导效应。在大规模多数据源训练中，采样问题通常被表述为“在不同数据集之间分配训练概率质量”。温度采样是实践中广泛采用的策略之一，它通过温度参数对原始数据占比进行平滑，从而避免训练被某个数据源完全主导，并在一定程度上提升小数据源的学习充分性。
+
+然而，在大模型训练场景中，简单以“样本数”或“记录数”定义数据占比往往不足以刻画真实训练开销与学习信号强度：不同数据源的 token 长度分布可能差异巨大，导致在固定 token 预算下，同样的“样本采样概率”对应完全不同的 token 消耗；同时，长上下文样本对 I/O 与显存压力更大，进一步影响端到端吞吐。基于此，本文在温度采样思想之上引入与物理成本相关的修正（例如 token 长度与加载开销），以实现更符合工程约束的混合配比与更稳定的训练动态。
+
+\subsection{去重、近似匹配与评测泄漏风险控制}
+在海量语料中，重复样本会带来两类关键风险：其一是训练资源浪费——相同或高度相似的信息被重复“消费”，降低单位 token 的信息增量；其二是评测污染——训练集与测试集存在近似重复时，模型可能以记忆形式获得虚高指标，导致对泛化能力的误判。为此，工业界常同时采用精确去重与近似去重：前者通常基于哈希实现，对完全一致样本进行快速剔除；后者用于识别近似重复，常见做法包括局部敏感哈希与 MinHash 近似 Jaccard 相似度。\citep{broder1997resemblance}
+
+需要强调的是，实际超大规模数据处理中，“完全去重”往往并非最优目标：在计算预算与吞吐约束下，追求过高的近似检索精度可能带来不可接受的工程成本。基于这一现实，本文在 \texttt{GAME} 子集中采用 MinHash 的目标是以可控的计算代价显著降低重复率与冗余曝光，从而将更多训练预算分配给信息增量更高的样本，并降低潜在的评测泄漏风险。
+
+
+\section{数据集特征与问题诊断}\label{sec:data_profile}
+
+本文实验数据来自 Affine 竞赛多任务数据集。为避免出现“看似精确但不可复现”的结论，本研究首先确立统一的统计口径（token 定义、截断规则、去重口径与随机抽样策略），并在此基础上构建数据集画像，以明确后续预处理与采样设计的约束与优化目标。
+
+\subsection{规模结构与任务异构性}\label{sec:scale_heterogeneity}
+
+表 \ref{tab:dataset_info} 汇总了主要子数据集的来源、规模数量级与任务属性。需要强调：本文以\textbf{数量级}呈现规模，旨在刻画工程挑战（存储、扫描成本与采样难度），而非替代官方精确统计；实际可用样本数会随过滤规则（字段缺失剔除、去重策略）与 tokenization 方案而变化。
+
+\begin{table}[H]
+\centering
+\caption{Affine 多任务数据集核心统计概览（数量级）}
+\label{tab:dataset_info}
+\begin{tabular}{llrlc}
+\toprule
+\textbf{子集} & \textbf{数据来源/生成方式} & \textbf{规模(数量级)} & \textbf{任务特征} & \textbf{格式} \\
+\midrule
+\texttt{GAME} & 仿真/规则生成 & $\sim 10^8$ & 强化学习式博弈轨迹 & JSONL \\
+\texttt{LGC} & 公共数据集整理 & $\sim 10^6$ & 基础逻辑推理 & Parquet \\
+\texttt{LGC-v2} & 公共数据集扩展/合成 & $\sim 10^7$--$10^8$ & 进阶逻辑推理 & Parquet \\
+\texttt{CDE} & 规则/模型生成 & $\sim 10^4$ & 代码生成/补全（基础） & JSONL \\
+\texttt{SWE-PRO} & 专家标注/高成本生成 & $\sim 10^3$ & 软件工程（高复杂度） & JSONL \\
+\texttt{PRINT} & 公共数据集整理 & $\sim 10^4$ & 格式化输出/可控生成 & JSONL \\
+\texttt{Affine:abd} & 合成数据/规则生成 & $\sim 10^4$ & 溯因推理（abductive） & JSONL \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+从规模结构看，\texttt{GAME} 与 \texttt{LGC-v2} 贡献了数据主体。其中 \texttt{GAME} 往往由智能体在仿真环境中自动生成，典型包含状态转移与反馈信号（如 $(s,a,r,s')$），其信息密度可能呈现边际递减：大量早期探索轨迹在结构上高度相似。与之相对，\texttt{SWE-PRO} 属于千级专家数据，单条样本常携带更长上下文（仓库片段、定位线索与修复补丁等），信息密度高但获取成本昂贵。这种“体量极大 + 高价值稀缺 + 任务异构”的组合，使得后续的筛选与混合采样必须同时满足统计有效性与工程可落地性。
+
+\subsection{统计口径}\label{sec:protocol}
+
+token 长度、模板拼接与截断策略会显著改变样本的有效训练开销。为保证可复现性，本文统一采用以下口径：
+\begin{itemize}
+    \item \textbf{长度定义}：以“输入指令 + 上下文 + 期望输出”的拼接文本计算 token 数。为避免均值被长尾支配，除均值外同时报告分位数（P50/P90/P99）。
+    \item \textbf{截断策略}：当样本超过最大上下文长度 $L_{\max}$ 时，采用“保留指令与关键上下文”的规则截断；并将\textbf{截断率}（被截断样本占比）作为潜在质量信号。
+    \item \textbf{去重口径}：对结构化字段与自然语言字段分别去重。对于代码样本，先进行规范化（去冗余空白、统一换行等）再哈希，以降低非语义差异导致的误判。
+\end{itemize}
+
+此外，所有抽样诊断均固定随机种子，并记录抽样帧（抽样时间、数据版本与过滤规则），以支持后续复现实验与对比。
+
+\subsection{数据质量诊断}\label{sec:quality_diagnosis}
+
+在大规模数据环境中，“脏数据”不可避免。本研究对 \texttt{LGC} 与 \texttt{GAME} 进行随机抽样扫描（$n=10{,}000$），并归纳出三类对训练最敏感的问题：
+\begin{enumerate}
+    \item \textbf{格式与解析错误}：包括 JSON 行截断、非法字符、括号不匹配等。工程上需要在解析层提供容错（跳过/记录/重试），并输出坏样本清单以便追溯与回归测试。
+    \item \textbf{重复与近似重复}：\texttt{GAME} 中受初始状态与随机种子空间影响，早期轨迹在结构上高度相似；而自然语言与代码字段存在大量语义重复，单纯精确去重不足以控制冗余曝光。
+    \item \textbf{缺失值与异常值}：部分样本字段为空或为 NaN（如 reward、done 标记等），会引入不可控噪声。实践中应先做 schema 校验（字段存在性、类型与范围），再决定丢弃、修补或隔离建模。
+\end{enumerate}
+
+上述诊断为后续“预处理 + 采样”架构提供了明确目标：在固定 I/O 与 token 预算约束下，降低冗余、过滤无效样本，并提升高价值长上下文任务的有效曝光。
+
+\section{大规模预处理与分层采样架构}\label{sec:pipeline}
+
+针对数据规模与质量挑战，本研究设计了一套流式计算 + 分层采样的处理架构，使 TB 级数据能够在单机内存预算下完成统计、去重标记与采样权重计算，并支持失败恢复与策略迭代复用。
+
+\subsection{列式存储转换}\label{sec:parquet}
+
+原始数据以 JSONL 为主。尽管 JSONL 可读性好，但逐行解析开销高、难以进行列式压缩，不利于大规模分析与训练加载。本文将原始数据统一转换为 Apache Parquet 列式存储格式，并使用 PyArrow dataset API 进行扫描与统计。该组合可利用列裁剪与谓词下推仅读取必要字段，从而降低 I/O 与峰值内存压力。\citep{arrow2016apache}
+
+需要说明：压缩比与吞吐提升与字段结构、压缩算法（如 zstd/snappy）与 row group 大小强相关。为保证可复现性，本文后续实验固定转换配置，并报告相对趋势而非依赖某个固定常数。
+
+\subsection{流式扫描与内存预算控制}\label{sec:streaming}
+
+面对 TB 级数据，将“全量载入内存”作为默认方案既不必要也不可靠。本研究将预处理拆解为可流式完成的子任务：schema 校验、字段抽取、近似去重标记、长度分布统计与采样权重计算。每一步均以 batch 为单位处理，并将中间结果落盘为轻量索引（如长度直方图、去重标记、MinHash 签名摘要等）。该设计具有两点优势：
+\begin{enumerate}
+    \item \textbf{失败可恢复}：任一环节异常不会导致全流程重跑；
+    \item \textbf{统计可复用}：采样策略迭代时可直接复用统计与标记结果，避免重复扫描全量数据。
+\end{enumerate}
+
+\subsection{近似去重}\label{sec:minhash}
+
+针对 \texttt{GAME} 中的近似重复问题，精确匹配无法处理细微差异且难以覆盖语义近似。本研究引入局部敏感哈希框架下的 MinHash 方法，近似估计样本集合的 Jaccard 相似度。\citep{broder1997resemblance}
+
+设 MinHash 使用的置换/哈希数量为 $M$（本文取 $M=128$），相似度阈值为 $T$（本文取 $T=0.95$）。当两条样本的 MinHash 签名相似度超过阈值时，判定为近似重复并标记，在后续采样阶段降低其权重或直接剔除。
+
+实现关键在于将样本映射为集合（shingling）：
+\begin{itemize}
+    \item \textbf{自然语言字段}：采用字符或词级 $n$-gram shingle；
+    \item \textbf{结构化轨迹字段}：将离散化后的 action 序列与关键状态特征拼接，再生成 shingle。
+\end{itemize}
+该方法无需引入昂贵语义模型即可捕捉近似重复，但会存在误判。本研究将 $M$ 与 $T$ 视为工程超参数，并通过抽样人工核验对误删率与保留率进行校准。
+
+\subsection{长度感知动态分层采样（LADS）}\label{sec:lads}
+
+为缓解“头部数据主导、尾部专家不可见”的混合训练问题，本研究提出长度感知动态采样（Length-Aware Dynamic Sampling, LADS）。核心思想是：混合采样应同时考虑数据规模与物理开销（token 长度），使采样预算更接近按 token 分配的真实训练目标。
+
+设数据集集合为 $\mathcal{D}=\{D_1,\dots,D_K\}$，其中 $D_i$ 的样本数为 $N_i$，长度统计量为 $L_i$（可取均值或 P50；本文使用与训练更稳健的分位数统计）。传统温度采样为：
+\begin{equation}
+P_{\text{temp}}(D_i)=\frac{N_i^{\tau}}{\sum_{j=1}^{K}N_j^{\tau}},
+\end{equation}
+其中 $\tau\in(0,1]$ 用于平滑不同数据集的规模差异。
+
+LADS 在此基础上引入长度因子：
+\begin{equation}
+\label{eq:lads_weight}
+W_i = N_i^{\tau}\cdot \bigl(\log(L_i+1)\bigr)^{\beta},
+\end{equation}
+\begin{equation}
+\label{eq:lads_prob}
+P_{\text{LADS}}(D_i)=\frac{W_i}{\sum_{j=1}^{K}W_j},
+\end{equation}
+其中 $\beta\ge 0$ 为长度调节系数。直观上，$\beta>0$ 将提升长上下文、高复杂度任务的采样概率，从而在固定 token 预算下提高其有效曝光；同时 $\log(\cdot)$ 的形式避免对极长样本进行过度放大。本文实验设置为 $\tau=0.7,\ \beta=0.5$。
+
+\textbf{实现细节：token 预算对齐}为避免“按样本条数”导致不同策略的 token 消耗不可比，采样阶段采用 token 预算 $B$ 作为停止条件：持续采样直至累计 token 达到 $B$（允许少量超出），并报告各数据源在token 占比与样本占比两个维度的构成差异。
+
+\section{实验设置与结果分析}\label{sec:experiments}
+
+本文关注数据工程与采样策略本身的有效性，实验流程主要依赖 CPU、内存与存储系统；其价值在真实训练中体现为更稳定的数据吞吐与更高的单位 token 有效信息密度。
+
+\subsection{实验设置}\label{sec:exp_setup}
+\textbf{环境}：Ubuntu 22.04.5 LTS，Python 3.11。
+
+\textbf{依赖}：pandas 2.3.3，pyarrow 22.0.0，numpy 1.24。
+
+\textbf{指标}：定义如下核心评价指标：
+\begin{itemize}
+    \item \textbf{压缩比}：$\mathrm{CR}=\frac{\text{采样后 token 数}}{\text{原始 token 数}}$。
+    \item \textbf{词元类型覆盖率（token-type coverage）}：采样数据中出现的不同 token 类型集合对原始集合的覆盖比例。
+    \item \textbf{数据加载耗时/吞吐}：完成一轮数据加载的时间或 tokens/sec，以反映 I/O 与解码效率。
+    \item \textbf{有效 token 比例}：剔除重复、无效字段与解析失败样本后，参与训练的 token 占比，用于近似衡量信息密度提升。
+\end{itemize}
+
+\subsection{长度分布与异构性分析}\label{sec:length_analysis}
+
+本研究对转换后的 Parquet 数据进行全量扫描（\texttt{GAME} 采用 $1\%$ 抽样以控制扫描成本），得到各子集长度分布，如图 \ref{fig:length_dist} 所示。总体趋势为：\texttt{GAME} 以短上下文为主且分布更集中；\texttt{SWE-PRO} 显著更长并呈长尾特征；\texttt{CDE} 介于二者之间且波动较大。
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{dataset_length_boxplot.png}
+    \caption{各子数据集样本长度分布对比（对数坐标）。}
+    \label{fig:length_dist}
+\end{figure}
+
+该结果说明仅按样本条数进行混合是不充分的：在固定 batch size 下，长样本更接近 token 预算的主要消耗者；若不进行 token 口径对齐，短样本将主导训练步数，模型更易在浅层模式上重复优化，而长程依赖与复杂约束相关信号不足。式 \eqref{eq:lads_weight}--\eqref{eq:lads_prob} 旨在以长度作为可计算代理，对这一偏差进行工程层面的修正。
+
+\subsection{采样策略对比}\label{sec:sampling_eval}
+
+本研究对比三种策略，并在固定 token 预算 $B$ 下对齐评估：
+\begin{enumerate}
+    \item \textbf{Proportional}：按样本数比例混合（等价于 $\tau=1$ 的规模比例）。
+    \item \textbf{Temperature}：标准温度采样（$\tau=0.5$）。
+    \item \textbf{LADS（本文）}：长度感知动态采样（$\tau=0.7,\ \beta=0.5$）。
+\end{enumerate}
+
+表 \ref{tab:sampling_result} 给出不同采样策略在 token 预算对齐前提下的构成对比。除 token 占比外，本研究进一步报告 token-type 覆盖率，并以“归一化 token 预算（总有效 token）”作为一阶计算开销代理。在该口径下，三种策略的总训练预算被显式对齐（均为 1.00$\times$），因此差异主要体现在 token 在不同任务之间的分配结构，而非计算总量本身。
+
+\begin{table}[H]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\caption{不同采样策略下的数据构成与覆盖率对比（按 token 口径，token 预算对齐）}
+\label{tab:sampling_result}
+
+\resizebox{\linewidth}{!}{
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{策略} &
+\textbf{GAME} &
+\textbf{SWE-PRO} &
+\textbf{Others} &
+\makecell{\textbf{token-type}\\\textbf{覆盖率}} &
+\makecell{\textbf{归一化 token 预算}\\\textbf{(总有效 token)}} \\
+\midrule
+Proportional
+& 56.70\% & 0.00415\% & 43.30\% & 基线 & 1.00$\times$ \\
+Temperature ($\tau=0.5$)
+& 44.19\% & 1.1957\% & 54.61\% & 提升 & 1.00$\times$ \\
+\textbf{LADS（$\tau=0.7,\ \beta=0.5$）}
+& 49.60\% & 0.1470\% & 50.25\% & \textbf{最高} & 1.00$\times$ \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+
+从表 \ref{tab:sampling_result} 可以归纳出三点主要观察。
+
+首先，按规模比例混合（Proportional）会使 \texttt{GAME} 等头部短样本主导 token 预算，而 \texttt{SWE-PRO} 的 token 占比仅为 0.00415\%，在训练过程中几乎不可见，难以为高复杂度能力提供稳定的学习信号。
+
+其次，标准温度采样（$\tau=0.5$）对小规模数据源具有更强的平滑作用，将 \texttt{SWE-PRO} token 占比提升至 1.1957\%，相对 Proportional 提升约 $2.46$ 个数量级（约 $288\times$）；相应地，\texttt{GAME} token 占比下降至 44.19\%，体现出更强的“从头部向长尾”预算再分配。
+
+最后，LADS 在温度平滑的基础上引入长度代理项，使采样权重同时受数据规模与样本长度影响，从而在“抬升长尾曝光”与“维持头部覆盖”之间形成可调折中。在本文超参数（$\tau=0.7,\beta=0.5$）下，\texttt{SWE-PRO} token 占比提升至 0.1470\%，并保持 \texttt{GAME} 为 49.60\%。由于三种策略在 token 预算下对齐（表中归一化 token 预算均为 1.00$\times$），上述差异反映的是训练信号在不同任务上的结构性重分配，而非总预算的变化。
+
+
+\subsection{系统吞吐与 I/O 影响}\label{sec:system_perf}
+
+本研究在相同字段裁剪口径下，对比了直接读取 JSONL 与读取 Parquet 的数据加载表现。观察到：逐行 JSON 解析带来更高的 CPU 解码开销，且在存在异常行时更易触发解析中断；而基于 PyArrow dataset 的列裁剪与批量解码更适合以 batch 为单位的流式扫描与统计。因此，在本实验设定的单机 CPU/存储约束下，列式存储与流式批处理更有利于稳定吞吐与失败恢复；在进一步扩展到 GPU 训练场景时，这类改动也更可能首先缓解 CPU 解码与磁盘 I/O 造成的数据供给瓶颈。
+
+
+\subsection{采样分配与训练信号}\label{sec:signal_allocation}
+
+混合训练优化的目标本质上是按 token 累积的整体损失，而非按样本条数的平均损失。因此，若采样仅按“条数比例”分配预算，短样本会在训练步数上占据优势，模型在相似的浅层模式上反复迭代，训练曲线虽平稳但对长程依赖、复杂约束与多步推理的提升有限。相对而言，长文本样本往往携带更丰富约束关系：软件工程任务体现为跨文件线索、接口约束与补丁一致性；逻辑推理任务体现为多步演绎链条与中间结论的可验证性。将长度因素纳入采样权重并非偏袒某类任务，而是使预算分配更接近“信息量”的代理，从而提升单位计算获得的有效训练信号。
+
+同时，长文本比例过高也会引发工程副作用：批内长度差异增大导致吞吐波动，I/O 抖动放大训练端等待。为将采样收益转化为端到端效率，需在数据加载端配合长度分桶（bucketing）、预取（prefetch）与并行解码，并对异常样本进行隔离与回滚。
+
+
+
+\section{讨论}\label{sec:discussion}
+
+\subsection{数据分配与过拟合/欠拟合的权衡}\label{sec:bias_variance_tradeoff}
+从优化视角看，降低 \texttt{GAME} 的采样权重等价于在数据层面对头部高频模式进行“预算压缩”，其直接效果是减少模型在相似轨迹与低信息增量片段上的重复更新，从而提升单位 token 的有效学习信号。该策略可能带来两类潜在代价：其一是模型在特定游戏环境或少数子任务上的拟合程度下降；其二是头部数据被下调后，训练动态对长尾数据的噪声更敏感，可能需要更稳健的混合策略或更严格的质量控制。
+
+然而，对于以通用能力为目标的大语言模型后训练而言，更关键的约束并非单一子任务的极致表现，而是在固定 token 预算内实现跨任务覆盖与能力结构的可控塑形。换言之，采样策略的目标应从“最大化某一数据源的局部性能”转向“在资源受限条件下最大化总体泛化收益”。在这一框架下，对头部 \texttt{GAME} 数据进行适度降权是一种合理的工程权衡：其目标是在不显著损害头部覆盖的前提下，减少低信息增量片段的重复优化，并为长上下文、复杂推理与高价值专家数据提供更充分的训练曝光。
+
+\subsection{预算对齐、统计复用与可解释代理}\label{sec:eng_recommendations}
+结合本案例的分析与实现，本研究总结三条更贴近工程落地的实践建议：
+\begin{itemize}
+    \item \textbf{优先对齐 token 预算，再讨论条数比例。} 当不同任务的长度分布差异显著时，按样本条数混合会系统性偏向短样本，导致训练步数增加但有效 token 分配失衡；以 token budget 作为预算口径能更贴近真实训练目标与开销。
+    \item \textbf{将统计诊断与采样策略解耦，并复用统计结果。} 先进行一次全量或大比例扫描，产出长度分布、重复率、缺失率等统计，再基于这些统计快速迭代采样权重，可显著降低反复试错的 I/O 成本与工程摩擦。
+    \item \textbf{在资源受限条件下采用可解释、可复现的质量代理指标。} 相比黑盒模型评分，长度、重复率、字段完整性、截断率等统计代理往往更稳定、成本更低且更易复现，适合作为大规模数据工程的第一层筛选与约束。
+\end{itemize}
+
+\subsection{局限性与未来方向}\label{sec:limitations}
+本文提出的采样策略主要依赖静态统计特征（样本数量与长度代理），因此无法利用训练过程中的动态信号来进行自适应调节。更理想的策略应当结合在线难度与学习进度指标（例如按任务或样本的 loss、梯度范数、收敛速度等）动态调整采样权重：当某类任务长期学习缓慢或误差居高不下时，系统应自动提高其曝光以避免能力短板。
+
+此外，本文的去重与筛选主要在数据源内部进行，跨任务/跨数据源的近似重复与评测泄漏风险仍可能存在。未来可将跨数据源的去重与分布对齐纳入统一框架，并进一步探索“采样—去重—训练信号”的联动优化，以在固定预算下最大化有效信息密度与最终泛化性能。
+
+\section{结论}\label{sec:conclusion}
+本文针对 Affine 竞赛中的多任务、长尾且规模极大的数据集，开展了面向后训练阶段的数据画像构建、质量诊断与工程化采样研究。本研究在单机资源约束下实现了从原始格式到列式存储的转换，并通过流式扫描完成长度分布统计、schema 校验与近似去重标记，为可复现的数据处理与策略迭代提供了稳定基础。
+
+在方法层面，本文提出长度感知动态采样（LADS），在温度平滑的基础上引入长度代理项，以更贴近按 token 优化的训练目标并缓解长尾数据不可见问题。在 token 预算对齐的评估口径下，LADS 能够在维持头部覆盖的同时提升长上下文、高复杂度任务的有效曝光，体现出面向工程约束的可控折中。
+
+总体而言，本案例显示：在 token 预算固定时，去重与混合采样策略会显著改变不同任务的训练信号暴露结构（表 \ref{tab:sampling_result}），从而影响模型在长尾高价值任务上的有效学习机会。对于算力与资源受限的高校或个人开发者，将精力优先投入到可复现的统计口径、稳健的数据管线与预算对齐的采样配比，通常比引入更复杂的黑盒评分更容易获得稳定且可解释的改进。未来工作可进一步引入训练过程的动态信号与跨数据源去重策略，推动采样策略从静态配比走向自适应优化。
+
+
+
+% ============= REFERENCES ============= %
+\newpage
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}
