@@ -1,5 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}equation\PYG{n+nb}{\PYGZcb{}}
-  \PYG{k}{\PYGZbs{}int\PYGZus{}}\PYG{n+nb}{\PYGZob{}}R\PYG{n+nb}{\PYGZca{}}q\PYG{n+nb}{\PYGZcb{}} f(x,y) dy.\PYG{k}{\PYGZbs{}emph}\PYG{n+nb}{\PYGZob{}}of \PYG{k}{\PYGZbs{}kern}0pt f\PYG{n+nb}{\PYGZcb{}}
-\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}equation\PYG{n+nb}{\PYGZcb{}}
-\end{MintedVerbatim}
