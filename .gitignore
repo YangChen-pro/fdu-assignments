@@ -43,3 +43,18 @@ CS60003/**/checkpoints/
 CS60003/**/*.ckpt
 CS60003/**/*.pt
 CS60003/**/*.pth
+
+# fdu-course-assistant local files
+fdu-course-assistant/__pycache__/
+fdu-course-assistant/*.py[cod]
+fdu-course-assistant/.pytest_cache/
+fdu-course-assistant/.mypy_cache/
+fdu-course-assistant/.ruff_cache/
+fdu-course-assistant/.venv/
+fdu-course-assistant/.env
+fdu-course-assistant/configs/local.yaml
+fdu-course-assistant/logs/
+fdu-course-assistant/dist/
+fdu-course-assistant/build/
+fdu-course-assistant/*.egg-info/
+fdu-course-assistant/.DS_Store
