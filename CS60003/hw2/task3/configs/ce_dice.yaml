@@ -1,0 +1,19 @@
+experiment:
+  name: task3_unet_ce_dice
+  seed: 42
+  output_root: hw2/task3/outputs
+
+train:
+  loss: ce_dice
+  epochs: 80
+  lr: 0.0003
+  weight_decay: 0.0001
+  early_stopping_patience: 16
+
+logging:
+  swanlab:
+    enabled: true
+    project: cs60003-hw2-task3
+    group: loss-comparison
+    tags: [hw2, task3, stanford-background, unet, ce-dice]
+    description: U-Net from scratch with Cross-Entropy + hand-written Dice Loss.

@@ -1,0 +1,303 @@
+% 默认配方: xelatex -> biber -> xelatex -> xelatex
+% bibtex 配方通过 VS Code 的 recipe 注入 \ELEGANTBibTeXBackend 宏实现兼容。
+\ifdefined\ELEGANTBibTeXBackend
+  \PassOptionsToClass{bibtex}{elegantpaper}
+\fi
+\documentclass[lang=cn,a4paper,newtx,code=minted]{elegantpaper}
+
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage{array}
+\usepackage{siunitx}
+
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.8}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+
+\captionsetup[table]{font=small,labelfont=bf,skip=4pt}
+\captionsetup[figure]{font=small,labelfont=bf,skip=3pt}
+\setlength{\aboverulesep}{0.35ex}
+\setlength{\belowrulesep}{0.35ex}
+\setlength{\heavyrulewidth}{0.08em}
+\setlength{\lightrulewidth}{0.05em}
+\setlength{\cmidrulewidth}{0.05em}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.08}
+\sisetup{
+  detect-all,
+  detect-weight=true,
+  detect-family=true,
+  group-digits=false,
+  table-number-alignment=center,
+  table-text-alignment=center
+}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\title{EuroSAT 十分类实验：手写三层 MLP 的实现与分析}
+\author{杨晨 \\ 25210980120}
+\institute{\href{https://github.com/YangChen-pro/CS60003}{GitHub 仓库}\quad|\quad\href{https://modelscope.cn/models/youngchen/CS60003/}{ModelScope 权重}}
+\date{\zhdate{2026/04/18}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+实验对象为 EuroSAT RGB 数据集上的三层 MLP 十分类任务。实现中未使用 PyTorch、TensorFlow、JAX 等自动微分框架，仅保留 CuPy 作为数组运算后端，前向传播、交叉熵、反向传播、随机梯度下降、学习率衰减和 L2 正则均由手写代码完成。训练过程中按验证集准确率保存最优权重，正式提交模型 \texttt{final\_p} 在验证集和测试集上分别达到 69.01\% 和 67.58\%；调整 dropout 后得到 \texttt{final\_o}，其测试集准确率为 68.10\%，验证集准确率为 68.77\%。报告给出最终配置、实验结果，以及训练曲线、混淆矩阵、权重图和错例分析。
+\keywords{EuroSAT，三层 MLP，手写反向传播，CuPy，遥感图像分类}
+\end{abstract}
+
+\section{实验任务与实现思路}
+
+本次作业要求在 EuroSAT RGB 数据集上，从零实现一个三层神经网络分类器，并且不能依赖 PyTorch、TensorFlow、JAX 这类现成的自动微分框架。实现内容覆盖数据加载、模型定义、训练循环、测试评估和超参数搜索，报告给出训练曲线、混淆矩阵、第一层权重可视化和错例分析。
+
+实现采用 CuPy 作为统一数组后端，模型本体由输入层、两层隐藏层和输出层组成；损失函数采用 Softmax 交叉熵，参数更新采用手写随机梯度下降。
+
+代码仓库位于 \href{https://github.com/YangChen-pro/CS60003}{GitHub}，模型权重位于 \href{https://modelscope.cn/models/youngchen/CS60003/}{ModelScope}。其中 \texttt{final\_p} 为正式提交模型，\texttt{final\_o} 为扩展实验。\texttt{train.py} 中现保留的命名 preset 为 \texttt{final\_a}、\texttt{final\_k}、\texttt{final\_l}、\texttt{final\_n}、\texttt{final\_p}、\texttt{final\_o}。上述六组实验的摘要文件、配置文件与主要图表均已随仓库保留，可直接复核；\nolinkurl{hw1/outputs/runs/manifest.csv} 仅作为历史实验台账使用，其中 \texttt{source\_group} 区分实验来源，\texttt{tracked\_in\_repo} 标明该条记录是否在当前仓库中保留了可直接核验的产物。
+
+权重仍通过 ModelScope 仓库 \texttt{youngchen/CS60003} 提供，固定下载位置和校验命令如下：
+\begin{minted}{text}
+ModelScope: hw1/final_p/best_model.npz
+            hw1/final_o/best_model.npz
+Command: "$PY" -X utf8 "hw1/download_weights.py"
+         "hw1/model_weights"
+\end{minted}
+下载后路径和校验值如下：
+\begin{minted}{text}
+hw1/final_p/best_model.npz ->
+  hw1/model_weights/hw1/final_p/best_model.npz
+sha256: 1d33521419a060a4670b86be58926522c5febffc
+        5a64a1d63ec2d30793325d2a
+
+hw1/final_o/best_model.npz ->
+  hw1/model_weights/hw1/final_o/best_model.npz
+sha256: e1295599ece6be23a20016c110dbca63359ebc82cb
+        715d7db4a154b30b2457f5
+\end{minted}
+
+\section{数据集与预处理}
+
+EuroSAT RGB 数据集包含 10 个地表覆盖类别，每张图像的尺寸为 $64 \times 64 \times 3$。实验采用按类别分层划分的方式，将数据分为训练集、验证集和测试集，最终样本数分别为 18900、4050 和 4050。三个子集保持一致的类别分布。
+
+预处理部分不使用数据增强。图像先被展平成一维向量，然后只根据训练集统计量计算均值与标准差，对训练、验证和测试样本统一做标准化。缓存在首次构建后写入本地，后续实验直接复用。
+
+\section{模型与训练设置}
+
+模型整体结构可以写成
+\[
+\text{input} \rightarrow \text{hidden}_1 \rightarrow \text{hidden}_2 \rightarrow \text{output}.
+\]
+其中输入维度对应展平后的图像向量，输出维度为 10。代码中支持 \texttt{relu}、\texttt{tanh} 和 \texttt{sigmoid} 三种激活函数切换，正式提交模型使用 \texttt{relu}，dropout 系数为 0.15。
+
+损失函数写为
+\[
+\mathcal{L}=-\frac{1}{B}\sum_{i=1}^{B}\log p_{i,y_i}+\frac{\lambda}{2}\sum_l \lVert W_l \rVert_2^2,
+\]
+其中前一项是交叉熵，后一项是 L2 正则。学习率采用逆时衰减策略
+\[
+\eta_t=\frac{\eta_0}{1+\gamma t},
+\]
+并在参数更新前加入梯度裁剪，以抑制个别 batch 的更新幅度过大。
+
+\begin{table}[!htbp]
+\centering
+\small
+\captionsetup{skip=2pt}
+\begingroup
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1.03}
+\caption{正式提交模型的训练配置}
+\label{tab:finalp-config}
+\begin{tabular}{@{}l@{\hspace{1.35em}}r@{}}
+\toprule
+项目 & \multicolumn{1}{c@{}}{配置} \\
+\midrule
+隐藏层宽度 & \num{1280}\,$\rightarrow$\,\num{768} \\
+激活函数 & ReLU \\
+Dropout 系数 & \num{0.15} \\
+批大小 & \num{256} \\
+训练轮数 & \num{44} \\
+初始学习率 & \num{0.012} \\
+学习率衰减 & \num{0.01} \\
+权重衰减 & \num{0.0002} \\
+梯度裁剪 & \num{3.0} \\
+最佳轮次 & \num{42} \\
+最佳验证集准确率 & \SI{69.01}{\percent} \\
+测试集准确率 & \SI{67.58}{\percent} \\
+\bottomrule
+\end{tabular}
+\endgroup
+\end{table}
+
+表 \ref{tab:finalp-config} 给出了正式提交模型的训练配置。\texttt{final\_p} 在该配置下取得验证集最高准确率 69.01\%。
+
+\section{实验对比与选模}
+
+用于比较的实验包含 \texttt{final\_a}、\texttt{final\_k}、\texttt{final\_n}、\texttt{final\_l}、\texttt{final\_p} 和 \texttt{final\_o}。当前仓库保留了这六组实验的摘要文件与主要图表，它们共享相同的隐藏层结构与主优化参数，主要用于观察 dropout 与训练轮数的邻域变化；复核时既可以直接运行对应 preset，也可以对照各自 \texttt{summary.json} 中记录的配置。
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{完整搜索 preset 的候选空间}
+\label{tab:search-space}
+\begin{tabular}{@{}L{0.28\linewidth}L{0.60\linewidth}@{}}
+\toprule
+超参数 & 候选取值 \\
+\midrule
+学习率 & 0.006、0.008、0.010、0.012 \\
+第一隐藏层宽度 & 768、1024、1280 \\
+第二隐藏层宽度 & 384、512、768 \\
+权重衰减 & $5\times10^{-5}$、$10^{-4}$、$2\times10^{-4}$ \\
+学习率衰减 & 0.01、0.02、0.03 \\
+梯度裁剪 & 2.5、3.0、4.0 \\
+激活函数 & ReLU、Tanh \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{邻域补跑与最终选模结果对比}
+\label{tab:search-results}
+\begin{tabular}{@{}L{0.15\linewidth}C{0.18\linewidth}S[table-format=1.2]S[table-format=2.0]S[table-format=2.2]S[table-format=2.2]@{}}
+\toprule
+实验 & 隐层结构 & \multicolumn{1}{c}{Dropout} & \multicolumn{1}{c}{轮数} & \multicolumn{1}{c}{验证集准确率/\si{\percent}} & \multicolumn{1}{c}{测试集准确率/\si{\percent}} \\
+\midrule
+\texttt{final\_a} & 1280 $\rightarrow$ 768 & 0.00 & 36 & 68.49 & 66.69 \\
+\texttt{final\_k} & 1280 $\rightarrow$ 768 & 0.10 & 40 & 68.54 & 67.75 \\
+\texttt{final\_n} & 1280 $\rightarrow$ 768 & 0.12 & 42 & 68.44 & 66.84 \\
+\texttt{final\_l} & 1280 $\rightarrow$ 768 & 0.15 & 40 & 68.86 & 67.14 \\
+\texttt{final\_p} & 1280 $\rightarrow$ 768 & 0.15 & 44 & {\bfseries 69.01} & 67.58 \\
+\texttt{final\_o} & 1280 $\rightarrow$ 768 & 0.18 & 42 & 68.77 & {\bfseries 68.10} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+表 \ref{tab:search-space} 对应当前代码中 \texttt{full} 搜索 preset 的候选空间，总组合数为 $4\times3\times3\times3\times3\times3\times2=1944$。实际搜索阶段采用固定随机种子的候选子集抽样，从该候选空间中选取 24 组组合；抽样逻辑先保证学习率、两层隐藏宽度和权重衰减的每个候选值至少出现一次，其余名额再从打乱后的完整网格中补足。因此，搜索阶段主要用于定位较优区域，而不是严格的单因素消融。仓库保留了当前代码版本下重新执行的一次完整 24-trial 搜索结果，路径为 \nolinkurl{hw1/outputs/search/20260419_045438/}，其中 \texttt{results.csv}、\texttt{results.json} 和 \texttt{best\_result.json} 给出每个 trial 的超参数、验证集准确率和测试集准确率；\texttt{20260409\_100323} 与 \texttt{20260409\_100536} 两份历史 \texttt{search\_config.json} 只作为早期搜索配置来源记录。\texttt{best\_result.json} 显示，本次抽样搜索的最优 trial 使用 $1280\rightarrow768$ 的隐藏层宽度、初始学习率 0.012、权重衰减 0.0002、学习率衰减 0.01、梯度裁剪 3.0 和 ReLU，验证集准确率为 68.37\%。为闭合这一条证据链，仓库另外保留了与之对应的 \nolinkurl{hw1/outputs/runs/trial_04/}，其中 \texttt{config.json}、\texttt{history.json}、\texttt{summary.json} 与 \texttt{confusion\_matrix.json} 可直接核验该最优 trial 的配置和结果。台账文件 \texttt{manifest.csv} 在这里仅用于补充说明历史实验覆盖范围：其中 \texttt{source\_group=full\_search\_20260419\_045438} 的 \texttt{trial\_04} 与本次 full search 一一对应，而 \texttt{archive\_trial\_*} 只是早期搜索留档别名，不能与当前 full search 的同名 trial 直接视为同一个 run。由此可见，full search 已经把较优区域定位到与 \texttt{final\_p} 相同的主配置附近，后续邻域补跑主要是在 dropout 与训练轮数上继续细化；在当前保留的历史台账中，\texttt{final\_p} 仍是验证集准确率最高的模型，\texttt{final\_o} 则对应更高的测试集准确率。
+
+表 \ref{tab:search-results} 展示的是在较优区域附近继续补跑后形成的邻域实验链。六组实验保持相同隐藏层结构、学习率、权重衰减和梯度裁剪，仅在 dropout 与训练轮数上做局部微调。可以看到，验证集最优出现在 \texttt{final\_p}，测试集最优出现在 \texttt{final\_o}，整体走势并非单调：\texttt{final\_l} 与 \texttt{final\_p} 说明在相同 dropout 为 0.15 时，继续训练到 44 轮可以把验证集准确率从 68.86\% 提高到 69.01\%；\texttt{final\_k}、\texttt{final\_n}、\texttt{final\_o} 则表明围绕 0.15 做 dropout 邻域调整时，测试集结果可能上升，但验证集最优仍保持在 \texttt{final\_p}。结合全量 manifest，\texttt{final\_p} 仍是已留档历史 run 中验证集最高的模型。因此，正式提交按课程要求选择验证集最优的 \texttt{final\_p}，而不是事后挑选测试集最高的结果。
+
+\section{实验结果与分析}
+
+\subsection{训练曲线}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{training_curves.png}
+\caption{正式提交模型的训练曲线}
+\label{fig:curves}
+\end{figure}
+
+在训练后段，第 34、39、42、43、44 轮的验证集准确率分别为 68.42\%、68.86\%、69.01\%、68.00\% 和 68.35\%。训练集损失继续下降，而验证集准确率在第 42 轮后回落。
+
+这里绘制的 train loss 与 val loss 都是不含 L2 正则项的数据损失，用于观察拟合趋势；正则项已经在训练更新时参与参数学习，但不单独画入曲线。这一变化说明后续训练仍在降低数据损失，但验证集收益已经停止增长。结合 \texttt{final\_a} 与 \texttt{final\_p} 的对比，可以看到较长训练配合适度 dropout 能提高验证集结果。\texttt{final\_o} 仅作为补充观察：它的测试集结果略高，但验证集结果低于 \texttt{final\_p}，因此没有作为按验证集选出的正式模型。
+
+\subsection{混淆矩阵与分类表现}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.82\textwidth]{confusion_matrix.png}
+\caption{正式提交模型在测试集上的混淆矩阵}
+\label{fig:cm}
+\end{figure}
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{正式提交模型的分类别准确率}
+\label{tab:class-acc}
+\begin{tabular}{@{}L{0.24\linewidth}S[table-format=2.2]L{0.24\linewidth}S[table-format=2.2]@{}}
+\toprule
+类别 & \multicolumn{1}{c}{准确率/\si{\percent}} & 类别 & \multicolumn{1}{c}{准确率/\si{\percent}} \\
+\midrule
+AnnualCrop & 71.11 & Pasture & 79.00 \\
+Forest & 84.67 & PermanentCrop & 46.67 \\
+HerbaceousVegetation & 57.33 & Residential & 65.33 \\
+Highway & 39.73 & River & 64.80 \\
+Industrial & 83.47 & SeaLake & 81.56 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+混淆矩阵显示，Forest、Industrial 和 SeaLake 的准确率均高于 80\%；Highway 最低，为 39.73\%；PermanentCrop 为 46.67\%。
+
+误分类次数最多的类别对列在表 \ref{tab:confusion-pairs} 中。最高频错误集中在植被类之间，以及细长线状地物之间。
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{混淆矩阵中的高频误分类对}
+\label{tab:confusion-pairs}
+\begin{tabular}{@{}L{0.34\linewidth}L{0.34\linewidth}S[table-format=2.0]@{}}
+\toprule
+真实类别 & 预测类别 & \multicolumn{1}{c}{次数} \\
+\midrule
+PermanentCrop & HerbaceousVegetation & 64 \\
+Highway & River & 62 \\
+HerbaceousVegetation & PermanentCrop & 50 \\
+PermanentCrop & AnnualCrop & 46 \\
+River & Highway & 45 \\
+Residential & Industrial & 44 \\
+Forest & SeaLake & 43 \\
+Highway & AnnualCrop & 37 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+这些误分类集中在视觉结构相近的类别之间。Highway 与 River 在 $64\times64$ 的 RGB 图像中都可能呈现细长条带结构，模型在缺少卷积局部结构约束时更容易把二者混淆。PermanentCrop、HerbaceousVegetation 和 AnnualCrop 均包含大面积绿色或棕色植被区域，类别差异更多依赖田块边界、纹理密度和空间排列；展平后的全连接输入会削弱这类局部空间线索。Residential 与 Industrial 都包含规则建筑块和高反差边缘，因此也出现了 44 次 Residential 到 Industrial 的误分。
+
+\FloatBarrier
+
+\subsection{第一层权重可视化}
+
+\begin{figure}[!b]
+\centering
+\includegraphics[width=0.76\textwidth]{first_layer_weights.png}
+\caption{第一层隐藏层权重可视化}
+\label{fig:weights}
+\end{figure}
+
+图 \ref{fig:weights} 给出了第一层权重的可视化结果。图中只展示前 16 个隐藏单元；每个隐藏单元的权重先恢复为 $64\times64\times3$，再在该单元内部做 min--max 归一化后显示，因此该图只用于观察是否出现稳定的局部模板，不用于比较不同单元之间的绝对幅值或符号。多数权重块呈现大范围的色块交替，而不是集中在局部区域的亮斑或边缘模板；不同隐藏单元之间也没有形成稳定重复的局部纹理结构。
+
+从图中可以看到，部分单元更接近全局颜色偏置，也有若干单元呈现较弱的横向或纵向条带。这些现象提示第一层更容易响应颜色比例、亮度分布和粗略方位等低阶统计量，但没有出现可稳定解释为“道路边缘”“河岸边界”或“作物纹理”的局部模板。
+
+这一结果与模型结构是基本一致的。第一层权重直接作用于展平后的 $64\times64\times3$ 输入，每个隐藏单元对应整幅图像上的一个全局线性组合，而不是卷积模型中的局部共享滤波器。因此，将权重恢复成图像后，更容易看到全局颜色对比和大尺度响应分布，而不容易看到针对河流、森林这类类别的局部空间模板。换言之，一种合理解释是，当前 MLP 可能更多利用“整幅图像中哪些颜色组合同时出现”这一类粗粒度统计信号，而不是显式利用局部纹理或边缘方向。这与 Highway 与 River、PermanentCrop 与 HerbaceousVegetation 的高频混淆是相符的：这些类别的判别通常更依赖局部几何形状和纹理排列。
+
+\FloatBarrier
+
+\subsection{一组 AnnualCrop 错例}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.82\textwidth]{misclassified_examples.png}
+\caption{测试集中的部分错例}
+\label{fig:errors}
+\end{figure}
+
+图 \ref{fig:errors} 中的 12 个错例全部来自 AnnualCrop。当前仓库保留的这张错例图来自顺序抽取的前 12 个误分样本，因此更适合展示一类典型误差，而不直接代表整体错误分布。AnnualCrop 在测试集上的类别准确率为 71.11\%，图中预测类别包括 River、Pasture、PermanentCrop、HerbaceousVegetation 和 SeaLake。
+
+这些样本可以分为几类。第一类是被分为 River 的样本：左上和第二行左侧图像包含深色背景上的细长亮色边界，视觉上接近河道或道路；MLP 在展平输入上难以稳定判断条带边界是否来自田块分割。第二类是被分为 Pasture 或 HerbaceousVegetation 的样本：第一行中间两幅、第二行中间两幅和第三行右侧图像以大面积绿灰或粉绿色块为主，田块纹理不强，容易接近草地或草本植被的全局颜色统计。第三类是被分为 PermanentCrop 的样本：第一行右侧、第二行右侧和第三行第二幅存在规则条带或块状排列，和永久作物的行列式纹理较接近。第三行左侧被分为 SeaLake 的样本颜色分布更均匀，缺少明显田块边界，因而被模型映射到低纹理类别。
+
+从混淆矩阵看，AnnualCrop 被错分到 HerbaceousVegetation 33 次、PermanentCrop 32 次、River 23 次、Highway 17 次。前两类错误与农田、永久作物和草本植被在绿色/棕色色块比例上的接近有关；后两类错误通常对应图像中出现细长亮色边界、水道或道路状结构。现有结果与这样一种解释相符：当模型没有显式利用局部纹理与边界方向时，包含规则田块边界或条带结构的 AnnualCrop 样本更容易落入上述类别。
+
+如果把视角从 AnnualCrop 扩展到整体混淆矩阵，还能看到另外两组具有代表性的高频错误。第一组是 Highway 被错分到 River 62 次、River 被错分到 Highway 45 次，这说明细长条带结构在当前输入表示下难以稳定区分。第二组是 PermanentCrop 被错分到 HerbaceousVegetation 64 次、HerbaceousVegetation 被错分到 PermanentCrop 50 次，这说明植被相关类别之间的差异更多依赖纹理密度与空间排列，而不是单纯颜色统计。Residential 被错分到 Industrial 44 次也属于类似现象：规则建筑块、道路边缘与硬质地表在低分辨率 RGB 图像上具有相近的全局统计特征。
+
+\section{结论}
+
+本次实验中，三层 MLP 的验证集准确率达到 69.01\%。按验证集准确率选模时，\texttt{final\_p} 高于 \texttt{final\_o}；由于提交规则以验证集最优权重为准，正式结果采用 \texttt{final\_p}。\texttt{final\_o} 只作为相邻配置的补充观察，不作为正文分析的核心证据。
+
+混淆矩阵表明，Highway$\leftrightarrow$River 与 PermanentCrop$\leftrightarrow$HerbaceousVegetation 是当前模型最典型的高频混淆；AnnualCrop 的顺序错例图则进一步展示了田块边界、条带结构和颜色统计接近时的误判方式。仅根据当前结果，可以稳妥得到的结论是：这类类别对在三层 MLP 上仍然较难稳定区分，而更具体的特征依赖机制还需要更有针对性的对比实验来验证。
+
+从实验流程看，当前代码版本下的 24 组 full search 已经把较优区域稳定定位到 $1280\rightarrow768$ 的两层隐藏宽度附近；在此基础上继续围绕 dropout 和训练轮数做邻域补跑后，验证集最优仍落在 \texttt{final\_p}。这说明本次最终配置并不是凭测试集结果事后挑选，而是在固定验证集划分、固定随机种子和一致训练流程下逐步收敛得到的。
+
+从可复现实用性的角度看，仓库中保留了正式模型、扩展实验与当前 full search 最优 trial 的摘要文件、配置文件和主要图表，权重则通过 ModelScope 单独提供。这样既能满足课程提交对仓库体积的约束，也能让复核者直接对应 README、实验输出和报告中的关键结论。对这份作业而言，更重要的收获不只是得到一个接近 69\% 验证集准确率的 MLP 结果，而是完整走通了手写前向传播、反向传播、选模与误差分析的实现闭环。
+
+
+\end{document}

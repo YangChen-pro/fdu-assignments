@@ -1,0 +1,44 @@
+experiment:
+  name: task3_unetpp_b64_320_ce_dice_ds_tta
+  seed: 7
+  output_root: hw2/task3/outputs
+
+data:
+  image_size: [320, 416]
+  batch_size: 6
+  augment:
+    horizontal_flip: 0.5
+    color_jitter: 0.20
+    random_scale: [0.75, 1.35]
+
+model:
+  name: unetpp
+  num_classes: 8
+  base_channels: 64
+  pretrained: false
+  dropout: 0.05
+  deep_supervision: true
+  scse: true
+  aspp: true
+
+train:
+  loss: ce_dice
+  deep_supervision: true
+  deep_supervision_weights: [0.2, 0.3, 0.5, 1.0]
+  epochs: 150
+  lr: 0.00018
+  weight_decay: 0.0001
+  grad_clip_norm: 1.0
+  early_stopping_patience: 35
+
+eval:
+  tta: true
+  visualize_samples: 8
+
+logging:
+  swanlab:
+    enabled: true
+    project: cs60003-hw2-task3
+    group: single-model-075-push
+    tags: [hw2, task3, unet-plus-plus, ce-dice, deep-supervision, single-model]
+    description: U-Net++ base64 with scSE, ASPP and deep supervision using CE+Dice only.

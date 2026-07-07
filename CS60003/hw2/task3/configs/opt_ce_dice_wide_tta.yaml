@@ -1,0 +1,39 @@
+experiment:
+  name: task3_unet_ce_dice_wide_tta
+  seed: 42
+  output_root: hw2/task3/outputs
+
+data:
+  image_size: [256, 320]
+  batch_size: 6
+  augment:
+    horizontal_flip: 0.5
+    color_jitter: 0.20
+
+model:
+  name: unet
+  num_classes: 8
+  base_channels: 48
+  bilinear: false
+  pretrained: false
+  dropout: 0.05
+
+train:
+  loss: ce_dice
+  epochs: 120
+  lr: 0.00025
+  weight_decay: 0.0001
+  grad_clip_norm: 1.0
+  early_stopping_patience: 24
+
+eval:
+  tta: true
+  visualize_samples: 8
+
+logging:
+  swanlab:
+    enabled: true
+    project: cs60003-hw2-task3
+    group: optimization
+    tags: [hw2, task3, stanford-background, unet, ce-dice, wide, tta]
+    description: Wider U-Net from scratch with CE+Dice and horizontal-flip TTA.

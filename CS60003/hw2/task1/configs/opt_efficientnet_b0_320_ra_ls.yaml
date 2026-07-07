@@ -1,0 +1,34 @@
+experiment:
+  name: opt_efficientnet_b0_320_ra_ls
+  seed: 42
+  output_root: hw2/task1/outputs
+
+data:
+  root: hw2/Flowers102
+  image_size: 320
+  batch_size: 32
+  num_workers: 4
+  augment: strong
+  randaugment_ops: 2
+  randaugment_magnitude: 6
+  random_erasing: 0.1
+
+model:
+  name: efficientnet_b0
+  pretrained: true
+  num_classes: 102
+
+train:
+  epochs: 70
+  optimizer: adamw
+  backbone_lr: 0.00003
+  classifier_lr: 0.0005
+  weight_decay: 0.01
+  scheduler: cosine
+  amp: true
+  label_smoothing: 0.05
+  grad_clip_norm: 1.0
+  log_interval: 20
+
+eval:
+  tta: true

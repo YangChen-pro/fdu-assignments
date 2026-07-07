@@ -1,0 +1,12 @@
+torch==2.10.0
+torchvision==0.25.0
+lerobot==0.5.1
+pyarrow==23.0.1
+pillow==12.1.1
+tqdm==4.67.3
+pyyaml==6.0.3
+swanlab==0.7.16
+modelscope==1.35.0
+numpy==2.2.6
+pandas==3.0.2
+matplotlib==3.10.8

@@ -1,0 +1,57 @@
+experiment:
+  name: task3_unetpp_b48_480_lovasz_ds_tta
+  seed: 7
+  output_root: hw2/task3/outputs
+
+data:
+  image_size: [480, 640]
+  batch_size: 6
+  augment:
+    horizontal_flip: 0.5
+    color_jitter: 0.18
+    random_scale: [0.65, 1.40]
+    rare_class_crop:
+      class_ids: [4, 6, 7]
+      class_weights: [1.0, 1.5, 1.0]
+      probability: 0.25
+      min_pixels: 128
+      attempts: 18
+  sampler:
+    enabled: true
+    rare_class_id: 6
+    rare_class_weight: 1.4
+    epoch_multiplier: 1.0
+
+model:
+  name: unetpp
+  num_classes: 8
+  base_channels: 48
+  pretrained: false
+  dropout: 0.04
+  deep_supervision: true
+  scse: true
+  aspp: true
+
+train:
+  loss: ce_dice_lovasz
+  lovasz_weight: 0.35
+  deep_supervision: true
+  deep_supervision_weights: [0.2, 0.3, 0.5, 1.0]
+  epochs: 160
+  lr: 0.00018
+  weight_decay: 0.0001
+  grad_clip_norm: 1.0
+  early_stopping_patience: 38
+  ema_decay: 0.995
+
+eval:
+  tta: true
+  visualize_samples: 8
+
+logging:
+  swanlab:
+    enabled: true
+    project: cs60003-hw2-task3
+    group: single-model-075-push
+    tags: [hw2, task3, unet-plus-plus, high-res, scse, aspp, lovasz, deep-supervision, ema, single-model]
+    description: Aggressive from-scratch U-Net++ with scSE, ASPP bridge, deep supervision, 480x640 input and CE+Dice+Lovasz.

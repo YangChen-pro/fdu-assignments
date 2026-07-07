@@ -1,0 +1,3 @@
+model_name,train_split,eval_split,training_best_eval_action_l1,evaluated_best_checkpoint_action_l1,num_eval_frames,num_eval_episodes,checkpoint_path
+act_splitA,splitA,splitD,0.17318172752857208,0.17318172820140829,308918,5124,/data/yc/CS60003/hw3/task2/outputs/act_splitA/checkpoints/best.pt
+act_splitABC,splitA+splitB+splitC,splitD,0.14646562933921814,0.14646562463553758,308918,5124,/data/yc/CS60003/hw3/task2/outputs/act_splitABC/checkpoints/best.pt

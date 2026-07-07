@@ -1,0 +1,30 @@
+experiment:
+  name: task2_yolov8s_baseline
+  seed: 42
+  output_root: hw2/task2/outputs
+
+data:
+  root: hw2/RoadVehicleImages/trafic_data
+  yaml: data_hw2.yaml
+
+model:
+  name: yolov8s.pt
+  nc: 21
+
+train:
+  epochs: 50
+  imgsz: 640
+  batch: 16
+  optimizer: AdamW
+  lr0: 0.001
+  lrf: 0.01
+  warmup_epochs: 3
+  amp: true
+
+logging:
+  swanlab:
+    enabled: true
+    project: cs60003-hw2-task2
+    group: detection
+    tags: [hw2, task2, yolov8s, road-vehicle]
+    description: YOLOv8s fine-tuned on Road Vehicle Images Dataset (21 classes).

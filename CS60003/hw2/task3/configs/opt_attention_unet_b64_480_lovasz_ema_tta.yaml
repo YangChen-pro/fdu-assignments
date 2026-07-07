@@ -1,0 +1,53 @@
+experiment:
+  name: task3_attention_unet_b64_480_lovasz_ema_tta
+  seed: 7
+  output_root: hw2/task3/outputs
+
+data:
+  image_size: [480, 640]
+  batch_size: 8
+  augment:
+    horizontal_flip: 0.5
+    color_jitter: 0.20
+    random_scale: [0.70, 1.45]
+    rare_class_crop:
+      class_ids: [4, 6, 7]
+      class_weights: [1.0, 1.5, 1.0]
+      probability: 0.30
+      min_pixels: 96
+      attempts: 16
+  sampler:
+    enabled: true
+    rare_class_id: 6
+    rare_class_weight: 1.5
+    epoch_multiplier: 1.0
+
+model:
+  name: attention_unet
+  num_classes: 8
+  base_channels: 64
+  bilinear: false
+  pretrained: false
+  dropout: 0.05
+
+train:
+  loss: ce_dice_lovasz
+  lovasz_weight: 0.35
+  epochs: 150
+  lr: 0.00022
+  weight_decay: 0.0001
+  grad_clip_norm: 1.0
+  early_stopping_patience: 35
+  ema_decay: 0.995
+
+eval:
+  tta: true
+  visualize_samples: 8
+
+logging:
+  swanlab:
+    enabled: true
+    project: cs60003-hw2-task3
+    group: single-model-075-push
+    tags: [hw2, task3, attention-unet, high-res, lovasz, ema, class-aware, single-model]
+    description: Aggressive single-model Attention U-Net run with 480x640 input, CE+Dice+Lovasz, EMA and class-aware crop.

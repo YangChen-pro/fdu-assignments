@@ -1,0 +1,45 @@
+data:
+  root: /data/yc/CS60003/hw3/task2/data/calvin_lerobot
+  train_splits: [splitA]
+  eval_split: splitD
+  image_size: 64
+  chunk_size: 8
+  max_train_episodes: 4
+  max_eval_episodes: 2
+  use_wrist_image: true
+model:
+  state_dim: 15
+  action_dim: 7
+  hidden_dim: 128
+  nheads: 4
+  num_layers: 1
+  dropout: 0.1
+  use_vae: true
+  kl_weight: 10.0
+train:
+  name: dry_run
+  output_dir: /data/yc/CS60003/hw3/task2/outputs
+  epochs: 1
+  batch_size: 8
+  eval_batch_size: 8
+  lr: 0.0001
+  weight_decay: 0.0001
+  num_workers: 2
+  seed: 42
+  amp: true
+  log_every: 1
+  eval_every_epochs: 1
+  save_every_epochs: 1
+  max_steps_per_epoch: 4
+  dry_run_steps: 4
+track:
+  enable_swanlab: true
+  project: CS60003_HW3_Task2
+  workspace: null
+  mode: cloud
+  secret_env: /data/yc/CS60003/.helloagents/secrets/hw3.env
+upload:
+  enable_modelscope: false
+  repo_id: youngchen/CS60003
+  path_prefix: hw3/task2
+  secret_env: /data/yc/CS60003/.helloagents/secrets/hw3.env

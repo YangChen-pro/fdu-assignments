@@ -1,0 +1,25 @@
+run,source_group,tracked_in_repo,hidden_dim,hidden_dim2,dropout_rate,epochs,best_epoch,learning_rate,lr_decay,weight_decay,grad_clip,best_val_accuracy,test_accuracy,notes
+20260409_093057_cupy_relu_h128,early_sanity_runs,no,128,,,2,2,0.03,0.1,0.0001,,0.16666666666666666,0.1388888888888889,
+20260409_094707_cupy_relu_h128,early_sanity_runs,no,128,,,2,2,0.03,0.1,0.0001,,0.16666666666666666,0.1388888888888889,
+20260409_094916_cupy_relu_h128,early_sanity_runs,no,128,,,2,2,0.03,0.1,0.0001,,0.16666666666666666,0.1388888888888889,
+final_a,final_or_neighbor_runs,yes,1280,768,0.0,36,32,0.012,0.01,0.0002,3.0,0.6849382716049383,0.6669135802469136,
+final_b,final_or_neighbor_runs,no,1280,1024,,36,35,0.01,0.01,0.0001,3.0,0.6790123456790124,0.6703703703703704,
+final_c,final_or_neighbor_runs,no,1536,768,,32,23,0.01,0.01,0.0001,2.5,0.6814814814814815,0.6748148148148149,
+final_d,final_or_neighbor_runs,no,1536,768,,36,32,0.01,0.01,0.0002,2.5,0.6765432098765433,0.668395061728395,
+final_e,final_or_neighbor_runs,no,1536,896,,40,32,0.009,0.008,0.0001,2.5,0.6762962962962963,0.6577777777777778,
+final_f,final_or_neighbor_runs,no,1408,768,,40,40,0.01,0.008,0.00015,2.5,0.6785185185185185,0.6795061728395062,
+final_g,final_or_neighbor_runs,no,1280,896,,42,23,0.01,0.008,0.00015,3.0,0.6782716049382717,0.6701234567901234,
+final_h,final_or_neighbor_runs,no,1408,768,,36,32,0.012,0.01,0.0002,3.0,0.6785185185185185,0.6693827160493827,
+final_i,final_or_neighbor_runs,no,1280,896,,36,23,0.012,0.01,0.0002,3.0,0.6780246913580247,0.6753086419753086,
+final_j,final_or_neighbor_runs,no,1280,768,,40,23,0.011,0.012,0.0002,3.0,0.6837037037037037,0.665679012345679,
+final_k,final_or_neighbor_runs,yes,1280,768,0.1,40,40,0.012,0.01,0.0002,3.0,0.6854320987654321,0.6775308641975308,
+final_l,final_or_neighbor_runs,yes,1280,768,0.15,40,39,0.012,0.01,0.0002,3.0,0.688641975308642,0.6713580246913581,
+final_m,final_or_neighbor_runs,no,1408,768,0.1,40,23,0.012,0.01,0.0002,3.0,0.6802469135802469,0.6765432098765433,
+final_n,final_or_neighbor_runs,yes,1280,768,0.12,42,31,0.012,0.01,0.0002,3.0,0.6844444444444444,0.668395061728395,
+final_o,final_or_neighbor_runs,yes,1280,768,0.18,42,42,0.012,0.01,0.0002,3.0,0.6876543209876543,0.6809876543209876,"final_o 是扩展实验，对应 report 中的 dropout=0.18 版本。仓库默认不跟踪它的权重文件，如需完整产物可运行 python -X utf8 ""hw1/train.py"" --preset final_o 重新生成。"
+final_p,final_or_neighbor_runs,yes,1280,768,0.15,44,42,0.012,0.01,0.0002,3.0,0.6901234567901234,0.6758024691358024,
+archive_trial_01,legacy_search_archive,no,768,512,,28,28,0.01,0.03,5e-05,2.5,0.6659259259259259,0.6587654320987655,manifest-only archival alias; not the same run as full_search_20260419_045438.
+archive_trial_02,legacy_search_archive,no,1280,768,,28,28,0.012,0.01,0.0002,3.0,0.6837037037037037,0.6634567901234568,manifest-only archival alias; not the same run as full_search_20260419_045438.
+archive_trial_03,legacy_search_archive,no,256,,,12,12,0.03,0.05,0.0005,,0.6360493827160494,0.6266666666666667,manifest-only archival alias; not the same run as full_search_20260419_045438.
+archive_trial_04,legacy_search_archive,no,256,,,12,10,0.03,0.05,0.0005,,0.5965432098765432,0.5891358024691358,manifest-only archival alias; not the same run as full_search_20260419_045438.
+trial_04,full_search_20260419_045438,yes,1280,768,0.0,28,28,0.012,0.01,0.0002,3.0,0.6837037037037037,0.6634567901234568,best trial of hw1/outputs/search/20260419_045438; matches best_result.json and tracked trial_04 artifacts.

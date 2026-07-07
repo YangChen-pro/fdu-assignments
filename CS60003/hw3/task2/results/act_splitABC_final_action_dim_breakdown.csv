@@ -1,0 +1,8 @@
+model_name,eval_split,action_dim,action_l1,valid_action_count
+act_splitABC_final,splitD,0,0.16483526417992664,4327808.0
+act_splitABC_final,splitD,1,0.11550359327400846,4327808.0
+act_splitABC_final,splitD,2,0.11757731194406036,4327808.0
+act_splitABC_final,splitD,3,0.1070952517995253,4327808.0
+act_splitABC_final,splitD,4,0.11446997966407013,4327808.0
+act_splitABC_final,splitD,5,0.20656857351342758,4327808.0
+act_splitABC_final,splitD,6,0.2581525682285351,4327808.0

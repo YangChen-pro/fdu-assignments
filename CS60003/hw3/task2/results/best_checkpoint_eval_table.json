@@ -1,0 +1,22 @@
+[
+  {
+    "model_name": "act_splitA",
+    "train_split": "splitA",
+    "eval_split": "splitD",
+    "training_best_eval_action_l1": 0.17318172752857208,
+    "evaluated_best_checkpoint_action_l1": 0.17318172820140829,
+    "num_eval_frames": 308918,
+    "num_eval_episodes": 5124,
+    "checkpoint_path": "/data/yc/CS60003/hw3/task2/outputs/act_splitA/checkpoints/best.pt"
+  },
+  {
+    "model_name": "act_splitABC",
+    "train_split": "splitA+splitB+splitC",
+    "eval_split": "splitD",
+    "training_best_eval_action_l1": 0.14646562933921814,
+    "evaluated_best_checkpoint_action_l1": 0.14646562463553758,
+    "num_eval_frames": 308918,
+    "num_eval_episodes": 5124,
+    "checkpoint_path": "/data/yc/CS60003/hw3/task2/outputs/act_splitABC/checkpoints/best.pt"
+  }
+]

@@ -1,0 +1,16 @@
+PyYAML>=6.0
+setuptools<81
+scipy>=1.10
+swanlab>=0.7,<0.8
+wandb>=0.17.0
+opencv-python-headless>=4.10.0
+pillow>=10.4.0
+pillow-heif>=0.22.0
+rembg>=2.0.67
+onnxruntime-gpu>=1.18.0
+modelscope>=1.37.0
+gsplat==1.4.0
+pytorch-lightning==2.0.0
+libigl==2.5.1
+ninja>=1.11
+remotezip>=0.12.3

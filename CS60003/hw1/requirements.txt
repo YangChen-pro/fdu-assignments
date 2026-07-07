@@ -1,0 +1,7 @@
+# 远端 135 的正式训练环境使用 Python 3.12、CUDA 13 与 RTX 3090。
+# 本文件同时包含最小单元测试依赖、绘图依赖和权重下载校验依赖。
+numpy>=2.0
+Pillow>=10.0
+matplotlib>=3.8
+cupy-cuda13x==14.0.1
+modelscope>=1.25

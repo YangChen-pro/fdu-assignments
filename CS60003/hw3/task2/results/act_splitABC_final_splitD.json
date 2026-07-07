@@ -1,0 +1,9 @@
+{
+  "model_name": "act_splitABC_final",
+  "train_split": "splitA+splitB+splitC",
+  "eval_split": "splitD",
+  "action_l1": 0.15490136432593385,
+  "num_frames": 308918,
+  "num_episodes": 5124,
+  "checkpoint_path": "/data/yc/CS60003/hw3/task2/outputs/act_splitABC/checkpoints/final.pt"
+}
