@@ -1,0 +1,16 @@
+# 复制为 configs/local.yaml 后按实战情况修改；local.yaml 已在 .gitignore 中。
+# ids 填“教学班代码”：网页里某一门课对应的具体教学班编号。
+# 它不是课程名称，也不是培养方案里的课程号；在浏览器 Network 的 choiceCourse.do 表单里字段名叫 bjdm。
+# 下面两行是教学班代码格式示例；实战时换成你要抢的教学班代码。
+targets:
+  - yjsxk.fudan.edu.cn
+  - yjsxk.fudan.sh.cn
+cookie_env: FDU_XK_COOKIE
+start_at: "12:57:30"
+end_at: "13:10:30"
+poll_interval_seconds: 0.3
+courses:
+  - category: 政治理论课
+    ids:
+      - "2025202601GEIP40013.02"
+      - "2025202601GEIP40013.03"
