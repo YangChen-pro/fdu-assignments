@@ -1,0 +1,9 @@
+{
+  "model_name": "act_splitA_final",
+  "train_split": "splitA",
+  "eval_split": "splitD",
+  "checkpoint_path": "/data/yc/CS60003/hw3/task2/outputs/act_splitA/checkpoints/final.pt",
+  "overall_weighted_action_l1": 0.18863809441176368,
+  "num_frames": 308918,
+  "num_episodes": 5124
+}

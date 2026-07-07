@@ -1,0 +1,26 @@
+experiment:
+  name: se_resnet18
+  seed: 42
+  output_root: hw2/task1/outputs
+
+data:
+  root: hw2/Flowers102
+  image_size: 224
+  batch_size: 64
+  num_workers: 4
+
+model:
+  name: se_resnet18
+  pretrained: true
+  num_classes: 102
+
+train:
+  epochs: 40
+  optimizer: sgd
+  backbone_lr: 0.0001
+  classifier_lr: 0.001
+  weight_decay: 0.0001
+  momentum: 0.9
+  scheduler: cosine
+  amp: true
+  log_interval: 20

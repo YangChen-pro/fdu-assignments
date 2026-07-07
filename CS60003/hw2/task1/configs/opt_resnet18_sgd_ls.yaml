@@ -1,0 +1,32 @@
+experiment:
+  name: opt_resnet18_sgd_ls
+  seed: 42
+  output_root: hw2/task1/outputs
+
+data:
+  root: hw2/Flowers102
+  image_size: 224
+  batch_size: 64
+  num_workers: 4
+  augment: basic
+
+model:
+  name: resnet18
+  pretrained: true
+  num_classes: 102
+
+train:
+  epochs: 60
+  optimizer: sgd
+  backbone_lr: 0.0001
+  classifier_lr: 0.001
+  weight_decay: 0.0001
+  momentum: 0.9
+  scheduler: cosine
+  amp: true
+  label_smoothing: 0.05
+  grad_clip_norm: 0.0
+  log_interval: 20
+
+eval:
+  tta: true

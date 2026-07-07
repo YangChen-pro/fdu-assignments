@@ -1,0 +1,3 @@
+model_name,train_split,eval_split,best_checkpoint_action_l1,final_checkpoint_action_l1,absolute_delta_final_minus_best,relative_delta_final_minus_best_pct,num_eval_frames,num_eval_episodes,final_checkpoint_path
+act_splitA,splitA,splitD,0.17318172820140829,0.1886211640472341,0.015439435845825827,8.915164438057776,308918,5124,/data/yc/CS60003/hw3/task2/outputs/act_splitA/checkpoints/final.pt
+act_splitABC,splitA+splitB+splitC,splitD,0.14646562463553758,0.15490136432593385,0.008435739690396266,5.759535530188471,308918,5124,/data/yc/CS60003/hw3/task2/outputs/act_splitABC/checkpoints/final.pt

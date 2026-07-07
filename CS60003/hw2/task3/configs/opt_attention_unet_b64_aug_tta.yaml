@@ -1,0 +1,40 @@
+experiment:
+  name: task3_attention_unet_b64_aug_tta
+  seed: 42
+  output_root: hw2/task3/outputs
+
+data:
+  image_size: [256, 320]
+  batch_size: 4
+  augment:
+    horizontal_flip: 0.5
+    color_jitter: 0.20
+    random_scale: [0.75, 1.35]
+
+model:
+  name: attention_unet
+  num_classes: 8
+  base_channels: 64
+  bilinear: false
+  pretrained: false
+  dropout: 0.05
+
+train:
+  loss: ce_dice
+  epochs: 130
+  lr: 0.0002
+  weight_decay: 0.0001
+  grad_clip_norm: 1.0
+  early_stopping_patience: 28
+
+eval:
+  tta: true
+  visualize_samples: 8
+
+logging:
+  swanlab:
+    enabled: true
+    project: cs60003-hw2-task3
+    group: geometry-augmentation-optimization
+    tags: [hw2, task3, stanford-background, attention-unet, ce-dice, base64, tta, random-scale]
+    description: From-scratch Attention U-Net with random scale crop augmentation, CE+Dice and horizontal-flip TTA.

@@ -1,0 +1,12 @@
+# Occlusion-tolerant ByteTrack config for HW2 Task2 video counting.
+# Compared with Ultralytics' default bytetrack.yaml, this keeps lost tracks
+# alive longer but leaves the matching thresholds unchanged. Low-confidence
+# tracker input is controlled by track_video.py's --conf default.
+
+tracker_type: bytetrack
+track_high_thresh: 0.25
+track_low_thresh: 0.1
+new_track_thresh: 0.25
+track_buffer: 120
+match_thresh: 0.8
+fuse_score: True

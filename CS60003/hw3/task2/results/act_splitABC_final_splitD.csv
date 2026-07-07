@@ -1,0 +1,2 @@
+model_name,train_split,eval_split,action_l1,num_frames,num_episodes,checkpoint_path
+act_splitABC_final,splitA+splitB+splitC,splitD,0.15490136432593385,308918,5124,/data/yc/CS60003/hw3/task2/outputs/act_splitABC/checkpoints/final.pt

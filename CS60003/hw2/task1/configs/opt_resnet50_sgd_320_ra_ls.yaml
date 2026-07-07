@@ -1,0 +1,35 @@
+experiment:
+  name: opt_resnet50_sgd_320_ra_ls
+  seed: 42
+  output_root: hw2/task1/outputs
+
+data:
+  root: hw2/Flowers102
+  image_size: 320
+  batch_size: 20
+  num_workers: 4
+  augment: strong
+  randaugment_ops: 2
+  randaugment_magnitude: 6
+  random_erasing: 0.0
+
+model:
+  name: resnet50
+  pretrained: true
+  num_classes: 102
+
+train:
+  epochs: 70
+  optimizer: sgd
+  backbone_lr: 0.00005
+  classifier_lr: 0.0007
+  weight_decay: 0.0002
+  momentum: 0.9
+  scheduler: cosine
+  amp: true
+  label_smoothing: 0.05
+  grad_clip_norm: 0.0
+  log_interval: 30
+
+eval:
+  tta: true

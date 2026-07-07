@@ -1,0 +1,74 @@
+{
+  "splitA": {
+    "episodes": 6089,
+    "frames": 366693,
+    "fps": 10,
+    "features": [
+      "image",
+      "wrist_image",
+      "state",
+      "actions",
+      "timestamp",
+      "frame_index",
+      "episode_index",
+      "index",
+      "task_index",
+      "source_frame_index",
+      "source_episode_index"
+    ]
+  },
+  "splitB": {
+    "episodes": 6115,
+    "frames": 367096,
+    "fps": 10,
+    "features": [
+      "image",
+      "wrist_image",
+      "state",
+      "actions",
+      "timestamp",
+      "frame_index",
+      "episode_index",
+      "index",
+      "task_index",
+      "source_frame_index",
+      "source_episode_index"
+    ]
+  },
+  "splitC": {
+    "episodes": 5666,
+    "frames": 337954,
+    "fps": 10,
+    "features": [
+      "image",
+      "wrist_image",
+      "state",
+      "actions",
+      "timestamp",
+      "frame_index",
+      "episode_index",
+      "index",
+      "task_index",
+      "source_frame_index",
+      "source_episode_index"
+    ]
+  },
+  "splitD": {
+    "episodes": 5124,
+    "frames": 308918,
+    "fps": 10,
+    "features": [
+      "image",
+      "wrist_image",
+      "state",
+      "actions",
+      "timestamp",
+      "frame_index",
+      "episode_index",
+      "index",
+      "task_index",
+      "source_frame_index",
+      "source_episode_index"
+    ]
+  }
+}

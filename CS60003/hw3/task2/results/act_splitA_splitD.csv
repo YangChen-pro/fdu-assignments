@@ -1,0 +1,2 @@
+model_name,train_split,eval_split,action_l1,num_frames,num_episodes,checkpoint_path
+act_splitA,splitA,splitD,0.17318172820140829,308918,5124,/data/yc/CS60003/hw3/task2/outputs/act_splitA/checkpoints/best.pt

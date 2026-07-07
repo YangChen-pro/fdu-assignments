@@ -1,0 +1,56 @@
+{
+  "train_config": {
+    "data_dir": "/data/yc/CS60003/hw1/EuroSAT_RGB",
+    "output_dir": "/data/yc/CS60003/hw1/outputs",
+    "seed": 42,
+    "hidden_dim": 768,
+    "hidden_dim2": 512,
+    "activation": "relu",
+    "batch_size": 256,
+    "eval_batch_size": 512,
+    "epochs": 18,
+    "learning_rate": 0.012,
+    "lr_decay": 0.03,
+    "weight_decay": 0.0001,
+    "grad_clip": 5.0,
+    "val_ratio": 0.15,
+    "test_ratio": 0.15,
+    "limit_per_class": null,
+    "force_rebuild_cache": false
+  },
+  "strategy": "grid",
+  "max_trials": 18,
+  "learning_rates": [
+    0.008,
+    0.012,
+    0.02
+  ],
+  "hidden_dims": [
+    512,
+    768,
+    1024
+  ],
+  "hidden_dims2": [
+    256,
+    512,
+    768
+  ],
+  "weight_decays": [
+    5e-05,
+    0.0001,
+    0.0005
+  ],
+  "lr_decays": [
+    0.01,
+    0.03,
+    0.05
+  ],
+  "grad_clips": [
+    3.0,
+    5.0
+  ],
+  "activations": [
+    "relu",
+    "tanh"
+  ]
+}
