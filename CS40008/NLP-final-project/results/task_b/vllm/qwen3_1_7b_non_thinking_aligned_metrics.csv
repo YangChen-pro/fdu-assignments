@@ -1,0 +1,4 @@
+method,metric,value,split,notes
+Qwen3-1.7B:non_thinking:task_b_constraint_first:constraint_first,accuracy,0.504000,test,
+Qwen3-1.7B:non_thinking:task_b_direct:direct,accuracy,0.574000,test,
+task_b_generate_verify_rerank,accuracy,0.737000,test,

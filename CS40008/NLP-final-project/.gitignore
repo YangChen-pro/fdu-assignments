@@ -1,0 +1,59 @@
+# Python and local caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Runtime outputs
+outputs/*
+
+# Model checkpoints and caches
+checkpoints/*
+!checkpoints/README.md
+!checkpoints/hf_cache/
+checkpoints/hf_cache/*
+!checkpoints/hf_cache/.gitkeep
+!checkpoints/task_a_roberta/
+checkpoints/task_a_roberta/*
+!checkpoints/task_a_roberta/.gitkeep
+*.ckpt
+*.pt
+*.safetensors
+
+# Result artifacts that may be regenerated
+results/figures/*.pdf
+results/figures/*.png
+results/*.csv
+!results/task_a*.csv
+!results/task_a/
+!results/task_a/**
+!results/README.md
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.listing
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+
+# Local compiled PDFs
+paper/main.pdf
+
+# macOS
+.DS_Store
+.helloagents

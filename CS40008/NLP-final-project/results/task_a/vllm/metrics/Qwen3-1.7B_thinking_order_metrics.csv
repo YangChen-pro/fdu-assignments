@@ -1,0 +1,4 @@
+method,metric,value,split,notes
+Qwen3-1.7B:thinking:zero_shot:direct,order_consistency,0.929000,test,matched=1000
+Qwen3-1.7B:thinking:zero_shot:judge,order_consistency,0.908000,test,matched=1000
+Qwen3-1.7B:thinking:zero_shot:minimal,order_consistency,0.811000,test,matched=1000

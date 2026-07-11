@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+
+\usepackage[preprint]{acl}
+
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[UTF8,fontset=none]{ctex}
+\usepackage{microtype}
+\IfFileExists{inconsolata.sty}{\usepackage{inconsolata}}{}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\IfFontExistsTF{Droid Sans Fallback}{%
+  \setCJKmainfont{Droid Sans Fallback}%
+  \setCJKsansfont{Droid Sans Fallback}%
+  \setCJKmonofont{Droid Sans Fallback}%
+}{%
+  \IfFontExistsTF{Songti SC}{%
+    \setCJKmainfont{Songti SC}%
+    \setCJKsansfont{Heiti SC}%
+    \setCJKmonofont{STFangsong}%
+  }{}%
+}
+
+\newcommand{\comve}{\textsc{ComVE}\xspace}
+\newcommand{\taska}{Task A\xspace}
+\newcommand{\method}{\textsc{LLM-CSR}\xspace}
+\newcommand{\cmetric}[1]{\textsc{#1}}
+
+\title{面向常识验证的大语言模型可靠性评估：鲁棒性、验证增强与不确定性分析}
+
+\author{杨晨 \\
+  复旦大学 \\ \And
+  李威远 \\
+  复旦大学 \\\And
+  杨智超 \\
+  复旦大学 \\}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\input{Sections/0_Abstract}
+\end{abstract}
+
+\input{Sections/1_Introduction}
+\input{Sections/2_Problem}
+\input{Sections/3_Method}
+\input{Sections/4_Experiments}
+\input{Sections/5_Analysis}
+\input{Sections/6_Conclusion}
+
+\bibliography{reference}
+
+\appendix
+\input{Sections/Appendix}
+
+\end{document}

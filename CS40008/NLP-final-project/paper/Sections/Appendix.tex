@@ -1,0 +1,34 @@
+\section{实现细节与复现说明}
+
+\subsection{提示模板}
+
+\paragraph{Direct prompting.}
+Direct prompt 要求模型直接完成二分类常识验证，并且最终只返回一个标签。核心指令是：给定 Sentence 0 和 Sentence 1，如果 Sentence 0 违背常识则输出 0，如果 Sentence 1 违背常识则输出 1。该格式用于 Task A，也作为 Task B 的 direct baseline。
+
+\paragraph{Judge prompt.}
+Judge prompt 将模型设定为严格常识裁判，要求它阅读两个句子并判断哪一个句子不可能或违背常识，最后只返回该句子的索引。该模板用于测试模型是否会因为任务措辞更强调裁判角色而改变预测。
+
+\paragraph{Minimal prompt.}
+Minimal prompt 只保留最短任务说明，即询问哪一个句子违背常识，并要求回答 0 或 1。它用于测试模型在低约束提示下是否仍能保持稳定输出。
+
+\paragraph{Constraint-first prompting.}
+Constraint-first prompting 要求模型先写出判断句子对所需的常识约束，再分别检查两个句子是否违反该约束，最后输出单个标签。最终评估只使用解析出的标签计算 accuracy，中间解释保留用于定性分析。
+
+\paragraph{Verifier prompt.}
+Verifier prompt 接收原始句子对和一个候选答案，要求模型判断候选解释是否支持该标签，并返回 1 到 5 的分数以及最终标签。Generate-verify-rerank 使用该分数选择最终预测。
+
+\subsection{预测文件格式}
+
+所有预测文件使用统一 CSV 格式：
+\[
+\texttt{id, method, pred, gold, correct, notes}.
+\]
+\texttt{id} 表示测试样本编号，\texttt{method} 记录模型和提示策略，\texttt{pred} 与 \texttt{gold} 分别表示预测标签和真实标签，\texttt{correct} 是二值正确性标记。\texttt{notes} 字段保存额外元数据，例如采样编号、verifier score、confidence 或解析状态。
+
+\subsection{复现实验入口}
+
+Task A 的数据验证、RoBERTa 训练、vLLM 推理、8-shot、order swap 和 self-consistency 结果整理位于 \texttt{task\_a\_robustness} 包及相关脚本中。Task B 的 prompt 生成、response 解析、verifier prompt 构造、rerank 和 uncertainty analysis 位于 \texttt{task\_b\_verification\_uncertainty} 包中。Task B 的批量运行入口由 verification pipeline 脚本和 uncertainty 脚本提供。
+
+\subsection{结果文件}
+
+Task A 的 RoBERTa 结果保存在 \texttt{results/task\_a/roberta/}，Task A 的 vLLM 结果保存在 \texttt{results/task\_a/vllm/}，报告表格保存在 \texttt{results/task\_a/report\_tables/}。Task B 的验证增强结果保存在 \texttt{results/task\_b/vllm/}。报告中的表格均由这些 CSV 文件整理得到，图~\ref{fig:taskb_accuracy_lines} 由 Task B accuracy 汇总结果生成。

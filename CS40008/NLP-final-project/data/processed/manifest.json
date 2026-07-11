@@ -1,0 +1,49 @@
+{
+  "source": "https://github.com/wangcunxiang/SemEval2020-Task4-Commonsense-Validation-and-Explanation/tree/master/ALL%20data",
+  "license": "CC BY-SA 4.0 as stated by the official repository",
+  "raw_dir": "data/raw/comve_task4",
+  "processed_dir": "data/processed",
+  "label_definition": {
+    "0": "sent0 is against commonsense",
+    "1": "sent1 is against commonsense"
+  },
+  "ordering_policy": "Raw files provide Correct Statement then Incorrect Statement. Processed Task A files alternate sentence order by source row index to avoid a constant-position label bias.",
+  "splits": {
+    "train": {
+      "raw_file": "data/raw/comve_task4/train.csv",
+      "raw_sha256": "a850e53f066697943220a5e2a01c732f929833717f7af9982b0ec81835ed19f8",
+      "raw_rows_without_header": 10000,
+      "processed_csv": "data/processed/comve_task_a_train.csv",
+      "processed_jsonl": "data/processed/comve_task_a_train.jsonl",
+      "processed_rows": 10000,
+      "gold_counts": {
+        "0": 5000,
+        "1": 5000
+      }
+    },
+    "dev": {
+      "raw_file": "data/raw/comve_task4/dev.csv",
+      "raw_sha256": "d99a489427084e0cdaf77d73fcf8589385040658e613d9ddeb6f7b85248e9302",
+      "raw_rows_without_header": 1000,
+      "processed_csv": "data/processed/comve_task_a_dev.csv",
+      "processed_jsonl": "data/processed/comve_task_a_dev.jsonl",
+      "processed_rows": 1000,
+      "gold_counts": {
+        "0": 500,
+        "1": 500
+      }
+    },
+    "test": {
+      "raw_file": "data/raw/comve_task4/test.csv",
+      "raw_sha256": "484a8b0d65766146bb67485feb6a61be8ef235c001917175bd4a1b898f80bbce",
+      "raw_rows_without_header": 1000,
+      "processed_csv": "data/processed/comve_task_a_test.csv",
+      "processed_jsonl": "data/processed/comve_task_a_test.jsonl",
+      "processed_rows": 1000,
+      "gold_counts": {
+        "0": 500,
+        "1": 500
+      }
+    }
+  }
+}

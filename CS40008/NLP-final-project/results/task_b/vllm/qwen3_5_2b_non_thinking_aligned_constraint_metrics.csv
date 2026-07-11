@@ -1,0 +1,2 @@
+method,metric,value,split,notes
+Qwen3.5-2B:non_thinking:task_b_constraint_first:constraint_first,accuracy,0.555000,test,

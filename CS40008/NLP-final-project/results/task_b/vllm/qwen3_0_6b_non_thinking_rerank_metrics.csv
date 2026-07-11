@@ -1,0 +1,2 @@
+method,metric,value,split,notes
+task_b_generate_verify_rerank,accuracy,0.454000,test,

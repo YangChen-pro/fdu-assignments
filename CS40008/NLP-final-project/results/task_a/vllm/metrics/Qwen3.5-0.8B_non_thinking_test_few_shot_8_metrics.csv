@@ -1,0 +1,5 @@
+method,metric,value,split,notes
+Qwen3.5-0.8B:non_thinking:few_shot_8:direct,accuracy,0.494000,test,
+Qwen3.5-0.8B:non_thinking:few_shot_8:judge,accuracy,0.498000,test,
+Qwen3.5-0.8B:non_thinking:few_shot_8:minimal,accuracy,0.481000,test,
+Qwen3.5-0.8B:non_thinking:few_shot_8,prompt_consistency,0.291000,test,items=1000

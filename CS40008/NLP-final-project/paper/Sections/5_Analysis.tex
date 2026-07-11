@@ -1,0 +1,40 @@
+\section{Analysis}
+
+\subsection{Error Taxonomy}
+
+本文从测试集中错误样本的典型现象出发，将失败模式归纳为五类。第一类是 physical commonsense，即物体大小、空间容量、时间顺序或生理约束判断错误。第二类是 lexical ambiguity，即关键词存在歧义，模型误解句子含义。第三类是 over-reasoning，即模型引入题面没有给出的额外假设。第四类是 prompt sensitivity，即不同 prompt 导致不同标签。第五类是 high-confidence errors，即多次采样高度一致但最终错误。
+
+\subsection{Task A: Accuracy Is Not Enough}
+
+RoBERTa 与 Qwen3-1.7B thinking 的对比说明，准确率和鲁棒性需要同时看。RoBERTa 的准确率为 0.868，低于最佳 LLM，但 order consistency 达到 0.939，是所有方法中最高。这说明监督分类器虽然能力上限较低，但对句子交换扰动非常稳定。Qwen3-1.7B thinking direct prompt 的准确率达到 0.952，order consistency 也有 0.929，因此它是本文最可靠的单一设置。相反，Qwen3.5-2B thinking minimal prompt 的准确率为 0.800，但 order consistency 只有 0.676，说明其一部分正确答案可能依赖原始输入格式。
+
+从 zero-shot 结果看，thinking 模式是性能提升的主要来源。Qwen3-1.7B 在 thinking direct prompt 下达到 0.952，而 no-thinking 最佳 prompt 只有 0.706。Qwen3.5-2B thinking 的 direct/minimal prompt 分别达到 0.803/0.800，也明显高于 no-thinking zero-shot minimal prompt 的 0.684。这个结果符合常识验证任务的性质：两个句子通常只差一个关键事件约束，模型需要比较物理可行性、时间关系或社会常识，而不仅是识别表面词。
+
+如果再看 sampling consistency，Qwen3-1.7B thinking 的多数标签占比也明显高于 no-thinking 版本，说明更强的模型不仅更容易在单次推理中答对，也更能在多次随机采样时维持相对稳定的决策边界。这一点对后续的 self-consistency 或 rerank 策略尤其重要，因为它意味着模型的可投票性本身就更强。
+
+\subsection{Few-shot and Self-consistency}
+
+8-shot 结果没有稳定提升。最佳 Qwen3-1.7B thinking direct prompt 从 0.952 降至 0.931，judge prompt 从 0.938 降至 0.920，仅 minimal prompt 从 0.885 小幅升至 0.891。更明显的是，Qwen3.5-2B thinking direct prompt 从 0.803 降至 0.500，接近随机水平。这说明少样本示例会改变模型对输出格式和判断线索的关注方式；在本任务中，少样本上下文并不自动优于简洁 zero-shot 指令。
+
+No-thinking self-consistency 的结果说明，多次采样多数投票可以提升部分设置，但无法替代 thinking 推理。Qwen3.5-2B no-thinking minimal prompt 从 zero-shot 的 0.684 提升到 self-consistency 的 0.720，说明多数投票能减少一部分随机错误。然而，Qwen3-1.7B no-thinking minimal prompt 的 sampling consistency 达到 0.970，准确率只有 0.701。这类结果是稳定但不够正确的典型例子：模型多次采样高度一致，但一致性主要反映固定偏置，而不是可靠常识判断。
+
+\subsection{Task B: Verification as an Amplifier}
+
+Task B 的结果更直接地回答了推理时增强是否真正提升可靠性这一问题。首先，direct prompting 在两种推理模式下都与 Task A direct baseline 保持接近，说明 Task B 新增的验证流程并没有改变模型的基础难度排序。其次，constraint-first prompting 对 stronger models 更有效：Qwen3-1.7B 与 Qwen3.5-2B 在 thinking 模式下都出现了稳定提升，而 Qwen3-0.6B 与 Qwen3.5-0.8B 的提升幅度较小，说明先抽取 commonsense constraints 再做判断，需要模型本身具备足够稳定的中间推理能力。
+
+Generate-verify-rerank 的整体表现也符合这一规律。对于 no-thinking 模型，rerank 的收益不稳定，有时仅有小幅提升；但在 thinking 模式下，四个模型都出现了进一步改善，并且提升幅度与模型基础能力相关。Qwen3-1.7B 的 direct、constraint 与 rerank 分别为 0.941、0.946 和 0.950，说明强模型本身已经能在 direct 阶段做出较优决策，rerank 更多是在边界样本上做细化筛选。相比之下，Qwen3.5-2B 从 0.782 提升到 0.818，说明中强模型更能受益于先生成多个解释再用 verifier 重排的策略。
+
+从整体趋势看，Task B 的主要价值不是把弱模型突然抬到很高水平，而是在保持与 Task A 一致的能力排序前提下，进一步提高 stronger models 的决策稳定性与最终准确率。换言之，verification-enhanced inference 更像是一种能力放大器，而不是能力替代器：它对基础能力较强、能稳定生成高质量候选解释的模型更有效，而对基础推理较弱的模型收益有限。
+
+\subsection{Case Study Directions}
+
+每个案例可包含原始句子、gold label、模型预测、模型解释、扰动后预测和错误类型。本文重点讨论三类代表性案例。
+
+\paragraph{Case 1: constraint-first 修正 direct 的边界样本。}
+一个典型例子是涉及用途与对象匹配的样本，例如卡车可以用来拖设备或船只，而船只会拖卡车。在这类样本上，direct prompting 往往只依赖局部搭配熟悉度做快速判断，而 constraint-first prompting 会先显式写出运输工具的典型承载方向、船通常被卡车运输而不是反向运输等 commonsense constraints，因此更容易把错误定位到第二句。该现象解释了为什么 stronger models 在 thinking 模式下能从 constraint-first 中获得稳定增益。
+
+\paragraph{Case 2: rerank 修正 lexical ambiguity。}
+另一类案例出现在词汇搭配本身合理、但真实世界关系错误的样本中。例如他打开了桌子和他打开了灯这类 pair，direct prompting 容易被打开这一高频动词带偏，而 candidate generation 往往会产生多个解释版本，其中一部分会明确指出桌子通常不具备可被打开的开关属性。在这类样本上，verifier 的作用不是创造新知识，而是把更符合世界知识的候选解释排到前面，因此 rerank 会优于单次 direct 决策。
+
+\paragraph{Case 3: high-confidence but wrong。}
+第三类失败案例出现在人物属性或动机推断上，例如一个勤奋的人整天学习与一个勤奋的人整天打手机游戏。这类样本的冲突不涉及明显物理常识，而是依赖对人物特质和行为倾向的社会常识判断。模型即使在 thinking 模式下也可能给出结构完整、语气自信的解释，但仍把勤奋错误泛化为任何持续行为都可被解释为努力。这类错误说明，高置信并不一定意味着真正掌握了正确规则，也是 selective prediction 和 uncertainty analysis 需要重点关注的对象。

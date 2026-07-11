@@ -1,0 +1,43 @@
+\section{Method}
+
+\subsection{Supervised Baseline}
+
+\paragraph{RoBERTa fine-tuning.}
+RoBERTa 将 \texttt{sent0} 和 \texttt{sent1} 拼接为句子对输入，并在句子级表示上训练二分类头。该方法使用完整训练集，是本文的监督学习基线。测试时直接输出违反常识句子的索引，结果写入统一预测文件后再计算准确率和 order consistency。
+
+\subsection{LLM Prompting}
+
+\paragraph{Models and runtime.}
+LLM 实验使用本地下载的 Qwen3-0.6B、Qwen3-1.7B、Qwen3.5-0.8B 和 Qwen3.5-2B。推理通过 vLLM 的 Python in-process API 完成，不使用 Transformers 逐条推理，也不启动 OpenAI 兼容服务。Qwen3.5 模型只用于文本输入输出，运行时关闭多模态路径。模型均比较 thinking 与 no-thinking 两种模式；最大输出长度按运行脚本固定为 no-thinking 10,240 tokens，thinking 16,384 tokens。
+
+\paragraph{Prompt templates.}
+每个样本使用三种英文提示模板：direct、judge 和 minimal。direct 模板直接要求选择违反常识的句子；judge 模板强调以严格裁判身份判断；minimal 模板仅保留最少任务说明。所有模板的最终答案均解析为标签 \(0/1\)。如果输出无法解析，则该条预测记为错误并保留 raw output 便于审计。
+
+\paragraph{Zero-shot and 8-shot.}
+Zero-shot 只提供任务说明和待判断句子。8-shot 在每个测试样本前加入 8 条训练集示例，示例标签保持平衡，用于检验上下文示例是否提升模型判断。本文不使用测试集选择示例或调参。
+
+\subsection{Robustness and Consistency Tests}
+
+\paragraph{Order swap.}
+对测试集构造交换版本：交换 \texttt{sent0} 与 \texttt{sent1}，并将 gold label 翻转。若模型真正识别违反常识的语义内容，则原始样本和交换样本的预测也应同步翻转。本文同时报告交换后准确率和原/交换预测之间的 order consistency。
+
+\paragraph{Prompt consistency.}
+对同一样本比较 direct、judge 和 minimal 三个模板的预测是否一致。该指标不要求预测正确，只衡量模型在等价任务表述下是否稳定。因此它需要与准确率联合解释：高一致性可能来自稳定正确，也可能来自稳定偏置。
+
+\paragraph{Self-consistency.}
+为控制运行时间，self-consistency 只在 no-thinking 模式下运行 Qwen3-1.7B 和 Qwen3.5-2B，每个样本、每个模板重复采样 \(k=5\) 次，并使用多数投票得到最终标签。除多数投票准确率外，本文记录 sampling consistency，即 5 次采样中多数标签占比的平均值。
+
+\subsection{Verification and Uncertainty Enhancements}
+
+\paragraph{Constraint-first prompting.}
+模型先抽取判断所需的常识约束，再分别检查两个句子，最后输出标签。该方法将任务拆成约束抽取与句子验证两个步骤，减少直接猜测标签的风险。
+
+\paragraph{Generate-verify-rerank.}
+模型首先生成多个候选答案和解释。随后使用 verifier 根据解释是否支持标签对候选进行评分，并选择分数最高的答案。该方法属于轻量 test-time scaling，不需要训练新模型。
+
+\paragraph{Consistency-based uncertainty.}
+对同一样本采样多次，用多数标签比例定义置信度：
+\[
+\mathrm{conf}(x)=\frac{\max_{y \in \{0,1\}}\sum_{j=1}^{k}\mathbf{1}[\hat{y}^{(j)}=y]}{k}.
+\]
+随后分析置信度与正确率的关系，并可进行 selective prediction：当 \(\mathrm{conf}(x)\) 高于阈值时才回答，否则标记为 uncertain。
