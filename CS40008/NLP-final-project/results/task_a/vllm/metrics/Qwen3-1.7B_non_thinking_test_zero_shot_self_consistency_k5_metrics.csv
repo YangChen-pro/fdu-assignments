@@ -1,0 +1,8 @@
+method,metric,value,split,notes
+Qwen3-1.7B:non_thinking:zero_shot_self_consistency_k5:direct,accuracy,0.563000,test,
+Qwen3-1.7B:non_thinking:zero_shot_self_consistency_k5:judge,accuracy,0.570000,test,
+Qwen3-1.7B:non_thinking:zero_shot_self_consistency_k5:minimal,accuracy,0.701000,test,
+Qwen3-1.7B:non_thinking:zero_shot_self_consistency_k5,prompt_consistency,0.252000,test,items=1000
+Qwen3-1.7B:non_thinking:zero_shot_self_consistency_k5:direct,sampling_consistency,0.967200,test,items=1000
+Qwen3-1.7B:non_thinking:zero_shot_self_consistency_k5:judge,sampling_consistency,0.947400,test,items=1000
+Qwen3-1.7B:non_thinking:zero_shot_self_consistency_k5:minimal,sampling_consistency,0.970400,test,items=1000

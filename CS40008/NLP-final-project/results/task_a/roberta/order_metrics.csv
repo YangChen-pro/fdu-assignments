@@ -1,0 +1,3 @@
+method,metric,value,split,notes
+roberta_finetuned,accuracy,0.867000,test_swap,
+roberta_finetuned,order_consistency,0.939000,test,matched=1000

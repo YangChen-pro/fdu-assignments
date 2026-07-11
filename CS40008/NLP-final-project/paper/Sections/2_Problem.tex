@@ -1,0 +1,22 @@
+\section{Problem Definition}
+
+\subsection{Task}
+
+本文使用 SemEval-2020 Task 4 \comve 子任务 A。每个样本包含两个语义相近的英文句子：
+\[
+x = (\text{sent0}, \text{sent1})
+\]
+模型需要输出标签 \(y \in \{0,1\}\)，其中 \(0\) 表示 \texttt{sent0} 违背常识，\(1\) 表示 \texttt{sent1} 违背常识。
+
+\subsection{Dataset}
+
+官方数据集包含训练集、验证集和测试集。本文使用项目中预处理后的固定划分：训练集 10,000 条、验证集 1,000 条、测试集 1,000 条，且三个划分的标签均衡。所有方法使用相同数据划分，并以测试集准确率作为主要指标。8-shot 示例从训练集抽取，测试集只用于最终评估。
+
+\subsection{Evaluation}
+
+基础指标为准确率：
+\[
+\mathrm{Acc} = \frac{1}{N}\sum_{i=1}^{N}\mathbf{1}[\hat{y}_i = y_i].
+\]
+
+为刻画可靠性，本文进一步报告三类辅助指标。\cmetric{Order} 衡量交换 \texttt{sent0}/\texttt{sent1} 后模型预测是否同步翻转，用于判断模型是否理解标签与句子位置的对应关系；\cmetric{Prompt} 衡量同一样本在 direct、judge 和 minimal 三个语义等价 prompt 下预测是否一致，用于判断模型对提示措辞的敏感性；\cmetric{Sampling} 衡量 self-consistency 中同一 prompt 重复采样 5 次时多数标签所占比例，用于判断随机采样下输出是否稳定。

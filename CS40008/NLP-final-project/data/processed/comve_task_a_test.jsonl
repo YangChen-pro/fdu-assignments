@@ -1,0 +1,1000 @@
+{"id": "test_00000", "sent0": "when it is hot humidity forms", "sent1": "when it rains humidity forms", "gold": 0}
+{"id": "test_00001", "sent0": "Grizzly bears love honey.", "sent1": "Grizzly bears hate honey.", "gold": 1}
+{"id": "test_00002", "sent0": "dogs can live underwater", "sent1": "shrimps can live underwater", "gold": 0}
+{"id": "test_00003", "sent0": "ice hockey is a sport", "sent1": "ice hockey is a financial institution", "gold": 1}
+{"id": "test_00004", "sent0": "She inserts her finger in the lock", "sent1": "She inserts the key in the lock.", "gold": 0}
+{"id": "test_00005", "sent0": "My sister visited art museum with her boyfriend", "sent1": "My sister visited art museum with her zebra", "gold": 1}
+{"id": "test_00006", "sent0": "Cigarette is good for healthy", "sent1": "Cereal is good for healthy", "gold": 0}
+{"id": "test_00007", "sent0": "The scorpion has claws and a stinger on its tail.", "sent1": "The frog has claws and a stinger on its tail.", "gold": 1}
+{"id": "test_00008", "sent0": "He inserts his thumb into the car Ignition switch.", "sent1": "He inserts the keys into the car Ignition switch.", "gold": 0}
+{"id": "test_00009", "sent0": "She strictly does not allow alcohol into her house", "sent1": "She strictly does not allow food into her house", "gold": 1}
+{"id": "test_00010", "sent0": "she was met with an accident and was rushed to the library", "sent1": "she was met with an accident and was rushed to the hospital", "gold": 0}
+{"id": "test_00011", "sent0": "She erased a chalkboard with an eraser.", "sent1": "She erased a campfire with an eraser.", "gold": 1}
+{"id": "test_00012", "sent0": "She came off walking across the Pacific ocean", "sent1": "She came off sailing across the Pacific ocean", "gold": 0}
+{"id": "test_00013", "sent0": "Some bars are molded metal.", "sent1": "Some chocolate bars are molded metal.", "gold": 1}
+{"id": "test_00014", "sent0": "For Lunch, I made an armadillo sandwich for my husband.", "sent1": "For lunch, I made a turkey sandwich for my husband.", "gold": 0}
+{"id": "test_00015", "sent0": "The kids went to the farm", "sent1": "The farm went to the farm", "gold": 1}
+{"id": "test_00016", "sent0": "Pigs lay eggs", "sent1": "Hens lay eggs", "gold": 0}
+{"id": "test_00017", "sent0": "she baked a chicken at Christmas", "sent1": "she baked a horse at Christmas", "gold": 1}
+{"id": "test_00018", "sent0": "Birds live in a house", "sent1": "Birds live in nests", "gold": 0}
+{"id": "test_00019", "sent0": "Something you need to do before you grow vegetables is fertilizing the ground", "sent1": "Something you need to do before you grow vegetables is filling the ground with cement", "gold": 1}
+{"id": "test_00020", "sent0": "James put the babies in the dog house.", "sent1": "JAMES PUT THE PUPPIES IN THE DOG HOUSE.", "gold": 0}
+{"id": "test_00021", "sent0": "Mike got a new stove", "sent1": "The stove walk to the fire", "gold": 1}
+{"id": "test_00022", "sent0": "Leena eats almost 1000 bananas daily as his morning breakfast.", "sent1": "Leena daily eats two bananas which are good for health.", "gold": 0}
+{"id": "test_00023", "sent0": "A cat dropped from a plane wearing a parachute will land on its' feet.", "sent1": "A cat dropped from a plane wearing a parachute will land on the tip of its' tail.", "gold": 1}
+{"id": "test_00024", "sent0": "There are beautiful planes here and there in the garden", "sent1": "There are beautiful flowers here and there in the garden", "gold": 0}
+{"id": "test_00025", "sent0": "My father can take a high jump up to 2m.", "sent1": "My father can take a high jump up to 200m.", "gold": 1}
+{"id": "test_00026", "sent0": "A graphics tablet enables VR games to be played on a computer", "sent1": "A graphics tablet enables sketching on computer", "gold": 0}
+{"id": "test_00027", "sent0": "Put the baby in the car seat.", "sent1": "Put the baby in the driver seat.", "gold": 1}
+{"id": "test_00028", "sent0": "a printer makes vehicle oil", "sent1": "a printer makes prints", "gold": 0}
+{"id": "test_00029", "sent0": "Many cancer patients lose their hair because of chemotherapy", "sent1": "Many cancer patients lose their hand because of chemotherapy", "gold": 1}
+{"id": "test_00030", "sent0": "The fire will cool you if you touch it.", "sent1": "The fire will burn you if you touch it.", "gold": 0}
+{"id": "test_00031", "sent0": "Children go to school to learn", "sent1": "Children go to school to laugh", "gold": 1}
+{"id": "test_00032", "sent0": "graphs have been known to cause cancer", "sent1": "graphs can track numeric information", "gold": 0}
+{"id": "test_00033", "sent0": "Puja almost works 12 to 15 hours every day.", "sent1": "Puja almost works 25 to 30 hours every day.", "gold": 1}
+{"id": "test_00034", "sent0": "He opened the bottle to read it", "sent1": "He opened the book to read it.", "gold": 0}
+{"id": "test_00035", "sent0": "My professor had us write an essay on The National Monument.", "sent1": "My son had us write an essay on The National Monument.", "gold": 1}
+{"id": "test_00036", "sent0": "the moon is falling from the sky", "sent1": "A moon didn't fall from the sky", "gold": 0}
+{"id": "test_00037", "sent0": "He bought groceries at the store.", "sent1": "He bought groceries at the zoo.", "gold": 1}
+{"id": "test_00038", "sent0": "Owls are used to brighten a room.", "sent1": "Lamps are used to brighten a room.", "gold": 0}
+{"id": "test_00039", "sent0": "Eagles are a kind of bird", "sent1": "Eagles are a type of fish", "gold": 1}
+{"id": "test_00040", "sent0": "Dolphins are fish.", "sent1": "Dolphins are mammals.", "gold": 0}
+{"id": "test_00041", "sent0": "Brushes are for hair", "sent1": "Salsa is for hair", "gold": 1}
+{"id": "test_00042", "sent0": "A home is a place for violence.", "sent1": "A home gives a person a sense of security", "gold": 0}
+{"id": "test_00043", "sent0": "If you sleep for 8 hours you will feel rested", "sent1": "If you run a marathon for 26 miles you will feel rested", "gold": 1}
+{"id": "test_00044", "sent0": "The bike overtake the car", "sent1": "The red car went by very fast", "gold": 0}
+{"id": "test_00045", "sent0": "a ball is a bouncy, round object made of rubber", "sent1": "a rock is a bouncy, round object made of rubber", "gold": 1}
+{"id": "test_00046", "sent0": "A group of people seated at bed for a meal", "sent1": "A group of people seated at the table for a meal", "gold": 0}
+{"id": "test_00047", "sent0": "orange juice tastes like orange", "sent1": "Water tastes like orange juice", "gold": 1}
+{"id": "test_00048", "sent0": "He used the mop to clean the carpet.", "sent1": "He used the vacuum to clean the carpet.", "gold": 0}
+{"id": "test_00049", "sent0": "She put the contact lens into her eye", "sent1": "She put the contact lens into her mouth", "gold": 1}
+{"id": "test_00050", "sent0": "surveys have been known to harm children", "sent1": "surveys are great to make quick money", "gold": 0}
+{"id": "test_00051", "sent0": "I saw my friend's cat dancing", "sent1": "I saw my friend's car dancing", "gold": 1}
+{"id": "test_00052", "sent0": "Today I ran three ice-creams to gain a lot of calories to help me lose weight.", "sent1": "Today I ran two miles to burn a lot of calories to help me lose weight.", "gold": 0}
+{"id": "test_00053", "sent0": "Mary won the race yesterday", "sent1": "Mary won the race tomorrow", "gold": 1}
+{"id": "test_00054", "sent0": "The watermelon ate the kids", "sent1": "The kids ate watermelon", "gold": 0}
+{"id": "test_00055", "sent0": "Coffee is made from beans", "sent1": "Orange juice is made from beans", "gold": 1}
+{"id": "test_00056", "sent0": "If you want to buy presents for others then you should figure out what you want", "sent1": "If you want to buy presents for others then you should figure out what they want", "gold": 0}
+{"id": "test_00057", "sent0": "Each day someone gets older.", "sent1": "Each day someone gets younger.", "gold": 1}
+{"id": "test_00058", "sent0": "she drives the public bus to school", "sent1": "she rides the public bus to school", "gold": 0}
+{"id": "test_00059", "sent0": "There are lots of fish in the sea.", "sent1": "There are lots of fish in the sky.", "gold": 1}
+{"id": "test_00060", "sent0": "You should leave the lights on when you leave the room.", "sent1": "You should turn the lights off when you leave the room.", "gold": 0}
+{"id": "test_00061", "sent0": "The sun is very hot.", "sent1": "The sun is very cold.", "gold": 1}
+{"id": "test_00062", "sent0": "A notebook can work with being plugged in", "sent1": "A computer can work with being plugged in", "gold": 0}
+{"id": "test_00063", "sent0": "People can breathe on earth without any mechanical aid or protection.", "sent1": "People can breathe in outer space without any mechanical aid or protection.", "gold": 1}
+{"id": "test_00064", "sent0": "She turned in her homework five years after it was due and got full credit", "sent1": "She turned in her homework before it was due and got full credit", "gold": 0}
+{"id": "test_00065", "sent0": "Running is faster than walking", "sent1": "Walking is faster than driving", "gold": 1}
+{"id": "test_00066", "sent0": "she likes to sing loudly at work", "sent1": "she likes to sing loudly at the mall", "gold": 0}
+{"id": "test_00067", "sent0": "He wears a hat on his head.", "sent1": "He wears an umbrella on his head.", "gold": 1}
+{"id": "test_00068", "sent0": "The car can go the speed of light", "sent1": "The car can go the speed of 200MPH", "gold": 0}
+{"id": "test_00069", "sent0": "Dogs require food to survive.", "sent1": "Dogs require aluminum to survive.", "gold": 1}
+{"id": "test_00070", "sent0": "Snowmen are made of sand.", "sent1": "Snowmen are made of snow.", "gold": 0}
+{"id": "test_00071", "sent0": "Horses have hooves.", "sent1": "Dogs have hooves.", "gold": 1}
+{"id": "test_00072", "sent0": "Cars stop at a green light.", "sent1": "Cars stop at a red light.", "gold": 0}
+{"id": "test_00073", "sent0": "Joe wanted something to eat. He decided to eat pizza.", "sent1": "Joe wanted something to eat. He decided to drink a soccer ball.", "gold": 1}
+{"id": "test_00074", "sent0": "My TV is floating in mid-air", "sent1": "My TV is on a black desk", "gold": 0}
+{"id": "test_00075", "sent0": "A television is something that you watch daily.", "sent1": "A television is something that you seat on daily.", "gold": 1}
+{"id": "test_00076", "sent0": "Halloween night is the most ordinary night of the year", "sent1": "Halloween night is the spookiest night of the year", "gold": 0}
+{"id": "test_00077", "sent0": "She danced eloquently into the night.", "sent1": "She drove eloquently into the sky.", "gold": 1}
+{"id": "test_00078", "sent0": "The book returned the girl to the library.", "sent1": "She returned the book to the library.", "gold": 0}
+{"id": "test_00079", "sent0": "She turned the light off.", "sent1": "She turned the sun off.", "gold": 1}
+{"id": "test_00080", "sent0": "Toothbrush is a small brush with a long handle, used for cleaning the car", "sent1": "Toothbrush is a small brush with a long handle, used for cleaning the teeth", "gold": 0}
+{"id": "test_00081", "sent0": "The wind blows over a tree", "sent1": "The wind pushes the tree upright", "gold": 1}
+{"id": "test_00082", "sent0": "Toads are not made of wood", "sent1": "Witches are not made of wood", "gold": 0}
+{"id": "test_00083", "sent0": "athletes are fast", "sent1": "athletes are slow", "gold": 1}
+{"id": "test_00084", "sent0": "John plays football in outer space.", "sent1": "John plays football on a field.", "gold": 0}
+{"id": "test_00085", "sent0": "my boyfriend drinks orange juice after breakfast every day", "sent1": "my boyfriend drinks diesel after breakfast every day", "gold": 1}
+{"id": "test_00086", "sent0": "He washed the sky", "sent1": "He washed the dishes", "gold": 0}
+{"id": "test_00087", "sent0": "Window is an opening in the wall or roof of a building or vehicle", "sent1": "Widow is an opening in the wall or roof of a building or vehicle", "gold": 1}
+{"id": "test_00088", "sent0": "You are likely to find zebras in an office building", "sent1": "You are likely to find office space in an office building", "gold": 0}
+{"id": "test_00089", "sent0": "People get killed in famines.", "sent1": "People get fat during famines.", "gold": 1}
+{"id": "test_00090", "sent0": "The order entered a system by the assistant.", "sent1": "The assistant entered the purchase order into the company system.", "gold": 0}
+{"id": "test_00091", "sent0": "The carpenters only uses the best wood.", "sent1": "The best wood is made out of metal.", "gold": 1}
+{"id": "test_00092", "sent0": "My neighbor has a sore throat so she took her car to the garage.", "sent1": "My neighbor went to the doctor because she has a sore throat.", "gold": 0}
+{"id": "test_00093", "sent0": "dolphins are fast to swim", "sent1": "dolphins are fast to fly", "gold": 1}
+{"id": "test_00094", "sent0": "Popsicles are made of cotton", "sent1": "Popsicles are frozen treats", "gold": 0}
+{"id": "test_00095", "sent0": "Joe got a speeding ticket because he drives too fast.", "sent1": "Joe got a parking ticket because he drives too fast.", "gold": 1}
+{"id": "test_00096", "sent0": "He takes the house from the washing machine.", "sent1": "She takes the clothes from the washing machine.", "gold": 0}
+{"id": "test_00097", "sent0": "An x-ray can be used to check the condition of a person's bones.", "sent1": "An x-ray can be used to see people without clothes.", "gold": 1}
+{"id": "test_00098", "sent0": "Pens are for painting", "sent1": "Pens are for writing", "gold": 0}
+{"id": "test_00099", "sent0": "Eat an apple a day and keep the doctor away", "sent1": "Eating an apple a day will invite the diseases", "gold": 1}
+{"id": "test_00100", "sent0": "I was doing my laundry at the library.", "sent1": "I was reading a book at the library.", "gold": 0}
+{"id": "test_00101", "sent0": "blueberries are blue", "sent1": "blueberries are red", "gold": 1}
+{"id": "test_00102", "sent0": "The doctor failed medical school", "sent1": "The doctor graduated from medical school", "gold": 0}
+{"id": "test_00103", "sent0": "Pianos have strings inside of them", "sent1": "Pianos have fires inside of them", "gold": 1}
+{"id": "test_00104", "sent0": "I play catch with a boat", "sent1": "I play catch with a baseball", "gold": 0}
+{"id": "test_00105", "sent0": "Paper comes from trees", "sent1": "Paper comes from tears cried by the planet", "gold": 1}
+{"id": "test_00106", "sent0": "She was drinking from a plate", "sent1": "She was drinking from a cup", "gold": 0}
+{"id": "test_00107", "sent0": "When you go out for a jog, you are participating in the activity of jogging.", "sent1": "When you go out to a baseball game, you are participating in the activity of baseball.", "gold": 1}
+{"id": "test_00108", "sent0": "He answers a call on his banana.", "sent1": "He answers a call on his cell phone.", "gold": 0}
+{"id": "test_00109", "sent0": "the chicken laid an egg", "sent1": "the horse laid an egg", "gold": 1}
+{"id": "test_00110", "sent0": "Carol turned on the potato", "sent1": "Carol turned on the flashlight", "gold": 0}
+{"id": "test_00111", "sent0": "The library is on a street corner downtown", "sent1": "The library is under a river downtown", "gold": 1}
+{"id": "test_00112", "sent0": "I wear my gloves on my feet.", "sent1": "I wear my gloves on my hands.", "gold": 0}
+{"id": "test_00113", "sent0": "The sun shines light on the earth", "sent1": "The sun sprays water on the planet", "gold": 1}
+{"id": "test_00114", "sent0": "A man walked from his home to the moon.", "sent1": "A man walked from his home to the grocery store.", "gold": 0}
+{"id": "test_00115", "sent0": "Observatories are located at the top of the mountain", "sent1": "Observatories are located at the bottom of the ocean.", "gold": 1}
+{"id": "test_00116", "sent0": "I swam to the lowest point of the ocean in one breath", "sent1": "I swam to the lowest point of the pool in one breath", "gold": 0}
+{"id": "test_00117", "sent0": "Nuts are a highly concentrated form of nutrition.", "sent1": "Ice is a highly concentrated form of nutrition.", "gold": 1}
+{"id": "test_00118", "sent0": "The man is a rubber", "sent1": "The man is resilient", "gold": 0}
+{"id": "test_00119", "sent0": "Eating pizza requires a pizza", "sent1": "Eating pizza requires a masters degree", "gold": 1}
+{"id": "test_00120", "sent0": "The bird rented a room", "sent1": "The bird is tired", "gold": 0}
+{"id": "test_00121", "sent0": "The black owl is large", "sent1": "The black owl is red", "gold": 1}
+{"id": "test_00122", "sent0": "Knives heal children.", "sent1": "Knives hurt children.", "gold": 0}
+{"id": "test_00123", "sent0": "The boy ate some ice cream.", "sent1": "The boy ate a bush.", "gold": 1}
+{"id": "test_00124", "sent0": "She went to college to learn how to drive a car", "sent1": "She went to college to get a degree in criminology", "gold": 0}
+{"id": "test_00125", "sent0": "a ball is for dancing at", "sent1": "dinner is for dancing at", "gold": 1}
+{"id": "test_00126", "sent0": "It is OK to take hot things out of the oven without using an oven mitten.", "sent1": "You should never take anything hot out of the oven without an oven mitten.", "gold": 0}
+{"id": "test_00127", "sent0": "The farm is in Kansas", "sent1": "The farm is in carpet", "gold": 1}
+{"id": "test_00128", "sent0": "He put bricks in the oven for baking", "sent1": "He put the cake in the oven for baking", "gold": 0}
+{"id": "test_00129", "sent0": "He hide his shoes in the closet.", "sent1": "He hide a lion in the closet.", "gold": 1}
+{"id": "test_00130", "sent0": "London goes in this bus.", "sent1": "This bus may go to London.", "gold": 0}
+{"id": "test_00131", "sent0": "Mowing the lawn requires peoples to accomplish the task.", "sent1": "Mowing the lawn requires zero people to accomplish the task.", "gold": 1}
+{"id": "test_00132", "sent0": "Fish swim in sand.", "sent1": "Fish swim in water.", "gold": 0}
+{"id": "test_00133", "sent0": "It is cold outside", "sent1": "It is cold and hot outside", "gold": 1}
+{"id": "test_00134", "sent0": "Empty books are educational.", "sent1": "Books are educational.", "gold": 0}
+{"id": "test_00135", "sent0": "If you want to go for a jog then you should start jogging.", "sent1": "If you want to go for a jog then you should start singing", "gold": 1}
+{"id": "test_00136", "sent0": "Everyone hates racists.", "sent1": "I hate racists.", "gold": 0}
+{"id": "test_00137", "sent0": "He broke his leg and had to get a cast", "sent1": "He broke his leg and went to get a burger", "gold": 1}
+{"id": "test_00138", "sent0": "I eat rocks every day for lunch.", "sent1": "I eat a banana every day for lunch.", "gold": 0}
+{"id": "test_00139", "sent0": "cake is not poisonous", "sent1": "lead is not poisonous", "gold": 1}
+{"id": "test_00140", "sent0": "salsa is blue", "sent1": "salsa is red", "gold": 0}
+{"id": "test_00141", "sent0": "A rainbow is a meteorological phenomenon", "sent1": "A rainbow can appear on the ground", "gold": 1}
+{"id": "test_00142", "sent0": "It is easy to see the stars on a clear day.", "sent1": "It is hard to see the stars at night in places with air pollution.", "gold": 0}
+{"id": "test_00143", "sent0": "The chef put extra mushrooms on the pizza.", "sent1": "The chef put extra lemons on the pizza.", "gold": 1}
+{"id": "test_00144", "sent0": "Outfielders catch the ball from pitchers.", "sent1": "Pitchers throw the ball from the pitcher's mound to the plate.", "gold": 0}
+{"id": "test_00145", "sent0": "He took his dog to the park.", "sent1": "He took his house to the park 2 blocks away", "gold": 1}
+{"id": "test_00146", "sent0": "He flew the airplane to Jupiter", "sent1": "He flew the airplane to Europe", "gold": 0}
+{"id": "test_00147", "sent0": "Food gets cooler as you leave it out", "sent1": "Food gets hotter as you leave it out", "gold": 1}
+{"id": "test_00148", "sent0": "I rescued my goldfish from the shelter.", "sent1": "I rescued my dog from the shelter.", "gold": 0}
+{"id": "test_00149", "sent0": "I put clothes into the washing machine.", "sent1": "I put bricks into the washing machine.", "gold": 1}
+{"id": "test_00150", "sent0": "The sky is orange", "sent1": "The sky is blue", "gold": 0}
+{"id": "test_00151", "sent0": "They stored food in the fridge in summer", "sent1": "They stored food in the ground in summer", "gold": 1}
+{"id": "test_00152", "sent0": "The man slipped on the gentle breeze", "sent1": "The man slipped on the banana skin", "gold": 0}
+{"id": "test_00153", "sent0": "A liquid becomes a gas when it reaches boiling point", "sent1": "A liquid becomes a solid when it reaches boiling point", "gold": 1}
+{"id": "test_00154", "sent0": "I hung a horse in my hallway.", "sent1": "I hung a painting of a horse in my hallway.", "gold": 0}
+{"id": "test_00155", "sent0": "She sat in the chair", "sent1": "She read the chair a book", "gold": 1}
+{"id": "test_00156", "sent0": "We need fire to survive.", "sent1": "We need plants to survive.", "gold": 0}
+{"id": "test_00157", "sent0": "The angered kitten is noisy", "sent1": "The angered chocolate bar is noisy", "gold": 1}
+{"id": "test_00158", "sent0": "The boy ate a basketball", "sent1": "The boy ate a donut", "gold": 0}
+{"id": "test_00159", "sent0": "Orange juice is orange.", "sent1": "Orange juice is green.", "gold": 1}
+{"id": "test_00160", "sent0": "I walked to the sand factory to eat lunch.", "sent1": "I walked to McDonald to eat lunch.", "gold": 0}
+{"id": "test_00161", "sent0": "Mike ate four sandwiches after running.", "sent1": "Mike ran four sandwiches.", "gold": 1}
+{"id": "test_00162", "sent0": "I will never die.", "sent1": "All that is born must eventually die.", "gold": 0}
+{"id": "test_00163", "sent0": "She made a shirt for a clown", "sent1": "She made a clown make a shirt", "gold": 1}
+{"id": "test_00164", "sent0": "We don't communicate with each other at all", "sent1": "We communicate with each other by words and gestures", "gold": 0}
+{"id": "test_00165", "sent0": "I use a lawnmower to cut my grass.", "sent1": "I use grass to cut my lawnmower.", "gold": 1}
+{"id": "test_00166", "sent0": "She fell up the stairs and broke her knee", "sent1": "She fell down the stairs and broke her knee", "gold": 0}
+{"id": "test_00167", "sent0": "An ant is a type of insect.", "sent1": "All insects are ants.", "gold": 1}
+{"id": "test_00168", "sent0": "She put the filing cabinet into the papers.", "sent1": "She put the papers into the filing cabinet.", "gold": 0}
+{"id": "test_00169", "sent0": "It is good to drink milk at night", "sent1": "It is good to drink saltwater at night", "gold": 1}
+{"id": "test_00170", "sent0": "The park ran to him", "sent1": "He ran to the park", "gold": 0}
+{"id": "test_00171", "sent0": "Arguments are to be avoided.", "sent1": "Arguments are something to be striven for.", "gold": 1}
+{"id": "test_00172", "sent0": "Most people sleep in a shoe.", "sent1": "Most people sleep in a bed.", "gold": 0}
+{"id": "test_00173", "sent0": "He is wearing gloves on his hands.", "sent1": "He is wearing gloves on his feet.", "gold": 1}
+{"id": "test_00174", "sent0": "Horse uses its trunk to drink water", "sent1": "Elephant uses its trunk to drink water", "gold": 0}
+{"id": "test_00175", "sent0": "They grabbed a soda from the drawer.", "sent1": "They grabbed a dinosaur from the drawer.", "gold": 1}
+{"id": "test_00176", "sent0": "The rotary phone recorded me.", "sent1": "The cell phone recorded me.", "gold": 0}
+{"id": "test_00177", "sent0": "Bats can fly perfectly.", "sent1": "Bats can ride bicycles.", "gold": 1}
+{"id": "test_00178", "sent0": "Jeremy fetches a bull from the cabinet.", "sent1": "Jeremy fetches the cans of soup from the cabinet.", "gold": 0}
+{"id": "test_00179", "sent0": "My bird is about a foot tall.", "sent1": "My bird is about forty feet tall.", "gold": 1}
+{"id": "test_00180", "sent0": "The worm swallowed the bird.", "sent1": "The bird swallowed the worm.", "gold": 0}
+{"id": "test_00181", "sent0": "a briefcase can be used for storing documents", "sent1": "the briefcase is stored in some documents", "gold": 1}
+{"id": "test_00182", "sent0": "She throws a stove in the hat.", "sent1": "She throws a feather in the hat.", "gold": 0}
+{"id": "test_00183", "sent0": "She brought a book to bed.", "sent1": "She brought a microwave to bed.", "gold": 1}
+{"id": "test_00184", "sent0": "I wore a notebook to work.", "sent1": "I wore pants to work.", "gold": 0}
+{"id": "test_00185", "sent0": "Most cars run on gasoline", "sent1": "Most kangaroos run on gasoline", "gold": 1}
+{"id": "test_00186", "sent0": "The lizard climbed the ocean.", "sent1": "The lizard climbed a rock.", "gold": 0}
+{"id": "test_00187", "sent0": "Cats walk on all four legs", "sent1": "Cats are bipedal creatures", "gold": 1}
+{"id": "test_00188", "sent0": "the clothes are running away", "sent1": "the clothes are being washed", "gold": 0}
+{"id": "test_00189", "sent0": "His glasses are blurry so he wipes them clean", "sent1": "His glasses are clear so he wipes them clean", "gold": 1}
+{"id": "test_00190", "sent0": "My knee was scrapped and I put dirt on it.", "sent1": "My knee was scrapped and I put ointment on it.", "gold": 0}
+{"id": "test_00191", "sent0": "Please turn off the lights? It is shinny", "sent1": "Please turn on the lights? It is shinny", "gold": 1}
+{"id": "test_00192", "sent0": "Joey likes to eat poison", "sent1": "Joey likes to eat fruits", "gold": 0}
+{"id": "test_00193", "sent0": "HE WAS GOING TO HOSPITAL AFTER ACCIDENT", "sent1": "HE WAS GOING TO RESTAURANT AFTER ACCIDENT", "gold": 1}
+{"id": "test_00194", "sent0": "He pet his pterodactyl gently", "sent1": "He pet his dog gently", "gold": 0}
+{"id": "test_00195", "sent0": "I use a weed whacker to cut my grass.", "sent1": "I use grass to cut my weed whacker.", "gold": 1}
+{"id": "test_00196", "sent0": "I just deposited ten tigers in the banks and will get doubled in six years.", "sent1": "I just invest 1 million in mutual funds.", "gold": 0}
+{"id": "test_00197", "sent0": "My dog is laying on the floor.", "sent1": "My dog is laying on the ceiling.", "gold": 1}
+{"id": "test_00198", "sent0": "Helicopters can speak English", "sent1": "Helicopters land without runways.", "gold": 0}
+{"id": "test_00199", "sent0": "I like to drink coffee in the morning", "sent1": "I like to drink coffee beans in the morning", "gold": 1}
+{"id": "test_00200", "sent0": "He parks his car in the closet.", "sent1": "He parks his car in the garage.", "gold": 0}
+{"id": "test_00201", "sent0": "He eats a banana for breakfast every day.", "sent1": "She throws bananas at caretakers at the zoo all day.", "gold": 1}
+{"id": "test_00202", "sent0": "the room is a nice place to jog", "sent1": "the park is a nice place to jog", "gold": 0}
+{"id": "test_00203", "sent0": "My brother is sick when he travels.", "sent1": "My brother travels when he's sick.", "gold": 1}
+{"id": "test_00204", "sent0": "People who start fires are pyromaniacs.", "sent1": "My friend started a campfire on the 4th of July.", "gold": 0}
+{"id": "test_00205", "sent0": "Ash caught all the Pokemon", "sent1": "The Pokemon caught Ash", "gold": 1}
+{"id": "test_00206", "sent0": "the TV is walking away", "sent1": "the TV is on right now", "gold": 0}
+{"id": "test_00207", "sent0": "a famous car brand is Ford.", "sent1": "The best car is the spaceships.", "gold": 1}
+{"id": "test_00208", "sent0": "the stove helps to cool down the house", "sent1": "the air-conditioning helps to cool down the house", "gold": 0}
+{"id": "test_00209", "sent0": "I finished my studies at school", "sent1": "I finished my studies inside the sewer", "gold": 1}
+{"id": "test_00210", "sent0": "The video game ran away.", "sent1": "he likes to lay video games.", "gold": 0}
+{"id": "test_00211", "sent0": "At night people can see many stars.", "sent1": "At day people can see many stars.", "gold": 1}
+{"id": "test_00212", "sent0": "the dog is talking", "sent1": "the dog likes to run", "gold": 0}
+{"id": "test_00213", "sent0": "She hung a post-it note on her pin-board using a push pin", "sent1": "She hung a post-it note on her pin-board using a cockroach", "gold": 1}
+{"id": "test_00214", "sent0": "The ant stepped on the child, which killed it.", "sent1": "The child stepped on the ant, which killed it.", "gold": 0}
+{"id": "test_00215", "sent0": "He ate a hamburger for lunch", "sent1": "He punched a hamburger for lunch", "gold": 1}
+{"id": "test_00216", "sent0": "He was in the backyard in Minnesota growing some burgers.", "sent1": "He was in the backyard in Minnesota grilling some burgers.", "gold": 0}
+{"id": "test_00217", "sent0": "The boy broke his tooth on a mango pit.", "sent1": "The boy broke his tooth on a banana pit.", "gold": 1}
+{"id": "test_00218", "sent0": "An old car is expensive.", "sent1": "A new cars are expensive.", "gold": 0}
+{"id": "test_00219", "sent0": "He fed the dog kibble.", "sent1": "He fed the dog eucalyptus leaves.", "gold": 1}
+{"id": "test_00220", "sent0": "She continued watching TV as she urinated in her pants.", "sent1": "She went to the bathroom to urinate in the toilet.", "gold": 0}
+{"id": "test_00221", "sent0": "He took the fruit basket to the store", "sent1": "He took the giraffe to the store", "gold": 1}
+{"id": "test_00222", "sent0": "My heater cools a lot", "sent1": "My heater gets very hot", "gold": 0}
+{"id": "test_00223", "sent0": "Reading a book is a great way to go on a journey without leaving your home.", "sent1": "Read a book and you'll be thrown into a world of lions, witches, and wardrobes, and have to fight for your life!", "gold": 1}
+{"id": "test_00224", "sent0": "Christmas eve is the most ordinary night of the year", "sent1": "Christmas eve is the spookiest night of the year", "gold": 0}
+{"id": "test_00225", "sent0": "I prefer Amazon to shop online.", "sent1": "Amazon is the only place to shop online.", "gold": 1}
+{"id": "test_00226", "sent0": "A dog can cut down a tree.", "sent1": "A dog can pee on a tree.", "gold": 0}
+{"id": "test_00227", "sent0": "She put an ice cream in the freezer.", "sent1": "She put an ice cream in the oven.", "gold": 1}
+{"id": "test_00228", "sent0": "Janitors create financial models for their company", "sent1": "Janitors often clean bathrooms for their company", "gold": 0}
+{"id": "test_00229", "sent0": "I ate a protein bar", "sent1": "The protein bar ate me", "gold": 1}
+{"id": "test_00230", "sent0": "the man fed the mouse a snake", "sent1": "the man fed the snake a mouse", "gold": 0}
+{"id": "test_00231", "sent0": "Something you find in a desk is highlighters.", "sent1": "Something you find in a desk is tigers.", "gold": 1}
+{"id": "test_00232", "sent0": "he likes to drink motor oil", "sent1": "he likes to drink cold coffee", "gold": 0}
+{"id": "test_00233", "sent0": "Plants need sunlight.", "sent1": "Plants need motor oil.", "gold": 1}
+{"id": "test_00234", "sent0": "in summers, always the weather is cold.", "sent1": "in summers, always the weather is rainy.", "gold": 0}
+{"id": "test_00235", "sent0": "he is bleeding", "sent1": "The rug is bleeding", "gold": 1}
+{"id": "test_00236", "sent0": "My uncle runs over the waters on weekends.", "sent1": "My uncle surfs on the weekends.", "gold": 0}
+{"id": "test_00237", "sent0": "My cockatoo speaks very well.", "sent1": "My window speaks very well.", "gold": 1}
+{"id": "test_00238", "sent0": "The woman dyes her feet every six weeks at the salon.", "sent1": "The woman dyes her hair every six weeks at the salon.", "gold": 0}
+{"id": "test_00239", "sent0": "An airplane flies through the air.", "sent1": "An airplane swims in the water.", "gold": 1}
+{"id": "test_00240", "sent0": "Artificial flowers in my flower vase wilts soon", "sent1": "Fresh flowers in my flower vase wilts soon", "gold": 0}
+{"id": "test_00241", "sent0": "People need fruit to live", "sent1": "Fruit needs people to live", "gold": 1}
+{"id": "test_00242", "sent0": "The inverter was able to power the continent.", "sent1": "The inverter was able to power the house", "gold": 0}
+{"id": "test_00243", "sent0": "Sweating is a body mechanism to cool down", "sent1": "Sweating is a body mechanism to look cool", "gold": 1}
+{"id": "test_00244", "sent0": "the ice cream stays cold in the microwave", "sent1": "the ice cream stays cold in the freeze", "gold": 0}
+{"id": "test_00245", "sent0": "A train is used for traveling", "sent1": "A train is used for sailing", "gold": 1}
+{"id": "test_00246", "sent0": "The cat pounced on the rabbit", "sent1": "The dog pounced on the rabbit", "gold": 0}
+{"id": "test_00247", "sent0": "Micheal swam across the pool", "sent1": "Michael swam across the Pacific Ocean", "gold": 1}
+{"id": "test_00248", "sent0": "She went to the grocery store to get an aneurysm.", "sent1": "She went to the grocery store to get bananas.", "gold": 0}
+{"id": "test_00249", "sent0": "Many mammals have fingerprints.", "sent1": "All mammals have fingerprints.", "gold": 1}
+{"id": "test_00250", "sent0": "The whale was found in the forest", "sent1": "The bear was found in the forest.", "gold": 0}
+{"id": "test_00251", "sent0": "Going to a place that is too far to walk to requires other means of transportation", "sent1": "Going to a place that is too far to walk requires good tennis.", "gold": 1}
+{"id": "test_00252", "sent0": "Snowmobiles wear snowsuits to stay warm in the wintertime.", "sent1": "Snowmobile drivers wear snowsuits to stay warm in the winter time.", "gold": 0}
+{"id": "test_00253", "sent0": "I live 100 miles from my birth location.", "sent1": "I live 100 miles from Saturn.", "gold": 1}
+{"id": "test_00254", "sent0": "Circuses only have animals", "sent1": "A clown is in a circus", "gold": 0}
+{"id": "test_00255", "sent0": "Snowmen are cold.", "sent1": "Snowmen are liquid.", "gold": 1}
+{"id": "test_00256", "sent0": "Stepping through the window is the usual way to enter a room.", "sent1": "Stepping through the door is the usual way to enter a room.", "gold": 0}
+{"id": "test_00257", "sent0": "A shark can live in an aquarium.", "sent1": "A dog can live in an aquarium.", "gold": 1}
+{"id": "test_00258", "sent0": "To be a doctor you must only obtain the faith and trust of your patients.", "sent1": "To be a doctor you must go to school for several years and earn a Ph.D.", "gold": 0}
+{"id": "test_00259", "sent0": "She is reading a book.", "sent1": "She is hypnotizing a book.", "gold": 1}
+{"id": "test_00260", "sent0": "She taught Spanish to her lilac bush.", "sent1": "She taught Spanish to her children.", "gold": 0}
+{"id": "test_00261", "sent0": "You will probably find a front room in a condominium.", "sent1": "You will probably find a front condo in a room.", "gold": 1}
+{"id": "test_00262", "sent0": "I went to the bathroom because I was tired.", "sent1": "I went to bed because I was tired.", "gold": 0}
+{"id": "test_00263", "sent0": "Men are usually larger than women.", "sent1": "Women are usually larger than men.", "gold": 1}
+{"id": "test_00264", "sent0": "He placed the table on top of the pencil", "sent1": "He placed the pencil on top of the table.", "gold": 0}
+{"id": "test_00265", "sent0": "Kim is taking out the garbage.", "sent1": "Kim is dating the garbage.", "gold": 1}
+{"id": "test_00266", "sent0": "The waterfall flowed up sending the children to the top of the rock.", "sent1": "The waterfall provided the children with an exciting slide down the rock.", "gold": 0}
+{"id": "test_00267", "sent0": "An electrician wires houses.", "sent1": "An electrician generates electricity.", "gold": 1}
+{"id": "test_00268", "sent0": "Racism is over", "sent1": "Racism is hurtful", "gold": 0}
+{"id": "test_00269", "sent0": "The whale washed up on the beach", "sent1": "The cheetah washed up on the beach", "gold": 1}
+{"id": "test_00270", "sent0": "Plastic is not reusable", "sent1": "plastic can be transparent", "gold": 0}
+{"id": "test_00271", "sent0": "My brother adopted a cat from a shelter", "sent1": "My brother adopter a tiger from a shelter", "gold": 1}
+{"id": "test_00272", "sent0": "He jumped through the happiness", "sent1": "He jumped through the window", "gold": 0}
+{"id": "test_00273", "sent0": "Something you find under a desk is the floor.", "sent1": "Something you find under a desk is the ceiling fan.", "gold": 1}
+{"id": "test_00274", "sent0": "I put on my sunglasses because it was an overcast day.", "sent1": "I put on my sunglasses because it was a hot August day.", "gold": 0}
+{"id": "test_00275", "sent0": "the pharmacy sell medications", "sent1": "the pharmacy sell pets", "gold": 1}
+{"id": "test_00276", "sent0": "Going to the movie is fun for animals.", "sent1": "Going to the movies is fun for the whole family.", "gold": 0}
+{"id": "test_00277", "sent0": "Babies are affected heavily by their environments.", "sent1": "Babies are unaware of their surroundings and reap no harm from the negativity around them.", "gold": 1}
+{"id": "test_00278", "sent0": "He combed a bookshelf because it is hairy.", "sent1": "He combed a bookshelf looking for a book.", "gold": 0}
+{"id": "test_00279", "sent0": "My sister eats an entire watermelon", "sent1": "My sister eats a pair of scissors", "gold": 1}
+{"id": "test_00280", "sent0": "At the restaurant, police came for taking orders", "sent1": "At the restaurant, a waiter came for taking orders", "gold": 0}
+{"id": "test_00281", "sent0": "Kids like to sleep with teddy bears.", "sent1": "Kids like to sleep with grizzly bears.", "gold": 1}
+{"id": "test_00282", "sent0": "Smartphone is a device used for transportation", "sent1": "Smartphone is a device used for communication", "gold": 0}
+{"id": "test_00283", "sent0": "I scrubbed the floors.", "sent1": "I oiled the floors.", "gold": 1}
+{"id": "test_00284", "sent0": "he was dancing on the lake", "sent1": "he was dancing on the floor", "gold": 0}
+{"id": "test_00285", "sent0": "He walked a dog on a leash in the park", "sent1": "He walked a rock in the park", "gold": 1}
+{"id": "test_00286", "sent0": "I put the leftover food in the oven.", "sent1": "I put the leftover food in the fridge.", "gold": 0}
+{"id": "test_00287", "sent0": "Lobsters live in the ocean", "sent1": "Lobsters live in the mountains", "gold": 1}
+{"id": "test_00288", "sent0": "He ate an interesting book.", "sent1": "He read an interesting book.", "gold": 0}
+{"id": "test_00289", "sent0": "The cheetah is the fastest mammal on the planet", "sent1": "The human is the fastest mammal on the planet", "gold": 1}
+{"id": "test_00290", "sent0": "Banks lend money without any interest", "sent1": "Banks lend money on interest", "gold": 0}
+{"id": "test_00291", "sent0": "He drove his car on the highway.", "sent1": "He drove his boat on the highway", "gold": 1}
+{"id": "test_00292", "sent0": "You can ride the subway in the country.", "sent1": "You can ride the subway in the city.", "gold": 0}
+{"id": "test_00293", "sent0": "He runs his air conditioner when it's hot outside", "sent1": "He runs his heater when it's hot outside", "gold": 1}
+{"id": "test_00294", "sent0": "She checked the bucket for the time", "sent1": "She turned around to check the time", "gold": 0}
+{"id": "test_00295", "sent0": "He smokes Cigarettes in his house.", "sent1": "He smokes Cigarettes in a gas station.", "gold": 1}
+{"id": "test_00296", "sent0": "Elephants life at the north-pole.", "sent1": "Tigers live in the jungle.", "gold": 0}
+{"id": "test_00297", "sent0": "CNN covers the news", "sent1": "CNN is for sports", "gold": 1}
+{"id": "test_00298", "sent0": "Jerry has orange serfs with flamingos printed on them.", "sent1": "Jerry has orange undies with flamingos printed on them.", "gold": 0}
+{"id": "test_00299", "sent0": "School is where students go to study", "sent1": "School is where animals go to dance", "gold": 1}
+{"id": "test_00300", "sent0": "Apples can only be found in orchards.", "sent1": "Apples are found in orchards around the world.", "gold": 0}
+{"id": "test_00301", "sent0": "We bought fresh corn from the farmer.", "sent1": "We bought a painting from the farmer.", "gold": 1}
+{"id": "test_00302", "sent0": "Friends have to talk to each other every day", "sent1": "Friends talk to each other", "gold": 0}
+{"id": "test_00303", "sent0": "The man went to jail after beating his wife.", "sent1": "The man went to jail after eating candy.", "gold": 1}
+{"id": "test_00304", "sent0": "Chronic pain is usually caused by a person's mood.", "sent1": "Chronic pain can affect a person's mood.", "gold": 0}
+{"id": "test_00305", "sent0": "Swimming is a common summer activity", "sent1": "Swimming is a common winter activity", "gold": 1}
+{"id": "test_00306", "sent0": "She takes a bath after wearing her running shoes.", "sent1": "She takes bath after removing her running shoes.", "gold": 0}
+{"id": "test_00307", "sent0": "The last thing you do when you leave the home is to lock the door.", "sent1": "The last thing you do when you leave the home is curling your hair.", "gold": 1}
+{"id": "test_00308", "sent0": "She started a fire in the fridge.", "sent1": "She started a fire in the fireplace.", "gold": 0}
+{"id": "test_00309", "sent0": "The men are mowing the lawn because the grass is getting long.", "sent1": "The men are mowing the lawn because it is raining.", "gold": 1}
+{"id": "test_00310", "sent0": "The counter fell off the lamp", "sent1": "The lamp fell off the counter", "gold": 0}
+{"id": "test_00311", "sent0": "cars can be used for road drives", "sent1": "Boats can be used for road drives", "gold": 1}
+{"id": "test_00312", "sent0": "The teachers scolded the principal.", "sent1": "The principal scolded the teachers.", "gold": 0}
+{"id": "test_00313", "sent0": "He opened a can of worms with a can opener.", "sent1": "He opened a can opener with a can opener.", "gold": 1}
+{"id": "test_00314", "sent0": "The woman had her hair cut at the hardware store.", "sent1": "The woman had her hair cut at the hair salon.", "gold": 0}
+{"id": "test_00315", "sent0": "Alcoholic drinks are often served at parties", "sent1": "Alcoholic drinks are served in bowls.", "gold": 1}
+{"id": "test_00316", "sent0": "My dog purred when I came home.", "sent1": "My dog barked when I came home.", "gold": 0}
+{"id": "test_00317", "sent0": "The girl broke her arm while ice skating.", "sent1": "The girl broke her lamp while ice skating.", "gold": 1}
+{"id": "test_00318", "sent0": "I and the goats had a nice barbecue yesterday", "sent1": "I and John had a barbecue yesterday", "gold": 0}
+{"id": "test_00319", "sent0": "The little boy likes to ride bicycle", "sent1": "The giraffe likes to ride  bicycle", "gold": 1}
+{"id": "test_00320", "sent0": "After cutting my hair, the barber shoveled snow that had fallen on the floor", "sent1": "After cutting my hair, the barber swept up hair that had fallen to the floor.", "gold": 0}
+{"id": "test_00321", "sent0": "He borrowed a book from the library", "sent1": "He borrowed a grinder from the library", "gold": 1}
+{"id": "test_00322", "sent0": "If it is a sunny day, you would have gotten wet", "sent1": "If it had rained, you would have gotten wet", "gold": 0}
+{"id": "test_00323", "sent0": "She cut down the large oak tree with a chainsaw", "sent1": "She cut down the grass with a chainsaw", "gold": 1}
+{"id": "test_00324", "sent0": "I talked to my friend in the bark.", "sent1": "I talked to my friend in the park.", "gold": 0}
+{"id": "test_00325", "sent0": "When people cry, tears come out of their eyes", "sent1": "When people cry, tears come out of their ears", "gold": 1}
+{"id": "test_00326", "sent0": "You are likely to find Rice bags in a shoe shop", "sent1": "You are likely to find sandals in a shoe shop", "gold": 0}
+{"id": "test_00327", "sent0": "He bought the book from the bookstore", "sent1": "he bought the bike from the bookstore", "gold": 1}
+{"id": "test_00328", "sent0": "he went up a valley", "sent1": "he went up the hill", "gold": 0}
+{"id": "test_00329", "sent0": "He put all dress in the washing machine to clean", "sent1": "He put all plates in the washing machine to clean", "gold": 1}
+{"id": "test_00330", "sent0": "Ocean water runs into the river", "sent1": "river water run and reach the ocean finally.", "gold": 0}
+{"id": "test_00331", "sent0": "You can use a hotel to sleep while away from home", "sent1": "You can use a Hospital to sleep while away from home", "gold": 1}
+{"id": "test_00332", "sent0": "he swims with piranhas", "sent1": "he swims 1km each way every day", "gold": 0}
+{"id": "test_00333", "sent0": "I play games on my phone", "sent1": "I play games on my shoes", "gold": 1}
+{"id": "test_00334", "sent0": "he put a giraffe on the back of his bike", "sent1": "he put a person on the back and his bike", "gold": 0}
+{"id": "test_00335", "sent0": "He cut the onion with a knife", "sent1": "He cut the onion with a spoon", "gold": 1}
+{"id": "test_00336", "sent0": "They write their exam by a water bottle.", "sent1": "They write their exam by pen", "gold": 0}
+{"id": "test_00337", "sent0": "He put on blue pants", "sent1": "He put his pants on a horse", "gold": 1}
+{"id": "test_00338", "sent0": "The doctor smashed the patient's broken bone.", "sent1": "The doctor repaired the patient's broken bone.", "gold": 0}
+{"id": "test_00339", "sent0": "My girlfriend and I went to the movies", "sent1": "The two lions went to the movies", "gold": 1}
+{"id": "test_00340", "sent0": "dogs are very social animals who prefer a solitary existence to live in a pack", "sent1": "dogs are very social animals who prefer life in a pack to a solitary existence", "gold": 0}
+{"id": "test_00341", "sent0": "he gave his dresses to wash in the laundry room", "sent1": "he gave his dresses to wash in the study room", "gold": 1}
+{"id": "test_00342", "sent0": "He picked up his piano and played a chord", "sent1": "He picked up his guitar and played a chord", "gold": 0}
+{"id": "test_00343", "sent0": "He wrote a book using his hands.", "sent1": "He wrote a book by breaking his pen.", "gold": 1}
+{"id": "test_00344", "sent0": "Children should eat their parents.", "sent1": "Children should be obedient to their parents.", "gold": 0}
+{"id": "test_00345", "sent0": "India backs Sri Lankan government", "sent1": "India backs Mars government", "gold": 1}
+{"id": "test_00346", "sent0": "He uses dumbbells for data typing work.", "sent1": "He uses a computer for data typing work.", "gold": 0}
+{"id": "test_00347", "sent0": "I use dumbbells to make big mussels body", "sent1": "I use cotton to make big mussels body", "gold": 1}
+{"id": "test_00348", "sent0": "Hair can be cut at the pharmacy.", "sent1": "Medicine is sold at the pharmacy.", "gold": 0}
+{"id": "test_00349", "sent0": "He sent some messages from the WhatsApp mobile application by his mobile", "sent1": "He sent some messages from the WhatsApp mobile application by his shoes", "gold": 1}
+{"id": "test_00350", "sent0": "A fish was walking on the roadside", "sent1": "A cat was walking on the roadside", "gold": 0}
+{"id": "test_00351", "sent0": "I tied my shoelaces with both hands", "sent1": "I tied my shoelaces with my shoulders", "gold": 1}
+{"id": "test_00352", "sent0": "He went to fishing in the Jeep to the desert.", "sent1": "He went for fishing in the boat to the lake.", "gold": 0}
+{"id": "test_00353", "sent0": "John can kick the ball with his foot", "sent1": "John can kick the ball with his hands", "gold": 1}
+{"id": "test_00354", "sent0": "He swam in petrol", "sent1": "He swam in the water", "gold": 0}
+{"id": "test_00355", "sent0": "Something that might happen while bathing is your body becomes wet.", "sent1": "Something that might happen while bathing is your shirt becomes wet.", "gold": 1}
+{"id": "test_00356", "sent0": "my brother speaks to the house", "sent1": "my brother today speak to me", "gold": 0}
+{"id": "test_00357", "sent0": "He purchased breads and vegetables to prepare a sandwich for dinner", "sent1": "He purchased chemical and cement to prepare a sandwich for dinner", "gold": 1}
+{"id": "test_00358", "sent0": "He turned on the TV with the VCR.", "sent1": "He turned on the TV with the remote.", "gold": 0}
+{"id": "test_00359", "sent0": "A television plays video with audio.", "sent1": "A television plays audio only.", "gold": 1}
+{"id": "test_00360", "sent0": "I hate the film so I keep watching it", "sent1": "I like the film so I keep watching it", "gold": 0}
+{"id": "test_00361", "sent0": "He melted the cheese onto the bread.", "sent1": "He melted the TV onto the bread.", "gold": 1}
+{"id": "test_00362", "sent0": "The boy wore his new shoes on his back.", "sent1": "The boy wore his new shoes on his feet.", "gold": 0}
+{"id": "test_00363", "sent0": "I would like to buy a PS4", "sent1": "I would like to fry a PS4", "gold": 1}
+{"id": "test_00364", "sent0": "She's a yogurt now and doesn't do anything fun", "sent1": "She's a yogi now and doesn't do anything fun", "gold": 0}
+{"id": "test_00365", "sent0": "i am going are computer buy on Acer store", "sent1": "i am going are computer buy on mobile shop", "gold": 1}
+{"id": "test_00366", "sent0": "He drinks white glue in breakfast", "sent1": "He drinks milk in breakfast", "gold": 0}
+{"id": "test_00367", "sent0": "she keeps milk inside the fridge.", "sent1": "she keeps the camel inside the fridge.", "gold": 1}
+{"id": "test_00368", "sent0": "Tacos was Johnny's favorite drink", "sent1": "Tacos was Johnny's favorite food", "gold": 0}
+{"id": "test_00369", "sent0": "Books are pages with ink printed on them", "sent1": "Books are piglets with flowers in their hair", "gold": 1}
+{"id": "test_00370", "sent0": "Her mom messed up her daughter's hair.", "sent1": "Her mom braided her hair for school.", "gold": 0}
+{"id": "test_00371", "sent0": "My son placed his football on his dresser.", "sent1": "My son placed his school locker on his dresser.", "gold": 1}
+{"id": "test_00372", "sent0": "My roommate waters his cell phone every morning.", "sent1": "My roommate waters his flowers every morning.", "gold": 0}
+{"id": "test_00373", "sent0": "A soldier fired with a revolver.", "sent1": "A soldier shot with a guitar.", "gold": 1}
+{"id": "test_00374", "sent0": "This girl made a horrible time-lapse", "sent1": "This girl made a very nice time-lapse", "gold": 0}
+{"id": "test_00375", "sent0": "She took a book from the shelf.", "sent1": "She took a live giraffe from the shelf.", "gold": 1}
+{"id": "test_00376", "sent0": "The robot felt sad", "sent1": "The monkey felt sad", "gold": 0}
+{"id": "test_00377", "sent0": "The McLaren is a well-designed vehicle.", "sent1": "The apple is a well-designed vehicle.", "gold": 1}
+{"id": "test_00378", "sent0": "my brother always takes mud in the morning", "sent1": "my brother always has breakfast in the morning", "gold": 0}
+{"id": "test_00379", "sent0": "I am going for my family tour on one bus", "sent1": "I am going for my family tour in one cycle", "gold": 1}
+{"id": "test_00380", "sent0": "The public library has lots of fish and birds", "sent1": "The public library has lots of books", "gold": 0}
+{"id": "test_00381", "sent0": "he kept chocolate in the fridge", "sent1": "he kept shoe in the fridge", "gold": 1}
+{"id": "test_00382", "sent0": "Some people like to put a scarf around their ears.", "sent1": "Some people like to put a scarf around their necks.", "gold": 0}
+{"id": "test_00383", "sent0": "One morning I shot a fly in my pajamas", "sent1": "One morning I shot an elephant in my pajamas", "gold": 1}
+{"id": "test_00384", "sent0": "She purchased four supermarket tickets.", "sent1": "She purchased four thether tickets.", "gold": 0}
+{"id": "test_00385", "sent0": "The snake feeds on the mice that come through the alleys", "sent1": "The snake sleeps on the mice that come through the alleys", "gold": 1}
+{"id": "test_00386", "sent0": "Dory moves the desk with her fin.", "sent1": "Dory moves the desk with her arms.", "gold": 0}
+{"id": "test_00387", "sent0": "He visited a doctor to cure his sickness", "sent1": "He went to a lawyer to cure his sickness", "gold": 1}
+{"id": "test_00388", "sent0": "Renting movies is the newest trend", "sent1": "Streaming movies is the newest trend", "gold": 0}
+{"id": "test_00389", "sent0": "The man went to the doctor because his back hurt", "sent1": "The man went to the doctor because he needed to buy bread", "gold": 1}
+{"id": "test_00390", "sent0": "dogs are social animals who prefer a solitary existence to live in a pack", "sent1": "dogs are social animals who prefer life in a pack to a solitary existence", "gold": 0}
+{"id": "test_00391", "sent0": "my sister went to the pond to fetch water", "sent1": "my sister went to the desert to fetch water", "gold": 1}
+{"id": "test_00392", "sent0": "my brother waters his phone every morning", "sent1": "my brother waters his flowers every morning", "gold": 0}
+{"id": "test_00393", "sent0": "I can buy medicine at the pharmacy", "sent1": "I can have a haircut at the pharmacy", "gold": 1}
+{"id": "test_00394", "sent0": "if you want fresh fruits and vegetables, you should destroy them", "sent1": "if you want fresh fruits and vegetables, you should grow them", "gold": 0}
+{"id": "test_00395", "sent0": "the owner of the restaurant apologized for the terrible customer service", "sent1": "the owner of the restaurant apologized for the good customer service", "gold": 1}
+{"id": "test_00396", "sent0": "a duck has two hands", "sent1": "a man has two hands", "gold": 0}
+{"id": "test_00397", "sent0": "the bird flew away", "sent1": "the cow flew away", "gold": 1}
+{"id": "test_00398", "sent0": "he carried a whale in his car", "sent1": "he carried two people in his car", "gold": 0}
+{"id": "test_00399", "sent0": "he put a flower into a pot", "sent1": "he put a bear into a pot", "gold": 1}
+{"id": "test_00400", "sent0": "the farmers live on a cloud", "sent1": "the farmers live on a farm", "gold": 0}
+{"id": "test_00401", "sent0": "she bought two cinema tickets", "sent1": "she bought two supermarket tickets", "gold": 1}
+{"id": "test_00402", "sent0": "my mother switch on the radio to watch movie", "sent1": "my mother switch on the television to watch movie", "gold": 0}
+{"id": "test_00403", "sent0": "the neighbor park their car in the parking lot", "sent1": "the neighbor park their car in the middle of the street", "gold": 1}
+{"id": "test_00404", "sent0": "shields can't protect ancient warriors from harm", "sent1": "shields can protect ancient warriors from harm", "gold": 0}
+{"id": "test_00405", "sent0": "she eats an egg for breakfast every day", "sent1": "she eats a table for breakfast every day", "gold": 1}
+{"id": "test_00406", "sent0": "I got ready for bed so I drank a cup of coffee", "sent1": "I got ready for bed so I washed my face", "gold": 0}
+{"id": "test_00407", "sent0": "he put a piece of cheese on the bread", "sent1": "he put a piece of plastic on the bread", "gold": 1}
+{"id": "test_00408", "sent0": "he put some cooking oil in his wine", "sent1": "he put some ice in his wine", "gold": 0}
+{"id": "test_00409", "sent0": "we can see the rainbows", "sent1": "we can touch the rainbows", "gold": 1}
+{"id": "test_00410", "sent0": "I would like to fry a laptop", "sent1": "I would like to buy a laptop", "gold": 0}
+{"id": "test_00411", "sent0": "an air-condition is used to cool the room", "sent1": "a bulb is used to cool the room", "gold": 1}
+{"id": "test_00412", "sent0": "the person was connected to the mixing console", "sent1": "the microphone was connected to the mixing console", "gold": 0}
+{"id": "test_00413", "sent0": "smoking is injurious to health", "sent1": "smoking is good for health", "gold": 1}
+{"id": "test_00414", "sent0": "it is safe to touch liquid nitrogen", "sent1": "it is dangerous to touch liquid nitrogen", "gold": 0}
+{"id": "test_00415", "sent0": "I need to heat up some water using the microwave", "sent1": "I need to heat up some water using the refrigerator", "gold": 1}
+{"id": "test_00416", "sent0": "hair gel is to be applied onto the back", "sent1": "hair gel is to be applied onto the scalp", "gold": 0}
+{"id": "test_00417", "sent0": "the man took his suit to the dry cleaner", "sent1": "the man took his door to the dry cleaner", "gold": 1}
+{"id": "test_00418", "sent0": "the family adopted a dinosaur to be their new pet", "sent1": "the family adopted a dog to be their new pet", "gold": 0}
+{"id": "test_00419", "sent0": "she put the ice cream in the freezer", "sent1": "she put the ice cream in the oven", "gold": 1}
+{"id": "test_00420", "sent0": "the dog growled, then taught the boy", "sent1": "the dog growled, then charged the boy", "gold": 0}
+{"id": "test_00421", "sent0": "he purchased bread and vegetables to prepare sandwiches for dinner", "sent1": "he purchased lime and cement to prepare sandwiches for dinner", "gold": 1}
+{"id": "test_00422", "sent0": "walking to university is a form of education", "sent1": "studying at university is a form of education", "gold": 0}
+{"id": "test_00423", "sent0": "you should pull on the brake to stop your bike", "sent1": "you should pull on the brake to accelerate your bike", "gold": 1}
+{"id": "test_00424", "sent0": "the fire is cold", "sent1": "the fire is warm", "gold": 0}
+{"id": "test_00425", "sent0": "the ripe apples taste sweet", "sent1": "the ripe apples taste spicy", "gold": 1}
+{"id": "test_00426", "sent0": "bananas grow on the ground", "sent1": "bananas grow on trees", "gold": 0}
+{"id": "test_00427", "sent0": "it snows in winter", "sent1": "it snows in summer", "gold": 1}
+{"id": "test_00428", "sent0": "a banana contains more water than a watermelon", "sent1": "a watermelon contains more water than a banana", "gold": 0}
+{"id": "test_00429", "sent0": "all watermelons have water", "sent1": "all watermelons have seeds", "gold": 1}
+{"id": "test_00430", "sent0": "the generator was able to power the continent", "sent1": "the generator was able to power the house", "gold": 0}
+{"id": "test_00431", "sent0": "snakes can eat rats", "sent1": "rats can eat snakes", "gold": 1}
+{"id": "test_00432", "sent0": "my son has four big hands", "sent1": "my son has two big hands", "gold": 0}
+{"id": "test_00433", "sent0": "some people ride bikes to work", "sent1": "some people ride tigers to work", "gold": 1}
+{"id": "test_00434", "sent0": "the TV program entertains the fish", "sent1": "the TV program entertains many people", "gold": 0}
+{"id": "test_00435", "sent0": "there are 7 days in a week", "sent1": "there are 8 days in a week", "gold": 1}
+{"id": "test_00436", "sent0": "we go to the disco to pray every weekend", "sent1": "we go to the disco to dance every weekend", "gold": 0}
+{"id": "test_00437", "sent0": "he fed bananas to the monkey", "sent1": "he fed boulders to the monkey", "gold": 1}
+{"id": "test_00438", "sent0": "she ran toward the dangerous-looking man in the alley", "sent1": "she ran away from the dangerous-looking man in the alley", "gold": 0}
+{"id": "test_00439", "sent0": "he was given sweets as he passed the exam", "sent1": "he was given sweets as he failed the exam", "gold": 1}
+{"id": "test_00440", "sent0": "I put many elevators in the car", "sent1": "I put many suitcases in the car", "gold": 0}
+{"id": "test_00441", "sent0": "he put the ice cream inside the fridge", "sent1": "he put the house into the fridge", "gold": 1}
+{"id": "test_00442", "sent0": "every time I go to the shops, I buy a dog", "sent1": "every time I go to the shops, I buy something", "gold": 0}
+{"id": "test_00443", "sent0": "The book club did not accept members under the age of forty", "sent1": "The primary school did not accept members under the age of forty", "gold": 1}
+{"id": "test_00444", "sent0": "eating trash food every day makes you stronger", "sent1": "a correct diet is good for your health", "gold": 0}
+{"id": "test_00445", "sent0": "the boat sailed on the open sea", "sent1": "the boat flew in the air", "gold": 1}
+{"id": "test_00446", "sent0": "she threw the football to the batter", "sent1": "she threw the softball to the batter", "gold": 0}
+{"id": "test_00447", "sent0": "a clutch pedal is part of a motor vehicle", "sent1": "a flower petal is part of a motor vehicle", "gold": 1}
+{"id": "test_00448", "sent0": "a person with no legs accidentally kicked me in the subway", "sent1": "a person with no legs accidentally hit me in the subway", "gold": 0}
+{"id": "test_00449", "sent0": "sugar is used to make coffee sweet", "sent1": "sugar is used to make coffee sour", "gold": 1}
+{"id": "test_00450", "sent0": "the cow had a significant amount of rust", "sent1": "the car had a significant amount of rust", "gold": 0}
+{"id": "test_00451", "sent0": "smoking is injurious to health", "sent1": "smoking will cherish your health", "gold": 1}
+{"id": "test_00452", "sent0": "standing up for long hours is relaxing", "sent1": "if you want to relax then you should go lie down", "gold": 0}
+{"id": "test_00453", "sent0": "when tired humans go to sleep", "sent1": "humans never go to sleep", "gold": 1}
+{"id": "test_00454", "sent0": "Jack lost his giraffe", "sent1": "Jack lost his wallet", "gold": 0}
+{"id": "test_00455", "sent0": "a scene is part of a film", "sent1": "all films are real life", "gold": 1}
+{"id": "test_00456", "sent0": "plastic bags are non-recyclable", "sent1": "plastic bags can be recycled", "gold": 0}
+{"id": "test_00457", "sent0": "you are able to use a piece of paper as a bookmark", "sent1": "you are able to use a brick as a bookmark", "gold": 1}
+{"id": "test_00458", "sent0": "he went for a walk in the woods and was bitten by a shark", "sent1": "he went for a walk in the woods and tripped on a rock", "gold": 0}
+{"id": "test_00459", "sent0": "onions are grown under the ground", "sent1": "onions are grown in the tree", "gold": 1}
+{"id": "test_00460", "sent0": "He returned five octopus to the library", "sent1": "He returned five books to the library", "gold": 0}
+{"id": "test_00461", "sent0": "the baby held the teddy bear", "sent1": "the baby held a grizzly bear", "gold": 1}
+{"id": "test_00462", "sent0": "the smartphone is a device used for transportation", "sent1": "the smartphone is a device used for communication", "gold": 0}
+{"id": "test_00463", "sent0": "the baby spilled milk on the floor", "sent1": "the bird spilled milk on the floor", "gold": 1}
+{"id": "test_00464", "sent0": "fire can burn without oxygen", "sent1": "fire cannot burn without oxygen", "gold": 0}
+{"id": "test_00465", "sent0": "at night it's easy to find the moon", "sent1": "at night it's easy to find sun", "gold": 1}
+{"id": "test_00466", "sent0": "the boat enjoyed rolling in the mud", "sent1": "the pig enjoyed rolling in the mud", "gold": 0}
+{"id": "test_00467", "sent0": "I enter in a car", "sent1": "I enter in a bottle", "gold": 1}
+{"id": "test_00468", "sent0": "a one-month-old baby put the laundry in the dryer", "sent1": "mother put the laundry in the dryer", "gold": 0}
+{"id": "test_00469", "sent0": "she cooked pasta and sushi for dinner", "sent1": "she cooked mosquitos and ants for dinner", "gold": 1}
+{"id": "test_00470", "sent0": "you can post the letter without any stamps", "sent1": "you should stamp the letter before posting the letter", "gold": 0}
+{"id": "test_00471", "sent0": "people usually have their dinner at night", "sent1": "people usually have their lunch in the morning", "gold": 1}
+{"id": "test_00472", "sent0": "I decided to pack my microwave into my suitcase", "sent1": "I am currently packing for my vacation", "gold": 0}
+{"id": "test_00473", "sent0": "the murder case remained unsolved", "sent1": "the murder case remained a happy event", "gold": 1}
+{"id": "test_00474", "sent0": "dancers just arrived at the accident scene to rescue the victims", "sent1": "paramedics just arrived at the accident scene to rescue the victims", "gold": 0}
+{"id": "test_00475", "sent0": "he ran on the track", "sent1": "he swam on the track", "gold": 1}
+{"id": "test_00476", "sent0": "ham is made from a cat", "sent1": "ham is made from a pig", "gold": 0}
+{"id": "test_00477", "sent0": "the amazon rainforest contains many undiscovered species", "sent1": "the Amazon rainforest does not have any animals on it", "gold": 1}
+{"id": "test_00478", "sent0": "he put a hat inside of his head", "sent1": "he put a hat on top of his head", "gold": 0}
+{"id": "test_00479", "sent0": "Tim went to the school this morning", "sent1": "Tim went to the school in the sky", "gold": 1}
+{"id": "test_00480", "sent0": "my brother always play football in a swimming tank", "sent1": "my brother is a big fan of football", "gold": 0}
+{"id": "test_00481", "sent0": "He put an orange in the fridge", "sent1": "He put the cat in the fridge", "gold": 1}
+{"id": "test_00482", "sent0": "relatives bark at the dog", "sent1": "my dog barks at relatives", "gold": 0}
+{"id": "test_00483", "sent0": "he cut the grass with the lawnmower", "sent1": "he cut the grass with a shovel", "gold": 1}
+{"id": "test_00484", "sent0": "the doctor sent the prescription pills by e-mail", "sent1": "the doctor sent the prescription by e-mail", "gold": 0}
+{"id": "test_00485", "sent0": "elephants eat grass and leaves", "sent1": "elephants eat rabbits and rats", "gold": 1}
+{"id": "test_00486", "sent0": "any dead dog can learn how to do a trick with his breed", "sent1": "any dog breed can be taught a trick, playing dead is a trick", "gold": 0}
+{"id": "test_00487", "sent0": "Peter is running towards the bus stop", "sent1": "Peter is sleeping towards the bus stop", "gold": 1}
+{"id": "test_00488", "sent0": "he wrote a great hamburger", "sent1": "he wrote a great novel", "gold": 0}
+{"id": "test_00489", "sent0": "he learned with his textbooks before the exam", "sent1": "he learned with his refrigerator before the exam", "gold": 1}
+{"id": "test_00490", "sent0": "she puts hot grease into a cup", "sent1": "she puts water into a cup", "gold": 0}
+{"id": "test_00491", "sent0": "a letter carrier is a human", "sent1": "an aircraft carrier is a human", "gold": 1}
+{"id": "test_00492", "sent0": "lipstick is good to keep in your pocket or purse for when you have cracked and dry skin", "sent1": "moisturizer is good to keep in your pocket or purse for when you have cracked and dry skin", "gold": 0}
+{"id": "test_00493", "sent0": "we drove our car for 40 miles before having to stop for an oil refill", "sent1": "we drove our car for 40000 miles before having to stop for an oil refill", "gold": 1}
+{"id": "test_00494", "sent0": "there are only 3 colors, red, yellow and blue", "sent1": "the red color is one of the simplest colors", "gold": 0}
+{"id": "test_00495", "sent0": "she put the dog in the car", "sent1": "she put the car in the dog", "gold": 1}
+{"id": "test_00496", "sent0": "all whales are small", "sent1": "whales are huge", "gold": 0}
+{"id": "test_00497", "sent0": "A stop sign is always red", "sent1": "A stop sign is always white", "gold": 1}
+{"id": "test_00498", "sent0": "plants convert sugar to a light", "sent1": "plants convert light to sugar", "gold": 0}
+{"id": "test_00499", "sent0": "the comedian made some jokes", "sent1": "the comedian performed magic tricks", "gold": 1}
+{"id": "test_00500", "sent0": "he turned the table on", "sent1": "he turned the light on", "gold": 0}
+{"id": "test_00501", "sent0": "the baseball pitcher hit a bird during the pitch", "sent1": "the baseball pitcher hit a home run during the pitch", "gold": 1}
+{"id": "test_00502", "sent0": "he had a toothache so he went to a car salesman", "sent1": "he had a toothache so he went to a dentist", "gold": 0}
+{"id": "test_00503", "sent0": "I walk and moves", "sent1": "I walk without moving", "gold": 1}
+{"id": "test_00504", "sent0": "he installed the carpet on the lake", "sent1": "he installed the carpet on the floor", "gold": 0}
+{"id": "test_00505", "sent0": "my friend jogs around the block after dinner every day", "sent1": "my friend runs marathons after dinner every day", "gold": 1}
+{"id": "test_00506", "sent0": "he made dinner on the television", "sent1": "he made dinner on the stove", "gold": 0}
+{"id": "test_00507", "sent0": "the sun rises in the east", "sent1": "the sun rises in the west", "gold": 1}
+{"id": "test_00508", "sent0": "the cow eats the bike", "sent1": "the cow eats the grass", "gold": 0}
+{"id": "test_00509", "sent0": "she used shampoo to wash her hair", "sent1": "she used motor oil to wash her hair", "gold": 1}
+{"id": "test_00510", "sent0": "if you want to have a pear then you should go to the toilet", "sent1": "if you want to have a pee then you should go to the toilet", "gold": 0}
+{"id": "test_00511", "sent0": "the fan was blowing air", "sent1": "the fan was blowing guns", "gold": 1}
+{"id": "test_00512", "sent0": "the dog gave birth to hotdogs", "sent1": "the dog gave birth to puppies", "gold": 0}
+{"id": "test_00513", "sent0": "kids often start speaking when they twelve months old", "sent1": "kids do not learn how to speak until they learn to walk", "gold": 1}
+{"id": "test_00514", "sent0": "her favorite organ is the telephone", "sent1": "her favorite organ is the kidney", "gold": 0}
+{"id": "test_00515", "sent0": "It is easy to find seashells by the ocean", "sent1": "It is easy to find seashells in the forest", "gold": 1}
+{"id": "test_00516", "sent0": "the turtle swam on the land", "sent1": "The turtle swam in the ocean", "gold": 0}
+{"id": "test_00517", "sent0": "he kept his prized horse in a stable and had it taken care by a professional trainer", "sent1": "he kept his prized horse in his pocket and had it taken care by a florist", "gold": 1}
+{"id": "test_00518", "sent0": "cars are the only way to get around", "sent1": "cars are a useful mode of transportation", "gold": 0}
+{"id": "test_00519", "sent0": "Jimmy got his leg bitten off by a shark", "sent1": "Jimmy got his leg bitten off by a kitten", "gold": 1}
+{"id": "test_00520", "sent0": "scissors are used to cut through rivers", "sent1": "scissors are used to cut through paper", "gold": 0}
+{"id": "test_00521", "sent0": "the father drove his two-years-old baby to daycare", "sent1": "the two-years-old baby drove her father daycare", "gold": 1}
+{"id": "test_00522", "sent0": "she eats a pillow after her workout", "sent1": "she eats an orange after her workout", "gold": 0}
+{"id": "test_00523", "sent0": "going to the gym is a healthy habit", "sent1": "going to the gym does not help you stay healthy", "gold": 1}
+{"id": "test_00524", "sent0": "crackhead does not take drugs", "sent1": "crackhead is a drug addict", "gold": 0}
+{"id": "test_00525", "sent0": "apple can be red or green", "sent1": "apple is a blue fruit", "gold": 1}
+{"id": "test_00526", "sent0": "you can go swimming and fishing at a zoo", "sent1": "some people's favorite place is the zoo", "gold": 0}
+{"id": "test_00527", "sent0": "he put pepper in the basket", "sent1": "he put a chair in the basket", "gold": 1}
+{"id": "test_00528", "sent0": "if you don't brush your teeth, you get dark", "sent1": "if you don't brush your teeth, you will get Oral Diseases", "gold": 0}
+{"id": "test_00529", "sent0": "I want to ride a car on the highway", "sent1": "I ride a car on the ocean", "gold": 1}
+{"id": "test_00530", "sent0": "humans use gas to wash their clothes", "sent1": "Garry washed his clothes yesterday", "gold": 0}
+{"id": "test_00531", "sent0": "the man put on his pants", "sent1": "the man put on his airplane", "gold": 1}
+{"id": "test_00532", "sent0": "he put a cat in the freezer", "sent1": "he put ice in the freezer", "gold": 0}
+{"id": "test_00533", "sent0": "smartphones are becoming even more popular", "sent1": "beepers are becoming even more popular", "gold": 1}
+{"id": "test_00534", "sent0": "she sipped a shoe", "sent1": "she sipped a coffee", "gold": 0}
+{"id": "test_00535", "sent0": "eating vegetables is a healthy part of your diet", "sent1": "only eating fried food makes your diet healthier", "gold": 1}
+{"id": "test_00536", "sent0": "he drove to the moon before it closed at 9pm", "sent1": "he drove to the store before it closed at 9pm", "gold": 0}
+{"id": "test_00537", "sent0": "shirts are clothes that people wear", "sent1": "shirts are clothes that birds wear", "gold": 1}
+{"id": "test_00538", "sent0": "dinosaurs are alive on earth", "sent1": "human are alive on earth", "gold": 0}
+{"id": "test_00539", "sent0": "she drove a car", "sent1": "she drove a pencil", "gold": 1}
+{"id": "test_00540", "sent0": "people behave softly if they are angry", "sent1": "people behave badly if they are angry", "gold": 0}
+{"id": "test_00541", "sent0": "curtains are useful for covering a window", "sent1": "fishing nets are useful for covering a window", "gold": 1}
+{"id": "test_00542", "sent0": "if it doesn't rain for a long time, the earth will get very wet", "sent1": "if it doesn't rain for a long time, the earth will get very dry", "gold": 0}
+{"id": "test_00543", "sent0": "sitting on a sofa is more comfortable than sitting on a stool", "sent1": "sitting on the barbed wire is more comfortable than sitting on a stool", "gold": 1}
+{"id": "test_00544", "sent0": "cats eat dog food", "sent1": "cats eat special cat food", "gold": 0}
+{"id": "test_00545", "sent0": "The desert is very dry, so bring water when you go.", "sent1": "The desert has sand that you can drink.", "gold": 1}
+{"id": "test_00546", "sent0": "The bottle drunk out of the baby.", "sent1": "The baby drunk out of the bottle.", "gold": 0}
+{"id": "test_00547", "sent0": "Frogs are found in ponds and swamps.", "sent1": "All frogs can fly in the sky just like birds.", "gold": 1}
+{"id": "test_00548", "sent0": "Wallets are typically used to hold spider eggs and denim.", "sent1": "Wallets are typically used to hold cash and credit cards.", "gold": 0}
+{"id": "test_00549", "sent0": "I had dinner with my friends yesterday.", "sent1": "I was on date with lion yesterday.", "gold": 1}
+{"id": "test_00550", "sent0": "The dog yelled at the man.", "sent1": "The man yelled at the dog.", "gold": 0}
+{"id": "test_00551", "sent0": "Giraffes have long necks.", "sent1": "Monkeys have long necks.", "gold": 1}
+{"id": "test_00552", "sent0": "Starfish are found in outer space", "sent1": "Starfish are marine animals.", "gold": 0}
+{"id": "test_00553", "sent0": "The young girl is riding the bicycle.", "sent1": "The giraffe is riding the bicycle.", "gold": 1}
+{"id": "test_00554", "sent0": "Milk contains alcohol.", "sent1": "Beer contains alcohol.", "gold": 0}
+{"id": "test_00555", "sent0": "Dogs can come in many different sizes and colors, these are called breeds.", "sent1": "Dogs can come in many different colors such as red, blue, and green.", "gold": 1}
+{"id": "test_00556", "sent0": "The dog was clean after playing in the mud.", "sent1": "The dog got dirty when she played in the mud.", "gold": 0}
+{"id": "test_00557", "sent0": "He put apple into the fridge.", "sent1": "He put stone into the fridge.", "gold": 1}
+{"id": "test_00558", "sent0": "Houses are found in lakes.", "sent1": "Tim painted his house yesterday.", "gold": 0}
+{"id": "test_00559", "sent0": "Shawn went to the mall yesterday.", "sent1": "Malls are found in the sky.", "gold": 1}
+{"id": "test_00560", "sent0": "The goldfish ate a cat.", "sent1": "The cat ate a goldfish.", "gold": 0}
+{"id": "test_00561", "sent0": "I took notes during class.", "sent1": "I took home the gold during class.", "gold": 1}
+{"id": "test_00562", "sent0": "Humans do not eat food.", "sent1": "Humans eat food.", "gold": 0}
+{"id": "test_00563", "sent0": "Derek plays basketball for a team.", "sent1": "The snake plays basketball.", "gold": 1}
+{"id": "test_00564", "sent0": "Ripping a paper in half creates six pieces.", "sent1": "Ripping a paper in half creates two pieces.", "gold": 0}
+{"id": "test_00565", "sent0": "Fish live in the ocean.", "sent1": "My neighbor is a fish.", "gold": 1}
+{"id": "test_00566", "sent0": "Human have four legs.", "sent1": "Dogs have four legs.", "gold": 0}
+{"id": "test_00567", "sent0": "Sara bought a new pet.", "sent1": "The dog bought a new pet.", "gold": 1}
+{"id": "test_00568", "sent0": "Elephants are the smallest land mammals.", "sent1": "Elephants are the largest land mammals.", "gold": 0}
+{"id": "test_00569", "sent0": "Daniel aced his examination papers ahead of others because he's the most intelligent and brilliant in the class.", "sent1": "Daniel performed woefully behind others because he's the most intelligent and brilliant in his class", "gold": 1}
+{"id": "test_00570", "sent0": "Sleeping with makeup on nourishes your skin and makes it healthier.", "sent1": "Sleeping with makeup off is very good for your skin's health.", "gold": 0}
+{"id": "test_00571", "sent0": "The woman's hung purse off her shoulder.", "sent1": "The woman's purse was floating above her.", "gold": 1}
+{"id": "test_00572", "sent0": "If it is a sunny day, you would got wet.", "sent1": "If it had rained, you would got wet.", "gold": 0}
+{"id": "test_00573", "sent0": "Me and Bob played cards last night.", "sent1": "Cats played cards last night.", "gold": 1}
+{"id": "test_00574", "sent0": "he added pepper to his coffee", "sent1": "he added milk to his coffee", "gold": 0}
+{"id": "test_00575", "sent0": "she wants to drink some water because she is thirsty", "sent1": "she wants to drink some water because she is full", "gold": 1}
+{"id": "test_00576", "sent0": "Water is not healthy.", "sent1": "Water is a clear, colorless, odorless and tasteless liquid.", "gold": 0}
+{"id": "test_00577", "sent0": "My friend runs for 2 miles every day.", "sent1": "My friend runs for 2 inches every day.", "gold": 1}
+{"id": "test_00578", "sent0": "I brushed my hair with a wrecking ball.", "sent1": "I brushed my hair with a hairbrush.", "gold": 0}
+{"id": "test_00579", "sent0": "A brave dog saved a drowning child this morning at Zion Beach!", "sent1": "A brave cat saved a drowning child this morning at Zion Beach!", "gold": 1}
+{"id": "test_00580", "sent0": "If I want ride a motorcycle I needn't wear the helmet.", "sent1": "If I want ride a motorcycle I must wear the helmet.", "gold": 0}
+{"id": "test_00581", "sent0": "My dad grew tomatoes in his garden.", "sent1": "My dad grew volleyballs in his garden.", "gold": 1}
+{"id": "test_00582", "sent0": "Salt quenches thirst.", "sent1": "Water quenches thirst.", "gold": 0}
+{"id": "test_00583", "sent0": "Billy kicked the ball into the goal", "sent1": "Billy kicked the frisbee into the goal", "gold": 1}
+{"id": "test_00584", "sent0": "I can drink bleach instead of water", "sent1": "I can't drink bleach instead of water", "gold": 0}
+{"id": "test_00585", "sent0": "The phone turned off because it ran out of battery power.", "sent1": "The human died because it ran out of juice.", "gold": 1}
+{"id": "test_00586", "sent0": "Something you find at a hotel is n cow shelter", "sent1": "Something you find at a hotel is an elevator", "gold": 0}
+{"id": "test_00587", "sent0": "If you're rich you can buy a yacht.", "sent1": "If you're poor you can buy a yacht.", "gold": 1}
+{"id": "test_00588", "sent0": "Everyday I feed my dog some chocolate bars.", "sent1": "Everyday I feed my dog some dog food.", "gold": 0}
+{"id": "test_00589", "sent0": "She put the guest coats in the bedroom closet.", "sent1": "Birds make nest everyday in bedroom closets.", "gold": 1}
+{"id": "test_00590", "sent0": "Plastic is more expensive than gold.", "sent1": "Gold is more expensive than plastic.", "gold": 0}
+{"id": "test_00591", "sent0": "You must exercise to stay healthy.", "sent1": "You must eat lots of fats and sugar to stay healthy.", "gold": 1}
+{"id": "test_00592", "sent0": "Once a pipe bursts, call a doctor.", "sent1": "Once a pipe bursts, call a plumber.", "gold": 0}
+{"id": "test_00593", "sent0": "I picked up a basket full of apples from the tree in the yard.", "sent1": "I picked up a basket full of peppers from the tree in the yard.", "gold": 1}
+{"id": "test_00594", "sent0": "if you break the law, you will receive a reward", "sent1": "if you break the law, you will be punished", "gold": 0}
+{"id": "test_00595", "sent0": "you are supposed to buy tickets before you get on the train", "sent1": "you are supposed to buy tickets after you get off the train", "gold": 1}
+{"id": "test_00596", "sent0": "You are likely to find Rice bags in shoe shops", "sent1": "You are likely to find sandals in a shoe shop", "gold": 0}
+{"id": "test_00597", "sent0": "The recipe takes a variety of herbs for flavor.", "sent1": "The pot takes a variety of herbs for flavor.", "gold": 1}
+{"id": "test_00598", "sent0": "A hole will make a boat float", "sent1": "A hole will make a boat sink", "gold": 0}
+{"id": "test_00599", "sent0": "people often use alarms to remind them of important events", "sent1": "people often use flowers to remind them of important events", "gold": 1}
+{"id": "test_00600", "sent0": "He ties his socks before leaving for his flight", "sent1": "He ties his shoes before leaving for his flight", "gold": 0}
+{"id": "test_00601", "sent0": "A reporter can press for an answer.", "sent1": "people can need sleep", "gold": 1}
+{"id": "test_00602", "sent0": "There are whales in a big city", "sent1": "There are buildings in a big city", "gold": 0}
+{"id": "test_00603", "sent0": "He loves to stroll at the park with his dog.", "sent1": "He loves to stroll at the park with his bed", "gold": 1}
+{"id": "test_00604", "sent0": "You are more likely to overeat on a full stomach.", "sent1": "You are more likely to overeat on an empty stomach.", "gold": 0}
+{"id": "test_00605", "sent0": "Something you find at a home is a t.v.", "sent1": "Something you find at the road is a t.v.", "gold": 1}
+{"id": "test_00606", "sent0": "if he is retarded,  he will pass the examination", "sent1": "if he is brilliant,  he will pass the examination", "gold": 0}
+{"id": "test_00607", "sent0": "A desalination plant in California would contribute to providing more drinkable water for that area.", "sent1": "Planting salt in California contributes to providing more drinkable water for that area.", "gold": 1}
+{"id": "test_00608", "sent0": "Mike went to the grocery store three blocks away by plane", "sent1": "Mike went to the grocery store three blocks away by bike", "gold": 0}
+{"id": "test_00609", "sent0": "Fruits and vegetables provide nutrients", "sent1": "Fruits and vegetables provide toxins", "gold": 1}
+{"id": "test_00610", "sent0": "The fish fights the dog.", "sent1": "The chicken fights the dog.", "gold": 0}
+{"id": "test_00611", "sent0": "A car engine is usually cooler before driving the car.", "sent1": "A car engine is usually cooler after driving the car.", "gold": 1}
+{"id": "test_00612", "sent0": "Mathematicians can play football very well", "sent1": "Mathematicians can solve math problems.", "gold": 0}
+{"id": "test_00613", "sent0": "A person can sleep", "sent1": "A fan can sleep", "gold": 1}
+{"id": "test_00614", "sent0": "My car is going to the church service", "sent1": "My car is going to be fixed", "gold": 0}
+{"id": "test_00615", "sent0": "Chickens are delicious for human taste", "sent1": "Wheels are delicious for human taste", "gold": 1}
+{"id": "test_00616", "sent0": "Reading to your children can make them stronger", "sent1": "Reading to your children can make them smarter", "gold": 0}
+{"id": "test_00617", "sent0": "books are used to read and write", "sent1": "books are used to watch a movie", "gold": 1}
+{"id": "test_00618", "sent0": "You can send the book by email", "sent1": "You can send the photos by email", "gold": 0}
+{"id": "test_00619", "sent0": "If you want to have a party then you should invite guests", "sent1": "If you want to have a party then you should invite things", "gold": 1}
+{"id": "test_00620", "sent0": "Joe asked Mary to have a date because he dislikes her", "sent1": "Joe asked Mary to have a date because he likes her", "gold": 0}
+{"id": "test_00621", "sent0": "You must have eyes to read a book.", "sent1": "You do not need eyes to read a book.", "gold": 1}
+{"id": "test_00622", "sent0": "he hit a helicopter over the flag", "sent1": "he hit the ball over the flag", "gold": 0}
+{"id": "test_00623", "sent0": "A normal person has two arms", "sent1": "A normal person has 4 arms", "gold": 1}
+{"id": "test_00624", "sent0": "Jim went to watch a movie at the gym", "sent1": "Jim went to watch a movie at the theater", "gold": 0}
+{"id": "test_00625", "sent0": "Many people drink milk to get nutrients from it.", "sent1": "No one drinks milk because you cannot absorb nutrients from it.", "gold": 1}
+{"id": "test_00626", "sent0": "She was interviewed after she got the offer", "sent1": "She was interviewed before she got the offer", "gold": 0}
+{"id": "test_00627", "sent0": "The train left the station on time", "sent1": "The train waited for a passenger for an hour", "gold": 1}
+{"id": "test_00628", "sent0": "Canvas is used for serving food", "sent1": "Canvas is used for painting", "gold": 0}
+{"id": "test_00629", "sent0": "Due to global warming, the temperature becomes higher", "sent1": "Due to global warming the temperature becomes lower", "gold": 1}
+{"id": "test_00630", "sent0": "He shucked a fish", "sent1": "He shucked and oyster", "gold": 0}
+{"id": "test_00631", "sent0": "He put old clothes into a box", "sent1": "He put a gorilla into a box", "gold": 1}
+{"id": "test_00632", "sent0": "He went to a petrol station to write the exam", "sent1": "He went to the examination hall to write the exam", "gold": 0}
+{"id": "test_00633", "sent0": "Blackberries and strawberries are berries.", "sent1": "Blackberries and strawberries are the same.", "gold": 1}
+{"id": "test_00634", "sent0": "Plants don't need the sunlight to grow.", "sent1": "Plants need sunlight to grow.", "gold": 0}
+{"id": "test_00635", "sent0": "Insects eat insects", "sent1": "Insects eat men", "gold": 1}
+{"id": "test_00636", "sent0": "The elephant jumped into the car.", "sent1": "The dog jumped into the car.", "gold": 0}
+{"id": "test_00637", "sent0": "Anthony concluded that he will put the warm glass of water in the fridge.", "sent1": "Anthony decided that he will kick the warm glass of water to the fridge.", "gold": 1}
+{"id": "test_00638", "sent0": "my sister flies to work today", "sent1": "my sister walks to work today", "gold": 0}
+{"id": "test_00639", "sent0": "You are likely to find a crocodile in the wild.", "sent1": "You are likely to find chocolate in the wild.", "gold": 1}
+{"id": "test_00640", "sent0": "The stone can float on the water", "sent1": "The wood can float on the water", "gold": 0}
+{"id": "test_00641", "sent0": "I watered the plants", "sent1": "I watered the orange juice", "gold": 1}
+{"id": "test_00642", "sent0": "She flies to the school everyday morning", "sent1": "She walks to the school everyday morning", "gold": 0}
+{"id": "test_00643", "sent0": "my mother cooked the chicken", "sent1": "my mother cooked the stone", "gold": 1}
+{"id": "test_00644", "sent0": "he put a horse in the cage", "sent1": "he put a bird in the cage", "gold": 0}
+{"id": "test_00645", "sent0": "Milk that is drunk by humans is white", "sent1": "Beer that is drunk by humans is white", "gold": 1}
+{"id": "test_00646", "sent0": "If it's dark,  I must put the light off.", "sent1": "If I put the light on,  it won't be dark anymore.", "gold": 0}
+{"id": "test_00647", "sent0": "A car runs on roads", "sent1": "There is a car engine on an airplane", "gold": 1}
+{"id": "test_00648", "sent0": "The elephant is pink.", "sent1": "The elephant is gray.", "gold": 0}
+{"id": "test_00649", "sent0": "moms love their children", "sent1": "grandparents don't love their children", "gold": 1}
+{"id": "test_00650", "sent0": "He played a game with fairies", "sent1": "He played a game with children", "gold": 0}
+{"id": "test_00651", "sent0": "playing in rain increases the chances to get the fever", "sent1": "playing in rain increases the chances to get caught by police", "gold": 1}
+{"id": "test_00652", "sent0": "When you close a door,  it can be walked through.", "sent1": "When you open a door,  it usually has hinges to keep it from falling off.", "gold": 0}
+{"id": "test_00653", "sent0": "A couple sat on a rock to watch the sunset.", "sent1": "A couple sat on the water to watch the sunset.", "gold": 1}
+{"id": "test_00654", "sent0": "Rocks may float when placed in water.", "sent1": "Rocks sink when placed in water.", "gold": 0}
+{"id": "test_00655", "sent0": "baby like milk", "sent1": "milk like a baby", "gold": 1}
+{"id": "test_00656", "sent0": "she put a rhino in the fridge", "sent1": "she put a pie in the fridge", "gold": 0}
+{"id": "test_00657", "sent0": "Rabbits are herbivores", "sent1": "Rabbits are carnivores", "gold": 1}
+{"id": "test_00658", "sent0": "When people cry,  tears come out of their ears", "sent1": "When people cry,  tears come out of their eyes", "gold": 0}
+{"id": "test_00659", "sent0": "He put a coin in his wallet", "sent1": "He put a motorcycle in his wallet", "gold": 1}
+{"id": "test_00660", "sent0": "He parked his train in his house", "sent1": "He parked his bike in his house", "gold": 0}
+{"id": "test_00661", "sent0": "I have a neck.", "sent1": "I have two necks.", "gold": 1}
+{"id": "test_00662", "sent0": "She is too timid so she loves to watch horror movies", "sent1": "She is too timid to watch horror movies", "gold": 0}
+{"id": "test_00663", "sent0": "She got off the bus at the crossroad", "sent1": "she got off the cruise ship at the crossroad", "gold": 1}
+{"id": "test_00664", "sent0": "Watching sports is fun for all people", "sent1": "Watching sports is fun to some people", "gold": 0}
+{"id": "test_00665", "sent0": "It was an August morning when Jessica,  a receptionist living in Toronto,  decided to wear her linen suit to work.", "sent1": "It was an August morning when Jessica,  a receptionist living in Toronto,  decided to wear her snowsuit to work.", "gold": 1}
+{"id": "test_00666", "sent0": "Basketball is played with the feet", "sent1": "Soccer is played with the feet", "gold": 0}
+{"id": "test_00667", "sent0": "A grapefruit is bigger than an orange.", "sent1": "A grapefruit is bigger than a pumpkin.", "gold": 1}
+{"id": "test_00668", "sent0": "I put a dumpling in the washing machine", "sent1": "I put my clothes in the washing machine", "gold": 0}
+{"id": "test_00669", "sent0": "You may sweat when it is hot outside.", "sent1": "When you are outside,  you will be sweating.", "gold": 1}
+{"id": "test_00670", "sent0": "Fish can help you learn", "sent1": "Tutors can help you learn", "gold": 0}
+{"id": "test_00671", "sent0": "The man is in front of the city hall", "sent1": "City Hall adjusted to man's view", "gold": 1}
+{"id": "test_00672", "sent0": "Flowers only need dirt to grow and nothing else.", "sent1": "Flowers need sunlight to grow.", "gold": 0}
+{"id": "test_00673", "sent0": "Colgate is a brand of toothpaste", "sent1": "Colgate is a brand of beer", "gold": 1}
+{"id": "test_00674", "sent0": "The dishwasher makes dishes dirty", "sent1": "Dirty dishes go into the dishwasher", "gold": 0}
+{"id": "test_00675", "sent0": "Two people enter in the car", "sent1": "one hundred people enter in the car", "gold": 1}
+{"id": "test_00676", "sent0": "She puts dirty clothes in the cabinet", "sent1": "She puts clean clothes in the cabinet.", "gold": 0}
+{"id": "test_00677", "sent0": "The taxpayer is being taxed to death,  while the rich become richer", "sent1": "The rich pay the same taxes as the poor.", "gold": 1}
+{"id": "test_00678", "sent0": "Runny eggs can last best by leaving them out in the sun.", "sent1": "A runner tries to go a long distance by controlling breath and pace.", "gold": 0}
+{"id": "test_00679", "sent0": "Most people sit quietly on the bus", "sent1": "every people sit quietly on a bus", "gold": 1}
+{"id": "test_00680", "sent0": "She went for a run on the Sun.", "sent1": "She went for a run on the trail.", "gold": 0}
+{"id": "test_00681", "sent0": "Drinking beers makes the girl drunk", "sent1": "Drinking beers makes the girl become an alien", "gold": 1}
+{"id": "test_00682", "sent0": "The kid took her mother to the school", "sent1": "The mother took her kid to the school", "gold": 0}
+{"id": "test_00683", "sent0": "The tiger ate a frog", "sent1": "The frog ate a tiger", "gold": 1}
+{"id": "test_00684", "sent0": "He left his dog at a service center for an oil change", "sent1": "He left his car at a service center for oil change", "gold": 0}
+{"id": "test_00685", "sent0": "There are steaks in the freezer", "sent1": "There are top hats in the freezer", "gold": 1}
+{"id": "test_00686", "sent0": "You are likely to find a cow in a kennel", "sent1": "You are likely to find a dog in a kennel", "gold": 0}
+{"id": "test_00687", "sent0": "She put her shoes on in the morning.", "sent1": "She put her shoes on the stove in the morning.", "gold": 1}
+{"id": "test_00688", "sent0": "He went to the theater for a medical checkup", "sent1": "He went to the theater to watch a movie", "gold": 0}
+{"id": "test_00689", "sent0": "Texas is hot in the summer.", "sent1": "Texas is snowing in the summer.", "gold": 1}
+{"id": "test_00690", "sent0": "Schools often have operation theater", "sent1": "Schools often have a mathematics department", "gold": 0}
+{"id": "test_00691", "sent0": "she went to buy a toothbrush at a petty shop", "sent1": "she went to buy a toothbrush at a flower shop", "gold": 1}
+{"id": "test_00692", "sent0": "People take showers when they feel happy.", "sent1": "People take showers when they feel dirty.", "gold": 0}
+{"id": "test_00693", "sent0": "Hats can protect from harsh sunlight.", "sent1": "Hats can protect you from an accident", "gold": 1}
+{"id": "test_00694", "sent0": "Sound is always faster than light", "sent1": "Sound is faster than people", "gold": 0}
+{"id": "test_00695", "sent0": "Robert close he's eyes and he is sleeping in his room", "sent1": "Roberts' room is sleeping", "gold": 1}
+{"id": "test_00696", "sent0": "Zookeeper is working at the hospital", "sent1": "The zookeeper feeds the animals.", "gold": 0}
+{"id": "test_00697", "sent0": "people can write what they heard", "sent1": "You need to see to write on paper.", "gold": 1}
+{"id": "test_00698", "sent0": "She saw a boat flying over the river", "sent1": "She saw a boat in the river", "gold": 0}
+{"id": "test_00699", "sent0": "Skyscrapers are very tall buildings.", "sent1": "Skyscrapers can cause rips in the sky.", "gold": 1}
+{"id": "test_00700", "sent0": "Nobody hates paying taxes", "sent1": "Everyone hates paying taxes", "gold": 0}
+{"id": "test_00701", "sent0": "people like to dress well", "sent1": "people like to dress nothing on the street", "gold": 1}
+{"id": "test_00702", "sent0": "He put a snake on pizza.", "sent1": "He likes to eat pizza.", "gold": 0}
+{"id": "test_00703", "sent0": "Popcorn is often eaten during movies.", "sent1": "Lasagna is often eaten during movies.", "gold": 1}
+{"id": "test_00704", "sent0": "Jane put a shark on her vegetable.", "sent1": "Jane loves to eat fresh vegetables.", "gold": 0}
+{"id": "test_00705", "sent0": "She can hear the rainfall.", "sent1": "She can make the rainfall.", "gold": 1}
+{"id": "test_00706", "sent0": "He drives cupboard well", "sent1": "He drives bike well", "gold": 0}
+{"id": "test_00707", "sent0": "detergents are used to clean clothes", "sent1": "detergents are used in an investigation", "gold": 1}
+{"id": "test_00708", "sent0": "A scholar is well-payed", "sent1": "A congressman is well-payed", "gold": 0}
+{"id": "test_00709", "sent0": "Volcanoes create lava which is created through high heat temperature.", "sent1": "Volcanoes produce snowballs when they erupt.", "gold": 1}
+{"id": "test_00710", "sent0": "Traveling by teleporting can take quite a long time.", "sent1": "Traveling on foot can take quite a long time.", "gold": 0}
+{"id": "test_00711", "sent0": "winter comes in different time each year", "sent1": "winter comes in the same time each year", "gold": 1}
+{"id": "test_00712", "sent0": "The pitcher threw a ball at 200 MPH.", "sent1": "The baseball team scored 4 home runs.", "gold": 0}
+{"id": "test_00713", "sent0": "My truck can be used for hauling equipment or a boat.", "sent1": "My boat hauls my truck.", "gold": 1}
+{"id": "test_00714", "sent0": "A dog lays carpet on the floor", "sent1": "A Carpet-layer can lay carpet on floors", "gold": 0}
+{"id": "test_00715", "sent0": "many girls like the color pink", "sent1": "Girls only like the color pink.", "gold": 1}
+{"id": "test_00716", "sent0": "bananas are addicted to my husband", "sent1": "My husband is addicted to bananas", "gold": 0}
+{"id": "test_00717", "sent0": "Sheep do not fly", "sent1": "Birds do not fly", "gold": 1}
+{"id": "test_00718", "sent0": "Whales can fly", "sent1": "Whales can swim", "gold": 0}
+{"id": "test_00719", "sent0": "He can cook a whole chicken in a frying pan", "sent1": "He can cook a whole elephant in a frying pan", "gold": 1}
+{"id": "test_00720", "sent0": "The cat drank milk in the duck.", "sent1": "The cat drank milk on the plate.", "gold": 0}
+{"id": "test_00721", "sent0": "Jill received a bill from the gas company", "sent1": "Jill received a bill from the moon", "gold": 1}
+{"id": "test_00722", "sent0": "The cat likes to watch alligators.", "sent1": "The cat likes to watch birds.", "gold": 0}
+{"id": "test_00723", "sent0": "Sarah's favorite food is lobster.", "sent1": "Sarah put a shark in the lobster.", "gold": 1}
+{"id": "test_00724", "sent0": "the fish is fishing", "sent1": "he is fishing", "gold": 0}
+{"id": "test_00725", "sent0": "There are four seasons each year.", "sent1": "There are four years each season.", "gold": 1}
+{"id": "test_00726", "sent0": "The reality readers live in is the same as the fictitious worlds authors create in fiction novels.", "sent1": "Readers read fiction novels to immerse themselves in the author's fictitious world.", "gold": 0}
+{"id": "test_00727", "sent0": "He left the dog in the kennel.", "sent1": "He left the cat in the kennel.", "gold": 1}
+{"id": "test_00728", "sent0": "Chairs are large and heavy machines.", "sent1": "Cars are large and heavy machines.", "gold": 0}
+{"id": "test_00729", "sent0": "When he said Go down the stairs\" he meant the stairs on the right.\"", "sent1": "\"When she said \"\"Go to the store\" she meant the plane had arrived.\"", "gold": 1}
+{"id": "test_00730", "sent0": "The lion used the litter box", "sent1": "The cat used the litter box", "gold": 0}
+{"id": "test_00731", "sent0": "Journals can help people in remembering important events.", "sent1": "Journals can help people in forgetting important events.", "gold": 1}
+{"id": "test_00732", "sent0": "I hike on surfboards.", "sent1": "I hike on trails.", "gold": 0}
+{"id": "test_00733", "sent0": "The groom threw the bride's garter to the groomsmen.", "sent1": "The groom threw the bridal party at the bride", "gold": 1}
+{"id": "test_00734", "sent0": "the bread is much sweeter than candy", "sent1": "Candy is much sweeter than bread", "gold": 0}
+{"id": "test_00735", "sent0": "Barbies are a fantastic desire for kids", "sent1": "Barbies are the horrible desire for kids", "gold": 1}
+{"id": "test_00736", "sent0": "All proteins are enzymes.", "sent1": "All enzymes are proteins.", "gold": 0}
+{"id": "test_00737", "sent0": "After sunset sky turns dark", "sent1": "After sunset sky turns blue", "gold": 1}
+{"id": "test_00738", "sent0": "The Carpenter Chopped the Train", "sent1": "The carpenter Chopped the Woods", "gold": 0}
+{"id": "test_00739", "sent0": "The temperature in Arizona is hotter than Michigan", "sent1": "Its cooler in Arizona than anywhere in the USA.", "gold": 1}
+{"id": "test_00740", "sent0": "The kangaroos are common to every continent.", "sent1": "Australia is known for its unique animals like the kangaroo.", "gold": 0}
+{"id": "test_00741", "sent0": "The mother carried her 3-day old newborn baby to the car.", "sent1": "The 3-day old newborn baby walked to the car.", "gold": 1}
+{"id": "test_00742", "sent0": "Heating food makes the food balance better on a fork.", "sent1": "Heating food makes the flavors more enhanced.", "gold": 0}
+{"id": "test_00743", "sent0": "He prays before sleeping.", "sent1": "He drinks energy drinks before sleeping", "gold": 1}
+{"id": "test_00744", "sent0": "A diet high in sugar is mandatory", "sent1": "A diet high in sugar is unhealthy", "gold": 0}
+{"id": "test_00745", "sent0": "a blue painting hangs on the wall", "sent1": "a blue painting is floating in air", "gold": 1}
+{"id": "test_00746", "sent0": "People like to eat land", "sent1": "People like to eat pizza", "gold": 0}
+{"id": "test_00747", "sent0": "the child plays video games", "sent1": "the chair plays video games", "gold": 1}
+{"id": "test_00748", "sent0": "Spatulas are great for both hiking and fishing.", "sent1": "Spatulas are great for both cooking and baking.", "gold": 0}
+{"id": "test_00749", "sent0": "Film making can be a stressful job in the summer", "sent1": "Film making can be a single job in the summer", "gold": 1}
+{"id": "test_00750", "sent0": "HE EATS THE PIANO.", "sent1": "HE PLAYS WITH PIANO.", "gold": 0}
+{"id": "test_00751", "sent0": "a turkey is a bird", "sent1": "a turkey is a pig", "gold": 1}
+{"id": "test_00752", "sent0": "The sun comes out at night", "sent1": "The sun is bigger than the earth", "gold": 0}
+{"id": "test_00753", "sent0": "Yen is the main currency used in Japan.", "sent1": "Japan is the main currency used in Yen.", "gold": 1}
+{"id": "test_00754", "sent0": "It was very hot,  so she put on her snowsuit and then ran and jumped into the pool.", "sent1": "It was very hot,  so she put on her swimsuit and then ran and jumped into the pool.", "gold": 0}
+{"id": "test_00755", "sent0": "Basketball is played within two teams", "sent1": "Basketball is played with pianos", "gold": 1}
+{"id": "test_00756", "sent0": "the fish live in computers.", "sent1": "The fish live in rivers.", "gold": 0}
+{"id": "test_00757", "sent0": "Breakfast is eaten in the morning.", "sent1": "Breakfast is eating during the night.", "gold": 1}
+{"id": "test_00758", "sent0": "The man who flies a plane is called a conductor.", "sent1": "The man who flies a plane is called the captain.", "gold": 0}
+{"id": "test_00759", "sent0": "HE PUT A CHICKEN IN THE OVEN", "sent1": "HE PUT A CUPBOARD IN THE OVEN", "gold": 1}
+{"id": "test_00760", "sent0": "You can dance anywhere.", "sent1": "You can dance in your own room", "gold": 0}
+{"id": "test_00761", "sent0": "He put water in a cup", "sent1": "He put the basketball inside a cup", "gold": 1}
+{"id": "test_00762", "sent0": "she put a horse in the washing machine", "sent1": "she put her cloths in the washing machine", "gold": 0}
+{"id": "test_00763", "sent0": "Dubai is located in Asia", "sent1": "Asia is part of Dubai", "gold": 1}
+{"id": "test_00764", "sent0": "He cut the lawn with his scissors.", "sent1": "He cut the lawn with his power mower.", "gold": 0}
+{"id": "test_00765", "sent0": "MY SISTER PREPARE A SANDWICHES WITH BREAD", "sent1": "MY SISTER PREPARE A SANDWICHES WITH CHALKS.", "gold": 1}
+{"id": "test_00766", "sent0": "he put an airplane on the bed", "sent1": "He put a pillow on the bed", "gold": 0}
+{"id": "test_00767", "sent0": "Babies cry and sleep a lot.", "sent1": "Babies cry in their sleep a lot.", "gold": 1}
+{"id": "test_00768", "sent0": "She flew to church in her new car", "sent1": "She drove to church in her new car", "gold": 0}
+{"id": "test_00769", "sent0": "She put her purse in the front seat of the car", "sent1": "There is a car in her purse", "gold": 1}
+{"id": "test_00770", "sent0": "Many ships are sunk when they enter Canada.", "sent1": "Many ships are sunk when they enter the bermuda triangle.", "gold": 0}
+{"id": "test_00771", "sent0": "My glasses help me see", "sent1": "My glasses help me smell", "gold": 1}
+{"id": "test_00772", "sent0": "God lives physically on earth", "sent1": "Humans wrote the bible about god", "gold": 0}
+{"id": "test_00773", "sent0": "The man ate the salad when he was hungry.", "sent1": "The man ate the bowl when he was hungry.", "gold": 1}
+{"id": "test_00774", "sent0": "the mobile phone is one of the food", "sent1": "the mobile phone can be used to contact with other person", "gold": 0}
+{"id": "test_00775", "sent0": "She doesn't like being abused", "sent1": "Abuse is good and fun", "gold": 1}
+{"id": "test_00776", "sent0": "Boats float on the road", "sent1": "Boats float on the river", "gold": 0}
+{"id": "test_00777", "sent0": "A teacher is writing in the board by sack piece", "sent1": "A teacher is writing in the board by Blade", "gold": 1}
+{"id": "test_00778", "sent0": "Exercising is not healthy", "sent1": "Exercising is healthy", "gold": 0}
+{"id": "test_00779", "sent0": "Canada is a country in North America", "sent1": "Canada is a country in Antarctica", "gold": 1}
+{"id": "test_00780", "sent0": "Dogs eat cats", "sent1": "Dogs and cats can live together", "gold": 0}
+{"id": "test_00781", "sent0": "It's might rain later today,  be sure to grab your umbrella before you leave.", "sent1": "It might rain later today,  be sure to grab your breakfast before you leave.", "gold": 1}
+{"id": "test_00782", "sent0": "Birds like to stay in the same location all year long.", "sent1": "Birds often fly south for the winter.", "gold": 0}
+{"id": "test_00783", "sent0": "The school is for learning", "sent1": "the store is for learning", "gold": 1}
+{"id": "test_00784", "sent0": "the lion likes ice cream", "sent1": "The kid likes ice cream", "gold": 0}
+{"id": "test_00785", "sent0": "If you do your job well, you will get paid regardless", "sent1": "If you do your job badly, you will get paid regardless", "gold": 1}
+{"id": "test_00786", "sent0": "Lotion is useful for moisturizing your tea.", "sent1": "The lotion is useful for moisturizing your skin", "gold": 0}
+{"id": "test_00787", "sent0": "People should study more to get a higher grade in exams", "sent1": "people should study less to get a higher grade in exams", "gold": 1}
+{"id": "test_00788", "sent0": "The animals bloomed in the spring", "sent1": "The flowers bloomed in the spring.", "gold": 0}
+{"id": "test_00789", "sent0": "peoples use cooling glass for eyes while the bike rides", "sent1": "peoples use a handkerchief for eyes while the bike rides", "gold": 1}
+{"id": "test_00790", "sent0": "Heaven is horrible", "sent1": "Heaven is nice", "gold": 0}
+{"id": "test_00791", "sent0": "The man was tired of shoveling snow every winter.", "sent1": "The man was tired of shoveling marbles every winter.", "gold": 1}
+{"id": "test_00792", "sent0": "You don't need to read", "sent1": "Reading is important", "gold": 0}
+{"id": "test_00793", "sent0": "he kept the ice cream in the fridge", "sent1": "he kept the ice cream in the oven", "gold": 1}
+{"id": "test_00794", "sent0": "She shaved her eyes.", "sent1": "She shaved her legs.", "gold": 0}
+{"id": "test_00795", "sent0": "he had a pair of air jordans for basketball game", "sent1": "he had Michael Jordan at the game", "gold": 1}
+{"id": "test_00796", "sent0": "Sunlight grows in plants.", "sent1": "Plants grow in sunlight.", "gold": 0}
+{"id": "test_00797", "sent0": "She went to the museum last weekend.", "sent1": "She went to the museum next weekend.", "gold": 1}
+{"id": "test_00798", "sent0": "weathering is a hammer that breaks rock", "sent1": "rock is converted into the soil by weathering", "gold": 0}
+{"id": "test_00799", "sent0": "I cooked the chicken in the oven last night.", "sent1": "I cooked the chicken in the refrigerator.", "gold": 1}
+{"id": "test_00800", "sent0": "A FISH WALKS IN THE STREET", "sent1": "A FISH LIVES IN WATER", "gold": 0}
+{"id": "test_00801", "sent0": "It's important to do your homework to get good grades", "sent1": "It's important to skip school to get good grades", "gold": 1}
+{"id": "test_00802", "sent0": "she put the giraffe in the freezer", "sent1": "she put water in the freezer", "gold": 0}
+{"id": "test_00803", "sent0": "I am a male", "sent1": "Men are more intelligent than women", "gold": 1}
+{"id": "test_00804", "sent0": "Roses are blue and violets are red", "sent1": "Roses are red and violets are blue", "gold": 0}
+{"id": "test_00805", "sent0": "Glasses help you see better", "sent1": "Broken glasses help you see better.", "gold": 1}
+{"id": "test_00806", "sent0": "You can use your eyes to eat", "sent1": "You can use your eyes to see", "gold": 0}
+{"id": "test_00807", "sent0": "social networks are for humans and robots", "sent1": "robots are omniscient such as humans", "gold": 1}
+{"id": "test_00808", "sent0": "Thanks for giving days starts the new year", "sent1": "Thanksgiving is in November.", "gold": 0}
+{"id": "test_00809", "sent0": "He put turkey in oven", "sent1": "There is a man in the oven", "gold": 1}
+{"id": "test_00810", "sent0": "A tiger is wearing pants.", "sent1": "A man is wearing pants.", "gold": 0}
+{"id": "test_00811", "sent0": "Restaurants are places to order food", "sent1": "Restaurants are places to cook your dinner.", "gold": 1}
+{"id": "test_00812", "sent0": "Every good singer is a member of the family of John Legend", "sent1": "John Legend is a very good singer.", "gold": 0}
+{"id": "test_00813", "sent0": "Orange juice is made of oranges", "sent1": "Orange juice is made of apples", "gold": 1}
+{"id": "test_00814", "sent0": "He rides rockets all days", "sent1": "He rides a bike all days", "gold": 0}
+{"id": "test_00815", "sent0": "Math is very useful these days", "sent1": "Math is not useful these days", "gold": 1}
+{"id": "test_00816", "sent0": "My brother is awarded a silver medal when he wins the race.", "sent1": "My brother is awarded a gold medal when he wins the race.", "gold": 0}
+{"id": "test_00817", "sent0": "He put butter into a fridge", "sent1": "He put a car into a fridge", "gold": 1}
+{"id": "test_00818", "sent0": "The fish ran through the forest", "sent1": "The fox ran through the forest", "gold": 0}
+{"id": "test_00819", "sent0": "It is important to stay hydrated", "sent1": "It is beautiful to stay hydrated", "gold": 1}
+{"id": "test_00820", "sent0": "The dog hates his hoster", "sent1": "The man Loves the dog", "gold": 0}
+{"id": "test_00821", "sent0": "I STOLE A RED CAR", "sent1": "I STOLE A BLUE CORVETTE", "gold": 1}
+{"id": "test_00822", "sent0": "I want ice cream so I buy an elephant", "sent1": "I want ice cream so I buy it", "gold": 0}
+{"id": "test_00823", "sent0": "he won the lottery", "sent1": "he always wins the lottery", "gold": 1}
+{"id": "test_00824", "sent0": "i use my dog to play cricket", "sent1": "i use the bat to play cricket", "gold": 0}
+{"id": "test_00825", "sent0": "girls wear a bra to provide support to their breasts", "sent1": "boys wear bra to provide support to their breasts", "gold": 1}
+{"id": "test_00826", "sent0": "i stand up in the theater", "sent1": "i sit down in the theater", "gold": 0}
+{"id": "test_00827", "sent0": "my android mobile installs games from play store", "sent1": "my android mobile installs games from the app store", "gold": 1}
+{"id": "test_00828", "sent0": "He buys a new tv every day", "sent1": "He watches sports TV every day.", "gold": 0}
+{"id": "test_00829", "sent0": "the cat ate the mouse", "sent1": "the mouse ate the cat", "gold": 1}
+{"id": "test_00830", "sent0": "If you need water, get it from the oven.", "sent1": "IF you need water, get it from the sink.", "gold": 0}
+{"id": "test_00831", "sent0": "every person take food for breakfast", "sent1": "every person take stones for breakfast", "gold": 1}
+{"id": "test_00832", "sent0": "I want a dirty house", "sent1": "I want a clean house", "gold": 0}
+{"id": "test_00833", "sent0": "She looks out the window", "sent1": "The window looks out her", "gold": 1}
+{"id": "test_00834", "sent0": "The sky is green.", "sent1": "The sky is above us", "gold": 0}
+{"id": "test_00835", "sent0": "I am saying hello", "sent1": "I am throwing hello", "gold": 1}
+{"id": "test_00836", "sent0": "To be the president of the country, you have to win the vote", "sent1": "Every country has a president", "gold": 0}
+{"id": "test_00837", "sent0": "I can lift a trash can.", "sent1": "I can lit a car", "gold": 1}
+{"id": "test_00838", "sent0": "Freshwater fish can live in the ocean.", "sent1": "The ocean consists of saltwater.", "gold": 0}
+{"id": "test_00839", "sent0": "Hot Dogs are the most popular food items at baseball games.", "sent1": "Hot Dogs are the most popular food item in America.", "gold": 1}
+{"id": "test_00840", "sent0": "A stove sits on a pan", "sent1": "A pan sits on a stove.", "gold": 0}
+{"id": "test_00841", "sent0": "He put stake into the pan", "sent1": "He put a pig into the pan", "gold": 1}
+{"id": "test_00842", "sent0": "The supermarket only sells cars", "sent1": "I shop at the supermarket", "gold": 0}
+{"id": "test_00843", "sent0": "he swapped a Corvette engine into a honda s2000", "sent1": "he put a semi-truck engine in the s2000", "gold": 1}
+{"id": "test_00844", "sent0": "he was swimming in Hawaii", "sent1": "he was flying to Hawaii", "gold": 0}
+{"id": "test_00845", "sent0": "the driver brakes when seeing the red signal", "sent1": "the driver accelerates when seeing the red signal", "gold": 1}
+{"id": "test_00846", "sent0": "A COW EAT A MOUNTAIN", "sent1": "A COW EAT A GRASS", "gold": 0}
+{"id": "test_00847", "sent0": "Television is a form of news.", "sent1": "You can open a jar with your teeth.", "gold": 1}
+{"id": "test_00848", "sent0": "To get to the top of the building you must use an elevator", "sent1": "To get to the top of the building you may use an elevator", "gold": 0}
+{"id": "test_00849", "sent0": "A blind man still has many senses", "sent1": "A dead man still has many senses", "gold": 1}
+{"id": "test_00850", "sent0": "SHE EAT A MOBILE PHONE", "sent1": "SHE eats AN APPLE", "gold": 0}
+{"id": "test_00851", "sent0": "There was a bird flying.", "sent1": "There was a boy with glasses flying on a broomstick.", "gold": 1}
+{"id": "test_00852", "sent0": "Zebra swim in the water", "sent1": "Fish swim in the water", "gold": 0}
+{"id": "test_00853", "sent0": "Boats float on water.", "sent1": "Planes float on water.", "gold": 1}
+{"id": "test_00854", "sent0": "Trees cause a lot of pollution", "sent1": "Pollutants cause pollution", "gold": 0}
+{"id": "test_00855", "sent0": "people usually wear a coat in the winter", "sent1": "Winter is a good time to wear short dresses.", "gold": 1}
+{"id": "test_00856", "sent0": "Some people will not die", "sent1": "All people will die", "gold": 0}
+{"id": "test_00857", "sent0": "He wrote a book using his hands.", "sent1": "He wrote a book by signing", "gold": 1}
+{"id": "test_00858", "sent0": "She used water to make the campfire.", "sent1": "She used a match to make the campfire.", "gold": 0}
+{"id": "test_00859", "sent0": "donkeys walk on four legs", "sent1": "donkeys walk on two legs", "gold": 1}
+{"id": "test_00860", "sent0": "The woman eats a wooden sandwich.", "sent1": "The woman eats tuna sandwich.", "gold": 0}
+{"id": "test_00861", "sent0": "That morning, Kate had breakfast and left for work", "sent1": "That morning, Kate had dinner and left for work", "gold": 1}
+{"id": "test_00862", "sent0": "The house shoved him", "sent1": "He shoved the girl", "gold": 0}
+{"id": "test_00863", "sent0": "The juice is tasty", "sent1": "The air is tasty", "gold": 1}
+{"id": "test_00864", "sent0": "The snake ate the elephant.", "sent1": "The snake ate the bird.", "gold": 0}
+{"id": "test_00865", "sent0": "A cat eats a fish", "sent1": "A cat eats a building", "gold": 1}
+{"id": "test_00866", "sent0": "My mom always cuts my fish's hair.", "sent1": "My mom always cuts my sister's hair.", "gold": 0}
+{"id": "test_00867", "sent0": "CAT RUNS FASTER THAN TORTOISE", "sent1": "TORTOISE RUNS FASTER THAN CAT", "gold": 1}
+{"id": "test_00868", "sent0": "My sister is a male", "sent1": "My sister is a female", "gold": 0}
+{"id": "test_00869", "sent0": "Dinosaurs are extinct.", "sent1": "Yesterday, a dinosaur chased me.", "gold": 1}
+{"id": "test_00870", "sent0": "He puts the monkeys in the cup.", "sent1": "He puts coffee into the cup.", "gold": 0}
+{"id": "test_00871", "sent0": "He turned on the ignition and drove fast for the next fifteen minutes.", "sent1": "After driving for fifteen minutes, he turned on the ignition.", "gold": 1}
+{"id": "test_00872", "sent0": "She put water in a cage", "sent1": "She put a mouse in a cage.", "gold": 0}
+{"id": "test_00873", "sent0": "You only die once", "sent1": "You die twice.", "gold": 1}
+{"id": "test_00874", "sent0": "He closed the blinds because it was too dark", "sent1": "He closed the blinds because it was too bright", "gold": 0}
+{"id": "test_00875", "sent0": "I have both a car and a bike", "sent1": "my car is smaller than my bike", "gold": 1}
+{"id": "test_00876", "sent0": "A family do not need a house.", "sent1": "A house is a shelter for the family.", "gold": 0}
+{"id": "test_00877", "sent0": "I took three Tylenol tablets to cure my headache.", "sent1": "I took 300 Tylenol tablets to cure my headache.", "gold": 1}
+{"id": "test_00878", "sent0": "There is peace during war", "sent1": "a war is fought for solution", "gold": 0}
+{"id": "test_00879", "sent0": "A neighbor is a person who lives next to you", "sent1": "A neighbor is a person who lives far from you", "gold": 1}
+{"id": "test_00880", "sent0": "He planted a chair in the jar.", "sent1": "He planted a plant in the jar.", "gold": 0}
+{"id": "test_00881", "sent0": "you can find fish in lakes", "sent1": "You can only find fish in the ocean", "gold": 1}
+{"id": "test_00882", "sent0": "Amazon has gone bankrupt", "sent1": "Amazon is a big company", "gold": 0}
+{"id": "test_00883", "sent0": "He put the child in the chair.", "sent1": "He put a truck in the chair.", "gold": 1}
+{"id": "test_00884", "sent0": "An anvil is floating in the pond.", "sent1": "A duck is floating in the pond.", "gold": 0}
+{"id": "test_00885", "sent0": "She put sunglasses on her face.", "sent1": "She put a ram in her face.", "gold": 1}
+{"id": "test_00886", "sent0": "She washed the car in the sink.", "sent1": "She washed the dish in the sink.", "gold": 0}
+{"id": "test_00887", "sent0": "The teacher was teaching English in the classroom", "sent1": "the teacher was harvesting wheat in the classroom", "gold": 1}
+{"id": "test_00888", "sent0": "He can fly.", "sent1": "He wants to fly.", "gold": 0}
+{"id": "test_00889", "sent0": "She poured juice into the glass.", "sent1": "She put a cat in the cup.", "gold": 1}
+{"id": "test_00890", "sent0": "The boy sucked on the popsicle with his nostril.", "sent1": "The boy sucked on the popsicle with his mouth.", "gold": 0}
+{"id": "test_00891", "sent0": "She put a fish in the oven.", "sent1": "She put some money in the oven.", "gold": 1}
+{"id": "test_00892", "sent0": "She put a building in the bucket.", "sent1": "She put water in the bucket.", "gold": 0}
+{"id": "test_00893", "sent0": "He took a bite of an apple.", "sent1": "An apple took a bite out of him.", "gold": 1}
+{"id": "test_00894", "sent0": "He put on a bike.", "sent1": "He put on a shirt.", "gold": 0}
+{"id": "test_00895", "sent0": "sunlight comes from the sun", "sent1": "the sun comes from sunlight", "gold": 1}
+{"id": "test_00896", "sent0": "She put a pig in her pocket.", "sent1": "She put a lipstick in her pocket.", "gold": 0}
+{"id": "test_00897", "sent0": "Sally taught her students English", "sent1": "Sally taught her students burglary", "gold": 1}
+{"id": "test_00898", "sent0": "Birds were heard barking at night", "sent1": "Birds were heard singing at night", "gold": 0}
+{"id": "test_00899", "sent0": "He walked up the stairs to the bedroom", "sent1": "He drove up the stairs to the bedroom", "gold": 1}
+{"id": "test_00900", "sent0": "The vegetarian ate a big dinner of horse meat and vegetables from the garden.", "sent1": "The vegetarian ate a big dinner of fruits and vegetables from the garden.", "gold": 0}
+{"id": "test_00901", "sent0": "A wolf howled at the little girl", "sent1": "the little girl howled at the wolf", "gold": 1}
+{"id": "test_00902", "sent0": "When people are hungry they drink water and do not eat food.", "sent1": "People eat food when they are hungry.", "gold": 0}
+{"id": "test_00903", "sent0": "I'saw a bird on the bike", "sent1": "I saw an elephant on a bicycle.", "gold": 1}
+{"id": "test_00904", "sent0": "I close my eyes to drive safely", "sent1": "I drive my car safely by following traffic rules", "gold": 0}
+{"id": "test_00905", "sent0": "I drink water", "sent1": "Water drinks people", "gold": 1}
+{"id": "test_00906", "sent0": "A ball can tear your trousers if you come in contact with it.", "sent1": "A sharp object can tear your trousers if you come in contact with it.", "gold": 0}
+{"id": "test_00907", "sent0": "A bird can fly in the sky.", "sent1": "A rock can fly in the sky.", "gold": 1}
+{"id": "test_00908", "sent0": "people usually walk backward", "sent1": "people usually walk forward", "gold": 0}
+{"id": "test_00909", "sent0": "The pen ran out of ink", "sent1": "the ink ran out of the pen", "gold": 1}
+{"id": "test_00910", "sent0": "She put a stove on the plate.", "sent1": "She put a soup on the plate.", "gold": 0}
+{"id": "test_00911", "sent0": "You are likely to find a book in a library.", "sent1": "You are unlikely to ever find a book in the library.", "gold": 1}
+{"id": "test_00912", "sent0": "The child studied a lot to open a door.", "sent1": "The child studied a lot to take a test.", "gold": 0}
+{"id": "test_00913", "sent0": "The boy kicked the ball.", "sent1": "The boy kicked the house.", "gold": 1}
+{"id": "test_00914", "sent0": "The man at the beach.", "sent1": "The man ate food on the beach.", "gold": 0}
+{"id": "test_00915", "sent0": "She put the salad on the table.", "sent1": "She put a motorcycle on the table.", "gold": 1}
+{"id": "test_00916", "sent0": "He rides his apple.", "sent1": "He rides his bike.", "gold": 0}
+{"id": "test_00917", "sent0": "he put both his legs into his trousers", "sent1": "he put all three of his legs into the trousers", "gold": 1}
+{"id": "test_00918", "sent0": "I hide successfully behind a book", "sent1": "I hide successfully behind a tree", "gold": 0}
+{"id": "test_00919", "sent0": "He filled his Car Tank with Gasoline.", "sent1": "He filled his Car Tank with  water.", "gold": 1}
+{"id": "test_00920", "sent0": "War is a good thing and benefits everyone.", "sent1": "War is evil.", "gold": 0}
+{"id": "test_00921", "sent0": "Life is short", "sent1": "short is life", "gold": 1}
+{"id": "test_00922", "sent0": "A sandwich eats me.", "sent1": "I ate a nice sandwich.", "gold": 0}
+{"id": "test_00923", "sent0": "He put the key in the lock.", "sent1": "He put a pony in the lock.", "gold": 1}
+{"id": "test_00924", "sent0": "He dried himself with a train ticket", "sent1": "He dried himself with a towel", "gold": 0}
+{"id": "test_00925", "sent0": "a boy rides a bike", "sent1": "a donkey rides a bike", "gold": 1}
+{"id": "test_00926", "sent0": "Eating loves me", "sent1": "I love to eat", "gold": 0}
+{"id": "test_00927", "sent0": "He put plum on the plate.", "sent1": "He put a helicopter on the plate.", "gold": 1}
+{"id": "test_00928", "sent0": "The world has the same time zones", "sent1": "There are different time zones around the world.", "gold": 0}
+{"id": "test_00929", "sent0": "The workers protested against the management People", "sent1": "The Management People were happy hearing the Protest news", "gold": 1}
+{"id": "test_00930", "sent0": "she likes to sit on babies from time to time", "sent1": "she likes to babysit from time to time", "gold": 0}
+{"id": "test_00931", "sent0": "the snake crawls on his body", "sent1": "the snake runs on his feet", "gold": 1}
+{"id": "test_00932", "sent0": "You should iron your clothes before you wash them", "sent1": "You should iron your clothes after you wash them", "gold": 0}
+{"id": "test_00933", "sent0": "Cheetahs can run faster than cats", "sent1": "Cat runs faster than a cheetah", "gold": 1}
+{"id": "test_00934", "sent0": "Children do not like playtime", "sent1": "Children love to play the game.", "gold": 0}
+{"id": "test_00935", "sent0": "grass grows on the ground", "sent1": "grass grows in the water", "gold": 1}
+{"id": "test_00936", "sent0": "Leafs are useless", "sent1": "Leafs help plants absorb nutrition", "gold": 0}
+{"id": "test_00937", "sent0": "You can sell unwanted items on Facebook", "sent1": "You can sell a baby on Facebook", "gold": 1}
+{"id": "test_00938", "sent0": "People are usually green", "sent1": "Apples are usually green", "gold": 0}
+{"id": "test_00939", "sent0": "Internet is very useful nowadays.", "sent1": "We do not use the internet in today's generation.", "gold": 1}
+{"id": "test_00940", "sent0": "waiting in line is for patient people", "sent1": "A mouse is an input device.", "gold": 0}
+{"id": "test_00941", "sent0": "It usually snows in New England", "sent1": "It usually snows in Cuba", "gold": 1}
+{"id": "test_00942", "sent0": "The sky is underground", "sent1": "The sky is blue", "gold": 0}
+{"id": "test_00943", "sent0": "there are many books in the library", "sent1": "the library has only one storybook", "gold": 1}
+{"id": "test_00944", "sent0": "I put a car inside the fridge.", "sent1": "I put a bottle of milk into the fridge.", "gold": 0}
+{"id": "test_00945", "sent0": "He waited for his bus at the bus stop", "sent1": "He waited for his flight at the bus stop", "gold": 1}
+{"id": "test_00946", "sent0": "the Internet will disperse people", "sent1": "Internet helps people stay connected", "gold": 0}
+{"id": "test_00947", "sent0": "The cow ate the grass in the pasture.", "sent1": "The cow ate the chickens in the pasture.", "gold": 1}
+{"id": "test_00948", "sent0": "Turkey is a color", "sent1": "Blue is a color", "gold": 0}
+{"id": "test_00949", "sent0": "The boy won the race with his friends", "sent1": "The boy won the race with a cheetah", "gold": 1}
+{"id": "test_00950", "sent0": "The outcome of cutting in line is waiting.", "sent1": "The outcome of getting in line is waiting.", "gold": 0}
+{"id": "test_00951", "sent0": "honesty should be encouraged", "sent1": "honesty should be banned", "gold": 1}
+{"id": "test_00952", "sent0": "everything comes in dreams happens in real life", "sent1": "things come in dreams may not happen in real life", "gold": 0}
+{"id": "test_00953", "sent0": "Sally taught mathematics for nine years since she was 30", "sent1": "Sally taught mathematics for ninety years since she was 30", "gold": 1}
+{"id": "test_00954", "sent0": "He put a giraffe in the pantry.", "sent1": "He put a can of beans in the pantry.", "gold": 0}
+{"id": "test_00955", "sent0": "People may consider you rude if you do not say please when asking for something.", "sent1": "People may consider you polite if you do not say please when asking for something.", "gold": 1}
+{"id": "test_00956", "sent0": "he put a whale in the car", "sent1": "he put a woman in his car", "gold": 0}
+{"id": "test_00957", "sent0": "that girl is taller than that boy", "sent1": "Girls are taller than boys on average", "gold": 1}
+{"id": "test_00958", "sent0": "Firetrucks are green", "sent1": "Firetrucks are red.", "gold": 0}
+{"id": "test_00959", "sent0": "Video games are fun", "sent1": "Video games are not fun", "gold": 1}
+{"id": "test_00960", "sent0": "she put the cat in the bowl", "sent1": "she put the salad in the bowl", "gold": 0}
+{"id": "test_00961", "sent0": "A pitcher throws a baseball", "sent1": "The soccer player kicked a football into the goal.", "gold": 1}
+{"id": "test_00962", "sent0": "He put a dinosaur into the pool", "sent1": "He put some water into a pool", "gold": 0}
+{"id": "test_00963", "sent0": "She put a cake into the oven", "sent1": "She put a child into the oven", "gold": 1}
+{"id": "test_00964", "sent0": "Sandwich made a turkey.", "sent1": "He made a turkey sandwich.", "gold": 0}
+{"id": "test_00965", "sent0": "A giraffe is a mammal", "sent1": "Mammals include alligators", "gold": 1}
+{"id": "test_00966", "sent0": "the clock shows animals", "sent1": "the clock shows the correct time", "gold": 0}
+{"id": "test_00967", "sent0": "He put the chicken on the fridge.", "sent1": "He put a shark into the fridge.", "gold": 1}
+{"id": "test_00968", "sent0": "Doctors do not have to study too much", "sent1": "To become a doctor, it is important to study the course medicine", "gold": 0}
+{"id": "test_00969", "sent0": "Reading is very important", "sent1": "Jumping is very important.", "gold": 1}
+{"id": "test_00970", "sent0": "I bought a car in the book store", "sent1": "I bought a history book in the book store", "gold": 0}
+{"id": "test_00971", "sent0": "The girl saw the red car.", "sent1": "The blind girl saw the red car.", "gold": 1}
+{"id": "test_00972", "sent0": "The bowling ball is swimming in the pond.", "sent1": "The big fish are swimming in the pond.", "gold": 0}
+{"id": "test_00973", "sent0": "The parrot flew onto the branch.", "sent1": "The branch ate the parrot.", "gold": 1}
+{"id": "test_00974", "sent0": "He put water without a container in the freezer for 24 hours", "sent1": "He put a watermelon in the freezer for 24 hours", "gold": 0}
+{"id": "test_00975", "sent0": "He took his dog for a walk", "sent1": "He took his goldfish for a walk", "gold": 1}
+{"id": "test_00976", "sent0": "Video game consoles can be seen without contact lenses only", "sent1": "Video game consoles are hard to see nowadays.", "gold": 0}
+{"id": "test_00977", "sent0": "People use cars for transportation.", "sent1": "People use cars to fly.", "gold": 1}
+{"id": "test_00978", "sent0": "The refrigerator cleaned the dirty clothes", "sent1": "The washing machine cleaned the dirty clothes", "gold": 0}
+{"id": "test_00979", "sent0": "My child likes to wear her red dress to school.", "sent1": "My child likes to wear her bathing suit to school.", "gold": 1}
+{"id": "test_00980", "sent0": "The cow went to college to study art.", "sent1": "The man went to college to study art.", "gold": 0}
+{"id": "test_00981", "sent0": "crack addicts are addicted to crack", "sent1": "crack addicts are addicted to chocolate milk", "gold": 1}
+{"id": "test_00982", "sent0": "he was television at his brother", "sent1": "he was angry at his brother", "gold": 0}
+{"id": "test_00983", "sent0": "he sent me a text message from his smartphone", "sent1": "he sent me a text message from his ashtray", "gold": 1}
+{"id": "test_00984", "sent0": "mailmen deliver babies", "sent1": "mailmen deliver mail", "gold": 0}
+{"id": "test_00985", "sent0": "the boy fed the fish with fish food", "sent1": "the boy fed the fish with a ball", "gold": 1}
+{"id": "test_00986", "sent0": "He buy a planet.", "sent1": "He buy a house.", "gold": 0}
+{"id": "test_00987", "sent0": "She read the interesting book for fun", "sent1": "She read the interesting book for dinner.", "gold": 1}
+{"id": "test_00988", "sent0": "Amy swam to Texas to see Austin", "sent1": "Amy travels to Texas to see Austin", "gold": 0}
+{"id": "test_00989", "sent0": "Molly turned the AC on", "sent1": "Molly ordered the AC on", "gold": 1}
+{"id": "test_00990", "sent0": "He pulled the water over his head when he got into bed.", "sent1": "He pulled the covers over his head when he got into bed.", "gold": 0}
+{"id": "test_00991", "sent0": "Water can be hot or cold.", "sent1": "Water can only be cold.", "gold": 1}
+{"id": "test_00992", "sent0": "I take the submarine to work every day.", "sent1": "I take the train to work every day.", "gold": 0}
+{"id": "test_00993", "sent0": "there is some water on the lawn", "sent1": "there is some water eating on the lawn", "gold": 1}
+{"id": "test_00994", "sent0": "The whale swam in the sky", "sent1": "The whale swam in the ocean", "gold": 0}
+{"id": "test_00995", "sent0": "Soccer balls are round.", "sent1": "American Football balls are round.", "gold": 1}
+{"id": "test_00996", "sent0": "He ate an entire zebra for lunch.", "sent1": "The zebra ate its lunch.", "gold": 0}
+{"id": "test_00997", "sent0": "I sliced the strong meat with my Kitchen Knife.", "sent1": "I sliced the strong meat with my Kitchen spoon.", "gold": 1}
+{"id": "test_00998", "sent0": "today my hand is very clear to see the world", "sent1": "today my eye is very clear to see the world", "gold": 0}
+{"id": "test_00999", "sent0": "Sean is a hard-working guy, so he studied the whole day", "sent1": "Sean is a hard-working guy, so he plays phone games the whole day", "gold": 1}

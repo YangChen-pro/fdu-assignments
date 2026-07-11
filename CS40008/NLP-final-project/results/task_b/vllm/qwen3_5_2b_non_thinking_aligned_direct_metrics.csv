@@ -1,0 +1,2 @@
+method,metric,value,split,notes
+Qwen3.5-2B:non_thinking:task_b_direct:direct,accuracy,0.578000,test,

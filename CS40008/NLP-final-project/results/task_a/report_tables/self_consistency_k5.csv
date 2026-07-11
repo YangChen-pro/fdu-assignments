@@ -1,0 +1,7 @@
+model,mode,template,accuracy,prompt_consistency,sampling_consistency,source
+Qwen3.5-2B,non_thinking,minimal,0.720,0.550,0.794,Qwen3.5-2B_non_thinking_test_zero_shot_self_consistency_k5_metrics.csv
+Qwen3-1.7B,non_thinking,minimal,0.701,0.252,0.970,Qwen3-1.7B_non_thinking_test_zero_shot_self_consistency_k5_metrics.csv
+Qwen3-1.7B,non_thinking,judge,0.570,0.252,0.947,Qwen3-1.7B_non_thinking_test_zero_shot_self_consistency_k5_metrics.csv
+Qwen3.5-2B,non_thinking,direct,0.568,0.550,0.767,Qwen3.5-2B_non_thinking_test_zero_shot_self_consistency_k5_metrics.csv
+Qwen3-1.7B,non_thinking,direct,0.563,0.252,0.967,Qwen3-1.7B_non_thinking_test_zero_shot_self_consistency_k5_metrics.csv
+Qwen3.5-2B,non_thinking,judge,0.538,0.550,0.779,Qwen3.5-2B_non_thinking_test_zero_shot_self_consistency_k5_metrics.csv

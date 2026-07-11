@@ -1,0 +1,3 @@
+\section{Conclusion}
+
+本文围绕 \comve 常识验证任务系统评估了大语言模型的判断可靠性。Task A 结果显示，RoBERTa 微调基线达到 0.868 准确率和 0.939 顺序一致性；最佳 LLM 设置为 Qwen3-1.7B thinking zero-shot direct prompt，准确率达到 0.952，order consistency 为 0.929，prompt consistency 为 0.849。8-shot 示例没有带来稳定收益，self-consistency 在 no-thinking 模式下只能有限改善部分模型，仍无法超过 thinking zero-shot。Task B 结果显示，verification-enhanced inference 在 stronger models 上还能带来进一步收益，尤其是 Qwen3.5-2B thinking 的 rerank 准确率达到 0.818。总体而言，标准准确率只能回答模型是否答对，而鲁棒性与不确定性分析进一步回答模型是否稳定地答对以及是否知道自己可能答错。这为常识验证中的大语言模型评估提供了比单一 baseline 比较更完整的研究叙事。

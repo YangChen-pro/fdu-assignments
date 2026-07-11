@@ -1,0 +1,5 @@
+method,accuracy,consistency,note
+RoBERTa fine-tuning,0.868,order 0.939,supervised baseline
+Best zero-shot LLM,0.952,prompt 0.849; order 0.929,Qwen3-1.7B thinking direct
+Best 8-shot LLM,0.931,prompt 0.849,Qwen3-1.7B thinking direct
+Best non-thinking self-consistency,0.720,prompt 0.550; sampling 0.794,Qwen3.5-2B non_thinking minimal k=5

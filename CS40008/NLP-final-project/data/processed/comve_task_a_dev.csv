@@ -1,0 +1,1001 @@
+id,sent0,sent1,gold
+dev_00000,A chainsaw is used to cut diamonds,A chainsaw is used to cut trees,0
+dev_00001,The closet got hangers,The hangers bought the closet,1
+dev_00002,Feathers in a pillow are hard.,A pillow is soft.,0
+dev_00003,Straight razors are great for trimming beards,Straight razors are great for cutting sheet metal,1
+dev_00004,You are likely to find an orange tree in Antarctica.,You are likely to find an orange tree in Florida.,0
+dev_00005,The boy went fishing,The boy ate the sky,1
+dev_00006,An e-wallet is the only kind of payment,An e-wallet is one kind of payment,0
+dev_00007,rob drives a car to work,rob drives a train to work,1
+dev_00008,We went to the restaurant to take a shower.,We went to the restaurant to eat dinner.,0
+dev_00009,I write a letter to my friend informing about his health.,I write a letter to my dog informing about his health.,1
+dev_00010,A person uses a camera to write an e-mail to his friend,A person uses the Internet-connected computer to write an e-mail to his friend,0
+dev_00011,cars have wheels,cars have legs,1
+dev_00012,Sam bought a baby from the store,Sam bought water from the store,0
+dev_00013,Bob painted his house yesterday,Bob painted the fire yesterday,1
+dev_00014,Water contains helium.,Water contains hydrogen.,0
+dev_00015,She cleaned the kitchen floor with a broom.,She cleaned the kitchen floor with a rake.,1
+dev_00016,"It is snowing, Susan put on a bathing suit to go outside.","It is snowing, Susan put on a jacket to go outside.",0
+dev_00017,the light bulb is spreading light in the darkroom.,the ceiling fan is spreading light in the darkroom.,1
+dev_00018,We go to the library to buy food.,We go to the supermarket to buy food.,0
+dev_00019,The fan is blowing cool air around the room,The light is blowing cool air around the room,1
+dev_00020,A circle has four corners.,A circle always has a radius.,0
+dev_00021,You are likely to find salt in a cruet,You are likely to find a fish in a cruet,1
+dev_00022,The leaves on the tree are starting to turn blue.,The leaves on the tree are starting to turn red.,0
+dev_00023,One of the things you do when facing the enemy is to observe his weaknesses and use them strategically against him.,One of the things you do when facing the enemy is to analyze your weaknesses and tell them to your enemy.,1
+dev_00024,I used the dog to open the door.,I used the key to open the door.,0
+dev_00025,the fly died because it did not have enough food,the fly died because the air was well-conditioned,1
+dev_00026,The sun is very very cold.,The sun is very very hot.,0
+dev_00027,An Eagle flies above the clouds.,An Eagle swim inside the water.,1
+dev_00028,Sarampo can kill all earth,Sarampo can kill many persons,0
+dev_00029,An ax can be used to chop a tree.,A spoon can be used to chop a tree.,1
+dev_00030,He gave the thirsty man chocolate.,He gave the thirsty man a coke.,0
+dev_00031,Heavy noise woke them up,Heavy noise made them sleep,1
+dev_00032,The teacher told their students to submit their home this week,The teacher told their students to submit their project this week,0
+dev_00033,I ate lava cake,I ate lava,1
+dev_00034,"If you don't keep oil in your car, it will overheat","If you don't keep the coolant in your car, it will overheat",0
+dev_00035,i ate pasta for dinner,i ate pest for dinner,1
+dev_00036,He swims over a table,He jumps over a table,0
+dev_00037,Fishing rods catch fish.,Flags catch rabbits,1
+dev_00038,Stones are falling from the sky.,Rain is falling from the sky,0
+dev_00039,She went to the store with her dog.,The dog drove to the store.,1
+dev_00040,jellyfish live high in trees,jellyfish live in water,0
+dev_00041,Sara rode the city bus,Sara flew the city bus,1
+dev_00042,I spent enough money to buy a dog.,I saved enough money to buy a dog.,0
+dev_00043,Wallet is a pocket-sized flat folding case for holding money and plastic cards,Carrot is a pocket-sized flat folding case for holding money and plastic cards,1
+dev_00044,he wants to cook orange in hot oil.,he wants to cook meat in hot oil.,0
+dev_00045,The bug ate leaves,The bug ate the moon,1
+dev_00046,"When you think that something is funny, you die","When you think that something is funny, you laugh",0
+dev_00047,You are likely to find a piano at a musical instrument shop,You are likely to find a lion at a musical instrument shop,1
+dev_00048,Eating dough-nuts is a form of exercise,Swimming is a form of exercise,0
+dev_00049,steak is delicious,steak is transparent,1
+dev_00050,when you drink water you get dehydrated,When you drink beer you get drunk,0
+dev_00051,music communicates emotions,music causes severe cramps,1
+dev_00052,The boy played fetch in his backyard with a fish.,The boy played fetch in his backyard with a dog.,0
+dev_00053,dry wood can catch fire,dry wood can put out fires,1
+dev_00054,The avocado tastes bitter.,The avocado tastes good,0
+dev_00055,I fell and got scrapped on my knee running outside and put ointment on it.,I fell and got scrapped on my knee running outside and put dirt on it.,1
+dev_00056,French and Latinos can communicate easy,A Latino can communicate with someone from Spain,0
+dev_00057,He used a towel to dry off after his shower.,He used an apple to dry off after his shower.,1
+dev_00058,Dust collects vacuum,Dust collects on unmoved objects,0
+dev_00059,A dolphin is a mammal.,A tuna is a mammal.,1
+dev_00060,She got a pedicure at church,She got baptized at church,0
+dev_00061,I filled up my car with oil,I filled up my car with orange juice,1
+dev_00062,Rockers play a vacuum,Rockers play the guitar,0
+dev_00063,The sun sets at night.,The moon sets at night.,1
+dev_00064,George broke the cat,George broke the phone,0
+dev_00065,Greg wore a green shirt today,Greg's bird wore a green shirt today,1
+dev_00066,The color of the grass is purple.,The color of the grass is green.,0
+dev_00067,The water kills the spiders.,The spider kills the water.,1
+dev_00068,Every day I use gel alcohol on my body and hands,Every day I use body soap and I use gel alcohol on my hands,0
+dev_00069,Medicine is used to cure illness,Medicine is a good entertainment,1
+dev_00070,He likes to play loud music at his library job,He likes to play music at night,0
+dev_00071,Dancers are entertainers,Dancers are monks,1
+dev_00072,Could you turn off the lights? It is very dark inside,Could you turn on the lights? It is very dark inside,0
+dev_00073,She used a camera to take a picture.,She used a suitcase to take a picture.,1
+dev_00074,JOE WENT THE JAIL FOR SAVE THE MONEY,JOE WENT THE JAIL FOR STOLE THE MONEY,0
+dev_00075,He is watching his reflection in the mirror.,He is watching his reflection on the wall.,1
+dev_00076,She left the room with her dinosaur,She left the room with her sister,0
+dev_00077,you can fight fire with CO2.,you can fight fire with chocolate.,1
+dev_00078,The supermarket goes into bags of groceries.,Groceries go into bags at the supermarket.,0
+dev_00079,You can see the lights with your eyes.,You can see the lights with your hands.,1
+dev_00080,The duck swam across the lava.,The duck swam across the water.,0
+dev_00081,Towels are made of cloth.,Towels are made of rubber.,1
+dev_00082,She listens to rap music because she hates it,She listens to rap music because she loves it,0
+dev_00083,He cooked the egg with a pan.,He cooked a pan with the egg.,1
+dev_00084,the fridge is stupid,people are stupid,0
+dev_00085,Doritos are a good party snack.,"Doritos are made from potatoes, that is why they are bad for a party.",1
+dev_00086,Mike wants an electric car because gas prices are so low.,Mike wants a V12 car because gas prices are so low.,0
+dev_00087,Apples grow on trees.,Apples hatch from eggs.,1
+dev_00088,Something you find in the street is dinosaurs.,Something you find in the street is lines.,0
+dev_00089,The car can be repaired by a mechanic.,The mechanic can be repaired by a car.,1
+dev_00090,White-headed birds are all bald eagles,Bald eagles have white heads,0
+dev_00091,You can sometimes find milk in fridges.,You can sometimes find a rhinoceros in a fridge.,1
+dev_00092,Leftover food goes on the roof.,Leftover food goes in the fridge.,0
+dev_00093,"Women always have a wallet in their handbags, unlike men.","Men always have a wallet in their handbags, unlike women.",1
+dev_00094,My dog meows.,My dog barks.,0
+dev_00095,Stone is harder to break than glass.,Stone is as easy to break like glass.,1
+dev_00096,My dog has a car around his neck.,My dog has a collar around his neck.,0
+dev_00097,The leaves fall from the tree,Trees dance and fall in disco clubs,1
+dev_00098,The dog took the man for a walk.,He took the dog for a run.,0
+dev_00099,I turned on the heater because I was cold,I turned on the heater because I was hot,1
+dev_00100,The inchworm stopped at the station.,The train stopped at the station.,0
+dev_00101,I drive on the right side of the road.,I drive sideways.,1
+dev_00102,Drowning in water involves too much oxygen in the lungs.,Drowning in water involves too much water in the lungs.,0
+dev_00103,The clock on the wall needs a new battery.,The paint on the wall needs a new battery.,1
+dev_00104,James weighs 300 kilometers,James weighs 300 pounds,0
+dev_00105,I bought a car from the car dealership.,I bought a house from the car dealership.,1
+dev_00106,You go to a concert for the lectures.,You go to a concert for the music.,0
+dev_00107,people eat bread,bread eat people,1
+dev_00108,Bahamas are eaten by monkeys,I want to go swimming in the Bahamas,0
+dev_00109,He studied biology so he is a biologist,He studied biology so he is a pilot,1
+dev_00110,The girl was inside the computer,The girl was using the computer,0
+dev_00111,The teacher threw an Oreo.,The Oreo threw the teacher.,1
+dev_00112,He installed solar panels in his basement,He installed solar panels on his roof,0
+dev_00113,I washed the car with the hose.,I washed the hose with the car.,1
+dev_00114,Basketballs are hit with golf clubs.,Golf balls are hit with golf clubs.,0
+dev_00115,He put the ice cream in the freezer,He put the ice cream in the oven,1
+dev_00116,The judge pleaded innocent.,The defendant pleaded innocent.,0
+dev_00117,The local library has plenty of books to read.,The local swimming pool has plenty of books in the water.,1
+dev_00118,The dress is made of music,The dress is made of cotton,0
+dev_00119,I put a baseball inside of my mitt.,I put a mitt inside of my baseball.,1
+dev_00120,The sweater is turkey,The sweater is red,0
+dev_00121,The apple is red,The apple is orange,1
+dev_00122,The oven was placed on the table.,The lamp was placed on the table.,0
+dev_00123,My phone rang,My phone told me to answer it,1
+dev_00124,People like things which make them feel nauseous,People like things which make them feel secure,0
+dev_00125,Clocks tell time,Street lights tell time,1
+dev_00126,Rock floated on the water.,I floated on the water.,0
+dev_00127,glue is sticky,glue is incohesive,1
+dev_00128,Type the letter then turn on the computer.,Please turn on the computer and type this letter,0
+dev_00129,He uses the calculator to crunch numbers,The calculators are only for crunching numbers.,1
+dev_00130,water enema is something that no human can live without.,Water is something that no human can live without.,0
+dev_00131,The shark ate the fish.,The shark ate the broccoli.,1
+dev_00132,Joe chooses to do what he likes because the future is predetermined.,Joe chooses to do what he likes because humans have free will.,0
+dev_00133,A fan is making me feel cool,A fan is making me hotter,1
+dev_00134,A car is normally made of wood,A car usually has 4 wheels,0
+dev_00135,The hunter shot a deer.,The hunter shot a scarecrow.,1
+dev_00136,You got dirty dishes for her birthday.,She got flowers for her birthday.,0
+dev_00137,the ribcage is part of a torso.,the bones are part of a torso.,1
+dev_00138,Paper money is made of iron,Paper money is made of paper,0
+dev_00139,the refrigerator's interior is cold,the refrigerator's interior is hot,1
+dev_00140,He went to the market to buy stars.,He went to the market to buy organic fruits.,0
+dev_00141,elephants are heavy,monkeys are heavier than elephants,1
+dev_00142,Texas is kind,Texas is warm,0
+dev_00143,I work in a bank,Bank works with me,1
+dev_00144,Toads are fond of cheese puffs and tango,Bananas are harvested in bunches.,0
+dev_00145,There are trees in the forest.,There are trees in a breadbox.,1
+dev_00146,Ice cream melts in the freezer.,Ice cream is found in the freezer.,0
+dev_00147,Eating apples is good,Eating Paint is good,1
+dev_00148,The little girl ate pillowcases for dessert.,The little girl ate cake for dessert.,0
+dev_00149,I like to view art at the art gallery.,I like to play drums at the art gallery,1
+dev_00150,"If you have a job, then you lose money.","If you have a job, then you make money.",0
+dev_00151,In winter we find snow everywhere,In summer we find snow everywhere,1
+dev_00152,Touristic places are always nobody here.,Touristic places are always crowded.,0
+dev_00153,He put dog food in the dog food bowl,He put red ants into the dog food bowl,1
+dev_00154,The flowers grew beautifully down in the cave.,The flowers grew beautifully out in the garden.,0
+dev_00155,The fan blew slowly,The fan jumped quickly,1
+dev_00156,He washed plates in Washing Machine,He washed plates in Dishwasher,0
+dev_00157,A person can plant a seed,A person can plant a star,1
+dev_00158,Lava is cold,Lava is hot,0
+dev_00159,He saw a bear during his trip to Canada,A bear was driving a car in Canada,1
+dev_00160,He gets out a giraffe from the microwave,He gets out a small bowl of soup from the microwave,0
+dev_00161,That Chinese food made me feel sick.,That boulder made me feel sick.,1
+dev_00162,I hate ice cream on a hot summer day,I enjoy ice cream on a hot summer day,0
+dev_00163,He takes a book on the bookshelf,He takes a car on the bookshelf,1
+dev_00164,A doctor may prescribe poison to the patient's,A doctor may prescribe medicine to the patient's,0
+dev_00165,the girl on the phone is annoying,the phone is annoying,1
+dev_00166,He opened the key with a lock,He opened the lock with a key,0
+dev_00167,The man poured water into the cup.,The man put a tiger into the cup.,1
+dev_00168,Blended up fruit makes a nacho,Blended up fruit makes a smoothie,0
+dev_00169,You can go to the Philippines and surf.,You can go to the deserts and surf.,1
+dev_00170,I place the Halloween candy in my mailbox,I place the Halloween candy in my bag,0
+dev_00171,He threw the spear at the lion,He threw his lion at the spear,1
+dev_00172,Something that you find in a pen is money.,Something that you find in a desk is a pen,0
+dev_00173,My brother won an award riding in a skateboarding competition.,The skateboarding competition won an award riding in my brother.,1
+dev_00174,The repairer can be repaired by a car.,The car can be repaired by a repairer.,0
+dev_00175,Meals get cooler as you leave it out,Meals get hotter as you leave it out,1
+dev_00176,We played a game of turquoise,We played a game of backgammon,0
+dev_00177,"She enjoyed the art of taxidermy, and practiced in her spare time.","She enjoyed the art of death, and practiced in her spare time.",1
+dev_00178,The British are table,The British are human,0
+dev_00179,the summer months are the hottest of the year.,the summer months are the coolest of the year.,1
+dev_00180,The movie ran down the street.,The movie was scary.,0
+dev_00181,she like to slam the garbage can,she like to eat the garbage can,1
+dev_00182,She cuts off her fingers every morning.,She brushes her hair every morning.,0
+dev_00183,He likes to sing in the shower,he likes to run in the shower,1
+dev_00184,You can use detergent to dye your hair.,You can use bleach to dye your hair.,0
+dev_00185,I had a delicious chocolate cake,I ate a delicious cake made with flying paper chocolate,1
+dev_00186,I prefer the tiger in my bag while walking.,I always carry a mobile in my pocket.,0
+dev_00187,He spends $100 for dinner.,He spends leaves for dinner.,1
+dev_00188,The milkman delivered cars,The milkman delivered the milk on the porch,0
+dev_00189,He likes to drink soda,he likes to drink gasoline,1
+dev_00190,Homestar Runner is Lazy and can't run,Homestar Runner is a terrific athlete,0
+dev_00191,he likes to cut potatoes and make breakfast,potatoes are not a breakfast item,1
+dev_00192,Most cars have vending machines,Most cars have seats,0
+dev_00193,She left her baby in the car,She left a tiger in the car,1
+dev_00194,"Adam buys a bull and put it in the fridge, for lunch.","Adam buys a ham and put it in the fridge, for lunch.",0
+dev_00195,Hummingbirds have no sense of smell,Hummingbirds eat hard-boiled eggs,1
+dev_00196,the fan turned the man on,the man turned the fan on,0
+dev_00197,Seagulls have beaks.,Seagulls have five feet.,1
+dev_00198,He ran eight hundred miles today,He ran three miles today.,0
+dev_00199,she gave birth to a baby,he gave birth to a baby,1
+dev_00200,Pouring acid into the soil is a good way to grow vegetables.,Fertilizing the soil is a good way to grow vegetables.,0
+dev_00201,Cars travel on roads,Boats fly in the sky,1
+dev_00202,I broke the bacon and cut the egg.,I made an egg omelet with bacon.,0
+dev_00203,I opened the door with the handle.,I opened the door with the hinges.,1
+dev_00204,You use shampoo to clean your teeth.,You use shampoo to clean your hair.,0
+dev_00205,He walked through the door.,He walked through the floor.,1
+dev_00206,A dog plays baseball,A boy plays baseball,0
+dev_00207,The dog spit on the ground.,The tree spit on the ground.,1
+dev_00208,Apple makes weapons for the military.,Apple makes phones and computers and develops software.,0
+dev_00209,I turn on AC hot days in summer,I turn on heater hot days in summer,1
+dev_00210,I got a splinter when I was moving the PVC pipe.,I got a splinter when I was moving the wooden board.,0
+dev_00211,I left my pen in the desk drawer.,I left my car in the desk drawer.,1
+dev_00212,I laugh when I'm sad,I cry when I'm sad,0
+dev_00213,He drinks whiskey on the rocks.,He drinks hot tea on the rocks.,1
+dev_00214,The car parked here in the garage.,She parked the car in the garage.,0
+dev_00215,He started a fire using a match.,He started a match using a fire.,1
+dev_00216,Dogs cook their food,Dogs eat food prepared by their masters,0
+dev_00217,Money can be used to purchase items from a shop,Chocolate can be used to make a coffee pot,1
+dev_00218,A rubber chicken is an animal used to make dinner.,A rubber chicken is a silly object used to make people laugh.,0
+dev_00219,The eagles fly in the air,the eagles swim under the sea,1
+dev_00220,Machines need enough sleep to function optimally.,Mammals need enough sleep to function optimally,0
+dev_00221,The boy picked up a small rock.,The boy picked up a Fire Truck.,1
+dev_00222,He laid outside under the stars and gazed up at the rug.,He laid outside under the stars and gazed up at the moon.,0
+dev_00223,He put the tomato into the milkshake,He put stones into the milkshake,1
+dev_00224,slinky is used for coffins,slinky rolls downstairs,0
+dev_00225,You can replace your intake of food with cheese-wiz and survive for three months,You can replace your intake of water with cheese-wiz and survive for three months,1
+dev_00226,He takes the airplane and goes to the supermarket,He takes the car and goes to the supermarket,0
+dev_00227,Video games are fun,Video games are real life,1
+dev_00228,A bicycle is fast than a motorcycle.,A motorcycle is fast than a bicycle.,0
+dev_00229,Daniela is pooping on a tree.,Daniela is pooping on a cloud,1
+dev_00230,He drove his oven to the lake.,He drove his car to the lake.,0
+dev_00231,I screamed when I grabbed the rose because there was a thorn.,I screamed when I grabbed the rose because there was a petal.,1
+dev_00232,I screamed when I hit my foot against the pillow.,I screamed when I hit my foot against the door.,0
+dev_00233,She painted her nails,She smashed her nails.,1
+dev_00234,"When diving, you should always stop at a stop sign.","When driving, you should always stop at a stop sign.",0
+dev_00235,Linda put salt and pepper in her batter before coating her raw chicken.,Linda put salt in pepper in her ice cream before eating it.,1
+dev_00236,I went to the restaurant and we saw a monkey.,I went to the zoo and we saw a monkey.,0
+dev_00237,the fire is lit on a dry mountain,the fire is lit with ice,1
+dev_00238,They cook in the ocean.,They swim in the ocean.,0
+dev_00239,the ocean looks blue,The ocean looks blue because of chemicals,1
+dev_00240,Refrigerators are to keep food sad,Refrigerators are to keep food cool,0
+dev_00241,Bill broke his nose when he fell on his face.,Bill broke his arm when he fell on his face.,1
+dev_00242,The eel capsized in the river,the boat has a capsized in the river,0
+dev_00243,The car was parked in the garage.,The car was parked in the bathroom.,1
+dev_00244,Aeroplanes can fly through mountains,Aeroplanes can fly through clouds,0
+dev_00245,He dug a hole with a shovel.,He mined petroleum with a shovel.,1
+dev_00246,The rock band laid and egg on the stage.,The rock band played on the stage,0
+dev_00247,His skin is sensitive.,His skin is completely transparent.,1
+dev_00248,A person should smoke to get a long life,A person wants to get a long life should not smoke,0
+dev_00249,a thief will take your watch,A thief will buy your watch,1
+dev_00250,You can be free to use a toll road.,You must pay to use a toll road.,0
+dev_00251,The cat got into the house,An hippo got into the house,1
+dev_00252,The girl asked for a dinosaur instead of dessert.,The girl asked for an apple instead of dessert.,0
+dev_00253,I drank some water from the fountain.,I drank some soda from the fountain.,1
+dev_00254,Bricks are soft,Bricks are used for constructing buildings.,0
+dev_00255,I took medicine for my acne.,I took medicine to get taller.,1
+dev_00256,You eat soap,You use soap to wash your hands,0
+dev_00257,Boys that play pee wee football follow strict hitting guidelines and rules.,All football players hit however they want.,1
+dev_00258,My brother loves eating chicken nuggets. Nuggets are made from cats.,My brother loves eating chicken nuggets. Nuggets are made from chicken.,0
+dev_00259,She sings a song,She sings a speech,1
+dev_00260,He drove his car into a can.,He drove his car into the garage.,0
+dev_00261,Some kids play with toys in the tub.,Some kids play with televisions in the tub.,1
+dev_00262,The table ate its meal,The cat ate his meal,0
+dev_00263,Hockey is on ice,Hockey doesn't use a stick,1
+dev_00264,He ate the metal rod after waking up.,He ate the burger after waking up.,0
+dev_00265,I bought a jar of peanut butter in the store.,I bought a jar of bread in the store.,1
+dev_00266,passing your driving license exams requires studying for your classes.,passing your university exams requires studying for your classes.,0
+dev_00267,"A tomato is a fruit, but people call it a vegetable","A tomato is a fruit, but people call it an animal",1
+dev_00268,"If he finds her number, he will give her a visit","If he finds her number, he will give her a call",0
+dev_00269,Equestrianism is a sport where you ride a horse.,Equestrianism is a sport where you ride a cheetah,1
+dev_00270,She returned the octopus to the library.,She returned the magazine to the library.,0
+dev_00271,Electrical devices are the devices run on electricity,Electrical devices are the devices run on water,1
+dev_00272,My brother parked the garage in the car.,My brother parked the car in the garage.,0
+dev_00273,She turned off the fan,She turned off the rain,1
+dev_00274,He picked up the train.,He picked up the stick with his right hand.,0
+dev_00275,he drank coffee with the cup,he drank coffee with the plate,1
+dev_00276,he wore a cap to cover his eyes,he wore a cap to cover his head,0
+dev_00277,coffee takes sleep,coffee depresses people,1
+dev_00278,I moisturize my teeth every day,I moisturize my face every day,0
+dev_00279,Nick is dancing on the floor.,Nick is cooking on the floor.,1
+dev_00280,The orange was square,The orange was round,0
+dev_00281,He walked to school in 5 minutes.,He walked across the country in 5 minutes.,1
+dev_00282,He drinks seawater,He drinks purified water,0
+dev_00283,I was sick after I ate at the restaurant.,I was sick after I ate at the gym.,1
+dev_00284,a book is used for opening a door,a knob is used for opening a door,0
+dev_00285,In order to have a job you must have skills that the employer is interested in.,"In order to have any job in the world, you must have all limbs.",1
+dev_00286,We jumped off the diving board into the bathtub.,We jumped off the diving board into the pool.,0
+dev_00287,we go every weekend to the disco to dance,we go every weekend to the disco to pray,1
+dev_00288,The mechanic romanced the car.,The mechanic repaired the car.,0
+dev_00289,Sean liked to drink milk.,Sean liked to drink gasoline.,1
+dev_00290,The food bought the food,Dave bought some food,0
+dev_00291,WiFi can reach hundreds to millions of people at one time.,WiFi only works for one person at a time.,1
+dev_00292,I saw a bird swimming under 20 feet of water.,I saw a bird by a birdbath.,0
+dev_00293,She took the dog home.,She rode the dog home.,1
+dev_00294,A one-month-old baby put the laundry in the dryer.,I put the laundry in the dryer.,0
+dev_00295,We saw the cows when we went to the farm.,We saw the skyscrapers when we went to the farm.,1
+dev_00296,"From the speakers, water flowed to surrounding","From the speakers, sound flowed to surrounding",0
+dev_00297,I bought the DVD player at the electronic store.,I bought the DVD player at the cafe.,1
+dev_00298,potatoes grow on trees,bananas grow on trees,0
+dev_00299,Sunlight and water help plants grow.,Sunlight and water help cars grow.,1
+dev_00300,The family watched a movie in the cupboard.,The family watched a movie in the theater.,0
+dev_00301,The child ate candy with a spoon.,The child ate candy with a shovel.,1
+dev_00302,She called the emergency number seeking love,She called the emergency number seeking help,0
+dev_00303,The man put on his pants.,The man put on his plane.,1
+dev_00304,Cars can travel in the ocean.,Boats can travel in the ocean.,0
+dev_00305,She watched a show on TV.,She watched a show on the radio.,1
+dev_00306,clock is show animals,clock shows the correct time,0
+dev_00307,The sun rises every morning.,The sun explodes every morning,1
+dev_00308,Videocassette tape can be used to create a video,Videocassette tape can be used to record television programs,0
+dev_00309,"The television is ultimately to help the user enjoy entertainment, sports, and news at their fingertips.","The remote control leads to a huge waste of time, as it has a direct correlation with the overuse of your fingertips.",1
+dev_00310,An a is a tool used for planting wood,An ax is a tool used for chopping wood,0
+dev_00311,He walked his dog,He walked his fish,1
+dev_00312,He went to patrol bunk to write the Exam,He went to the Examination hall to write the exam,0
+dev_00313,she cooked meat in the pressure cooker,she cooked a giraffe in the pressure cooker,1
+dev_00314,ships are large that roll in the water,ships are large vehicles that float in water,0
+dev_00315,We hung lights from the roof for Christmas.,We hung trees from the roof for Christmas.,1
+dev_00316,She chopped her fingers off and put them in the soup.,She chopped the vegetables and placed them into the soup.,0
+dev_00317,Heart is part of human body,Helmet is part of human body,1
+dev_00318,"With her pillow, she went to the bathroom","With her towel, she went to the bathroom",0
+dev_00319,The cat used the liter box,The lion used the liter box,1
+dev_00320,the whale sleeps in bed,He sleeps in bed,0
+dev_00321,He poured water for the plants,He poured paint for the plants,1
+dev_00322,He built his house out of cooked spaghetti.,He built his house out of bricks.,0
+dev_00323,I drive my car,My car drives me,1
+dev_00324,The man bought a hotel from the grocery store.,The man bought cereal from the grocery store.,0
+dev_00325,She loves to play table tennis at the gym.,She loves to ride horses at the gym.,1
+dev_00326,Holy water is made of wine,Holy water is made of water,0
+dev_00327,a monkey eats bananas,a monkey eats gorillas,1
+dev_00328,my child takes the plane to go to school,my child takes the bus to go to school,0
+dev_00329,Mobile phones are used to contact people.,Eggplants are used to contact people.,1
+dev_00330,My wife eats boiled stones daily.,My wife like pizza very much.,0
+dev_00331,Humans eat cooked meat.,Humans eat uncooked meat.,1
+dev_00332,The amusement park had a cemetery in it.,The amusement park had a Ferris wheel in it.,0
+dev_00333,She is going to the park for playing,she is going to the park for cooking,1
+dev_00334,the elephant was caught in the mousetrap,the mouse was caught in the mousetrap,0
+dev_00335,THE TEMPERATURE IS WARM,THE TEMPERATURE IS EMOTIONAL,1
+dev_00336,The boy hit the dog with a mountain.,The boy hit the dog with a stone.,0
+dev_00337,The deer crashed into the window.,The deer sauntered into the window.,1
+dev_00338,Ellen washed her head with excrements,Ellen washed her head with shampoo,0
+dev_00339,Ill people go to doctors to get treated.,Ill people go to doctors to play cards.,1
+dev_00340,He used a watering can to water his pants,He used a watering can to water the plants,0
+dev_00341,books are used to read and write,books are used to watch movie,1
+dev_00342,"It was very hot out, so she put on her snowsuit and then ran and jumped into the pool.","It was very hot out, so she put on her swimsuit and then ran and jumped into the pool.",0
+dev_00343,Maria smokes cigarettes at work,Maria smokes weed at work,1
+dev_00344,Cell phones can be eaten as a light snack,Cell phones can be used to make phone calls,0
+dev_00345,He changed the oil in his car.,He changed the oil in his piano.,1
+dev_00346,A chair has a screen.,A laptop has a screen,0
+dev_00347,Film making can be a stressful job in the summer,Film making can be a pinnacle job in the summer,1
+dev_00348,Metals are made up of fibers,Metals are very hard,0
+dev_00349,The woman winked at the man,The fish winked at the man,1
+dev_00350,The stove was cleaned with a mop.,The stove was cleaned with a cleaner.,0
+dev_00351,He hung a picture on the wall.,He hung a picture on the floor.,1
+dev_00352,she ate her soup with a fork,she ate her soup with a spoon,0
+dev_00353,Hair is already dead,Hair screams when you cut it,1
+dev_00354,"When people call someone on the phone, they don't want to speak to them","When people call someone on the phone, they usually want to have a conversation with them",0
+dev_00355,My brother eats strawberries after dinner every day,My brother eats toys after dinner every day,1
+dev_00356,the mama bear allowed humans to get close to the cubs,the mama bear was protecting her cubs,0
+dev_00357,dolls are inanimate objects,dolls are living things,1
+dev_00358,I bought a giraffe for my girlfriend,I bought a trapeze dress for my girlfriend,0
+dev_00359,fans are made to produce wind,fans are made to produce water,1
+dev_00360,he put a car in the lunchbox,he put the sandwich in the lunchbox,0
+dev_00361,the mousetrap can catch a mouse,the mousetrap can catch an elephant,1
+dev_00362,the dog played catch with a bowling ball,the dog played catch with a tennis ball,0
+dev_00363,she drinks coffee from a cup,she drinks coffee from a plate,1
+dev_00364,the knight slays the armor,the knight slays the dragon,0
+dev_00365,he killed his enemy with the knife,he killed his enemy with the cotton bud,1
+dev_00366,a millionaire has a lot of rubbish,a millionaire has a lot of money,0
+dev_00367,a driver rides a motorcycle,an elephant rides a motorcycle,1
+dev_00368,a blind person can see the table,a blind person can touch the table,0
+dev_00369,she put on her make-up at the dresser,she took a shower at the dresser,1
+dev_00370,the neighbor's dog drove the car,my neighbor's daughter drove the car,0
+dev_00371,football is a popular sport in the world,All the people in the world play football,1
+dev_00372,reading books can make you more stupid,reading books can make you smarter,0
+dev_00373,a keyboard can be used for typing,a mouse can be used for typing,1
+dev_00374,"when someone dies, their heart-rate increases","when someone dies, their heart stops beating",0
+dev_00375,drinking a glass of vegetable juice is good for you,drinking a glass of motor oil is good for you,1
+dev_00376,the helmet is part of the human body,the heart is part of the human body,0
+dev_00377,"to get food fast and cheap, you go to a fast-food restaurant","to get food fast and cheap, you go to a gourmet restaurant",1
+dev_00378,I read water with every meal,I drink water with every meal,0
+dev_00379,you can also buy tickets online with a credit card,you can also buy tickets online with an identity card,1
+dev_00380,"if you want to risk money to make money, then you should buy insurance","if you want to risk money to make money, then you should gamble",0
+dev_00381,nurses usually work in the hospital,policemen usually work in the hospital,1
+dev_00382,the weather in the arctic pole is hot,the weather in the arctic pole is cold,0
+dev_00383,a diamond is a precious gem,a boulder is a precious gem,1
+dev_00384,he dug a hole in the ground with a spoon,he dug a hole in the ground with a spade,0
+dev_00385,a freezer can keep ice cream cold,a microwave can keep ice cream cold,1
+dev_00386,drama plays are often performed before cows,drama plays are often played before audiences,0
+dev_00387,"if you want to move fast, you must run","if you want to move fast, you must crawl",1
+dev_00388,People play near the volcano and swim in the lava,people play near the beach and swim in the water,0
+dev_00389,I left my pen in the desk drawer,I left my chair in the desk drawer,1
+dev_00390,the boy ate a table,the boy ate an apple,0
+dev_00391,rabbits like to eat grass,rabbits like to eat meat,1
+dev_00392,you don't need to fasten your seat belt to drive,you need to fasten your seat belt to drive,0
+dev_00393,bees are insects,bees are pests,1
+dev_00394,horses don't need to sleep,horses can sleep standing up,0
+dev_00395,my mother cooked a delicious meal,the chicken cooked a delicious meal,1
+dev_00396,eating some apples is bad for your health,eating some apples is good for your health,0
+dev_00397,he walked through the door,he walked through the wall,1
+dev_00398,the cactus spit on the ground,the camel spit on the ground,0
+dev_00399,writing skills consists of having a basic knowledge of grammar,writing skills consists of having a basic knowledge of mathematics,1
+dev_00400,unicorns exist in our real lives,unicorns exist in our fantasy,0
+dev_00401,saliva began to spill out of the boy's mouth,saliva began to spill out of the boy's eyes,1
+dev_00402,it's totally safe to drive after drinking,it's not safe to drive after drinking,0
+dev_00403,a man is driving a car,a baby is driving a car,1
+dev_00404,I am playing basketball with a chair,I am playing basketball with my friends,0
+dev_00405,you may find a sound or software in a CD,you may find an egg in a CD,1
+dev_00406,elephants live at the north pole,elephants live in the jungle,0
+dev_00407,I like to wear shoes on my feet,I want to wear glasses on my feet,1
+dev_00408,John kicked a tennis ball into the net and scored a goal,John kicked a soccer ball into the net and scored a goal,0
+dev_00409,fresh baked cookies smell good,rotten cookies smell good,1
+dev_00410,the rabbit built a church,the rabbit dug a hole,0
+dev_00411,a giraffe is bigger than a dog,a dog is bigger than a giraffe,1
+dev_00412,the teenager has never fallen off his skateboard,"while walking to the car, a teenager fell off his skateboard",0
+dev_00413,you receive money from your mother,he fed a table to the cat,1
+dev_00414,radiation is safe for Dave and he can take his trip through the area,radiation spreads quickly over several acres threatening Dave's long trip,0
+dev_00415,Frogs are amphibians,Amphibians are reptiles,1
+dev_00416,Jimmy was feeling full while standing watch due to all the food he ate,while standing watch Jimmy was hungry and wish he had eaten earlier,0
+dev_00417,I finished reading a book,I finished reading the dining room table,1
+dev_00418,the dog drank all the water in the pond,the dog jumped into the pond,0
+dev_00419,Jerry went to school for studying,Jerry went to school for eating,1
+dev_00420,he tied his socks,he tied his shoes,0
+dev_00421,George is a thief and he stole the necklace from a big city store last night,George is law-abiding and he stole the necklace from a big city store last night,1
+dev_00422,She eats a 12-inch cake before dinner every day,She eats candy before dinner every day,0
+dev_00423,carnivores like eating meat,vegetarians like eating meat,1
+dev_00424,he can complete writing a page in a second,he can complete writing a page in an hour,0
+dev_00425,we do our physics exam in the classroom,we do our physics exam in the kitchen,1
+dev_00426,working in a gym might help people gain weight,working in a gym might help augment your muscles,0
+dev_00427,photosynthesis is the process of energy synthesis in trees,photosynthesis is the process of energy synthesis in electric generator,1
+dev_00428,it must mean you're a millionaire if you can afford to go on vacation,it doesn't necessarily mean you're a millionaire if you can afford to go on vacation,0
+dev_00429,my cat just caught a mouse in my basement,my bunny just caught a mouse in my closet,1
+dev_00430,He slept in the pool,He got in the pool,0
+dev_00431,Cookies can have chocolate chips in them,all cookies need chocolate chips,1
+dev_00432,she put a tiger into the basket,she put an apple into the basket,0
+dev_00433,"an equilateral triangle has angles of 60, 60, and 60 degrees respectively",an equilateral triangle may have three unequal sides,1
+dev_00434,nobody buys flights,the airport is always busy,0
+dev_00435,the titanic sank after it hit an iceberg,the titanic flew into the sky after it hit an iceberg,1
+dev_00436,he needed his car repaired so he took it to a heart surgeon,he needed his car fixed so he took it to a mechanic,0
+dev_00437,sometimes you fall sleep while attending a lecture,you attend a lecture while sleeping,1
+dev_00438,at the restaurant police came for taking orders,at the restaurant a waiter came for taking orders,0
+dev_00439,he takes his toy into his bedroom,he takes his car into his bedroom,1
+dev_00440,the man went to jail after eating a candy,the man went to jail after beating his wife,0
+dev_00441,you should wear gloves when handling dangerous chemicals,"when you handling dangerous chemicals, you should taste it",1
+dev_00442,cereal is only for breakfast,cereal is breakfast food,0
+dev_00443,a rabbit is eating grass,a rabbit is driving a car,1
+dev_00444,we saw the skyscrapers when we visited the farm,we saw the cows when we visited the farm,0
+dev_00445,ducks are usually found in ponds and lakes,ducks are usually found in office buildings,1
+dev_00446,fish have feet to swim,fish can swim,0
+dev_00447,Money is made from paper,Money is made from food,1
+dev_00448,spiders don't have legs,ants have many legs,0
+dev_00449,you can eat turkey,you can eat mercury,1
+dev_00450,there were dinosaurs at the pond,there were ducks and geese at the pond,0
+dev_00451,Tommy used a pan to cook dinner,Tommy used a computer to cook dinner,1
+dev_00452,table sugar is made from seawater,table sugar is made from sugar cane,0
+dev_00453,mom is cooking chicken,mom is cooking poison,1
+dev_00454,he put a case of the bottle in his cap,he put 2 bottles in his cap,0
+dev_00455,a coffee shop is a good place to relax,a coffee shop is a good place to have a boxing match,1
+dev_00456,he likes to wear a blouse,he likes to wear a shirt,0
+dev_00457,I accidentally hit a deer with my car while driving,I accidentally hit a dolphin with my car while driving,1
+dev_00458,water is extracted from crude oil,petrol is extracted from crude oil,0
+dev_00459,fire is used to cook meals,fire is used to extinguish the fire,1
+dev_00460,she rode the soup can,she opened the soup can,0
+dev_00461,the lady put a self-portrait in a wooden picture frame,the lady put a basketball in a wooden picture frame,1
+dev_00462,the girl was wearing a newspaper dress every day,the girl was wearing a white dress every day,0
+dev_00463,the dog ran fast across the street,the turtle ran fast across the street,1
+dev_00464,the pig delivered a package to the small child,the mailman delivered a package to the small child,0
+dev_00465,she washed the clothes in the washing machine,she washed the clothes in the dryer,1
+dev_00466,he went to the tailor to have a hair cut,he went to the tailor to mend his clothes,0
+dev_00467,the mother gave birth to a baby boy,the father gave birth to a baby boy,1
+dev_00468,the dog dug a hole in the concrete,the dog dug a hole in the dirt,0
+dev_00469,hens will lay a dozen eggs a day,puppies will lay a dozen eggs a day,1
+dev_00470,the sandwich contains sadness,the sandwich contains meat,0
+dev_00471,painter paints the house,carpenter paints the house,1
+dev_00472,the rock ate a nut,the squirrel ate a nut,0
+dev_00473,you should go to the dentist if you think you have a cavity,cavities are caused by not believing in the Creation Theory,1
+dev_00474,the bear ate a car,the bear ate a fish,0
+dev_00475,Mike flew in a plane from Florida to Italy,Mike walked to Italy from Florida,1
+dev_00476,I saw a chicken flying outside the window,I saw a chicken walking down the streets,0
+dev_00477,we pushed a cart at the store,we pushed a tank at the store,1
+dev_00478,going to a party is for working,going to a party is for having fun,0
+dev_00479,the ant ate the honey,the ant ate the anteater,1
+dev_00480,school bus attends school early in the morning,kids attend school early in the morning,0
+dev_00481,to stew spaghetti you need boiling water,to stew spaghetti you need boiling vegetable oil,1
+dev_00482,he vacuumed up the piles of wood,he vacuumed up the crumbs,0
+dev_00483,my brother is sleeping in his bed,my brother is sleeping in the kitchen,1
+dev_00484,wild boars are one of the most dangerous kinds of dogs,wild boars are one of the most dangerous kinds of pigs,0
+dev_00485,he brought a car with all the money he had,he brought a car with all the love he had,1
+dev_00486,the ball kicked the athlete,the athlete kicked the ball,0
+dev_00487,rock climbers climb big rocks,rock climbers climb oceans,1
+dev_00488,a ball is square and can roll,a ball is round and can roll,0
+dev_00489,the bank keeps your money safe,the bank keeps your money dangerous,1
+dev_00490,he put a cigarette in his ear and lighted up,he put a cigarette in his mouth and lighted up,0
+dev_00491,she painted her bedroom red,she painted the earth red,1
+dev_00492,cars don't have tires,cars have doors,0
+dev_00493,regular exercise can help you keep healthy,you will not be fit if you exercise daily,1
+dev_00494,the world is just a ball filled with nothing,the world is a ball of energy filled with all walks of life,0
+dev_00495,he put a scarf around his neck,he put a scarf around his ear,1
+dev_00496,the automotive magazine featured tips and tricks for maintaining a healthy complexion,the skincare article featured tips and tricks for maintaining a healthy complexion,0
+dev_00497,babies are born naked,babies are born with clothes on,1
+dev_00498,cars drive on railroads,trains drive on railroads,0
+dev_00499,he likes to play tennis at the gym,he likes to ride horses at the gym,1
+dev_00500,a refrigerator is used to keep things warm,a microwave oven is used to warm or heat things,0
+dev_00501,She bakes a cake in the oven,She bakes a cake in the dishwasher,1
+dev_00502,the rat killed the cat,the cat killed the rat,0
+dev_00503,Jason put the motor oil into his car,Jason drank the motor oil in front of his car,1
+dev_00504,whales are one of the smallest animals in the ocean,whales are one of the biggest animals in the ocean,0
+dev_00505,cars are made to drive,cars can float in the ocean just like a boat,1
+dev_00506,The ditch jumped in front of him and caused him to wreck.,He turned the wheel to the left and slid down the ditch.,0
+dev_00507,The sky can have many colors,The sky is always one color.,1
+dev_00508,He put a dog in the fridge.,He put milk in the fridge.,0
+dev_00509,He gives money to a person.,He gives money to the dog.,1
+dev_00510,She took a jet plane from her bedroom to her kitchen for a snack.,She walked from her bedroom to her kitchen for a snack.,0
+dev_00511,A dog get in the car.,An elephant get in the car.,1
+dev_00512,Smoking is good to health.,Smoking is injurious to health,0
+dev_00513,He played a song on the piano.,The piano played a song on him.,1
+dev_00514,An axes is a tool used for planting wood.,An axes is a tool used for chopping wood.,0
+dev_00515,There is a bus outside my window.,The bus has been idling outside my window for an hour.,1
+dev_00516,Bikes are made for swimming.,All bikes are made for people to ride.,0
+dev_00517,He put pajamas on and went to bed.,He put a swimsuit on and went to bed.,1
+dev_00518,A dishwasher is a band instrument.,A trombone is a band instrument.,0
+dev_00519,I and Sara went to the movies.,The lion went to the movies.,1
+dev_00520,I store my cats in a kitchen drawer.,I store my forks in a kitchen drawer.,0
+dev_00521,Spiders are found in homes and attics.,Spiders are found in the ocean.,1
+dev_00522,He cooked a pot inside of spaghetti.,He cooked spaghetti in a pot on the stove.,0
+dev_00523,Cats clean themselves.,Cats know how to use a shower.,1
+dev_00524,He opened a can opener with a can of worms.,He opened a can of worms with a can opener.,0
+dev_00525,Tim bought a new TV yesterday.,TV's are found in the ocean.,1
+dev_00526,I'll ask a friend to help me to commit suicide right now.,I am going to commit suicide right now.,0
+dev_00527,Cars are made from metal.,Cars are made from food.,1
+dev_00528,She put the moon inside the mashing machine.,She put the clothes inside the washing machine.,0
+dev_00529,She put her baby in the cot.,She put her grandfather in the cot.,1
+dev_00530,He parked his house in the garage.,He parked his car in the garage.,0
+dev_00531,She jumped over the puddle.,She jumped over the Grand Canyon.,1
+dev_00532,She wore the soup.,She cooked the soup.,0
+dev_00533,He replaced the battery in his phone.,He replaced the phone in his battery.,1
+dev_00534,Sarah ran to her kitchen to make a grilled cheese in response to the fire alarm.,Sarah ran out the door in response to the fire alarm.,0
+dev_00535,Chicken are found on a farm.,Chicken can swim in water.,1
+dev_00536,"If you freeze water, it becomes angry.","If you freeze water, it becomes a solid.",0
+dev_00537,The moon is in outer space.,Canada is in outer space.,1
+dev_00538,Cats can play hockey.,Jeff plays hockey.,0
+dev_00539,Cats have fur.,Cats have scales.,1
+dev_00540,"most people would be happy, if they saw a snake.","most people would be terrified, if they saw a snake.",0
+dev_00541,Monkeys love bananas.,Bananas are only for monkeys.,1
+dev_00542,People don't need glasses if they have vision problems.,People with vision problems often wear glasses.,0
+dev_00543,He ate a grape in one bite.,He ate a cow in one bite.,1
+dev_00544,robber should be rewarded,robbing is illegal,0
+dev_00545,Coffee can wake you up but also contains a lot of acid.,Coffee can wake you up but also makes you tired.,1
+dev_00546,He drove a car into the sky.,He flew to California on the plane.,0
+dev_00547,The secretary took careful notes.,The secretary ate the desk.,1
+dev_00548,Our dog laid an egg this morning.,Our chickens laid 12 eggs this morning.,0
+dev_00549,I brought a ball to play in garden.,I brought a book to play in a garden.,1
+dev_00550,The girl was sit on the fan for her school,The girl was sit on the bench for her school,0
+dev_00551,A shareholder owns a portion of a company.,Nobody owns the company other than the founder,1
+dev_00552,Everyone can afford luxury cars,Rich man can afford luxury cars,0
+dev_00553,He took the train in the station,He took the train in the bar,1
+dev_00554,She had a giraffe in her backpack.,She took her backpack to school.,0
+dev_00555,Humans breath air and live on Planet earth.,Humans breath air and live on Venus and Mars.,1
+dev_00556,She put the freezer in the microwave.,She put the frozen burrito in the microwave.,0
+dev_00557,You can earn money if you work.,You can earn money if you rest.,1
+dev_00558,He walked on the lake.,He walked on the road.,0
+dev_00559,He put new rubber tires on the car.,He put new cement tires on the car.,1
+dev_00560,He likes to go to the park to shop for food.,He likes to go to the grocery store to shop for food.,0
+dev_00561,She loaded the box into the car.,She loaded the car into the box.,1
+dev_00562,He put a rocket inside a toy rocket.,He put a toy rocket inside a rocket.,0
+dev_00563,He ran into the woman at the crosswalk.,He ran into an ocean at the crosswalk,1
+dev_00564,The woman was reading a sponge.,The woman was reading a book.,0
+dev_00565,He was good at basketball because he was tall.,He was good at impressions because he was tall.,1
+dev_00566,My friend drank milk from the sea.,My friend drank the milk from the glass.,0
+dev_00567,strong acid solution is hazardous,strong acid solution can be touched,1
+dev_00568,a tiger is eating straw there,a tiger is eating raw meat there,0
+dev_00569,Leaves leave the trees when the time is right,"Leaves can leave their trees anytime, this is why they are called leaves.",1
+dev_00570,Dollar can be used in China,The dollar can be used in the United States,0
+dev_00571,I go to the grocery store every week to buy food,I go to the grocery store every week to buy pets,1
+dev_00572,Each item in the grocery store is taxable.,Not every item in the grocery store is taxable.,0
+dev_00573,Grocery stores usually provide an itemized receipt with each purchase.,Grocery stores usually provide an itemized check with each purchase.,1
+dev_00574,The dog barks when the moon is green.,The dog barks when the moon rises,0
+dev_00575,The sun rises every morning at dawn.,The sun rises every morning at dusk,1
+dev_00576,terrorists are innocent peoples,terrorists are those who kill innocent people,0
+dev_00577,The public library has lots of books,The public library sells live fish and birds,1
+dev_00578,A gardener can follow a suspect,A detective can follow a suspect,0
+dev_00579,Glass is inedible,glass is edible,1
+dev_00580,shoes can fly,Dragonfly can fly,0
+dev_00581,Seawater contains a high amount of salt,Seawater contains high amount of sugar,1
+dev_00582,The mountain is smaller than the man,The man is smaller than the mountain,0
+dev_00583,It's time for bed so I should go lay down.,It's bedtime so I should start cooking dinner.,1
+dev_00584,Cages are monkeys' best friends.,Bananas are monkeys' best friend.,0
+dev_00585,I can see myself in the mirror,My reflection can see me in the mirror,1
+dev_00586,mosquito bite causes rabies,mosquito bite causes dengue fever,0
+dev_00587,Stonehenge is in England,Stonehenge is in Poland,1
+dev_00588,It is fun to ride bikes for all people,It is fun to ride bikes for some people,0
+dev_00589,You are likely to find a fungus in damp places,You are likely to find a fungus in dry places,1
+dev_00590,Horses can only be male.,Horses can either be male or female.,0
+dev_00591,It takes years to learn how to play chess,It takes years to learn how to clap hands.,1
+dev_00592,Walking makes you fat.,Walking helps you keep fit,0
+dev_00593,Mike moves the desk with his arms.,Mike moves the desk with his fin.,1
+dev_00594,He ate the egg before peeling it,He ate the egg after peeling it,0
+dev_00595,Lovebirds celebrate on Valentine's day.,Enemies celebrate on Valentine's day.,1
+dev_00596,I can smell the flowers by my eyes,I can smell the flowers by my nose,0
+dev_00597,Honesty is the best policy.,Lying is the best policy.,1
+dev_00598,Dishonesty is one of the best characteristics of a person.,Gratitude is one of the best characteristics of a person.,0
+dev_00599,Something that might happen as a consequence of doing regular exercise is you improve your health,Something that might happen as a consequence of doing regular exercise is you improve your study,1
+dev_00600,My sister wants to raise a horse at home,My sister wants to raise a cat at home,0
+dev_00601,He lived without Sara for about a year,He lived without food for about a year,1
+dev_00602,Students need flowers and plants to study,Students need notebooks and backpacks to study,0
+dev_00603,Soaps are used to clean the body.,bathroom cleaner can be used to clean body,1
+dev_00604,She drives the bus to work everyday,She drives the car to work every day,0
+dev_00605,Lions are predators that prey on antelopes.,Antelopes are predators that prey on lions.,1
+dev_00606,My grandparents stay at the kindergarten,My grandparents stay at the nursing home,0
+dev_00607,Electricity is a useful resource for cities and towns.,Electricity is a harmful resource for cities and towns.,1
+dev_00608,All fruits are yellow,Bananas are yellow.,0
+dev_00609,ships are large vehicles that float in water,ships are large vehicles that roll in water,1
+dev_00610,She is a superstar and has no fans,She is a superstar and has lots of fans,0
+dev_00611,Pork comes from pigs.,Pork comes from cows.,1
+dev_00612,She put a room on her car,She put a flag on her car,0
+dev_00613,Breakfast is the most important meal of the day.,Breakfast is not important.,1
+dev_00614,he built a treehouse on the rooftop.,he built a treehouse on the tree.,0
+dev_00615,We like to dance every day.,We like to die every day.,1
+dev_00616,He put a camel on a table,He put a roast pig on the table,0
+dev_00617,He works for a computer company because he studies computer science,He works for a computer company because he studies art history,1
+dev_00618,He played piano in the marching band.,He played tuba in the marching band.,0
+dev_00619,A car can be driven at night,A car is only driven at night,1
+dev_00620,A bone can eat a dog,A dog can eat a bone,0
+dev_00621,girlswear menstrual pad,boys wear menstrual pad,1
+dev_00622,The cleaner is in charge of the money at the store,The cashier is in charge of the money at the store,0
+dev_00623,You should eat at least 5 portions of fruit and vegetables a day,You should eat at least 5 portions of candy and soda a day,1
+dev_00624,A bald man brushed his hair every day,A bald man washed his hair every day,0
+dev_00625,Breakfast is served in the morning.,Breakfast is served at night.,1
+dev_00626,I put the phone into the fridge.,I put the leftovers into the fridge.,0
+dev_00627,I use dumbbells to make big muscles body,I use cotton to make big muscles body,1
+dev_00628,He can swim so he uses a swimming ring,He can't swim so he uses a swimming ring,0
+dev_00629,sausage is made of meat,sausage is made of stone,1
+dev_00630,SHE DRAWS A PICTURE WITH FORK.,SHE DRAWS  A PICTURE WITH PENCIL.,0
+dev_00631,Sometimes doing some exercises causes sweatings,doing some exercises makes you cold,1
+dev_00632,socks are always worn on hands,socks are worn on feet,0
+dev_00633,I  SAW A  ROCKET.,I  SAW A SPACESHIP.,1
+dev_00634,He put lion into a glass,He put water into a glass.,0
+dev_00635,Birds often fly south for the winter.,Birds often hitchhike to Miami.,1
+dev_00636,An earthquake can cure people,An earthquake can kill people because of its destructive nature.,0
+dev_00637,Christians worship God in churches,Christians curse God in churches,1
+dev_00638,A smile denotes that the person is sad.,A smile denotes that the person is happy.,0
+dev_00639,Sam saw a dolphin in the sea,Sam saw a rabbit in the sea,1
+dev_00640,I feel hungry and watch movies,I feel hungry and eat food,0
+dev_00641,we planned to go to England from India by plane,we planned to go to England from India by bike,1
+dev_00642,All trees produce fruits,Some trees produce fruits,0
+dev_00643,Sometimes thinking does not require a pen,Sometimes thinking does not require a brain,1
+dev_00644,She had a baby with her robot,She had a baby with her lover,0
+dev_00645,I love reading horror novels.,Everyone loves reading horror novels.,1
+dev_00646,She washed the quilt in the dishwasher,She washed the dishes in the dishwasher,0
+dev_00647,Playing computer games is bad for eyes,Playing computer games is good for eyes,1
+dev_00648,She washes her hair with detergent,She washes her hair with shampoo,0
+dev_00649,Water is in solid form while cold,Water is in liquid form while cold,1
+dev_00650,all politicians are lawyers,Many politicians are lawyers,0
+dev_00651,There are several rooms in a normal house,There is only one room in a normal house,1
+dev_00652,The Injuries escaped with the people in the car after the accident,The People inside the Car Escaped with Few Injuries after the accident,0
+dev_00653,I like to travel by plane because they are faster.,Planes are cheaper than trains.,1
+dev_00654,Building wants freedom,People want freedom,0
+dev_00655,paper is made of wood,wood is made of paper,1
+dev_00656,He put ostrich in the oven.,He put muffins in the oven.,0
+dev_00657,A ball is on the table.,A table is on the ball.,1
+dev_00658,The bed is in the dog.,The dog is in his bed.,0
+dev_00659,Dinosaurs lived millions of years ago,Dinosaurs still live today,1
+dev_00660,A tree looked at me,I looked at a tree,0
+dev_00661,Girls are usually shy,Trees are usually shy,1
+dev_00662,He parked the garage in the car.,He parked the car in the garage.,0
+dev_00663,The refrigerator chilled the water,The refrigerator warmed the water,1
+dev_00664,The TV show started at 10 and finished at 9,The TV show started at 9 and finished at 10,0
+dev_00665,He was drunk because of drinking beer,He was drunk because of drinking water,1
+dev_00666,Seagulls live in the desert,Seagulls live near to the sea,0
+dev_00667,He feeds the dog.,the dog feed him,1
+dev_00668,I've been lifting my spirits to strengthen my arms.,I've been lifting dumbells to strengthen my arms.,0
+dev_00669,He put a turkey in the oven,he put some money in the oven,1
+dev_00670,The refrigerator rejects bad blueberries.,Blueberries can go bad in the refrigerator.,0
+dev_00671,Do your homework after lunch.,Do your homework while eating lunch.,1
+dev_00672,The sun rises in the evening.,The sun rises in the morning.,0
+dev_00673,fishes that are bought from a fish market.,fishes are bought in a fruit stall,1
+dev_00674,I eat a play with friends today,We played a fun game today.,0
+dev_00675,If you want to relax your mind then you could listen to music.,If you want to relax your mind then you must listen to music.,1
+dev_00676,"Summer in North America is great for skiing,  snowshoeing,  and making a snowman.","Summer in North America is great for swimming,  boating, and fishing.",0
+dev_00677,He put a chicken in the fridge,He put a dinosaur in the fridge,1
+dev_00678,The blue man got into the car,The man got into a blue car,0
+dev_00679,she watched a movie on her television,she watched a movie in her refrigerator,1
+dev_00680,A food is opposite of the truth,A lie is the opposite of the truth,0
+dev_00681,saving people is our willing,killing people is our willing,1
+dev_00682,An apple has handled.,A grocery bag has handled.,0
+dev_00683,Trees are the gift of nature,Trees are a burden to nature,1
+dev_00684,a match can put out a candle,A match can light a candle.,0
+dev_00685,If you cross the street illegally you are jaywalking.,people can cross the street illegally,1
+dev_00686,A windmill could power the whole U.S.,A windmill can power a whole city.,0
+dev_00687,Winter is the coldest season in North America.,People often wear parkas and hats in the summer in North America.,1
+dev_00688,Working in an office is one way to spend leisure time,Playing the game is one way to spend leisure time,0
+dev_00689,the man shaved with a razor.,The man drooled with a frog.,1
+dev_00690,He hates to hear music.,He likes to listen to music.,0
+dev_00691,My dog has a huge nose.,My dog has two noses.,1
+dev_00692,people do business only for earnings,people do business for income,0
+dev_00693,it is very cold in the freezer.,it is very hot in the freezer.,1
+dev_00694,When you have fever your body temperature drops,When you have fever your body temperature rises,0
+dev_00695,He looked at the moon through his telescope,He put the moon in his backyard shed,1
+dev_00696,The man flapped his wings and flew.,The man walked to the store.,0
+dev_00697,people use air-conditioners during summer to be cold,people use air conditioners during winter to be cold,1
+dev_00698,a little league baseball team is playing in an orchestra.,A little league baseball team is playing in the world series.,0
+dev_00699,He went to the temple for praying the god.,He goes to a hospital for praying the god,1
+dev_00700,since he is good man police jailed him,since he is criminal police jailed him,0
+dev_00701,Plants need water to grow.,Plants can only grow underwater.,1
+dev_00702,Billy married a dog named Sam.,Billy married a woman named Sam.,0
+dev_00703,local Chinese restaurant has delicious food.,A favorite menu item at my local Chinese restaurant is boiled rocks.,1
+dev_00704,drugs taken can cause a clone to develop.,Drugs taken can cause internal damage.,0
+dev_00705,Rabbits are small animals with big ears and fluffy whitetails.,A rabbit typically weighs 200 pounds.,1
+dev_00706,Disposable plates are dishwasher safe.,Disposable plates are usually made of paper.,0
+dev_00707,a cat eats the mouse,a mouse eats the cat,1
+dev_00708,he gets good score by skipping all questions,he scored good marks by attending all questions,0
+dev_00709,She is going to a party to dance,She is going to a party to kill,1
+dev_00710,Carrots make good coffee.,Coffee is made from the coffee bean.,0
+dev_00711,A hurricane hit the coast of Florida,Florida hit the coast of the hurricane,1
+dev_00712,Pigs can become birds.,Pigs can become a pet.,0
+dev_00713,I sit in a boat,A boat sits in me,1
+dev_00714,Something you might do while going on the internet is open an envelope.,Something you might do while going on the internet is read your mail,0
+dev_00715,He is a father of two children,He is a mother of two children,1
+dev_00716,I have to bring a dinosaur to my work.,I have to go to work.,0
+dev_00717,there is a computer on the desk,there is a desk on the computer,1
+dev_00718,she walked in the river for an hour,she walked along the river bay for an hour,0
+dev_00719,He is going to the office to earn money,He is going to the office to kill people,1
+dev_00720,An apple can voice an opinion,A person can voice an opinion,0
+dev_00721,One of the things you do when you play cricket is using two arms to hit the ball with a bat,One of the things you do when you play cricket is using two legs to hit the ball with a bat,1
+dev_00722,Sam stayed in the cinema when the movie ended,Sam went home after the movie ended,0
+dev_00723,He added oil in his car.,He drove to work on his piano.,1
+dev_00724,Yesterday the sky was purple,The sky is blue today,0
+dev_00725,I am baking cakes.,I am baking people,1
+dev_00726,"It was late, so she stopped and had a rest","It was late, so she hurried up",0
+dev_00727,She walked to the bottom of the road,She jumped to the bottom of the road,1
+dev_00728,The horse gave birth to a puppy,The horse gave birth to a little horse,0
+dev_00729,He eats steak for breakfast,He eats dirt for breakfast,1
+dev_00730,Monkeys like insects,Monkeys like bananas,0
+dev_00731,He put the ham in the fridge.,He put a pig in the fridge.,1
+dev_00732,I was distracted by a squirrel appearing to eat a dog.,A dog can be easily distracted by the appearance of a squirrel.,0
+dev_00733,Lasagna baked at 375 for 40 minutes is perfect,Shredded or diced lasagna is typical,1
+dev_00734,My grandmother is already 300 years old,My grandmother is already 80 years old,0
+dev_00735,Australia is one of the largest countries in the world,Australia is giant ice cream,1
+dev_00736,They put the apple pie in the oven to freeze.,They froze the apple pie.,0
+dev_00737,The grass is green.,the grass is purple,1
+dev_00738,1 Hour of sleep a day is recommended,8 hours of sleep a day is recommended,0
+dev_00739,To bake the cake you first switch on the oven to preheat.,Cold oven can bake the cake.,1
+dev_00740,The Escaping Thief Gave final warning to the Cops,The Cops gave the Final warning to the Escaping Thief,0
+dev_00741,I am having a bike inside my house.,I am having a flight inside my house.,1
+dev_00742,The garden needs to be watered because it is raining.,The garden needs to be watered because it has not rained.,0
+dev_00743,The sun is white,The sun is black,1
+dev_00744,we put out the fire with the wind from a trombone,we put out the fire using water balloons,0
+dev_00745,Steven loves to play basketball.,the basketball loves to play Steven,1
+dev_00746,A manicurist will remove your fingernails.,A manicurist will polish your fingernails.,0
+dev_00747,I will run on a treadmill,I will run on a donkey,1
+dev_00748,sheep have blue wool,his shirt was blue,0
+dev_00749,Bees eat on on flowers,humans eat on flowers,1
+dev_00750,He poured cake into a cup,He poured coffee into a cup,0
+dev_00751,She cut the apple,She sat on the apple,1
+dev_00752,My sister had breakfast at 8 PM in evening and then she went to school.,My sister had breakfast at 8 AM in morning and then she went to school.,0
+dev_00753,People laugh when they find a joke to be funny.,People jump when they find a joke to be funny.,1
+dev_00754,The cat drank the food,The cat drank the water,0
+dev_00755,A fly can fly,A reptile can fly,1
+dev_00756,The man used cheese to make the building.,The man used cheese to make his sandwich.,0
+dev_00757,She ran a lap around the track field.,She swam a lap around the track field.,1
+dev_00758,he walked in front of a car,he was crossing the road,0
+dev_00759,Switching the gas stove on when you want to boil water,Switching the fridge on when you want to boil water,1
+dev_00760,sleeping exercises body,Swimming exercises body,0
+dev_00761,SHE PUT AN EGG INTO THE FRIDGE.,SHE PUT A HEN INTO THE FRIDGE.,1
+dev_00762,he try to give a powerful hit by some cotton,he try to give a powerful hit by some hands,0
+dev_00763,I want to walk to the lake and go fishing.,I want to fly to the lake and go fishing.,1
+dev_00764,Vegetables should eat a healthy diet.,Vegetable are part of a healthy diet.,0
+dev_00765,Man eats animals meat to survive,Man have to eat meat to live,1
+dev_00766,Food store sells pets,a food store is used for selling food.,0
+dev_00767,A shoe store is used for selling shoes,A shoe store is used for selling food,1
+dev_00768,he cooked food in toilet,He cooked food in kitchen,0
+dev_00769,a food store is used for selling food.,a toilet seat is used for eating,1
+dev_00770,Watch tv with your eyes closed,If you want to watch tv you have to turn on the TV,0
+dev_00771,There were a hundred participants in the competition,There were a million participants in the competition,1
+dev_00772,Many people eat coffee grounds from a mug.,Many people drink coffee from a mug.,0
+dev_00773,Humans have hands.,Humans don't have hands,1
+dev_00774,A bus is only needed for dropping kids off at school,The bus is common in our city,0
+dev_00775,Rain falls from the sky,Dogs falls from the sky,1
+dev_00776,The deer flied into the window.,The deer crashed into the window.,0
+dev_00777,Beans is a great source of protein,If you want carbohydrates you can eat beans all day,1
+dev_00778,I'm working on a box,I'm working on a laptop,0
+dev_00779,Bob kicked the ball up the hill,Bob kicked the boulder up the hill,1
+dev_00780,Dogs ride the subway.,I rice the subway,0
+dev_00781,the ocean is very large,the ocean is very noisy,1
+dev_00782,Narcotic Anonymous is for drug dealers.,Narcotic Anonymous is for addicts.,0
+dev_00783,I use the money to buy tickets for the bus,i use my biscuits to buy tickets for bus,1
+dev_00784,A television plays audio-only.,A televisions plays video with audio.,0
+dev_00785,I have to go to school.,I can go to school whenever I like.,1
+dev_00786,humans can live forever,smoking is bad for humans,0
+dev_00787,Trees can sometimes live in saltwater,Trees can not live on the ground,1
+dev_00788,Light bulbs help generate electricity.,Light bulbs are powered by electricity.,0
+dev_00789,When the weather is hot we turn the air conditioning on in our houses.,When the weather is hot we turn the air conditioning off in our houses.,1
+dev_00790,The car flew away,The car rolled down the hill,0
+dev_00791,A toast is for a celebration,A toast is for mourning someone's death,1
+dev_00792,he buys patrol from the bank for his bike,he buys patrol from patrol bunk for his bike,0
+dev_00793,A MAN PUT WASTAGE INTO THE DUSTBIN.,A MAN STORE MONEY INTO THE DUSTBIN.,1
+dev_00794,A rich man never leaves his money to his child,A rich man has a lot of money.,0
+dev_00795,Baking is common,Baking is easier underwater.,1
+dev_00796,Cocks are swimming in the river.,Ducks are swimming in the river.,0
+dev_00797,Water is required for life to occur.,Life does not require water.,1
+dev_00798,Sunflowers are orange,Sunflowers are yellow,0
+dev_00799,She drank water because she was thirsty,She listened to the water because she was thirsty,1
+dev_00800,she put a whale on the stove to bake,she put a cake batter on the stove to bake,0
+dev_00801,she put a pen in the bag,she put a car in the bag,1
+dev_00802,Aliens are said to be bound to their terrestrial place.,Aliens are said to be extraterrestrial beings.,0
+dev_00803,The barber trimmed his hair with scissors,The barber trimmed his lips with scissors,1
+dev_00804,HE FILLS THE PEN WITH WATER.,HE FILLS THE PEN WITH INK.,0
+dev_00805,he uses the fingers to touch the keyboards,he uses this head to touch the keyboards,1
+dev_00806,Evolution never exists,Evolution is a biology process,0
+dev_00807,Jack parked his car next to the building.,The building moved on its own.,1
+dev_00808,SHE PLACE A TRAIN IN THE BEDROOM,SHE places A PILLOW IN THE BED,0
+dev_00809,Giraffes live in Africa,Giraffes live in the Arctic,1
+dev_00810,They write their's exam by a water bottle.,They write their's exam by the pen,0
+dev_00811,THE EFFECT OF RUNNING A MARATHON IS BEING VERY TIRED,THE EFFECT OF RUNNING A MARATHON IS VERY ENERGETIC,1
+dev_00812,A HURRICANE IS VERY WEAK.,A HURRICANE HAS HIGH WINDS.,0
+dev_00813,the sun rises in the east every day,the sun rises in the north every day,1
+dev_00814,He put one hundred thousand dollars in his back pocket,He put some money in his wallet,0
+dev_00815,There are nice trees in the park.,There is no restaurant available in the business districts.,1
+dev_00816,The last thing to do before sleeping is to get dressed.,"When you wake up in the morning,  you should brush your teeth.",0
+dev_00817,Tofu is a meat substitute,Tofu is a ufo substitute,1
+dev_00818,I SAW MOON AT 11.30 A.AM every day,I  SAW  MOON AT 8.00 P.M.,0
+dev_00819,The largest animal on the land is the elephant,The largest animal  is the elephant,1
+dev_00820,He put a horse into the oven,He put muffins into the oven.,0
+dev_00821,today I went to school,today I went to the Mars,1
+dev_00822,I am looking up a phone number in the Red Pages,I am looking up a phone number in the Yellow Pages,0
+dev_00823,The woman who works here is from Japan,japan is a planet,1
+dev_00824,he smelled a flower in his finger,he smelled a flower in his nose,0
+dev_00825,She went to a store to buy a dress.,She went to a library to buy a dress.,1
+dev_00826,A clock can be made by anyone,A clock is a difficult machine,0
+dev_00827,Arizona has warm weather,It's very cold in Arizona.,1
+dev_00828,My aunt drank a cup of sand.,My aunt drank a cup of tea.,0
+dev_00829,Playing the drums makes a lot of noise.,"When someone plays the drums, it is a silent activity.",1
+dev_00830,the spoon is used in the mining industry,The spoon is used in the kitchen,0
+dev_00831,Cartoons are fiction,Cartoons are fact,1
+dev_00832,Clothes can be washed in a microwave,"If you want to have clean clothes, you have to wash them when they get dirty",0
+dev_00833,He put oil into the pan,He put alligator into the pan,1
+dev_00834,He worked while sleeping,He stayed up late working,0
+dev_00835,"If you are going on a trip by car, you should first fill the fuel tank.",My car runs on water.,1
+dev_00836,you will find clothes in a workshop,You will find good clothes in the supermarket,0
+dev_00837,A frog has four feet,A small frog has four feet,1
+dev_00838,i used a ball to wash my clothes,i went to washing shop to wash my clothes,0
+dev_00839,The man is living on the earth,The man is living on the moon,1
+dev_00840,I eat all the supermarket,I eat all the cake,0
+dev_00841,You have five fingers on one hand.,You have three fingers on one hand.,1
+dev_00842,Lightning comes after thunder,Thunder comes after lightning,0
+dev_00843,my boyfriend drinks orange juice for breakfast every day,my boyfriend drinks petrol for breakfast every day,1
+dev_00844,Rabbits sometimes howls at night.,Dogs sometimes howl at night.,0
+dev_00845,The kids want to play on the slide.,Slides want to play on the kids.,1
+dev_00846,he microwaved his empty bowl,he microwaved his popcorn,0
+dev_00847,They decided to give some money to poor peoples,they decided to give some money to rich peoples.,1
+dev_00848,I am going to a computer store to buy a mobile phone,i am going to computer stores to buy a laptop,0
+dev_00849,she put rice in the pan,she put a giraffe in the pan,1
+dev_00850,An Airplane can fit in a car,Airplanes are huge,0
+dev_00851,You can break your leg playing football,You can heal your leg playing football,1
+dev_00852,he threw the gold in dust bin,He threw the trash in dust bin,0
+dev_00853,Lions roar,I saw a lion bark a few days ago,1
+dev_00854,He drove the car into a house.,He drove the car into the garage.,0
+dev_00855,she set up a consulting business,house addresses are great to attract customer service,1
+dev_00856,The cat used the toilet.,The cat used the litter box.,0
+dev_00857,He put pencils in his pencil box,he put books in his pencil box,1
+dev_00858,A ring is a rectangle in shape,A ring is a circle in shape,0
+dev_00859,The government implemented regulations to protect workers.,The workers implemented regulations to protect the government.,1
+dev_00860,An electrical charge comes only from batteries.,A battery holds an electrical charge.,0
+dev_00861,"My cell phone battery is about to die, so I put it on charging.","My cell phone battery is fully charged, so i put it on charging.",1
+dev_00862,Tanks are made of mostly paper.,Tanks are made of mostly steel.,0
+dev_00863,fencing is not a dangerous sport,fencing is a dangerous sport,1
+dev_00864,A player can easily place his own king in check.,A player can never place his own king in check.,0
+dev_00865,Amy drinks water when she is tired,Amy drinks pee when she is tired,1
+dev_00866,I will plant a big tree in my room,I'll plant a tree in my backyard,0
+dev_00867,When I get tired I want to go to bed.,When I get tired I go to gym with my friends,1
+dev_00868,The park is near the factory,The park is near the building,0
+dev_00869,Driving somewhere is quicker than walking.,Walking is faster than driving somewhere.,1
+dev_00870,An apple can never be green.,Some apples are red.,0
+dev_00871,A ship can float on water.,A ship will never float on water and always sinks.,1
+dev_00872,jerry springer is his favorite cartoon,Spongebob is his favorite cartoon,0
+dev_00873,You are likely to find a baseball at a baseball game.,You will never find a baseball at a baseball game.,1
+dev_00874,Every Sunday my grandpa goes to a restaurant to check his teeth.,Every Sunday my grandpa goes to the clinic to check his teeth.,0
+dev_00875,Don't step on the broken glass.,Step on the broken glass,1
+dev_00876,"If you like birds, you should watch the action movies.","If you like action movies, you should watch X-Men.",0
+dev_00877,the printer is out of ink,the printer is out of water,1
+dev_00878,"On Monday morning, the hen mooed like a cow.","On Monday morning, the hen clucked.",0
+dev_00879,fish live in the water,fish live in outer space,1
+dev_00880,When I am tired and sleepy I run.,I go to sleep when I am tired from running.,0
+dev_00881,"She worked all day and night, causing severe dehydration.",She doesn't need food or water to survive.,1
+dev_00882,A stick wants to have sex,A person wants to have sex,0
+dev_00883,I shop at a store for groceries once a week,people usually shop for a new place to live once a week,1
+dev_00884,He put the book in the bookmark,He put the bookmark in the book,0
+dev_00885,it is said that Santa comes on Christmas days,it is said that Santa comes on Thanksgiving Days,1
+dev_00886,We use fire to run a television,We use electricity to run a Television,0
+dev_00887,I listen to music using a headphone,I use my pen to listen to music,1
+dev_00888,There was a pop singer running in the sky.,There were clouds running in the sky.,0
+dev_00889,It is fun to watch baseball.,Baseball is only for boys.,1
+dev_00890,He is playing cricket on his own rules.,To play the cricket there are some universal  rules.,0
+dev_00891,children like watching tv,cat watches tv,1
+dev_00892,You would never have a shower even if you smelled bad.,You should have a shower if you smelled bad.,0
+dev_00893,She put an outfit in the drawer.,She put a horse in the drawer.,1
+dev_00894,A judge governs the nation,A president governs the nation,0
+dev_00895,Prisons are for criminals,prisons are for innocent people,1
+dev_00896,He put a yacht in bed.,He put the pillow on the bed.,0
+dev_00897,Harry likes cookies,Harry eats stone.,1
+dev_00898,The table in the dining room is made out of butter.,The table in the dining room is made out of wood.,0
+dev_00899,She put beans in the pan.,She put a giraffe in the pan.,1
+dev_00900,There are streets on Jupiter,There are streets in Germany,0
+dev_00901,A king may not always have a queen,A king must always have a queen,1
+dev_00902,The woman painted a portrait on a camel.,The woman painted a portrait on a canvas.,0
+dev_00903,Houses built with steel frames are more resistant to damage than houses built with wooden frames,Houses built with wooden frames are more resistant to damage than houses built with steel frames,1
+dev_00904,You would never wash clothes even if they get dirty.,You will wash clothes when clothes get dirty.,0
+dev_00905,A chicken lays eggs when it gives birth.,A chicken gives birth to live chicks that are not encased in eggs.,1
+dev_00906,milky way galaxy is a part of the earth,earth is part of the milky way galaxy,0
+dev_00907,everyone needs a heart,everyone in the world needs a helmet,1
+dev_00908,Pills are shaped to make them hard to swallow.,A pill is shaped so that it is easy to swallow.,0
+dev_00909,My son went to school today.,My tractor went to school today.,1
+dev_00910,He went hunting the deer in the desert.,He went hunting the deer in the forest,0
+dev_00911,The woman holds a cat in her arms.,The woman holds a hippo in her arms.,1
+dev_00912,he puts a fire in a cooler,he puts beer in the cooler,0
+dev_00913,The woman got a receipt from the hardware store.,The woman got a receipt from the water fountain.,1
+dev_00914,The soda evaporated as soon as she opened it.,The soda tasted flat.,0
+dev_00915,You are likely to find a farmer on a farm.,You will never find a farmer on a farm.,1
+dev_00916,the wood is pretty,the girl is pretty,0
+dev_00917,The woman made apple juice.,The woman made juice glass.,1
+dev_00918,you should close umbrellas when it rains when umbrellas are closed they don't protect you from the rain,you should open umbrellas when it rains,0
+dev_00919,A game is supposed to be fun.,He put a table on a TV.,1
+dev_00920,The couple married and went for courtship.,The couple got married after they had courted for two years.,0
+dev_00921,You put rubbish in bins,you put bins in rubbish,1
+dev_00922,the lava was warm and soft,the bed was warm and soft,0
+dev_00923,He took the dog for a walk.,He took the refrigerator for a walk.,1
+dev_00924,There is a refrigerator in the freezer,There is ice cream in the freezer,0
+dev_00925,My dog is white,Every dog is purple,1
+dev_00926,You can not listen to music on a phone.,People listen to music on their phones.,0
+dev_00927,EAGLE EATS FISH,EAGLE EATS LION,1
+dev_00928,poop is lovely,She is lovely,0
+dev_00929,Cats have got one life,Cats have got seven lives,1
+dev_00930,He put a camel on his head.,He put a hat on his head.,0
+dev_00931,I am going to work so I can get paid.,I am going to work so I can lose money.,1
+dev_00932,Fruit is bad for you and for your health.,The fruit is healthy food to eat.,0
+dev_00933,cat goes into its cage,the man tries to fit into cat cage,1
+dev_00934,The door flies to Spain,The key unlocks the door,0
+dev_00935,She put the meat on the barbecue grill.,She put a car on the barbecue grill.,1
+dev_00936,The dog lifted the house,He put the dog outside,0
+dev_00937,Some people like to sleep when it rains,Some people only sleep when it rains,1
+dev_00938,I like to walk my t-rex every morning,I like to walk my dog every morning,0
+dev_00939,Babies love to crawl on the ground,babies love to crawl on top of airplanes,1
+dev_00940,My sister ate a pink apple,My sister ate a red apple,0
+dev_00941,Use the lawnmower to cut grass.,Use the shovel to cut grass.,1
+dev_00942,Square wheels go faster,The wheels on the bus go round and round,0
+dev_00943,She puts plants in pots.,She put pots into plants.,1
+dev_00944,Boxes are spheres,Cats like to sit in boxes,0
+dev_00945,You want to color your white hair to black because you want to look younger.,all the old want to color white hair to black,1
+dev_00946,A bone buried its dog.,A dog buried its bone.,0
+dev_00947,It is important to drink lots of water,Water is toxic and should not be consumed,1
+dev_00948,She put plants into the egg tray.,She puts the egg into the egg tray.,0
+dev_00949,Oranges provide a good source of vitamin C,Oranges provide a good source of mozzarella,1
+dev_00950,humans can exist in outer space without protected environments,Satellite  exist in outer space within protected environments,0
+dev_00951,people usually pray in silent places,people usually pray in noisy places,1
+dev_00952,You must go to New York by flight from Boston,You can go to New York by flight from Boston,0
+dev_00953,Sometimes using a computer causes blurry vision,Using a computer always causes blurry vision,1
+dev_00954,A haircut will lengthen your hair,A haircut will shorten your hair,0
+dev_00955,I am smaller than my house,I am larger than my house,1
+dev_00956,A woman went to the fish market to buy Pizza,A woman went to the pizza shop to buy Pizza,0
+dev_00957,Every mammal is born with two paws,Some mammals are born with two paws,1
+dev_00958,the NBA is the football league.,Basketball is very popular,0
+dev_00959,I am going to temple for prey,I am going to the circus for prey,1
+dev_00960,People who are likely full will visit a restaurant,Something you find at a restaurant is food,0
+dev_00961,She likes adding oil in the gas station,She likes eating in the gas station,1
+dev_00962,A good house can be built without the use of skilled technicians,Building a house will require engineers,0
+dev_00963,Jack ate a pie,Jack ate a porch,1
+dev_00964,There are nine planets in the solar system,There are eight planets in the solar system,0
+dev_00965,He parked his car in the garage,He parked the train in the garage,1
+dev_00966,Cats like alcohol,cats like milk,0
+dev_00967,he cleans up with bleach,the bleach cleaned the house,1
+dev_00968,Astronauts can breathe in open space.,Astronauts can go into space.,0
+dev_00969,The sky is cloudy when it's raining.,The sky is sunny when it's raining.,1
+dev_00970,She danced on the water.,She swam through the water.,0
+dev_00971,Food is needed to stay alive,Soccer is needed to stay alive,1
+dev_00972,I dreamed of an invisible rainbow of black color,I dreamed of a very beautiful rainbow,0
+dev_00973,The car drove down the street,The boat drove down the street,1
+dev_00974,She is going for a ride on a horsefly.,She is going for a ride on a horse.,0
+dev_00975,He wrote an exam in pen,He wrote an exam in knife,1
+dev_00976,The television is powered by heat,The television is powered by electricity,0
+dev_00977,Rhonda went shopping for a nice black dress for the funeral.,She bought a matching pair of black skates for the funeral.,1
+dev_00978,The murder remained a happy event.,The murder remained unsolved.,0
+dev_00979,He rides a motorcycle on the freeway,He rides a footstool on the freeway,1
+dev_00980,he parked a hippopotamus in garage,he parked his car in the garage,0
+dev_00981,He rides a bicycle on a road,He rides a bicycle on a water,1
+dev_00982,Mom is preparing poison for lunch.,Mom is preparing chicken for lunch.,0
+dev_00983,some people suffer from cancer,all people suffer from cancer,1
+dev_00984,I make some dish to see the dentist,I make an appointment to see the dentist,0
+dev_00985,a dog can walk,a tree can walk,1
+dev_00986,"everyone hates her because she's kind,patient,gentle and calm",everyone hates her because she's obnoxious and wicked,0
+dev_00987,The submarine went underwater in the ocean.,The submarine drove down the street.,1
+dev_00988,The dog ate the shark.,The dog ate my snack.,0
+dev_00989,He poured the coffee into a mug,He poured the coffee into a hat,1
+dev_00990,The fish ran through the street.,The fish swam through the ocean.,0
+dev_00991,An apple a day keeps the doctor away.,An apple a day keeps death away.,1
+dev_00992,He drank poison to become healthy.,He drank apple juice to become healthy.,0
+dev_00993,people can sit in cars,cars can sit in people,1
+dev_00994,oranges like eating her,she likes eating oranges,0
+dev_00995,Heat energy can convert to light energy.,Lamps can convert peanut butter for energy.,1
+dev_00996,He ride a bicycle on water,He ride a bicycle on road,0
+dev_00997,The boy wore uniform to go to school,The boy wore uniform to go to restaurant,1
+dev_00998,my giraffe is driving a car,my brother is driving a car,0
+dev_00999,he used fire to cook food,he used water to cook food,1
