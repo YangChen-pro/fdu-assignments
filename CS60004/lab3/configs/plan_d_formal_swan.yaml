@@ -1,0 +1,95 @@
+{
+  "model_name_or_path": "models/Qwen3-0.6B",
+  "ref_model_name_or_path": "models/Qwen3-0.6B",
+  "teacher_model_name_or_path": "models/Qwen3-8B",
+  "raw_train_file": "lab3/datasets/rl_train_test_datasets/raw_train.parquet",
+  "train_file": "lab3/datasets/dpo/plan_d_formal_train.jsonl",
+  "valid_file": "lab3/datasets/dpo/plan_d_formal_valid.jsonl",
+  "output_dir": "lab3/outputs/dpo/plan_d_formal_swan",
+  "source_plan": "plan_d",
+  "valid_ratio": 0.05,
+  "per_device_batch_size": 1,
+  "gradient_accumulation_steps": 8,
+  "learning_rate": 5e-06,
+  "num_epochs": 2,
+  "max_steps": 200,
+  "max_prompt_length": 256,
+  "max_response_length": 1024,
+  "beta": 0.1,
+  "eval_interval": 100,
+  "save_interval": 100,
+  "log_interval": 5,
+  "seed": 42,
+  "max_grad_norm": 1.0,
+  "torch_dtype": "bfloat16",
+  "gradient_checkpointing": true,
+  "data_build": {
+    "max_samples": 400,
+    "teacher_batch_size": 8,
+    "teacher_retries": 2,
+    "teacher_backend": "vllm_api",
+    "rejected_reasons": [
+      "wrong_result",
+      "number_usage_error",
+      "missing_answer",
+      "empty_answer"
+    ],
+    "solver_repair_on_fail": true
+  },
+  "teacher": {
+    "torch_dtype": "bfloat16",
+    "device_map": "auto"
+  },
+  "teacher_generation": {
+    "max_new_tokens": 256,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "do_sample": true,
+    "use_chat_template": true,
+    "top_k": 20,
+    "min_p": 0,
+    "enable_thinking": false,
+    "presence_penalty": 1.5,
+    "api_base": "http://localhost:8000/v1",
+    "request_concurrency": 8
+  },
+  "generation": {
+    "max_new_tokens": 512,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "do_sample": true,
+    "use_chat_template": true,
+    "top_k": 20,
+    "min_p": 0,
+    "enable_thinking": false,
+    "api_base": "http://localhost:8000/v1",
+    "presence_penalty": 1.5,
+    "request_concurrency": 4
+  },
+  "eval_generation": {
+    "max_new_tokens": 512,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "do_sample": true,
+    "use_chat_template": true,
+    "top_k": 20,
+    "min_p": 0,
+    "enable_thinking": false,
+    "api_base": "http://localhost:8000/v1",
+    "presence_penalty": 1.5,
+    "request_concurrency": 4
+  },
+  "eval_batch_size": 4,
+  "swanlab": {
+    "enabled": true,
+    "project": "cs60004-lab3",
+    "experiment_name": "plan_d_formal_swan",
+    "tags": [
+      "dpo",
+      "plan_d",
+      "formal",
+      "qwen3-0.6b",
+      "vllm-only"
+    ]
+  }
+}

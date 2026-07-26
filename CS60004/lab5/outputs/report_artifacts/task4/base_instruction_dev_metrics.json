@@ -1,0 +1,16 @@
+{
+  "input_file": "lab5/public_pack/data/instruction_following/dev.jsonl",
+  "num_samples": 100,
+  "concurrency": 32,
+  "total_latency_s": 13.906456232070923,
+  "avg_latency_s": 1.853314561843872,
+  "p50_latency_s": 1.9335203170776367,
+  "p95_latency_s": 3.8247726082801816,
+  "prediction_file": "lab5/outputs/task4/base_instruction_dev/predictions.jsonl",
+  "detail_file": "lab5/outputs/task4/base_instruction_dev/details.jsonl",
+  "served_model": "task4-base",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "repetition_penalty": 1.05,
+  "max_tokens": 512
+}

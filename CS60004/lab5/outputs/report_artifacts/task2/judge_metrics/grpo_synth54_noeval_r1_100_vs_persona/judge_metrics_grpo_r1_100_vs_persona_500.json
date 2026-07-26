@@ -1,0 +1,44 @@
+{
+  "num_samples": 500,
+  "num_records": 500,
+  "ok_count": 500,
+  "pending_count": 0,
+  "baseline_name": "persona",
+  "candidate_name": "grpo_r1_100",
+  "winner_counts": {
+    "grpo_r1_100": 403,
+    "persona": 96,
+    "tie": 1
+  },
+  "candidate_win_count": 403,
+  "baseline_win_count": 96,
+  "tie_count": 1,
+  "status_counts": {
+    "ok": 500
+  },
+  "avg_scores": {
+    "persona": {
+      "memorisation": 2.438,
+      "values": 3.296,
+      "personality": 2.362,
+      "hallucination": 3.34,
+      "answer_quality": 2.898,
+      "overall": 2.684
+    },
+    "grpo_r1_100": {
+      "memorisation": 2.882,
+      "values": 4.112,
+      "personality": 3.878,
+      "hallucination": 3.882,
+      "answer_quality": 3.858,
+      "overall": 3.874
+    }
+  },
+  "avg_latency_s": 18.992176184654237,
+  "result_file": "lab5/outputs/task2_judge/grpo_synth54_noeval_r1_100_vs_persona/judge_results_grpo_r1_100_vs_persona_500.jsonl",
+  "model": "Qwen3.5-35B-A3B",
+  "base_url": "http://127.0.0.1:8318/v1",
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "memory_details": ""
+}

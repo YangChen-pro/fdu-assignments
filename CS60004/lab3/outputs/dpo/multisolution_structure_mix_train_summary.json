@@ -1,0 +1,18 @@
+{
+  "input_rows": 115826,
+  "hard_rows": 80997,
+  "requires_muldiv": 51386,
+  "avg_solutions_accum": 303635,
+  "output_rows": 303635,
+  "reason::missing_muldiv": 51386,
+  "reason::wrong_result": 114894,
+  "reason::number_usage_error": 81337,
+  "solutions::3": 3415,
+  "requires_paren": 30119,
+  "reason::missing_paren": 17990,
+  "solutions::2": 46654,
+  "reason::equation_answer": 38028,
+  "solutions::4": 44775,
+  "solutions::1": 20982,
+  "avg_solutions_per_row": 2.6214753164229103
+}

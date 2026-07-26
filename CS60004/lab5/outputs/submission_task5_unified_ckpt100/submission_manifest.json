@@ -1,0 +1,21 @@
+{
+  "role_count": 500,
+  "instruction_count": 441,
+  "role_unique_ids": 500,
+  "instruction_unique_keys": 441,
+  "role_keys": [
+    "character_id",
+    "id",
+    "prediction"
+  ],
+  "instruction_keys": [
+    "key",
+    "prediction"
+  ],
+  "role_has_required_fields": true,
+  "instruction_has_required_fields": true,
+  "zip_file": "lab5/outputs/submission_task5_unified_ckpt100/task_5_test.zip",
+  "role_source": "lab5/outputs/experiments/role_instruction_teacher_grpo_probe100_ckpt100_memory_dedup_voice/predictions.jsonl",
+  "instruction_source": "lab5/outputs/experiments/instruction_teacher_grpo_probe100_ckpt100_test_strict/predictions.jsonl",
+  "postprocess": false
+}

@@ -1,0 +1,53 @@
+{
+  "checkpoint": "/root/autodl-tmp/CS60004/lab3/outputs/dpo/r8_onepos_targeted_failures_ep2/final",
+  "test_file": "lab3/datasets/rl_train_test_datasets/raw_test.json",
+  "num_samples": 500,
+  "candidate_count": 32,
+  "runtime_sec": 1931.9490239620209,
+  "generation": {
+    "api_base": "http://127.0.0.1:8001/v1",
+    "max_tokens": 1024,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "enable_thinking": true,
+    "request_concurrency": 64,
+    "timeout": 600
+  },
+  "single_shot": {
+    "num_samples": 500,
+    "format_rate": 0.468,
+    "expr_valid_rate": 0.444,
+    "accuracy": 0.436,
+    "avg_output_tokens": 140.074,
+    "reasons": {
+      "ok": 218,
+      "missing_answer": 266,
+      "number_usage_error": 10,
+      "ValueError": 1,
+      "wrong_result": 4,
+      "illegal_character": 1
+    }
+  },
+  "pass_at_32": {
+    "num_samples": 500,
+    "format_rate": 0.8,
+    "expr_valid_rate": 0.796,
+    "accuracy": 0.796,
+    "avg_output_tokens": 273.366,
+    "reasons": {
+      "ok": 398,
+      "missing_answer": 100,
+      "ValueError": 1,
+      "number_usage_error": 1
+    }
+  },
+  "files": {
+    "single_predictions": "lab3/outputs/eval/dpo4_pass32_rerun.single.jsonl",
+    "passk_candidates": "lab3/outputs/eval/dpo4_pass32_rerun.pass32.jsonl",
+    "correct_messages": "lab3/outputs/eval/dpo4_pass32_rerun.pass32.correct_messages.jsonl",
+    "summary": "lab3/outputs/eval/dpo4_pass32_rerun.summary.json"
+  }
+}

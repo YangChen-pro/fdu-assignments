@@ -1,0 +1,12 @@
+{
+  "base_file": "lab3/datasets/dpo/full_answer_only_from_plan_d_train.jsonl",
+  "extra_file": "lab3/datasets/dpo/hardcase_weighted_from_full_train.jsonl",
+  "output_file": "lab3/datasets/dpo/replay_mix25_train.jsonl",
+  "base_rows": 115826,
+  "extra_pool_rows": 162922,
+  "sampled_extra_rows": 28956,
+  "extra_ratio": 0.25,
+  "extra_source_plan": "hardcase_weighted",
+  "output_rows": 144782,
+  "seed": 46
+}

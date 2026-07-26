@@ -1,0 +1,9 @@
+Input samples    : 5
+Output samples   : 5
+Dropped samples  : 0
+Candidates/sample: 4
+Accepted total   : 17
+Avg accepted     : 3.40
+Top reject reasons:
+- hard:option_leakage: 2
+- hard:meta_phrase: 1

@@ -1,0 +1,28 @@
+{
+  "dev_before_strict": {
+    "prompt_accuracy": 0.91,
+    "instruction_accuracy": 0.9363057324840764,
+    "num_samples": 100
+  },
+  "dev_before_loose": {
+    "prompt_accuracy": 0.92,
+    "instruction_accuracy": 0.9426751592356688,
+    "num_samples": 100
+  },
+  "dev_after_targeted_strict": {
+    "prompt_accuracy": 0.94,
+    "instruction_accuracy": 0.9617834394904459,
+    "num_samples": 100
+  },
+  "dev_after_targeted_loose": {
+    "prompt_accuracy": 0.95,
+    "instruction_accuracy": 0.9681528662420382,
+    "num_samples": 100
+  },
+  "test_repaired_keys": [
+    3287,
+    1392,
+    3069
+  ],
+  "test_repair_method": "Prompt-only targeted instruction repair; no reference answers or hidden labels used."
+}

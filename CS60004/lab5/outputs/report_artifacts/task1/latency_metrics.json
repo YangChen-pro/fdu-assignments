@@ -1,0 +1,43 @@
+{
+  "source": "lab5/outputs/task1/*/metrics.json",
+  "measurement": "end-to-end inference latency measured by task1_memory_agent.py; judge latency is excluded",
+  "served_model": "local vLLM chat service used by the Task1 run; generation model was served through serve_vllm.sh",
+  "concurrency": 32,
+  "num_samples": 500,
+  "modes": {
+    "question": {
+      "total_latency_s": 26.975550413131714,
+      "avg_latency_s_per_sample": 1.0170242338180542,
+      "p50_latency_s_per_sample": 0.8395745754241943,
+      "p95_latency_s_per_sample": 1.6866475701332093,
+      "avg_chat_latency_s_per_sample": 1.0070996265411376,
+      "avg_retrieval_latency_s_per_sample": 0.0
+    },
+    "persona": {
+      "total_latency_s": 29.007887363433838,
+      "avg_latency_s_per_sample": 1.489159245967865,
+      "p50_latency_s_per_sample": 1.7016717195510864,
+      "p95_latency_s_per_sample": 1.8430667281150819,
+      "avg_chat_latency_s_per_sample": 1.4756760640144349,
+      "avg_retrieval_latency_s_per_sample": 0.0
+    },
+    "memory": {
+      "total_latency_s": 107.24024438858032,
+      "avg_latency_s_per_sample": 5.568831154823303,
+      "p50_latency_s_per_sample": 5.70900022983551,
+      "p95_latency_s_per_sample": 6.858359348773955,
+      "avg_chat_latency_s_per_sample": 4.799920854091645,
+      "avg_retrieval_latency_s_per_sample": 0.04466025876998901
+    }
+  },
+  "report_answer": {
+    "main_system": "Persona+Memory",
+    "avg_latency_s_per_sample": 5.568831154823303,
+    "p50_latency_s_per_sample": 5.70900022983551,
+    "p95_latency_s_per_sample": 6.858359348773955,
+    "total_latency_s_for_500_samples": 107.24024438858032,
+    "avg_retrieval_latency_s_per_sample": 0.04466025876998901,
+    "avg_generation_latency_s_per_sample": 4.799920854091645,
+    "throughput_samples_per_second_wall_clock": 4.662428763107551
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "model_name_or_path": "lab3/outputs/sft/r8_ckpt382_pass32_correct_ep2/v1-0425165909/latest",
+  "ref_model_name_or_path": "lab3/outputs/sft/r8_ckpt382_pass32_correct_ep2/v1-0425165909/latest",
+  "train_file": "lab3/datasets/dpo/r8_ckpt382_pass32_onepos_train.jsonl",
+  "valid_file": "lab3/datasets/dpo/r8_ckpt382_pass32_onepos_valid.jsonl",
+  "output_dir": "lab3/outputs/dpo/r8_sft_pass32_onepos_ep2",
+  "per_device_batch_size": 1,
+  "gradient_accumulation_steps": 8,
+  "learning_rate": 1e-6,
+  "num_epochs": 2,
+  "max_optimizer_steps": 1200,
+  "max_prompt_length": 256,
+  "max_response_length": 1024,
+  "beta": 0.1,
+  "save_interval": 200,
+  "log_interval": 10,
+  "seed": 42,
+  "max_grad_norm": 1.0,
+  "torch_dtype": "bfloat16",
+  "gradient_checkpointing": true,
+  "dpo_chat_template_kwargs": {
+    "enable_thinking": true
+  },
+  "dpo_system_prompt": "You are a careful arithmetic solver. The <answer> block must contain exactly one final expression, with no equals sign, no explanation, and no extra text.",
+  "swanlab": {
+    "enabled": true,
+    "project": "cs60004-lab3",
+    "experiment_name": "dpo_r8_sft_pass32_onepos_ep2",
+    "tags": [
+      "dpo",
+      "r8",
+      "sft-init",
+      "pass32-onepos",
+      "thinking-mode"
+    ]
+  }
+}

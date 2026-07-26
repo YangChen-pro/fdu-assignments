@@ -1,0 +1,22 @@
+{
+  "output_file": "lab3/outputs/submit/thinking_grpo_r3_ckpt50_single_test500.jsonl",
+  "checkpoint": "/root/autodl-tmp/CS60004/lab3/outputs/grpo/thinking_grpo_r3/checkpoint-50",
+  "num_samples": 500,
+  "runtime_sec": 200.57155346870422,
+  "generation": {
+    "max_new_tokens": 1024,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "do_sample": true,
+    "candidate_count": 1,
+    "use_chat_template": true,
+    "top_k": 20,
+    "min_p": 0,
+    "enable_thinking": true,
+    "presence_penalty": 0,
+    "api_base": "http://127.0.0.1:8001/v1",
+    "request_concurrency": 64
+  },
+  "backend": "vllm_api",
+  "rule_fallback": "none"
+}

@@ -1,0 +1,507 @@
+{
+  "task1_memory_vs_persona": {
+    "num_samples": 500,
+    "num_records": 500,
+    "ok_count": 500,
+    "pending_count": 0,
+    "concurrency": 4,
+    "max_retries": 2,
+    "avg_latency_s": 17.831042921066285,
+    "winner_counts": {
+      "memory": 284,
+      "tie": 3,
+      "persona": 203,
+      "unknown": 7,
+      "question": 3
+    },
+    "memory_helped_count": 465,
+    "status_counts": {
+      "ok": 500
+    },
+    "result_file": "lab5/outputs/task1_judge/judge_results_500.jsonl",
+    "model": "Qwen3.5-35B-A3B",
+    "max_tokens": 4096,
+    "enable_thinking": true
+  },
+  "task3_r2_memory_vs_r2_persona": {
+    "num_samples": 500,
+    "num_records": 500,
+    "ok_count": 500,
+    "pending_count": 0,
+    "baseline_name": "grpo_synth54_noeval_r2_100_all",
+    "candidate_name": "grpo_r2_memory",
+    "winner_counts": {
+      "grpo_r2_memory": 280,
+      "grpo_synth54_noeval_r2_100_all": 215,
+      "tie": 5
+    },
+    "candidate_win_count": 280,
+    "baseline_win_count": 215,
+    "tie_count": 5,
+    "status_counts": {
+      "ok": 500
+    },
+    "avg_scores": {
+      "grpo_synth54_noeval_r2_100_all": {
+        "memorisation": 2.91,
+        "values": 4.004,
+        "personality": 3.51,
+        "hallucination": 3.836,
+        "answer_quality": 3.776,
+        "overall": 3.582
+      },
+      "grpo_r2_memory": {
+        "memorisation": 3.262,
+        "values": 4.092,
+        "personality": 3.64,
+        "hallucination": 3.572,
+        "answer_quality": 3.906,
+        "overall": 3.722
+      }
+    },
+    "avg_latency_s": 15.951667947769165,
+    "result_file": "lab5/outputs/task3_judge/grpo_r2_memory_vs_grpo_r2_persona/judge_results_grpo_r2_memory_vs_grpo_synth54_noeval_r2_100_all_500.jsonl",
+    "model": "Qwen3.5-35B-A3B",
+    "base_url": "http://127.0.0.1:8318/v1",
+    "max_tokens": 4096,
+    "enable_thinking": false,
+    "memory_details": "lab5/outputs/task3/trained_r2_memory/details.jsonl"
+  },
+  "task3_memory_sft_r2_memory_vs_trained_r2_memory": {
+    "num_samples": 500,
+    "num_records": 500,
+    "ok_count": 500,
+    "pending_count": 0,
+    "baseline_name": "trained_r2_memory",
+    "candidate_name": "memory_sft_r2_memory",
+    "winner_counts": {
+      "memory_sft_r2_memory": 248,
+      "trained_r2_memory": 247,
+      "tie": 5
+    },
+    "candidate_win_count": 248,
+    "baseline_win_count": 247,
+    "tie_count": 5,
+    "status_counts": {
+      "ok": 500
+    },
+    "avg_scores": {
+      "trained_r2_memory": {
+        "memorisation": 3.21,
+        "values": 4.048,
+        "personality": 3.544,
+        "hallucination": 3.698,
+        "answer_quality": 3.89,
+        "overall": 3.668
+      },
+      "memory_sft_r2_memory": {
+        "memorisation": 3.204,
+        "values": 4.11,
+        "personality": 3.606,
+        "hallucination": 3.704,
+        "answer_quality": 3.88,
+        "overall": 3.716
+      }
+    },
+    "avg_latency_s": 15.035731243610382,
+    "result_file": "lab5/outputs/task3_judge/memory_sft_r2_memory_vs_trained_r2_memory/judge_results_memory_sft_r2_memory_vs_trained_r2_memory_500.jsonl",
+    "model": "Qwen3.5-35B-A3B",
+    "base_url": "http://127.0.0.1:8318/v1",
+    "max_tokens": 4096,
+    "enable_thinking": false,
+    "memory_details": "lab5/outputs/task3/memory_sft_r2_memory/details.jsonl"
+  },
+  "task4_dev_accuracy": {
+    "r2_instruction_dev": 0.2611464968152866,
+    "base_instruction_dev": 0.5796178343949044,
+    "base_instruction_dev_strict": 0.5987261146496815,
+    "Qwen3.5-35B-A3B_instruction_dev_strict": 0.9363057324840764,
+    "Qwen3.5-35B-A3B_instruction_dev_targeted_repair_strict_prompt": 0.94,
+    "Qwen3.5-35B-A3B_instruction_dev_targeted_repair_strict_instruction": 0.9617834394904459
+  },
+  "task3_memory_sft_r2_grpo_r1_memory_vs_memory_sft_r2_memory": {
+    "num_samples": 500,
+    "num_records": 500,
+    "ok_count": 500,
+    "pending_count": 0,
+    "baseline_name": "memory_sft_r2_memory",
+    "candidate_name": "memory_sft_r2_grpo_r1_memory",
+    "winner_counts": {
+      "memory_sft_r2_grpo_r1_memory": 258,
+      "memory_sft_r2_memory": 228,
+      "unknown": 2,
+      "tie": 12
+    },
+    "candidate_win_count": 258,
+    "baseline_win_count": 228,
+    "tie_count": 12,
+    "status_counts": {
+      "ok": 500
+    },
+    "avg_scores": {
+      "memory_sft_r2_memory": {
+        "memorisation": 3.154,
+        "values": 4.012,
+        "personality": 3.506,
+        "hallucination": 3.744,
+        "answer_quality": 3.776,
+        "overall": 3.596
+      },
+      "memory_sft_r2_grpo_r1_memory": {
+        "memorisation": 3.2730923694779115,
+        "values": 4.116465863453815,
+        "personality": 3.6506024096385543,
+        "hallucination": 3.6305220883534135,
+        "answer_quality": 3.8674698795180724,
+        "overall": 3.7329317269076303
+      }
+    },
+    "avg_latency_s": 13.6287461643219,
+    "result_file": "lab5/outputs/task3_judge/memory_sft_r2_grpo_r1_memory_vs_memory_sft_r2_memory/judge_results_memory_sft_r2_grpo_r1_memory_vs_memory_sft_r2_memory_500.jsonl",
+    "model": "Qwen3.5-35B-A3B",
+    "base_url": "http://127.0.0.1:8318/v1",
+    "max_tokens": 4096,
+    "enable_thinking": false,
+    "memory_details": "lab5/outputs/task3/memory_sft_r2_grpo_r1_memory/details.jsonl"
+  },
+  "selected_role_model": {
+    "name": "judge_hybrid_plus_Qwen3.5-35B-A3B_three_stage_rewrite",
+    "reason": "Started from the judge hybrid role output; applied Qwen3.5-35B-A3B low-score, dimension-low, and fact-grounded/direct-answer rewrites using only persona, retrieved memories, question, and current answer. Targeted judges preferred 50/50, 59/60, and 71/80 candidate rewrites respectively; final role artifact count remains 0.",
+    "prediction_file": "lab5/outputs/submission_task5/role_interview_predictions.jsonl",
+    "checkpoint_primary": "lab5/outputs/task3/megatron_memory_sft_r2_grpo_r1/v0-20260530-134509/checkpoint-100",
+    "checkpoint_fallback": "lab5/outputs/task3/megatron_memory_sft_r2/v1-20260529-173903/checkpoint-100",
+    "postprocess": "CJK/text-artifact repair, no-label judge hybrid, Qwen3.5-35B-A3B low-score rewrite, Qwen3.5-35B-A3B dimension-low rewrite, and Qwen3.5-35B-A3B fact-grounded rewrite; no reference answers or hidden labels used."
+  },
+  "task5_repaired_cjk_vs_memory_sft_r2_grpo_r1_memory": {
+    "num_samples": 27,
+    "num_records": 27,
+    "ok_count": 27,
+    "pending_count": 0,
+    "baseline_name": "memory_sft_r2_grpo_r1_memory",
+    "candidate_name": "repaired_cjk",
+    "winner_counts": {
+      "repaired_cjk": 27
+    },
+    "candidate_win_count": 27,
+    "baseline_win_count": 0,
+    "tie_count": 0,
+    "status_counts": {
+      "ok": 27
+    },
+    "avg_scores": {
+      "memory_sft_r2_grpo_r1_memory": {
+        "memorisation": 2.6666666666666665,
+        "values": 3.6666666666666665,
+        "personality": 2.4444444444444446,
+        "hallucination": 2.5925925925925926,
+        "answer_quality": 2.5925925925925926,
+        "overall": 2.740740740740741
+      },
+      "repaired_cjk": {
+        "memorisation": 3.4814814814814814,
+        "values": 4.7407407407407405,
+        "personality": 4.222222222222222,
+        "hallucination": 4.222222222222222,
+        "answer_quality": 4.666666666666667,
+        "overall": 4.555555555555555
+      }
+    },
+    "avg_latency_s": 11.855573274471142,
+    "result_file": "lab5/outputs/task3_judge/repaired_cjk_vs_memory_sft_r2_grpo_r1_memory/judge_results_repaired_cjk_vs_memory_sft_r2_grpo_r1_memory_27.jsonl",
+    "model": "Qwen3.5-35B-A3B",
+    "base_url": "http://127.0.0.1:8318/v1",
+    "max_tokens": 4096,
+    "enable_thinking": false,
+    "memory_details": "lab5/outputs/task3/memory_sft_r2_grpo_r1_memory/details.jsonl"
+  },
+  "task5_instruction_targeted_repair": {
+    "dev_strict_prompt_accuracy_before": 0.91,
+    "dev_strict_prompt_accuracy_after": 0.94,
+    "dev_strict_instruction_accuracy_before": 0.9363057324840764,
+    "dev_strict_instruction_accuracy_after": 0.9617834394904459,
+    "test_repaired_keys": [
+      3287,
+      1392,
+      3069
+    ],
+    "evidence_file": "lab5/outputs/report_artifacts/task4/Qwen3.5-35B-A3B_instruction_dev_targeted_repair_metrics.json"
+  },
+  "task5_role_judge_hybrid": {
+    "baseline_name": "memory_sft_r2_memory",
+    "candidate_name": "memory_sft_r2_grpo_r1_memory",
+    "judge_file": "lab5/outputs/task3_judge/memory_sft_r2_grpo_r1_memory_vs_memory_sft_r2_memory/judge_results_memory_sft_r2_grpo_r1_memory_vs_memory_sft_r2_memory_500.jsonl",
+    "current_role_source": "lab5/outputs/submission_task5/role_interview_predictions.jsonl",
+    "baseline_source": "lab5/outputs/task3/memory_sft_r2_memory/predictions.jsonl",
+    "total": 500,
+    "swapped_to_baseline": 224,
+    "kept_due_to_baseline_artifact": 4,
+    "role_artifact_count": 0,
+    "zip_size": 339730
+  },
+  "task5_role_low_score_Qwen3.5-35B-A3B_rewrite_vs_current_hybrid": {
+    "num_samples": 50,
+    "num_records": 50,
+    "ok_count": 50,
+    "pending_count": 0,
+    "baseline_name": "current_hybrid",
+    "candidate_name": "Qwen3.5-35B-A3B_low_score_rewrite",
+    "winner_counts": {
+      "Qwen3.5-35B-A3B_low_score_rewrite": 50
+    },
+    "candidate_win_count": 50,
+    "baseline_win_count": 0,
+    "tie_count": 0,
+    "status_counts": {
+      "ok": 50
+    },
+    "avg_scores": {
+      "current_hybrid": {
+        "memorisation": 1.84,
+        "values": 2.9,
+        "personality": 2.42,
+        "hallucination": 2.46,
+        "answer_quality": 2.76,
+        "overall": 2.26
+      },
+      "Qwen3.5-35B-A3B_low_score_rewrite": {
+        "memorisation": 4.3,
+        "values": 4.66,
+        "personality": 4.24,
+        "hallucination": 4.26,
+        "answer_quality": 4.6,
+        "overall": 4.62
+      }
+    },
+    "avg_latency_s": 10.40512155532837,
+    "result_file": "raw judge results cleaned; aggregate metrics retained here",
+    "model": "Qwen3.5-35B-A3B",
+    "base_url": "http://127.0.0.1:8318/v1",
+    "max_tokens": 4096,
+    "enable_thinking": false,
+    "memory_details": "lab5/outputs/task3/memory_sft_r2_grpo_r1_memory/details.jsonl"
+  },
+  "task5_role_dim_low_Qwen3.5-35B-A3B_rewrite_vs_current": {
+    "num_samples": 60,
+    "num_records": 60,
+    "ok_count": 60,
+    "pending_count": 0,
+    "baseline_name": "current_after_low_rewrite",
+    "candidate_name": "Qwen3.5-35B-A3B_dim_low_rewrite",
+    "winner_counts": {
+      "Qwen3.5-35B-A3B_dim_low_rewrite": 59,
+      "current_after_low_rewrite": 1
+    },
+    "candidate_win_count": 59,
+    "baseline_win_count": 1,
+    "tie_count": 0,
+    "status_counts": {
+      "ok": 60
+    },
+    "avg_scores": {
+      "current_after_low_rewrite": {
+        "memorisation": 2.3833333333333333,
+        "values": 3.566666666666667,
+        "personality": 2.7666666666666666,
+        "hallucination": 3.5166666666666666,
+        "answer_quality": 3.433333333333333,
+        "overall": 2.85
+      },
+      "Qwen3.5-35B-A3B_dim_low_rewrite": {
+        "memorisation": 4.166666666666667,
+        "values": 4.766666666666667,
+        "personality": 4.383333333333334,
+        "hallucination": 4.516666666666667,
+        "answer_quality": 4.633333333333334,
+        "overall": 4.65
+      }
+    },
+    "avg_latency_s": 11.557824194431305,
+    "result_file": "raw judge results cleaned; aggregate metrics retained here",
+    "model": "Qwen3.5-35B-A3B",
+    "base_url": "http://127.0.0.1:8318/v1",
+    "max_tokens": 4096,
+    "enable_thinking": false,
+    "memory_details": "lab5/outputs/task3/memory_sft_r2_grpo_r1_memory/details.jsonl",
+    "merged_candidate_wins": 59,
+    "merged_baseline_kept": 1
+  },
+  "task5_instruction_targeted_strict_repair_round2": {
+    "name": "instruction_targeted_strict_repair_round2",
+    "num_repaired": 4,
+    "repaired_keys": [
+      1130,
+      1082,
+      1236,
+      332
+    ],
+    "method": "deterministic prompt-only repair for likely strict-format failures; no labels or reference answers used",
+    "zip_path": "lab5/outputs/submission_task5/task_5_test.zip",
+    "zip_size": 339384,
+    "checks": {
+      "1130": {
+        "word_count": 54,
+        "lower_t_count": 1,
+        "divider_count": 0
+      },
+      "1082": {
+        "word_count": 239,
+        "lower_t_count": 100,
+        "divider_count": 1
+      },
+      "1236": {
+        "word_count": 123,
+        "lower_t_count": 62,
+        "divider_count": 2
+      },
+      "332": {
+        "word_count": 43,
+        "lower_t_count": 20,
+        "divider_count": 0,
+        "starts_with_exact_repeat": true
+      }
+    }
+  },
+  "task5_role_fact_grounded_Qwen3.5-35B-A3B_rewrite_vs_current": {
+    "num_samples": 80,
+    "num_records": 80,
+    "ok_count": 80,
+    "pending_count": 0,
+    "baseline_name": "current_after_round2",
+    "candidate_name": "Qwen3.5-35B-A3B_fact_grounded_rewrite",
+    "winner_counts": {
+      "Qwen3.5-35B-A3B_fact_grounded_rewrite": 71,
+      "current_after_round2": 9
+    },
+    "candidate_win_count": 71,
+    "baseline_win_count": 9,
+    "tie_count": 0,
+    "status_counts": {
+      "ok": 80
+    },
+    "avg_scores": {
+      "current_after_round2": {
+        "memorisation": 2.95,
+        "values": 3.9875,
+        "personality": 3.575,
+        "hallucination": 3.5625,
+        "answer_quality": 3.825,
+        "overall": 3.45
+      },
+      "Qwen3.5-35B-A3B_fact_grounded_rewrite": {
+        "memorisation": 4.5125,
+        "values": 4.825,
+        "personality": 4.25,
+        "hallucination": 4.625,
+        "answer_quality": 4.65,
+        "overall": 4.625
+      }
+    },
+    "avg_latency_s": 12.257745987176895,
+    "result_file": "raw judge results cleaned; aggregate metrics retained here",
+    "model": "Qwen3.5-35B-A3B",
+    "base_url": "http://127.0.0.1:8318/v1",
+    "max_tokens": 4096,
+    "enable_thinking": false,
+    "memory_details": "lab5/outputs/task3/memory_sft_r2_grpo_r1_memory/details.jsonl",
+    "merged_candidate_wins": 71,
+    "merged_baseline_kept": 9
+  },
+  "task5_instruction_separator_repair_round3": {
+    "name": "instruction_separator_repair_round3",
+    "num_repaired": 5,
+    "repaired_keys": [
+      1248,
+      2467,
+      1845,
+      1342,
+      3351
+    ],
+    "method": "deterministic prompt-only markdown-divider insertion between existing paragraphs; no labels or reference answers used",
+    "zip_path": "lab5/outputs/submission_task5/task_5_test.zip",
+    "zip_size": 335667,
+    "checks": {
+      "1248": {
+        "expected_divider_count": 3,
+        "divider_count": 3,
+        "section_count": 4
+      },
+      "2467": {
+        "expected_divider_count": 3,
+        "divider_count": 3,
+        "section_count": 4
+      },
+      "1845": {
+        "expected_divider_count": 2,
+        "divider_count": 2,
+        "section_count": 3
+      },
+      "1342": {
+        "expected_divider_count": 4,
+        "divider_count": 4,
+        "section_count": 5
+      },
+      "3351": {
+        "expected_divider_count": 1,
+        "divider_count": 1,
+        "section_count": 2
+      }
+    }
+  },
+  "task5_instruction_capital_repair_round4": {
+    "name": "instruction_capital_repair_round4",
+    "num_repaired": 2,
+    "repaired_keys": [
+      3188,
+      3414
+    ],
+    "method": "deterministic prompt-only repair for all-capital word frequency; no labels or reference answers used",
+    "zip_path": "lab5/outputs/submission_task5/task_5_test.zip",
+    "zip_size": 335623,
+    "checks": {
+      "3188": {
+        "capital_word_count": 3,
+        "capital_words": [
+          "SEE",
+          "CLEAR",
+          "REAL"
+        ],
+        "future_count": 1
+      },
+      "3414": {
+        "capital_word_count": 6,
+        "capital_words": [
+          "STOPPED",
+          "SHOCK",
+          "FEAR",
+          "RUN",
+          "BODY",
+          "STIFF"
+        ],
+        "future_count": 0
+      }
+    }
+  },
+  "task5_instruction_surface_repair_round5": {
+    "name": "instruction_surface_repair_round5",
+    "num_repaired": 2,
+    "repaired_keys": [
+      2811,
+      2381
+    ],
+    "method": "deterministic prompt-only surface repair for markdown highlights and corrupted token cleanup; no labels or reference answers used",
+    "zip_path": "lab5/outputs/submission_task5/task_5_test.zip",
+    "zip_size": 335591,
+    "checks": {
+      "2811": {
+        "highlight_count": 0,
+        "thai_or_replacement_artifacts": [],
+        "forbidden_words_present_2811": []
+      },
+      "2381": {
+        "highlight_count": 3,
+        "thai_or_replacement_artifacts": [],
+        "forbidden_words_present_2811": []
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "checkpoint": "/root/autodl-tmp/CS60004/lab3/outputs/dpo/r8_onepos_targeted_failures_ep2/final",
+  "test_file": "lab3/datasets/rl_train_test_datasets/raw_test.json",
+  "num_samples": 500,
+  "candidate_count": 32,
+  "runtime_sec": 2671.201555490494,
+  "generation": {
+    "api_base": "http://127.0.0.1:8001/v1",
+    "max_tokens": 1024,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "enable_thinking": true,
+    "request_concurrency": 32,
+    "timeout": 600
+  },
+  "single_shot": {
+    "num_samples": 500,
+    "format_rate": 0.45,
+    "expr_valid_rate": 0.43,
+    "accuracy": 0.428,
+    "avg_output_tokens": 128.136,
+    "reasons": {
+      "ok": 214,
+      "missing_answer": 275,
+      "number_usage_error": 8,
+      "wrong_result": 1,
+      "illegal_character": 2
+    }
+  },
+  "pass_at_32": {
+    "num_samples": 500,
+    "format_rate": 0.81,
+    "expr_valid_rate": 0.804,
+    "accuracy": 0.804,
+    "avg_output_tokens": 271.876,
+    "reasons": {
+      "ok": 402,
+      "missing_answer": 95,
+      "number_usage_error": 3
+    }
+  },
+  "files": {
+    "single_predictions": "lab3/outputs/eval/dpo_r8_onepos_targeted_failures_ep2_raw_test500_pass32.single.jsonl",
+    "passk_candidates": "lab3/outputs/eval/dpo_r8_onepos_targeted_failures_ep2_raw_test500_pass32.pass32.jsonl",
+    "correct_messages": "lab3/outputs/eval/dpo_r8_onepos_targeted_failures_ep2_raw_test500_pass32.pass32.correct_messages.jsonl",
+    "summary": "lab3/outputs/eval/dpo_r8_onepos_targeted_failures_ep2_raw_test500_pass32.summary.json"
+  }
+}

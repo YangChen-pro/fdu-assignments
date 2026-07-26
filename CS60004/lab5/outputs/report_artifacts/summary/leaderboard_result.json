@@ -1,0 +1,9 @@
+{
+  "submitted_file": "lab5/outputs/submission_task5/task_5_test.zip",
+  "role_simulation_score_100": 77.5,
+  "instruction_score_100": 95.27,
+  "role_weight": 0.7,
+  "instruction_weight": 0.3,
+  "weighted_raw_score_reference": 82.831,
+  "note": "Leaderboard final score is rank-percentile based and recalculated live; weighted_raw_score_reference is only a direct-score reference."
+}

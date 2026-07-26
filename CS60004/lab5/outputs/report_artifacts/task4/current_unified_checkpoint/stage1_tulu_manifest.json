@@ -1,0 +1,24 @@
+{
+  "purpose": "single-checkpoint fusion dataset for Lab5 Task4 role simulation and instruction following",
+  "train_count": 16000,
+  "val_count": 350,
+  "counts": {
+    "role_memory_replay_train": 0,
+    "role_memory_replay_val": 50,
+    "tulu3_if_train": 16000,
+    "tulu3_if_val": 300,
+    "alpaca_gpt4_en_train": 0,
+    "alpaca_gpt4_en_val": 0
+  },
+  "filtered_exact_prompt_overlaps_with_lab5_dev_test": {
+    "tulu3_if": 0,
+    "alpaca_gpt4_en": 0
+  },
+  "external_sources": [
+    "ModelScope: LLM-Research/tulu-3-sft-personas-instruction-following, Apache License 2.0",
+    "ModelScope: llamafactory/alpaca_gpt4_en, Apache License 2.0"
+  ],
+  "lab5_public_pack_policy": "read only; dev/test prompts used only for exact-overlap filtering, never as training targets",
+  "seed": 20260531,
+  "max_chars": 12000
+}

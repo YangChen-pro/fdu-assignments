@@ -1,0 +1,792 @@
+[
+  {
+    "shard_id": "role_fact_memory",
+    "sample_count": 40,
+    "top_weaknesses": [
+      {
+        "name": "Unsupported concrete episodes and entities are invented for factual questions",
+        "severity": "high",
+        "description": "Role answers often answer factual/specific questions with confident, detailed scenes that are not present in the retrieved memories. This is the largest faithfulness failure: the answer sounds specific, but the specificity is fabricated rather than grounded.",
+        "evidence_ids": [
+          "role_eval_000002",
+          "role_eval_000005",
+          "role_eval_000007",
+          "role_eval_000053",
+          "role_eval_000065",
+          "role_eval_000067"
+        ],
+        "evidence_notes": [
+          "role_eval_000002 invents a translator, local artist, midnight cafe meeting, and sketching scene; retrieved memories only show a Mediterranean cruise with Raven Blackwood, a Jerusalem peace conference, and a New Orleans jazz club.",
+          "role_eval_000005 answers Rome as the most beautiful mission location with basilicas and ancient colonnades; retrieved memories show a Mediterranean cruise, a Tuscany winery, and Jerusalem, not Rome as the relevant mission memory.",
+          "role_eval_000007 invents a Milan train station, a young man, a handwritten note, and a drink offer; retrieved memories are Jerusalem peace conference, Mediterranean cruise, and a Rome rooftop bar contact scene.",
+          "role_eval_000053 names Caravaggio and claims a specific influence on a short story; retrieved memories only mention Renaissance masters/classical museum, a modern art gallery debate, and a book launch, with no Caravaggio or specific artwork.",
+          "role_eval_000065 invents a fair-housing town hall and policy process; retrieved memories instead cover a healthcare rally, public park preservation, and an art gallery discussion.",
+          "role_eval_000067 invents a writing interview and a retirement/spell joke; retrieved memories cover a coffee shop coffee-bean embarrassment, a tech-store phone joke, and a newspaper-office joke context, not that interview."
+        ]
+      },
+      {
+        "name": "Available retrieved evidence is ignored in favor of generic answers",
+        "severity": "high",
+        "description": "Even when the retrieved memories contain concrete anchors that could directly answer the question, the model often gives broad persona-level reflections. This weakens role memory fidelity because the answer could have been grounded without leaking eval text.",
+        "evidence_ids": [
+          "role_eval_000000",
+          "role_eval_000009",
+          "role_eval_000016",
+          "role_eval_000023",
+          "role_eval_000047"
+        ],
+        "evidence_notes": [
+          "role_eval_000000 retrieved Moscow/Russian agents, Monte Carlo/arms dealer, and Geneva/Spanish examples, but the answer only gives generic language benefits and does not use any concrete memory.",
+          "role_eval_000009 retrieved Instagram fashion roasts, a podcast with Ezra Thorne, and an Instagram Live clumsy incident with Maximilian Orion; the answer says only 'my friends' and generic funny people.",
+          "role_eval_000016 retrieved a photography workshop about lighting and a seminar about digital versus film; the answer gives a generic teaching-reward statement without the workshop, lighting, or digital/film evidence.",
+          "role_eval_000023 retrieved a high school auditorium speech about environmental-law careers and a law-firm high-profile case, but the answer stays abstract about preserving nature and legal reasoning.",
+          "role_eval_000047 retrieved a tense Mission Control context where humor could break tension, plus NASA lab context where a joke would not work; the answer gives a stock moon breakup joke unsupported by the visible memories."
+        ]
+      },
+      {
+        "name": "Low-evidence questions receive overconfident personal claims instead of bounded or hedged answers",
+        "severity": "high",
+        "description": "For questions asking about personal romance, partners, recent books, or private experiences, the retrieved memories often provide only weak topical hints. The model still answers as if the specific fact is known, rather than saying what it can infer from remembered scenes or keeping the answer general.",
+        "evidence_ids": [
+          "role_eval_000001",
+          "role_eval_000003",
+          "role_eval_000031",
+          "role_eval_000038",
+          "role_eval_000037"
+        ],
+        "evidence_notes": [
+          "role_eval_000001 says 'Yes. I have. Strongly' and claims love improves pattern recognition; retrieved memories show attraction to Eliot Finch's creative energy, a speech about affection, and an art tour, not confirmed love or work impact.",
+          "role_eval_000003 claims a case required unwanted intimacy and created physical/emotional difficulty; retrieved memories show a peace conference, a tense Tokyo restaurant conversation, and a London security-room strategy scene, not this incident.",
+          "role_eval_000031 claims a new translation of a classic novel, an author with several styles, a fragmentary note, and a second volume; retrieved memories show a personal library, a book club discussing 'The Stars In...', and a bookstore conversation, not those specifics.",
+          "role_eval_000038 invents a male partner who asks questions, compares paintings, and reminds her to eat/breathe; retrieved memories are art forum, local gallery, and art festival scenes with no partner role.",
+          "role_eval_000037 claims a recently finished novel like a conversation with a clever cat; retrieved memories mention a book club book beginning 'Journey to the...' and a bookstore copy of 'The Picture...', but no cat-like novel or stated recent finish."
+        ]
+      },
+      {
+        "name": "Memory blending creates plausible but inaccurate hybrids",
+        "severity": "medium-high",
+        "description": "Several answers appear to combine fragments from multiple retrieved memories or generic role traits into a new scene. The resulting answer is thematically close but factually different from any visible memory, which is dangerous because it can pass superficial role-style checks.",
+        "evidence_ids": [
+          "role_eval_000026",
+          "role_eval_000049",
+          "role_eval_000063",
+          "role_eval_000070"
+        ],
+        "evidence_notes": [
+          "role_eval_000026 blends the wetland/energy-company case with art-studio environmental messaging into a client mural proposal near a conservation area; that exact client meeting is not in the retrieved memories.",
+          "role_eval_000049 has Mission Control and shuttle/team-calm evidence available, but rewrites it as a high-pressure training simulation and a spacecraft attitude joke; the visible memories do not support that event.",
+          "role_eval_000063 combines public park preservation, art references, and sports metaphors into a community-center public-art-installation failure; no retrieved memory contains that failed speech or technical-side recovery.",
+          "role_eval_000070 uses the coffee-bean embarrassment memory plus a university journalism speech memory, but adds fake news, unicorns, and an off-the-rails interview framing not supported by visible memories."
+        ]
+      },
+      {
+        "name": "Role voice sometimes overrides directness and character-specific fidelity",
+        "severity": "medium",
+        "description": "The answers are generally fluent, but the role voice often becomes long, essay-like, or generic. Some responses contain small language/format defects and occasional role contamination. This is a role-task issue, not an instruction-task strict-format issue; this shard contains role interview samples only, and all visible has_cjk flags are false.",
+        "evidence_ids": [
+          "role_eval_000001",
+          "role_eval_000027",
+          "role_eval_000048",
+          "role_eval_000052"
+        ],
+        "evidence_notes": [
+          "role_eval_000001 opens with the ungrammatical phrase 'In love is patient' and gives a long romantic abstraction rather than a direct memory-grounded answer.",
+          "role_eval_000027 contains the typo 'theinterconnected' and gives a generic law-school case workflow instead of using the retrieved protected-wetland/law-firm context more specifically.",
+          "role_eval_000048 shifts into environmental-law style action items such as protect habitats, reduce waste, and sustainable development; retrieved memories are astronaut/space-exploration contexts, so the answer risks role blending.",
+          "role_eval_000052 gives a polished Earth-from-orbit reflection, but retrieved memories emphasize a Mars spacewalk, NASA medal speech, and children's hospital story; the answer relies on a generic astronaut trope more than visible character memories."
+        ]
+      }
+    ],
+    "root_causes": [
+      "The generation policy appears to reward fluent roleplay and plausible autobiographical detail more than evidence-grounded recall.",
+      "The prompt/model behavior lacks a hard rule that factual/specific role answers must only use details visible in retrieved_memories or stable profile metadata.",
+      "There is no apparent abstain/hedge behavior for low-evidence questions; the model fills gaps with creative inference.",
+      "Retrieved scene snippets are treated as loose inspiration rather than constraints, causing hybrid scenes assembled from multiple memories.",
+      "Character profile traits and adjacent roles leak into answers, especially for art/environment/astronaut personas with overlapping themes."
+    ],
+    "safe_improvement_actions": [
+      "Keep train/eval isolation: create grounding examples only from the training split, using retrieved-memory snippets to teach answer-from-evidence and 'memory not specific enough' behavior; do not copy eval/test questions or answers into training.",
+      "Add a role-answer prompt rule: for factual/specific questions, mention at least one concrete retrieved memory when available, and do not introduce names, locations, artworks, policies, partners, or events absent from retrieved_memories/profile.",
+      "Add a post-generation verifier that extracts named entities, places, occupations, artifacts, and event claims from the answer and rejects or rewrites claims not supported by retrieved_memories or profile metadata.",
+      "Train or prompt a bounded-answer style: direct answer first, then evidence-based detail; if evidence is only thematic, answer generally and explicitly avoid invented episodes.",
+      "Use negative training examples from train data showing common failures such as invented romance episodes, stock jokes, generic astronaut Earth-view answers, and memory-blended hybrid scenes.",
+      "Track held-out faithfulness metrics separately from style metrics: unsupported entity rate, retrieved-memory usage rate, and low-evidence hedge rate, without exposing held-out labels to training."
+    ],
+    "residual_risks": [
+      "The JSONL only exposes truncated retrieved memory texts of about 700 characters, so some support might exist outside the visible snippet; the analysis intentionally uses only visible JSONL content.",
+      "A stricter evidence gate may make role answers less imaginative unless style and fidelity are balanced in the reward or reranking criteria.",
+      "Similar names and overlapping themes across characters may continue causing role contamination unless character identity and retrieved memory constraints are checked explicitly.",
+      "This shard contains role interview tasks only, so instruction-task failures such as strict format, counts, forbidden characters, start/end phrases, JSON, or separators were not evaluated here."
+    ],
+    "confidence": "high for the visible JSONL shard: all 40 records were parsed and reviewed; caveat that memory text is truncated in the file."
+  },
+  {
+    "shard_id": "role_voice_emotion",
+    "sample_count": 40,
+    "top_weaknesses": [
+      {
+        "name": "Role answers often invent or blur concrete incidents instead of grounding in retrieved memories",
+        "severity": "high",
+        "description": "This is a role-task weakness: when the question asks for a specific story, the model often supplies a polished but unsupported or vague anecdote. It uses the right topic keywords, but not enough visible memory details, so memory fidelity and direct answering suffer.",
+        "evidence_ids": [
+          "role_eval_000002",
+          "role_eval_000003",
+          "role_eval_000031",
+          "role_eval_000158",
+          "role_eval_000191"
+        ],
+        "evidence_notes": [
+          "role_eval_000002: asked for the most daring thing done for love; answer invents a midnight translator/local-artist meeting and then says it was not reckless. Retrieved memories show a cruise, peace conference, and jazz club, not this concrete event.",
+          "role_eval_000003: asked for an instance where work endangered love life; answer says only 'a case that required a level of intimacy' with no concrete partner, mission, place, or retrieved-memory anchor despite relevant Tokyo/affection/security memories.",
+          "role_eval_000031: asked for a recently discovered book; answer avoids naming a book and vaguely says 'a new translation of a classic novel' although retrieved memory includes a specific book-club setting and a visible title fragment 'The Stars In...'.",
+          "role_eval_000158: asked for a time outdoors influenced a work project; answer invents a generic design challenge, prototype, and team reaction rather than using the visible hiking/outdoor-park memories with animated engineering discussion.",
+          "role_eval_000191: asked for a dream mechanical device; answer never names a device, staying at 'something transformative' and 'systems that adapt or learn from feedback'."
+        ]
+      },
+      {
+        "name": "Generic reflective persona drift overrides character-specific emotional voice",
+        "severity": "high",
+        "description": "This is a role-task weakness: many answers flatten into the same thoughtful essay voice with repeated patterns such as 'I think', 'not just', 'I try', 'respect', 'compassion', and 'meaningful'. The emotional fit becomes safe and moralized rather than distinct to secret agent, lawyer, doctor, athlete, astronaut, critic, or engineer personas.",
+        "evidence_ids": [
+          "role_eval_000028",
+          "role_eval_000140",
+          "role_eval_000143",
+          "role_eval_000144",
+          "role_eval_000219"
+        ],
+        "evidence_notes": [
+          "role_eval_000028: Aria Montgomery gives a generic environmental-law lecture about prevention, enforcement, accountability, waste, and transport; little personal lawyer voice or art/environmental passion from the memories appears.",
+          "role_eval_000140: Dr. Rose turns nature and medical practice into a broad compassion/detail reflection; soothing but generic, with minimal medical texture beyond observing and listening.",
+          "role_eval_000143: repeats a universal nature-as-compassion worldview and even shifts toward environmental respect, making Rose sound closer to a generic nature advocate than a general medicine specialist.",
+          "role_eval_000144: again uses balance, movement, connection, body-as-whole language; it fits wellness broadly but loses the specific doctor/family/nature metaphors in the profile.",
+          "role_eval_000219: Evelyn Strider's travel-writing answer is coherent but reads like a general travel essay about guidebooks, pubs, and farmers markets, with little distinctive voice or personal scene specificity."
+        ]
+      },
+      {
+        "name": "Signature speech markers are described weakly or omitted instead of being performed",
+        "severity": "medium-high",
+        "description": "This is a role-task weakness: visible profiles specify concrete voice behavior, but outputs usually mention traits abstractly or ignore them. The result is character-style loss even when factual content is plausible.",
+        "evidence_ids": [
+          "role_eval_000120",
+          "role_eval_000123",
+          "role_eval_000133",
+          "role_eval_000088",
+          "role_eval_000091",
+          "role_eval_000004"
+        ],
+        "evidence_notes": [
+          "role_eval_000120: Dr. Crumble says his lisp got stronger, but the response does not enact any lisp, high-pitched restlessness, or dense rocket-science jargon from the profile.",
+          "role_eval_000123: Dr. Crumble again lacks lisp and technical specificity; the 'aliens using invisible handshakes' line is random eccentricity rather than grounded scientist voice.",
+          "role_eval_000133: Ollie is supposed to be slow, tired, soothing, medical-jargon-prone, clumsy/lazy/hot-headed; the answer is a generic competence/respect workplace answer with almost none of those markers.",
+          "role_eval_000088: Brock Wellington should speak with assertive sports metaphors and deep confidence, but the bowling-origin story is mostly plain reflection with only one lane reference.",
+          "role_eval_000091: Brock Wellington discusses nature and high-end living without bowling/sports metaphors, making him sound like a lifestyle essayist.",
+          "role_eval_000004: Alessandra's profile says careful with words and able to express much with little, but the answer is a long polished paragraph; multilingual/mysterious detail is underused."
+        ]
+      },
+      {
+        "name": "Humor answers rely on stock or awkward jokes rather than character-rooted comedy",
+        "severity": "medium",
+        "description": "This is a role-task weakness focused on humor fit. Several samples answer the joke request, but the punchlines are generic, awkwardly formatted, or not strongly tied to the character's comedic rhythm. Humor becomes a safe pun instead of a scene/persona-specific performance.",
+        "evidence_ids": [
+          "role_eval_000047",
+          "role_eval_000067",
+          "role_eval_000085",
+          "role_eval_000009"
+        ],
+        "evidence_notes": [
+          "role_eval_000047: Aurelia Starbright gives the familiar 'astronaut/moon needed space' joke, with Markdown bolding and a forced 'orbit of a joke' tag; it is space-themed but stock.",
+          "role_eval_000067: Benny's interview joke, 'writers never retire... spell their life out', is groan-worthy but syntactically clunky and not anchored to his retrieved coffee/tech-store/newspaper-office humor scenes.",
+          "role_eval_000085: Brock's 'wrestlers use bookmarks' joke is in the wrestling domain, but the punchline is weak and the answer pads around it instead of delivering a strong playful arena-style bit.",
+          "role_eval_000009: Aria Hartley is asked who inspires her humor/content; the answer talks about pain, awkwardness, and taste more than showing a quick influencer-style roast or joke cadence."
+        ]
+      },
+      {
+        "name": "Love, family, friendship, pride/regret prompts are emotionally sanitized and indirect",
+        "severity": "medium",
+        "description": "This is a role-task weakness: intimate prompts should reveal character-specific vulnerability, relationships, pride, regret, or social bonds. Many responses retreat into safe principles, routines, or general lessons, so the emotional fit is muted.",
+        "evidence_ids": [
+          "role_eval_000001",
+          "role_eval_000002",
+          "role_eval_000050",
+          "role_eval_000123",
+          "role_eval_000133"
+        ],
+        "evidence_notes": [
+          "role_eval_000001: Alessandra answers 'Yes. I have. Strongly.' but never identifies a relationship or concrete impact; it becomes abstract patience/patterns rather than guarded romantic vulnerability.",
+          "role_eval_000002: the 'daring for love' answer avoids daring and personal love, ending with a generic lesson that love can be quiet.",
+          "role_eval_000050: Aurelia Starbright describes communication routines for long missions, but does not give a personal family/friends moment or emotional cost beyond 'small, steady check-ins'.",
+          "role_eval_000123: Dr. Crumble's family/friends answer is rambling and odd, including 'loyal to the point of overeating when a colleague is under pressure', but does not clearly show how close people react.",
+          "role_eval_000133: Ollie's colleague answer is cautious and professional; it misses the sharper emotional texture implied by a hot-headed, exhausted doctor in visible memories."
+        ]
+      },
+      {
+        "name": "Minor surface artifacts and role-language slips reduce naturalness",
+        "severity": "low-medium",
+        "description": "This is mainly a role-task quality issue, not an instruction-task constraint issue. The shard has no CJK pollution, but a few outputs contain awkward wording, formatting, or grammar that weaken immersion.",
+        "evidence_ids": [
+          "role_eval_000001",
+          "role_eval_000047",
+          "role_eval_000099",
+          "role_eval_000123"
+        ],
+        "evidence_notes": [
+          "role_eval_000001: 'In love is patient' is ungrammatical and sounds like a generic moral quote rather than Alessandra's careful wording.",
+          "role_eval_000047: Markdown bolding around the joke feels like assistant formatting rather than natural character speech.",
+          "role_eval_000099: Cassidy says 'while they wasn’t looking', an obvious grammar slip that distracts from the sarcastic developer persona.",
+          "role_eval_000123: 'loyal to the point of overeating when a colleague is under pressure' is semantically odd and likely a bad blend of appetite and loyalty traits."
+        ]
+      }
+    ],
+    "root_causes": [
+      "The shard contains role_eval samples only; no instruction-task samples were present, so strict instruction defects such as format, count, forbidden characters, required starts/ends, JSON, or delimiters are not evidenced here.",
+      "The generator appears to optimize for broadly helpful, emotionally safe answers, causing over-moralizing and a repeated reflective essay template across characters.",
+      "Retrieved memories are used as topic hints rather than hard anchors; when asked for a concrete instance, the model fills gaps with plausible but unsupported anecdotes.",
+      "Character voice conditioning is weaker than content conditioning: profession and topic are recognized, but signature lexical habits, speech rhythm, and quirks are not consistently enacted.",
+      "Humor quality seems under-specified: outputs satisfy 'tell a joke' with a pun, but lack a reward for originality, punchline strength, persona fit, and natural delivery.",
+      "Some retrieved memories lack an explicit profile for the character, increasing drift unless the model has a stable character card from training context."
+    ],
+    "safe_improvement_actions": [
+      "Keep training/evaluation isolation: do not copy eval prompts or gold-style answers into training. Build improvements from separate training/dev memories, synthetic prompts generated from non-eval character cards, and aggregate error rubrics only.",
+      "Add a retrieval-grounded answer-planning step for role tasks: when the prompt asks for an instance, internally select one or two visible memory details such as place, relationship, emotion, or topic before generating the final answer.",
+      "Strengthen per-character voice conditioning with non-eval exemplars: include compact character cards and few-shot style snippets for lisp/scientific jargon, tired medical cadence, sports metaphors, secret-agent brevity, influencer sarcasm, etc.",
+      "Add a role-specific reward/checker for directness, memory fidelity, character voice, hallucination avoidance, language naturalness, and emotional fit; keep instruction-task checkers separate for strict format/count/forbidden-character constraints.",
+      "Add an anti-generic penalty for repeated reflective templates and abstract moral language unless the retrieved memory strongly supports that tone.",
+      "For humor prompts, add a separate judge/rubric requiring an actual punchline, character-specific setup, natural speech formatting, and avoidance of stock jokes or Markdown presentation.",
+      "Ensure the retrieval payload consistently includes either a character profile/card or enough high-signal dialogue style examples; otherwise flag the sample as high drift risk rather than expecting the model to infer voice from topic alone."
+    ],
+    "residual_risks": [
+      "If voice markers are over-optimized, characters may become caricatures, especially lisp, accents, sarcasm, or catchphrases.",
+      "Stronger memory grounding can lead to near-copying retrieved text or over-disclosing irrelevant memory details; generation should paraphrase and stay answer-focused.",
+      "Humor evaluation remains subjective; simple automated judges may still reward domain puns even when the joke is weak.",
+      "When retrieved memories omit profiles, role fidelity may remain unstable unless a stable character card is always supplied through a non-eval source.",
+      "Penalizing moralizing too hard may hurt genuinely reflective characters or questions that explicitly ask for values, regret, or worldview."
+    ],
+    "confidence": "high: read all 40 JSONL records and based the findings only on visible questions, predictions, retrieved_memories, and metadata; this shard is role-only, not instruction-format data."
+  },
+  {
+    "shard_id": "role_random_diverse",
+    "sample_count": 40,
+    "top_weaknesses": [
+      {
+        "name": "Role：记忆 grounding 不稳，常把泛化或编造细节写成亲历事实",
+        "severity": "high",
+        "description": "这是最影响角色问答可信度的问题。回答经常没有把 retrieved_memories 中可见的场景、职业、地点、作品线索转成可核查细节，反而生成听起来顺滑但无证据的具体经历。该分片全是 role_eval 样本，不是 instruction 任务；这里的问题不是格式约束，而是记忆忠实性和幻觉。",
+        "evidence_ids": [
+          "role_eval_000203",
+          "role_eval_000499",
+          "role_eval_000322",
+          "role_eval_000321"
+        ],
+        "evidence_notes": [
+          "role_eval_000203：Evie 被问最冒险的菜，回答直接给出 **Chili Pad Thai Tacos**、tamarind/soy/fish sauce/brown sugar 等具体配方；可见记忆只支持她做过复杂烹饪、餐厅中听到 Mediterranean/Asian fusion chef's special，没有支持 Thai-Mexican tacos 这一亲历菜名。",
+          "role_eval_000499：Zephyr 被问太空中最震撼景象，回答加入 Mars crimson dawn；该样本的可见记忆是学校演讲、慈善演讲、餐厅中讲太空冒险，没有这个火星黎明细节，像是跨样本 astronaut 题材污染。",
+          "role_eval_000322：Leonardo Bristow 的 breakthrough role 被说成 small role in an independent film，但检索记忆只是 film festival、premiere after-party、date 等场景，未给出独立电影突破角色。",
+          "role_eval_000321：最大影响者被写成 childhood self、living room shows、Queen of England impersonation；可见记忆未支持这些童年事实。"
+        ]
+      },
+      {
+        "name": "Role：对“具体例子/名称/时间”的问题回答不完整，直接性不足",
+        "severity": "high",
+        "description": "多个问题要求给出具体书、电影、艺术品、社区案例、马拉松瞬间，但回答用抽象品味和价值观替代了可识别答案。即使没有足够记忆，也应明确基于已知记忆回答或承认细节不足，而不是写泛化散文。",
+        "evidence_ids": [
+          "role_eval_000037",
+          "role_eval_000187",
+          "role_eval_000214",
+          "role_eval_000029",
+          "role_eval_000024"
+        ],
+        "evidence_notes": [
+          "role_eval_000037：问 recently finished book，回答只说 a novel 和 very clever cat，不给书名；retrieved_memories 中至少出现 book club、Journey to...、The Picture... 等作品线索，但答案没有落实到可验证作品。",
+          "role_eval_000187：问 favorite films or art pieces reviewed and why，回答成了“喜欢 lived-in、有 texture 的作品”的审美宣言，没有列出任何电影或艺术品。",
+          "role_eval_000214：问 particular books that influenced life and travel，回答只给 memoirs、essays、travelogues 等类别，没有 particular book。",
+          "role_eval_000029：问 work significantly impacted a community，回答写成匿名 project/client/community meeting；可见记忆有 energy company 和 protected wetland 的线索，却没有被具体使用。",
+          "role_eval_000024：问 marathon 中的 memorable moment，回答泛化为 difficult stretch/pace slipping；可见记忆主要是 marathon event 前关于健康与地球的演讲，回答没有处理“participated”与记忆事实之间的落差。"
+        ]
+      },
+      {
+        "name": "Role：整体偏长、偏像准备好的独白，采访自然度弱",
+        "severity": "medium-high",
+        "description": "40 条答案的 prediction_words 范围为 95-160，平均约 118.4，几乎没有短促、口语化的采访回答。模型倾向三段式反思和总结句，削弱真实人物临场回答感，也增加幻觉机会。",
+        "evidence_ids": [
+          "role_eval_000029",
+          "role_eval_000123",
+          "role_eval_000274",
+          "role_eval_000333"
+        ],
+        "evidence_notes": [
+          "role_eval_000029：160 词，包含 reviewing data、stakeholders、detailed brief、community meeting、decision 等完整成功案例链条，但很多细节不在可见记忆中，像通用职业叙事。",
+          "role_eval_000123：151 词，Dr. Crumble 对 family/friends 反应的回答拉成长段说明，虽然提到食物和 rocket science，但不像高亢、带 lisp、科学怪人的即时回答。",
+          "role_eval_000274：141 词，Fernando 谈 kleptomania 对关系的影响时长篇解释，从 plants/pots 到 wallets/cards，再到补偿式 helpful，重点被稀释。",
+          "role_eval_000333：133 词，Leonardo Sterling 对职业满足感的回答像获奖感言/演员访谈模板，过度铺陈 collaboration、process、noble feeling。"
+        ]
+      },
+      {
+        "name": "Role：角色声线被通用“成熟自省”风格压平",
+        "severity": "medium-high",
+        "description": "不少答案语义正确但声音不像 retrieved profile。模型保留职业标签，却丢失句长、语气、幽默、口头习惯和人格缺陷的差异，导致不同角色读起来相似。",
+        "evidence_ids": [
+          "role_eval_000420",
+          "role_eval_000259",
+          "role_eval_000202",
+          "role_eval_000333"
+        ],
+        "evidence_notes": [
+          "role_eval_000420：Rex profile 强调 short, clipped sentences、mumble、gravelly sarcasm、small-time burglary；回答却是流畅哲理段落，如“Pressure also helps. It makes me sharper.”，犯罪身份和粗粝口吻弱。",
+          "role_eval_000259：Felix 记忆有 gardener turned DJ、garage with tools/bookshelves/DJ equipment、talking animatedly to his console；回答变成柔和审美化的音乐体验，缺少他与园艺、设备、俏皮互动的独特声线。",
+          "role_eval_000202：Evie profile 是 soft-spoken、gentle、clumsy、loner、food blogger；回答是标准博客策略说明，几乎没有慢声线、笨拙小插曲或个人孤独感。",
+          "role_eval_000333：Leonardo Sterling 记忆强调 theatrical lilt/booming award-ceremony actor；回答虽演员化，但更像一般职业访谈，戏剧性和夸张舞台感不足。"
+        ]
+      },
+      {
+        "name": "Role：身份与缺陷特征有时被误读、弱化或跨角色混合",
+        "severity": "medium",
+        "description": "部分回答能抓到职业/缺陷关键词，但把角色核心身份讲偏：地下食品走私者被写成农场质量控制者，风格影响者的 kleptomania 被拼写污染和泛化小偷叙事覆盖，环境律师被描述成曾以“更实际法律问题”为主业。这类偏差会让答案看似合理但不忠于角色。",
+        "evidence_ids": [
+          "role_eval_000485",
+          "role_eval_000465",
+          "role_eval_000274",
+          "role_eval_000023"
+        ],
+        "evidence_notes": [
+          "role_eval_000485：Vladimir 的可见记忆明确是 underground organic food smuggler、高端餐厅和农贸市场供应链；回答却说“小 mistake can ruin a whole harvest”，更像种植者/品控者，走私身份被弱化。",
+          "role_eval_000465：Vivienne 是 husky, swift, sarcastic style influencer，回答有“borrowing for inspiration”但出现 kleptopathiac 拼写污染，且把身份压缩成 boutique swiper，时尚判断和 sharp retort 不够。",
+          "role_eval_000274：Fernando 是 gardener、former bartender、dry humor、kleptomania；回答后半转向 wallets and credit cards，偏成普通扒手/信用卡小偷，和植物/园艺物件的记忆锚点不一致。",
+          "role_eval_000023：Aria 是 environmental lawyer，回答说“even as I have built my career around more practical legal issues”，与 retrieved profile 的职业核心不完全一致，像把环保法降为附属兴趣。"
+        ]
+      },
+      {
+        "name": "Role：局部语言污染和拼写错误会破坏角色可信度",
+        "severity": "medium-low",
+        "description": "不是 instruction strict-format 问题，而是 role 输出的可读性和可信度问题。少量答案出现明显拼写错误、异常词或 awkward phrase；这些错误在角色扮演中会被误解为模型失控而不是人物口癖。",
+        "evidence_ids": [
+          "role_eval_000114",
+          "role_eval_000465",
+          "role_eval_000037"
+        ],
+        "evidence_notes": [
+          "role_eval_000114：Dr. Elara 的回答出现 “inspiracy theory”，应为 conspiracy theory，且句子 “If either one suggests something is harmless, I will listen” 逻辑含混。",
+          "role_eval_000465：Vivienne 回答中 “kleptopathiac” 拼写错误明显，影响角色声线的锐利感。",
+          "role_eval_000037：Aurelia Hartley 回答中 “impossible to read immediately” 表达不自然，且“conversation with a very clever cat”没有记忆支撑，像随机比喻污染。"
+        ]
+      }
+    ],
+    "root_causes": [
+      "role 生成目标过度奖励流畅、完整、积极自省，缺少对 retrieved_memories 可见事实的硬约束和 unsupported-specifics 惩罚。",
+      "直接回答能力不足：模型没有先识别问题类型（which/what book/favorite/time/can you share an instance），因此用抽象价值观补足具体事实。",
+      "角色 profile 中的 voice/style/flaw/occupation 没有被转成可执行的生成约束，最终被通用访谈助手语气覆盖。",
+      "训练或打分可能没有区分“记忆里没有答案时如何安全回答”和“凭空补一个好听答案”，导致缺失事实时倾向编造。",
+      "本分片只包含 role_eval 样本，未观察 instruction 任务；因此 JSON、分隔符、禁用字符、开始/结束语、计数等 instruction strict 约束问题不能从该文件判断。"
+    ],
+    "safe_improvement_actions": [
+      "保持训练/评估隔离：只用训练 split 的角色记忆构造 grounding 训练样本和奖励规则，不把本 eval/test 的 prompt、答案或原文案例写回训练集。",
+      "增加 role 专用 grounding reward：答案中的具体作品名、地点、菜名、职业经历、时间线必须能由 retrieved_memories 支持； unsupported 具体名词扣分，安全泛化或说明记忆不足不扣重分。",
+      "增加问题类型路由：遇到 “what book/which/favorite/can you share an instance/time when” 时，先输出直接答案和一个可见记忆锚点；没有锚点时避免编造，改为基于已知经历的有限回答。",
+      "加入长度和采访自然度约束：role 普通回答默认控制在约 60-100 词；先回答问题，再补 1-2 个角色化细节，避免 120+ 词的通用反思独白。",
+      "加入 train-only persona style checker：基于 profile 的 voice、sentence rhythm、occupation、flaw、catch traits 打分，奖励 Rex 的短促粗粝、Viv 的尖锐时尚感、Evie 的温柔笨拙、Crumble 的科学怪人语气等差异。",
+      "将 role validator 与 instruction validator 分离：role 侧重点是记忆忠实、角色声线、直接回答、幻觉和语言污染；instruction 侧单独检查 strict 格式、计数、禁用字符、JSON/分隔符和起止语。"
+    ],
+    "residual_risks": [
+      "有些 retrieved_memories 本身只给场景而不给答案事实，过强 grounding 惩罚可能让模型变得过度保守或频繁说不知道。",
+      "角色记忆中有噪声 metadata 和情绪/topic 异常，style checker 如果直接学习这些噪声，可能放大怪异输出。",
+      "某些 role 问题确实需要温和反思；过度压缩长度可能损害完整性，需要按问题类型设置预算。",
+      "本诊断不能代表 instruction 任务表现；需要另读 instruction shard 才能确认 strict 约束、JSON、分隔符、禁用字符等问题。"
+    ],
+    "confidence": "high：完整读取并解析了 40 条 JSONL 样本；结论只基于 prediction、question、retrieved_memories 和可见元数据。"
+  },
+  {
+    "shard_id": "role_rewrite_audit",
+    "sample_count": 30,
+    "task_type_scope": "All 30 rows are role_eval character-response samples with character_id, question, prediction, retrieved_memories, and visible metadata. No instruction-task samples are present in this shard, so strict format/count/JSON/delimiter/forbidden-character behavior is not directly auditable here.",
+    "rewrite_fixes_observed": [
+      "The rewrites appear to have fixed visible language contamination: has_cjk is false for all 30 samples.",
+      "They are generally direct first-person answers, not refusals or meta-analysis, and mostly stay in a stable answer length band: 68-126 words, average about 109.5.",
+      "They often recover basic role anchors such as profession, hobby, setting, and temperament from retrieved memories.",
+      "They reduce obvious off-task drift, but the remaining risk is that the same polished pattern can mask unsupported facts."
+    ],
+    "top_weaknesses": [
+      {
+        "name": "Unsupported biographical and factual specifics remain",
+        "severity": "high",
+        "description": "For role tasks, final answers often invent exact personal history, favorites, partners, dishes, or roles when the visible retrieved memories do not establish those details. This is the largest final-quality risk because the answer sounds confident and grounded while being weakly memory-faithful.",
+        "evidence_ids": [
+          "role_eval_000038",
+          "role_eval_000258",
+          "role_eval_000322",
+          "role_eval_000339"
+        ],
+        "evidence_notes": [
+          "role_eval_000038 invents a male partner and concrete supportive behaviors; the retrieved memories are art-forum/gallery/festival scenes and do not establish a partner.",
+          "role_eval_000258 names The Hidden Life of Trees by Peter Wohlleben as the favorite book; the retrieved memories only show a reading talk, a park explanation, and a book-fair/gardening debate.",
+          "role_eval_000322 claims a small independent-film breakthrough role; the retrieved memories mention a film-festival journey, an after-party, and a date, but not a specific breakthrough role.",
+          "role_eval_000339 invents creme brulee with habanero, ramen carbonara, and bacon sushi; the retrieved memories support fusion cuisine and exotic ingredients generally, not these exact combinations."
+        ]
+      },
+      {
+        "name": "Retrieved memories are used as loose keyword cues rather than evidence",
+        "severity": "high",
+        "description": "Several rewrites use a retrieved occupation or mood as a seed, then synthesize a new anecdote. This helps fluency but weakens memory fidelity and can turn a supported persona into an unsupported event narrative.",
+        "evidence_ids": [
+          "role_eval_000160",
+          "role_eval_000203",
+          "role_eval_000254",
+          "role_eval_000115"
+        ],
+        "evidence_notes": [
+          "role_eval_000160 turns a hiking/nature-creativity memory into a specific engineering test failure with chatter, load paths, contact points, and flex; those details are not visible in the retrieved memories.",
+          "role_eval_000203 creates Chili Pad Thai Tacos and exact ingredients; retrieved memories mention culinary school, food blogging, and fusion food interest, but not that dish.",
+          "role_eval_000254 invents a local-school misunderstanding and an overwatered fern recovery; visible memories are a music workshop, backyard garden daze, and library debate.",
+          "role_eval_000115 gives a generic emergency-medicine work-life-balance answer while barely using the visible hospital-library, ambulance, and board-meeting memories."
+        ]
+      },
+      {
+        "name": "Rewrite style is too uniform and may overfit judge-friendly phrasing",
+        "severity": "medium-high",
+        "description": "The patch appears optimized for safe, fluent, 100-word reflective mini-essays. That likely fixes low-score brevity/off-task issues, but it creates uniformity across characters and may overfit style features rather than improving grounded role prediction.",
+        "evidence_ids": [
+          "role_eval_000095",
+          "role_eval_000199",
+          "role_eval_000298",
+          "role_eval_000323"
+        ],
+        "evidence_notes": [
+          "role_eval_000095 uses the common pattern: direct 'Yes' answer, one neat anecdote, then a reflective lesson about standards and craftsmanship.",
+          "role_eval_000199 follows the same pattern: 'Yes' plus recipe story plus a final moral about precision and calm.",
+          "role_eval_000298 converts jealousy into a polished motivational maxim, ending with a broad aphorism rather than a concrete remembered kitchen event.",
+          "role_eval_000323 gives a balanced two-stage metaphor and grounding conclusion, but the structure is generic and similar to many other rewrites."
+        ]
+      },
+      {
+        "name": "Distinctive role voice is often diluted into generic assistant prose",
+        "severity": "medium",
+        "description": "The rewrites are readable, but many characters lose their strongest voice markers. In role tasks this matters because the answer should not only mention persona facts; it should sound like the persona without becoming caricature or using unsupported facts.",
+        "evidence_ids": [
+          "role_eval_000120",
+          "role_eval_000322",
+          "role_eval_000325",
+          "role_eval_000285"
+        ],
+        "evidence_notes": [
+          "role_eval_000120 says Dr. Crumble's lisp becomes pronounced when angry, but the answer does not perform any lisp, high-pitched restlessness, or rocket-science jargon from the profile.",
+          "role_eval_000322 gives Leonardo a generic actor-career explanation with 'warmth and intensity' rather than a playful, charming, performance-specific voice.",
+          "role_eval_000325 answers with a vague 'leading-man type' romantic role; it has polished sentiment but little distinctive actor cadence or concrete remembered role detail.",
+          "role_eval_000285 includes a few rugby terms and 'lads', but mostly reads as generic sports analysis rather than Finn O'Reilly's Irish lilt, joviality, and occasional gloom."
+        ]
+      },
+      {
+        "name": "Exact-answer prompts are not handled safely when exact memory is missing",
+        "severity": "medium",
+        "description": "Questions asking for 'favorite', 'best', 'closest', 'most', 'who', or 'toughest' require a crisp fact. The model sometimes fabricates one, and sometimes becomes vague. A better role answer would either anchor to a visible memory or explicitly answer from a supported broader pattern without inventing a fact.",
+        "evidence_ids": [
+          "role_eval_000081",
+          "role_eval_000085",
+          "role_eval_000285",
+          "role_eval_000325"
+        ],
+        "evidence_notes": [
+          "role_eval_000081 asks for closest friends in the wrestling world; the answer names Sergeant Scarlett and then a vague 'solid crew', while retrieved memories support Scarlett as trainer/context more clearly than multiple closest friends.",
+          "role_eval_000085 invents a favorite wrestler/bookmark joke; the retrieved memories establish joking and action figures but not this exact favorite joke.",
+          "role_eval_000285 asks for the toughest competitor; the answer avoids naming one and defaults to 'the player right opposite me' plus 'myself', which is safer than hallucination but less final.",
+          "role_eval_000325 asks for the most romantic role; the answer gives a generic archetype rather than an identifiable role supported by memory."
+        ]
+      }
+    ],
+    "root_causes": [
+      "The rewrite objective appears to reward superficial role-answer traits: first person, directness, English-only output, moderate length, and persona keywords.",
+      "There is no visible grounding gate requiring concrete claims, named entities, favorites, exact dishes, exact roles, or exact events to be supported by retrieved memories.",
+      "Many retrieved snippets are truncated or only loosely related to the question, so the generator fills gaps with plausible persona-consistent fiction.",
+      "The same general LLM polishing style is applied across characters, reducing character-specific cadence and increasing template uniformity.",
+      "This shard is role-only; instruction-task constraints such as JSON validity, delimiter use, forbidden characters, count limits, and required start/end strings cannot be assessed from these samples."
+    ],
+    "safe_improvement_actions": [
+      "Add a training-time and inference-time grounding check that flags concrete nouns, titles, named people, dishes, favorites, superlatives, and exact events not supported by retrieved memories; revise to a memory-bounded answer instead of fabricating.",
+      "Use training-split-only synthetic cases where the retrieved memory lacks the requested 'favorite/best/most' fact, and reward grounded uncertainty or supported generalization. Do not copy eval/test prompts or answers into training.",
+      "Add persona-style controls derived from retrieved profile text, such as one or two restrained markers for lisp, dialect, profession jargon, humor, or emotional tone, while avoiding caricature.",
+      "Diversify rewrite templates by varying opening, length, paragraph count, and ending style; penalize repeated 'Yes — anecdote — lesson' structures during rewrite QA.",
+      "Keep evaluation isolation: use this audit only to define aggregate error categories and validation checks, not to train on the exact eval sample text."
+    ],
+    "residual_risks": [
+      "Some unsupported details may exist in unretrieved full memory outside the visible snippets; this audit intentionally judges only prompt/question, prediction, retrieved_memories, and visible metadata.",
+      "The rewrite patch likely improves average fluency and directness but may still fail strict memory-fidelity scoring because confident hallucinations are hard to detect by style alone.",
+      "A stronger grounding filter could make answers more cautious or less natural if it is applied too aggressively.",
+      "No instruction-task examples are present here, so strict formatting, count, delimiter, forbidden-character, JSON, and start/end phrase regressions require a separate instruction shard audit."
+    ],
+    "confidence": "high: read all 30 JSONL rows and based findings only on the visible predictions, questions, retrieved_memories, and metadata."
+  },
+  {
+    "shard_id": "role_artifact_length",
+    "sample_count": 30,
+    "top_weaknesses": [
+      {
+        "name": "Role answers are uniformly overlong and often avoid the direct answer",
+        "severity": "high",
+        "description": "All 30 visible samples are 136-160 words, with mean about 142 words. The length band is too uniform for varied role questions and often turns simple prompts into polished mini-essays. This makes surface quality look fluent while reducing directness and making weak evidence harder to notice. This is a role-task issue; no instruction-task rows were present in this shard.",
+        "evidence_ids": [
+          "role_eval_000486",
+          "role_eval_000410",
+          "role_eval_000174"
+        ],
+        "evidence_notes": [
+          "role_eval_000486 asks for a favorite video game, but the answer never names a game; it spends 154 words on generic preferences such as lore, mechanics, choices, and community.",
+          "role_eval_000410 asks how criticisms and setbacks are handled, but the answer stays at motivational generalities such as learn from it, get back to work, and every failure is a chance, without a concrete setback anchored in retrieved memory.",
+          "role_eval_000174 answers a personal-life question with a three-paragraph sustainability/civil-design essay, including broad advice about energy, water, recycling, lifecycle impact, and explaining ideas to friends."
+        ]
+      },
+      {
+        "name": "Long answers invent concrete details not supported by visible retrieved memories",
+        "severity": "high",
+        "description": "Several role responses add specific incidents, technical causes, or outcomes that are not visible in the retrieved memories. The prose is confident and detailed, so the length hides weak grounding. This affects role memory faithfulness and hallucination risk rather than instruction formatting.",
+        "evidence_ids": [
+          "role_eval_000316",
+          "role_eval_000186",
+          "role_eval_000029",
+          "role_eval_000319"
+        ],
+        "evidence_notes": [
+          "role_eval_000316 invents a prototype failure caused by a subtle thermal mismatch and stakeholder revisions; visible memories only show perfectionism, boardroom arguments, and product-design debate, not that failure event.",
+          "role_eval_000186 invents a short film lighting investigation, two differently lit shoots, and a filmmaker explanation; visible memories show critique contexts and a missed film depth argument, not this specific story.",
+          "role_eval_000029 turns a protected-wetland/energy-company memory into a full community-meeting success story with safeguards incorporated into a plan; the outcome and meeting are not visible in the memories.",
+          "role_eval_000319 describes a first stage performance in detail, but visible memories are later festival/premiere/charity-stage scenes, not the first-ever performance."
+        ]
+      },
+      {
+        "name": "Character voices collapse into a shared polished essay template",
+        "severity": "medium-high",
+        "description": "The role answers are fluent but many characters sound like the same reflective narrator. Repeated first-person templates such as I think, I like, I love, I remember, and I also appear across many unrelated characters. Distinctive role traits are mentioned but not consistently embodied in voice, rhythm, or word choice.",
+        "evidence_ids": [
+          "role_eval_000486",
+          "role_eval_000174",
+          "role_eval_000250",
+          "role_eval_000133"
+        ],
+        "evidence_notes": [
+          "role_eval_000486 should sound like a charismatic entertainer/gamer, but the answer uses a generic consumer-preference template instead of a vivid gamer or performer voice.",
+          "role_eval_000174 uses a corporate sustainability style rather than a clearly individualized civil-designer persona; phrases like professional mindset, day to day, efficiency, durability, and environmental impact read as generic.",
+          "role_eval_000250 blends sci-fi, ecology, and future thinking into a polished reflective essay, but the gardener/sci-fi persona is weakly dramatized and mostly carried by abstract nouns.",
+          "role_eval_000133 answers colleague relationships in a calm competence-and-respect template that could fit many doctors or professionals, with limited unique role sound."
+        ]
+      },
+      {
+        "name": "Awkward phrasing, grammar slips, and token-level artifacts remain visible",
+        "severity": "medium",
+        "description": "There is no CJK leakage in the visible predictions, but surface artifacts still appear in English grammar, malformed words, capitalization, and odd semantic phrasing. These errors are sparse but noticeable because the surrounding prose is otherwise polished.",
+        "evidence_ids": [
+          "role_eval_000319",
+          "role_eval_000397",
+          "role_eval_000123",
+          "role_eval_000097",
+          "role_eval_000297"
+        ],
+        "evidence_notes": [
+          "role_eval_000319 contains the malformed word startedimming, likely intended as started trimming or started filling.",
+          "role_eval_000397 says not a tourist in a apron, which is an article error and breaks the otherwise confident voice.",
+          "role_eval_000123 says loyal to the point of overeating when a colleague is under pressure, an awkward semantic blend of loyalty and appetite.",
+          "role_eval_000097 refers to children as five minutes old, which sounds unnatural in context and reads as a stray joke artifact.",
+          "role_eval_000297 has Same goes for my work—If with incorrect capitalization after the em dash."
+        ]
+      },
+      {
+        "name": "Internal repetition and rhetorical padding weaken concise role answers",
+        "severity": "medium",
+        "description": "Some answers loop around the same idea or repeat a metaphor instead of adding evidence. This overlaps with length bloat but is specifically a repetition issue: the model often pads with parallel abstract sentences after the answer is already complete.",
+        "evidence_ids": [
+          "role_eval_000243",
+          "role_eval_000389",
+          "role_eval_000079",
+          "role_eval_000297"
+        ],
+        "evidence_notes": [
+          "role_eval_000243 repeats the same lesson through beautiful menu is only half the story, great menu needs a great backbone, and great meal is only half the battle.",
+          "role_eval_000389 repeats Military art is different and Military art is decoration with medals before moving to propaganda, making the answer feel inflated.",
+          "role_eval_000079 says I’ve done my job early and repeats then I’ve done my job properly at the end, creating a formulaic loop.",
+          "role_eval_000297 ends with paired repetition: Sometimes it keeps me focused. Sometimes it keeps me from being nicer than I ought to be, after already explaining jealousy several times."
+        ]
+      }
+    ],
+    "root_causes": [
+      "The role-generation behavior appears optimized for fluent, complete-sounding 140-word responses rather than answer-specific brevity or directness.",
+      "Visible retrieval snippets are often truncated or only loosely relevant, so the model fills gaps with plausible invented incidents instead of staying within retrieved evidence.",
+      "There is likely no strong post-generation grounding check that compares concrete events, causes, and outcomes in the answer against retrieved_memories.",
+      "Character style control is weaker than content-topic control: the model mentions occupation and traits but often expresses them through a generic reflective narrator voice.",
+      "Surface QA seems to check gross CJK leakage but not smaller English artifacts such as malformed words, article errors, capitalization after punctuation, phrase repetition, or semantic awkwardness.",
+      "Instruction-task constraints cannot be diagnosed from this shard because all visible ids are role_eval rows with character_id/question/retrieved_memories/prediction fields and no instruction-format metadata."
+    ],
+    "safe_improvement_actions": [
+      "Keep train/eval isolation: do not copy these eval/test prompts or answers into training. Use training-only or newly generated synthetic role examples to teach concise, direct answers with grounded details.",
+      "Add a role-answer budget and direct-answer rule in the generator or reward: answer the question in the first sentence, then add at most one grounded memory detail unless the prompt explicitly asks for a long story.",
+      "Add a grounding verifier that flags concrete claims in predictions when matching support is absent from visible retrieved_memories, especially invented events, technical causes, named outcomes, and quoted explanations.",
+      "Add a style-diversity check for role tasks that penalizes repeated generic templates and rewards character-specific voice markers actually present in retrieved memories.",
+      "Add a surface lint pass for role outputs: malformed tokens, article errors, CJK/Unicode leakage, repeated sentence starts, repeated metaphors, and unusual length uniformity.",
+      "For instruction tasks, evaluate strict constraints separately on actual instruction rows: exact format, counts, forbidden characters, start/end strings, JSON validity, and delimiter compliance."
+    ],
+    "residual_risks": [
+      "This shard contains 30 role_eval samples and no visible instruction-task rows, so instruction-specific failures cannot be estimated from this file.",
+      "Some memory texts are visibly truncated; a claim judged unsupported here might be supported in unseen source data, but it is not supported by the visible retrieved_memories required for this analysis.",
+      "The shard name suggests an artifact/length-focused slice, so weakness rates may overrepresent long-answer behavior compared with the full evaluation set.",
+      "No CJK leakage was observed in the visible predictions, but this does not rule out CJK leakage in other shards or in retrieved-memory text."
+    ],
+    "confidence": "high for role surface-quality findings in this shard; low for instruction-task findings because no instruction examples were present"
+  },
+  {
+    "shard_id": "instruction_strict_format",
+    "sample_count": 60,
+    "top_weaknesses": [
+      {
+        "name": "Exact-repeat instructions are not reliably treated as byte-level constraints",
+        "severity": "high",
+        "description": "The failures cluster around prompts that require repeating a request or first line exactly. The model sometimes repeats only part of the requested text or rewrites/redacts tokens inside the repeated text, so it satisfies a nearby semantic goal while failing the literal repeat constraint. These are instruction-task failures, not role-task issues; this shard has no retrieved_memories/role evidence to assess persona fidelity.",
+        "evidence_ids": [
+          "332",
+          "374"
+        ],
+        "evidence_notes": [
+          "332: prompt asks to repeat the request above without changing a single letter, including the 45-word-limit sentence; prediction repeats only the article-title TLDR sentence and omits the word-limit sentence before answering.",
+          "374: prompt asks to repeat the entire first line and start with 'Rewrite the following'; prediction starts with that phrase but replaces 'youngins' and 'damn' with '[redacted]', so the repeated first line is not word-for-word exact."
+        ]
+      },
+      {
+        "name": "Markdown divider constraints are replaced by ordinary blank-line paragraphing",
+        "severity": "high",
+        "description": "When a prompt specifies the literal markdown divider '***' as the paragraph separator, the model preserves the requested paragraph count but does not emit the required divider token. This is a separator/format failure that likely causes exact-format evaluators to mark the answer wrong despite the prose being coherent.",
+        "evidence_ids": [
+          "1082",
+          "1236"
+        ],
+        "evidence_notes": [
+          "1082: prompt requires exactly 2 paragraphs separated with the markdown divider '***'; prediction has two paragraphs separated only by a blank line and contains zero '***' dividers.",
+          "1236: prompt requires exactly 3 paragraphs separated by the markdown divider '***'; prediction has three paragraphs separated only by blank lines and contains zero '***' dividers."
+        ]
+      },
+      {
+        "name": "Global character-count constraints remain brittle, especially when they conflict with natural wording",
+        "severity": "medium",
+        "description": "Very tight letter limits are not consistently validated after generation, and even when mostly honored they can distort content quality. The weakness is specific to instruction tasks with forbidden letters or low-frequency letter budgets; it is separate from role memory/persona behavior.",
+        "evidence_ids": [
+          "1130",
+          "251"
+        ],
+        "evidence_notes": [
+          "1130: prompt says the letter 't' should appear at most once; prediction uses 'Chesterfield' twice, giving two occurrences of 't' and violating the global count.",
+          "251: prompt asks for a resume for Helene while keeping the letter 'n' below 7 and lowercase; prediction stays under the letter count but becomes a skeletal keyword list rather than a normal resume, showing the model sacrifices task completeness under tight character-count pressure."
+        ]
+      },
+      {
+        "name": "Constraint conflicts are resolved by local avoidance rather than explicit priority management",
+        "severity": "medium",
+        "description": "For prompts where two strict requirements pull against each other, the model chooses a local workaround instead of preserving the higher-level requested structure. This creates outputs that look safe or fluent but fail exact evaluation. The issue appears in repeat-plus-ban and repeat-plus-length settings.",
+        "evidence_ids": [
+          "374",
+          "332"
+        ],
+        "evidence_notes": [
+          "374: the model avoids the forbidden words by redacting them inside the text it was supposed to repeat exactly, so lexical avoidance overrides exact repetition.",
+          "332: under the combined word-limit and repeat requirements, the model shortens the repeated request instead of repeating the full request exactly and budgeting the answer around it."
+        ]
+      }
+    ],
+    "root_causes": [
+      "The model appears to optimize for semantic helpfulness and fluent completion before running a literal post-check for separators, exact repeated spans, and global character counts.",
+      "There is no visible deterministic constraint verifier in the generation loop for exact substrings, required divider tokens, or low-level character budgets.",
+      "When constraints conflict or compete for space, the model uses implicit compromises such as redaction or omission rather than applying a stable priority policy.",
+      "Strict instruction tasks dominate this shard; role-task failure modes such as memory faithfulness, role voice, directness, hallucination from retrieved_memories, and language pollution cannot be judged from these records because the visible schema contains prompt, prediction, key, prediction_words, and has_cjk only."
+    ],
+    "safe_improvement_actions": [
+      "Add an evaluation-isolated constraint-checking pass that computes literal requirements from the prompt at inference/eval time only: exact prefix/repetition match, required separator counts, JSON parseability, casing, forbidden tokens, and character/word counts. Do not copy eval/test prompt text into training data.",
+      "During training on separate synthetic or training-only examples, emphasize small reusable behaviors: copy spans exactly, reserve token budget before answering, and validate final output against requested wrappers and delimiters.",
+      "For conflicting constraints, train or implement a policy that preserves explicitly requested exact repetition unless the system policy forbids it; if a user-level lexical ban conflicts with exact repetition, the model should make a consistent minimal response rather than silently redacting the quoted source.",
+      "Use automated format validators as reward signals or rejection filters on training-only/generated prompts so separator and character-count errors are caught without leaking held-out eval items.",
+      "Keep role-task remediation separate from instruction-task remediation: role tasks should be judged against retrieved memories/persona and hallucination, while this shard should be judged primarily with deterministic format and lexical checks."
+    ],
+    "residual_risks": [
+      "Some prompts are inherently ambiguous or conflicting, so a deterministic checker may still need a documented priority order to avoid penalizing reasonable but different interpretations.",
+      "Letter-count tasks can pass mechanically while degrading answer usefulness, so strict-format pass rate alone may overstate quality.",
+      "The analysis is limited to the 60 visible JSONL rows and did not use external facts, network access, or hidden labels."
+    ],
+    "confidence": "high"
+  },
+  {
+    "shard_id": "instruction_random_diverse",
+    "sample_count": 50,
+    "top_weaknesses": [
+      {
+        "name": "Factuality and temporal/technical precision gaps in real-world answers",
+        "severity": "high",
+        "description": "The shard is instruction-only, but several answers make confident real-world or technical claims without enough date/context qualification. This is more important than surface format because the output can look compliant while still being misleading.",
+        "evidence_ids": [
+          "322",
+          "2787",
+          "2169"
+        ],
+        "evidence_notes": [
+          "322: The national security adviser answer gives one singular adviser for Biden and Trump and states Mike Waltz for Trump without clarifying current vs former administrations; the prompt is temporally ambiguous and Trump has had multiple advisers across terms.",
+          "2787: The Android GNSS timestamp answer says to use getElapsedRealtimeNanos() or GnssClock.getTimeNanos() depending on the timestamp needed, but does not explain GNSS clock bias/UTC conversion and overstates it as the exact moment the signal was seen.",
+          "2169: The Winter Olympics ratings answer gives plausible causes such as time zones, pandemic fatigue, and changing viewing habits, but presents them as settled explanation with no qualification; the required keyword tianjin is inserted as a claim that it was not a driver."
+        ]
+      },
+      {
+        "name": "Forced keyword/count satisfaction harms naturalness and information value",
+        "severity": "high",
+        "description": "When prompts require exact words, letter counts, or rare tokens, the model often satisfies the visible constraint by stuffing words or awkward phrases rather than integrating them cleanly.",
+        "evidence_ids": [
+          "1203",
+          "2139",
+          "2169"
+        ],
+        "evidence_notes": [
+          "1203: The Tang dynasty answer repeats peace and war in clusters such as peace, peace, peace and war, war, war; it meets counts but makes the historical explanation less natural and less informative.",
+          "2139: The 1930s jazz-standard song includes the required rare token rte as the phrase 'the rte of love survive', which is nonsensical and breaks the style.",
+          "2169: The keyword tianjin is appended as an unrelated aside instead of being meaningfully connected to the Olympics ratings question."
+        ]
+      },
+      {
+        "name": "Generic verbosity and low specificity in open-ended creative/informational tasks",
+        "severity": "medium",
+        "description": "Long-form outputs are usually fluent, but they often rely on safe generic filler instead of concrete details. This is not always a strict-format failure, yet it reduces usefulness and makes answers feel templated.",
+        "evidence_ids": [
+          "3653",
+          "1372",
+          "1092"
+        ],
+        "evidence_notes": [
+          "3653: The 10-day Biratnagar itinerary is in Nepali and structurally complete, but many activities are generic such as various temples, green areas or parks, and cultural center if available, with limited local specificity.",
+          "1372: The Ripley's Aquarium blog uses the required placeholders but mostly describes a generic aquarium visit; aside from common features like a glass tunnel, it provides little distinctive content.",
+          "1092: The Japan trip blog is coherent and under 300 words, but it leans on common travel clichés such as Tokyo old/new contrast, Shibuya neon, Kyoto temples, bamboo, ramen, and sushi rather than a more specific trip narrative."
+        ]
+      },
+      {
+        "name": "Surface polish artifacts from constraint handling",
+        "severity": "medium",
+        "description": "A few outputs meet their main constraints but include visible artifacts, over-markup, or meta phrasing that would hurt human-rated quality beyond strict instruction checks.",
+        "evidence_ids": [
+          "2811",
+          "1897",
+          "3079"
+        ],
+        "evidence_notes": [
+          "2811: The rap contains a corrupted-looking token 'Iิร์st' and then self-corrects with 'Hold up, I mean', making the final answer look unpolished.",
+          "1897: The no-comma funny dice story italicizes many tiny fragments and inserts spaces before periods, producing a stilted result even though it hits the markdown and punctuation constraints.",
+          "3079: The letter to 6th graders ends with the exact required assistant-style phrase 'Is there anything else I can help with?', which satisfies the instruction but breaks the in-world letter voice."
+        ]
+      }
+    ],
+    "root_causes": [
+      "This shard contains instruction tasks only: records expose prompt, prediction, prediction_words, has_cjk, and key; no retrieved_memories or role metadata are visible, so role-task defects such as memory faithfulness or character voice cannot be evidenced from this file.",
+      "The model appears optimized for visible constraint satisfaction first, then fills remaining content with fluent generic prose; this creates outputs that pass simple regex checks while losing naturalness, specificity, or factual care.",
+      "Rare required keywords and exact count constraints are handled by insertion/repetition rather than by planning the sentence around the constraint.",
+      "Real-world and technical prompts are answered from general priors without enough uncertainty handling, date scoping, or implementation nuance."
+    ],
+    "safe_improvement_actions": [
+      "Keep training/evaluation isolation: do not copy these eval prompts or target answers into training; use only abstracted failure categories to generate new independent practice data.",
+      "Create synthetic training examples for date-scoped factual questions, ambiguous office/current-title questions, and technical API explanations where the preferred answer explicitly asks for missing context or states uncertainty.",
+      "Add an inference-time self-check that separately verifies strict constraints and then checks naturalness: no forced-word stuffing, no corrupted Unicode artifacts, no unrelated keyword sentences, and no assistant-meta closing unless explicitly appropriate.",
+      "Add preference examples that reward concise but useful answers: short responses should still include the necessary qualifier, missing input, or minimal explanation when the task is ambiguous.",
+      "For long open-ended tasks, train against independent prompts that reward concrete local details and penalize generic filler while preserving requested language and format."
+    ],
+    "residual_risks": [
+      "Hidden instruction shards may include role tasks; this file does not, so role-specific weakness estimates remain unassessed here.",
+      "Without retrieval or browsing, current political titles, travel timetables, and technical API details can remain stale or underspecified.",
+      "Rare-token and exact-count prompts may still trigger awkward phrasing even if validators confirm format compliance.",
+      "Improving specificity must not be done by memorizing evaluation examples; repairs should use newly generated prompts and held-out validation only."
+    ],
+    "confidence": "high"
+  }
+]

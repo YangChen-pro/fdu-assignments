@@ -1,0 +1,16 @@
+{
+  "input_file": "lab5/public_pack/data/instruction_following/dev.jsonl",
+  "num_samples": 100,
+  "concurrency": 32,
+  "total_latency_s": 10.025529623031616,
+  "avg_latency_s": 1.3314817881584167,
+  "p50_latency_s": 1.0849506855010986,
+  "p95_latency_s": 1.9917778372764585,
+  "prediction_file": "lab5/outputs/task4/r2_instruction_dev/predictions.jsonl",
+  "detail_file": "lab5/outputs/task4/r2_instruction_dev/details.jsonl",
+  "served_model": "task3-grpo-r2",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "repetition_penalty": 1.05,
+  "max_tokens": 512
+}

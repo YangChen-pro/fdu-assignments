@@ -1,0 +1,71 @@
+{
+  "zip_path": "lab5/outputs/submission_task5/task_5_test.zip",
+  "size_bytes": 335591,
+  "entries": [
+    {
+      "name": "instruction_test_predictions.jsonl",
+      "lines": 441,
+      "first_record_keys": [
+        "key",
+        "prediction"
+      ]
+    },
+    {
+      "name": "role_interview_predictions.jsonl",
+      "lines": 500,
+      "first_record_keys": [
+        "character_id",
+        "id",
+        "prediction"
+      ]
+    }
+  ],
+  "role_source": "judge hybrid plus Qwen3.5-35B-A3B low-score, dimension-low, and fact-grounded rewrites; see report_artifacts/task5/role_*_rewrite_summary.json",
+  "instruction_source": "lab5/outputs/submission_task5/instruction_test_predictions.jsonl with targeted format, separator, capital-frequency, and surface repairs",
+  "role_artifact_count_after_repair": 0,
+  "role_hybrid_swapped_to_baseline": 224,
+  "role_low_score_rewrite_count": 50,
+  "role_dim_low_rewrite_count": 59,
+  "role_dim_low_rewrite_baseline_kept": 1,
+  "instruction_repaired_keys": [
+    3287,
+    1392,
+    3069,
+    1130,
+    1082,
+    1236,
+    332,
+    1248,
+    2467,
+    1845,
+    1342,
+    3351,
+    3188,
+    3414,
+    2811,
+    2381
+  ],
+  "instruction_repair_round2_keys": [
+    1130,
+    1082,
+    1236,
+    332
+  ],
+  "role_fact_grounded_rewrite_count": 71,
+  "role_fact_grounded_rewrite_baseline_kept": 9,
+  "instruction_separator_repair_round3_keys": [
+    1248,
+    2467,
+    1845,
+    1342,
+    3351
+  ],
+  "instruction_capital_repair_round4_keys": [
+    3188,
+    3414
+  ],
+  "instruction_surface_repair_round5_keys": [
+    2811,
+    2381
+  ]
+}

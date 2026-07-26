@@ -1,0 +1,17 @@
+{
+  "input_file": "lab5/public_pack/data/instruction_following/dev.jsonl",
+  "num_samples": 100,
+  "concurrency": 8,
+  "total_latency_s": 283.080397605896,
+  "avg_latency_s": 9.759553282260894,
+  "p50_latency_s": 7.467542767524719,
+  "p95_latency_s": 21.520660054683685,
+  "prediction_file": "lab5/outputs/task4/Qwen3.5-35B-A3B_instruction_dev_strict/predictions.jsonl",
+  "detail_file": "lab5/outputs/task4/Qwen3.5-35B-A3B_instruction_dev_strict/details.jsonl",
+  "served_model": "Qwen3.5-35B-A3B",
+  "system_prompt": "You are a precise instruction-following assistant. Read the user's instruction carefully. Satisfy every explicit constraint, including required keywords, forbidden words, counts, order, casing, punctuation, language, and format. Do not add extra text unless requested.",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "repetition_penalty": 1.05,
+  "max_tokens": 1024
+}

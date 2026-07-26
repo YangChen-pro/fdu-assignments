@@ -1,0 +1,42 @@
+{
+  "num_samples": 27,
+  "num_records": 27,
+  "ok_count": 27,
+  "pending_count": 0,
+  "baseline_name": "memory_sft_r2_grpo_r1_memory",
+  "candidate_name": "repaired_cjk",
+  "winner_counts": {
+    "repaired_cjk": 27
+  },
+  "candidate_win_count": 27,
+  "baseline_win_count": 0,
+  "tie_count": 0,
+  "status_counts": {
+    "ok": 27
+  },
+  "avg_scores": {
+    "memory_sft_r2_grpo_r1_memory": {
+      "memorisation": 2.6666666666666665,
+      "values": 3.6666666666666665,
+      "personality": 2.4444444444444446,
+      "hallucination": 2.5925925925925926,
+      "answer_quality": 2.5925925925925926,
+      "overall": 2.740740740740741
+    },
+    "repaired_cjk": {
+      "memorisation": 3.4814814814814814,
+      "values": 4.7407407407407405,
+      "personality": 4.222222222222222,
+      "hallucination": 4.222222222222222,
+      "answer_quality": 4.666666666666667,
+      "overall": 4.555555555555555
+    }
+  },
+  "avg_latency_s": 11.855573274471142,
+  "result_file": "lab5/outputs/task3_judge/repaired_cjk_vs_memory_sft_r2_grpo_r1_memory/judge_results_repaired_cjk_vs_memory_sft_r2_grpo_r1_memory_27.jsonl",
+  "model": "Qwen3.5-35B-A3B",
+  "base_url": "http://127.0.0.1:8318/v1",
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "memory_details": "lab5/outputs/task3/memory_sft_r2_grpo_r1_memory/details.jsonl"
+}

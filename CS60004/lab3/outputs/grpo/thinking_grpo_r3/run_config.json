@@ -1,0 +1,61 @@
+{
+  "model_name_or_path": "lab3/outputs/dpo/full_answer_only_from_plan_d/final",
+  "ref_model_name_or_path": "lab3/outputs/dpo/full_answer_only_from_plan_d/final",
+  "train_file": "lab3/datasets/rl_train_test_datasets/raw_train.parquet",
+  "valid_file": "lab3/datasets/rl_train_test_datasets/raw_test.json",
+  "output_dir": "lab3/outputs/grpo/thinking_grpo_r3",
+  "per_device_batch_size": 2,
+  "learning_rate": 2e-07,
+  "max_steps": 200,
+  "rollout_group_size": 16,
+  "rollout_backend": "vllm_api",
+  "rollout_temperature": 0.6,
+  "rollout_top_p": 0.95,
+  "clip_range": 0.2,
+  "reward_weights": {
+    "correct": 1.0,
+    "expr_valid": 0.1,
+    "format": 0.05
+  },
+  "max_prompt_length": 256,
+  "max_response_length": 1024,
+  "forward_chunk_size": 4,
+  "eval_interval": 50,
+  "save_interval": 50,
+  "log_interval": 5,
+  "seed": 42,
+  "use_kl": true,
+  "kl_coef": 0.05,
+  "max_grad_norm": 1.0,
+  "torch_dtype": "bfloat16",
+  "gradient_checkpointing": true,
+  "vllm_sync_interval": 50,
+  "vllm_gpu_memory_utilization": 0.2,
+  "vllm_port": 8001,
+  "generation": {
+    "max_new_tokens": 1024,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "do_sample": true,
+    "use_chat_template": true,
+    "top_k": 20,
+    "min_p": 0,
+    "enable_thinking": true,
+    "presence_penalty": 0,
+    "api_base": "http://127.0.0.1:8001/v1",
+    "request_concurrency": 8
+  },
+  "eval_batch_size": 4,
+  "swanlab": {
+    "enabled": true,
+    "project": "cs60004-lab3",
+    "experiment_name": "thinking_grpo_r3",
+    "tags": [
+      "grpo",
+      "thinking-mode",
+      "vllm-rollout",
+      "kl",
+      "round3"
+    ]
+  }
+}

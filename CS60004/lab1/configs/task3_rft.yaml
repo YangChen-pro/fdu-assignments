@@ -1,0 +1,54 @@
+experiment:
+  name: null
+
+model:
+  model_name_or_path: models/Qwen2.5-1.5B-Instruct
+  max_length: 2048
+  bf16: true
+  quantization:
+    enabled: false
+
+data:
+  train_paths:
+    - datasets/task3/rft_train.jsonl
+  dev_ratio: 0.1
+
+train:
+  batch_size: 8
+  num_epochs: 15
+  learning_rate: 1.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.03
+  gradient_accumulation_steps: 4
+  grad_clip: 1.0
+  seed: 3407
+  num_workers: 4
+
+peft:
+  method: rft
+  r: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+  bias: none
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+
+rft:
+  train_backend: lora
+  candidate_count: 4
+  source_paths: []
+
+logging:
+  log_steps: 10
+  save_steps: 200
+  use_swanlab: true
+  swanlab_project: cs60004-lab1-task3
+
+output:
+  output_root: outputs/task3_rft

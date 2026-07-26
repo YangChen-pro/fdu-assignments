@@ -1,0 +1,18 @@
+{
+  "purpose": "rule-reward GRPO dataset for Lab5 Task4 instruction-following capability",
+  "train_count": 12000,
+  "val_count": 500,
+  "counts": {
+    "rlvr_ifeval_train": 12000,
+    "rlvr_ifeval_val": 500
+  },
+  "filtered_exact_prompt_overlaps_with_lab5_dev_test": {
+    "rlvr_ifeval": 0
+  },
+  "external_sources": [
+    "ModelScope: LLM-Research/RLVR-IFeval, public IFEval-style RLVR data"
+  ],
+  "lab5_public_pack_policy": "read only; dev/test prompts used only for exact-overlap filtering, never as training targets",
+  "seed": 20260531,
+  "max_chars": 24000
+}

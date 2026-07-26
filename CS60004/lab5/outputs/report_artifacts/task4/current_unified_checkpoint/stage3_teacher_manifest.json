@@ -1,0 +1,18 @@
+{
+  "purpose": "teacher-distilled SFT data for instruction-following constraints, generated from external RLVR-IFeval prompts only",
+  "teacher_model": "Qwen3.5-35B-A3B via local OpenAI-compatible endpoint; used for training labels only, not for dev/test/submission answers",
+  "train_count": 963,
+  "val_count": 107,
+  "attempted_count": 1400,
+  "accepted_count": 1070,
+  "status_counts": {
+    "ok": 1070,
+    "failed_rule": 330
+  },
+  "filtered_exact_prompt_overlaps_with_lab5_dev_test": 0,
+  "external_sources": [
+    "ModelScope: LLM-Research/RLVR-IFeval public training prompts and constraint metadata"
+  ],
+  "cleaning": "filtered exact prompt overlap with Lab5 instruction dev/test; kept only teacher answers that passed the public rule checker for the source constraint",
+  "seed": 20260531
+}

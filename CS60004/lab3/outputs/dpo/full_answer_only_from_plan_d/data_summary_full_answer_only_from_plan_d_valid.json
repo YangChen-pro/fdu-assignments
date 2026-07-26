@@ -1,0 +1,230 @@
+{
+  "num_rows": 1170,
+  "chosen": {
+    "num_samples": 1170,
+    "format_rate": 1.0,
+    "expr_valid_rate": 1.0,
+    "accuracy": 1.0,
+    "avg_output_tokens": 3.0,
+    "reasons": {
+      "ok": 1170
+    },
+    "success_examples": [
+      {
+        "prediction": "<answer> (86-(73-53)) </answer>",
+        "numbers": [
+          86,
+          53,
+          73
+        ],
+        "target": 66,
+        "sample_id": 16530,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": true,
+          "reason": "ok",
+          "answer": "(86-(73-53))",
+          "value": 66.0,
+          "output_tokens": 3
+        }
+      },
+      {
+        "prediction": "<answer> ((55+98)-66) </answer>",
+        "numbers": [
+          66,
+          55,
+          98
+        ],
+        "target": 87,
+        "sample_id": 16628,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": true,
+          "reason": "ok",
+          "answer": "((55+98)-66)",
+          "value": 87.0,
+          "output_tokens": 3
+        }
+      },
+      {
+        "prediction": "<answer> ((83*25)-(22*93)) </answer>",
+        "numbers": [
+          83,
+          25,
+          22,
+          93
+        ],
+        "target": 29,
+        "sample_id": 6142,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": true,
+          "reason": "ok",
+          "answer": "((83*25)-(22*93))",
+          "value": 29.0,
+          "output_tokens": 3
+        }
+      },
+      {
+        "prediction": "<answer> (93+((4+14)-16)) </answer>",
+        "numbers": [
+          93,
+          16,
+          4,
+          14
+        ],
+        "target": 95,
+        "sample_id": 96239,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": true,
+          "reason": "ok",
+          "answer": "(93+((4+14)-16))",
+          "value": 95.0,
+          "output_tokens": 3
+        }
+      },
+      {
+        "prediction": "<answer> (4+(2*17)) </answer>",
+        "numbers": [
+          2,
+          17,
+          4
+        ],
+        "target": 38,
+        "sample_id": 56842,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": true,
+          "reason": "ok",
+          "answer": "(4+(2*17))",
+          "value": 38.0,
+          "output_tokens": 3
+        }
+      }
+    ],
+    "failure_examples": []
+  },
+  "rejected": {
+    "num_samples": 1170,
+    "format_rate": 0.711965811965812,
+    "expr_valid_rate": 0.5863247863247864,
+    "accuracy": 0.0,
+    "avg_output_tokens": 11.942735042735043,
+    "reasons": {
+      "number_usage_error": 147,
+      "wrong_result": 686,
+      "missing_answer": 337
+    },
+    "success_examples": [],
+    "failure_examples": [
+      {
+        "prediction": "<think>I reused one number.</think>\n<answer> 86 + 86 </answer>",
+        "numbers": [
+          86,
+          53,
+          73
+        ],
+        "target": 66,
+        "sample_id": 16530,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": false,
+          "correct": false,
+          "reason": "number_usage_error",
+          "answer": "86 + 86",
+          "value": null,
+          "output_tokens": 9
+        }
+      },
+      {
+        "prediction": "<think>This expression uses the numbers but reaches the wrong value.</think>\n<answer> 66 + 55 + 98 </answer>",
+        "numbers": [
+          66,
+          55,
+          98
+        ],
+        "target": 87,
+        "sample_id": 16628,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": false,
+          "reason": "wrong_result",
+          "answer": "66 + 55 + 98",
+          "value": 219.0,
+          "output_tokens": 17
+        }
+      },
+      {
+        "prediction": "<think>This expression uses the numbers but reaches the wrong value.</think>\n<answer> 83 + 25 + 22 + 93 </answer>",
+        "numbers": [
+          83,
+          25,
+          22,
+          93
+        ],
+        "target": 29,
+        "sample_id": 6142,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": false,
+          "reason": "wrong_result",
+          "answer": "83 + 25 + 22 + 93",
+          "value": 223.0,
+          "output_tokens": 19
+        }
+      },
+      {
+        "prediction": "<think>I cannot find a valid equation.</think>",
+        "numbers": [
+          93,
+          16,
+          4,
+          14
+        ],
+        "target": 95,
+        "sample_id": 96239,
+        "eval": {
+          "format_ok": false,
+          "expr_valid": false,
+          "correct": false,
+          "reason": "missing_answer",
+          "answer": "",
+          "value": null,
+          "output_tokens": 0
+        }
+      },
+      {
+        "prediction": "<think>I cannot find a valid equation.</think>",
+        "numbers": [
+          2,
+          17,
+          4
+        ],
+        "target": 38,
+        "sample_id": 56842,
+        "eval": {
+          "format_ok": false,
+          "expr_valid": false,
+          "correct": false,
+          "reason": "missing_answer",
+          "answer": "",
+          "value": null,
+          "output_tokens": 0
+        }
+      }
+    ]
+  },
+  "skipped": [],
+  "num_skipped": 0,
+  "num_repaired": 0,
+  "chosen_backend": "solver",
+  "rejected_backend": "corrupt"
+}

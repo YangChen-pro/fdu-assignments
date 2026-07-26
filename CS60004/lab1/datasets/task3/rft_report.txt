@@ -1,0 +1,16 @@
+Input samples    : 800
+Output samples   : 754
+Dropped samples  : 46
+Candidates/sample: 4
+Accepted total   : 2337
+Avg accepted     : 2.92
+Top reject reasons:
+- hard:option_leakage: 459
+- hard:reasoning_len_not_3: 253
+- error:APITimeoutError: 109
+- hard:meta_phrase: 97
+- empty:length: 24
+- hard:answer_leakage: 9
+- error:JSONDecodeError: 9
+- validate:missing answer field: 2
+- validate:reasoning item is empty: 2

@@ -1,0 +1,64 @@
+Plan B Clean Report
+===================
+
+dry_run            : False
+input_samples      : 800
+processed_samples  : 800
+keep_threshold     : 8
+drop_threshold     : 4
+max_regen_attempts : 2
+
+Final counts:
+- keep_total    : 738
+- keep_original : 612
+- keep_regen    : 126
+- regen_total   : 130
+- drop_total    : 9
+- drop_original : 7
+- drop_regen    : 2
+- error         : 53
+- final_b_clean : 738
+
+Original hard-rule reasons:
+- answer_leakage: 3
+- meta_phrase: 29
+- option_leakage: 118
+- reasoning_len_not_3: 60
+
+Original judge decisions:
+- drop: 7
+- keep: 612
+- regen: 7
+
+Regen judge decisions:
+- drop: 2
+- keep: 126
+- regen: 3
+
+Keep examples:
+- 0: 推理逻辑严密，准确结合实验室检查与家族史排除干扰项，医学知识准确，可作为优质 SFT 样本。
+- 1: 推理逻辑清晰，史实准确，紧扣题干核心信息且无冗余
+- 2: 推理过程逻辑严密，紧扣题意解释正确选项机制，无事实性错误或过度依赖标准答案的表述。
+- 3: 推理准确结合了微观结构差异与宏观生理功能，符合医学常识且无事实错误。
+- 4: 推理逻辑严密，医学概念准确，清晰解释了错误选项的根本原因且符合独立推导要求。
+
+Regen examples:
+- 5: hard_pass=True, hard_reasons=[]
+- 13: hard_pass=True, hard_reasons=[]
+- 21: hard_pass=True, hard_reasons=[]
+- 22: hard_pass=True, hard_reasons=[]
+- 25: hard_pass=True, hard_reasons=[]
+
+Drop examples:
+- 67: 候选推理逻辑空洞且生造“功能适应视角”等术语无依据，同时所提供的标准答案（E）与护理学关于健康疾病连续性的主流理论高度疑似冲突，训练此类样本存在显著的事实误导风险。
+- 200: 样本包含疑似错误的药物代谢酶命名（CYP2E6 非标准命名，通常为 CYP2E1）且与公认药理知识不符（巴比妥不诱导 CYP2D6 而非该标），存在明显的医学事实风险，不适合作为训练数据。
+- 216: 姜炙法常规干姜用量通常规定为 10%（即 10kg/100kg），候选输出中的 3kg 数值与主流教材及药典标准不符，存在明显的医学事实风险。
+- 228: 题干药材名疑似错别字（应为金钗石斛），且性状描述与权威中药学教材记载冲突，存在严重医疗事实风险。
+- 396: 题目内容实为文学哲理题而非医学题，存在严重领域偏差，不适合作为医疗垂直模型的训练数据。
+
+Error examples:
+- 43: teacher returned empty content (finish_reason=length, max_tokens=4096)
+- 60: Unterminated string starting at: line 1 column 121 (char 120)
+- 66: teacher returned empty content (finish_reason=length, max_tokens=4096)
+- 73: Unterminated string starting at: line 1 column 16 (char 15)
+- 83: teacher returned empty content (finish_reason=length, max_tokens=4096)

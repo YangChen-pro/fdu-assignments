@@ -1,0 +1,24 @@
+{
+  "backend": "vllm_api",
+  "model_name_or_path": "lab3/outputs/dpo/full_answer_only_continue_bs112_epoch_continue735/final",
+  "test_file": "lab3/datasets/rl_train_test_datasets/raw_test.json",
+  "output_file": "lab3/outputs/submit/full_answer_only_continue735_test500.jsonl",
+  "meta_file": "lab3/outputs/submit/full_answer_only_continue735_test500_meta.json",
+  "torch_dtype": "bfloat16",
+  "batch_size": 2,
+  "prompt_template": "Using the numbers {numbers}, create one expression that equals {target}. Use every number exactly once. First consider multiplication, division, and parentheses; do not fall back to simple plus/minus unless it exactly works. Return only <answer> expression </answer>.",
+  "generation": {
+    "max_new_tokens": 512,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "do_sample": true,
+    "candidate_count": 512,
+    "use_chat_template": true,
+    "top_k": 20,
+    "min_p": 0,
+    "enable_thinking": false,
+    "presence_penalty": 1.5,
+    "api_base": "http://127.0.0.1:8001/v1",
+    "request_concurrency": 64
+  }
+}

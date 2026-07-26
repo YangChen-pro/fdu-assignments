@@ -1,0 +1,35 @@
+{
+  "output_file": "lab3/outputs/submit/dpo_r8_onepos_targeted_failures_ep2_single_cleaned_test500.jsonl",
+  "source_file": "lab3/outputs/eval/dpo_r8_onepos_targeted_failures_ep2_raw_test500_single.single.jsonl",
+  "eval_file": "lab3/outputs/submit/dpo_r8_onepos_targeted_failures_ep2_single_cleaned_test500.eval.json",
+  "checkpoint": "/root/autodl-tmp/CS60004/lab3/outputs/dpo/r8_onepos_targeted_failures_ep2/final",
+  "num_samples": 500,
+  "postprocess": "clean_prediction_for_submit",
+  "changed_predictions": 1,
+  "generation": {
+    "candidate_count": 1,
+    "max_tokens": 1024,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "enable_thinking": true,
+    "request_concurrency": 64
+  },
+  "local_eval": {
+    "num_samples": 500,
+    "format_rate": 0.504,
+    "expr_valid_rate": 0.476,
+    "accuracy": 0.472,
+    "avg_output_tokens": 150.036,
+    "reasons": {
+      "ok": 236,
+      "missing_answer": 248,
+      "number_usage_error": 12,
+      "wrong_result": 2,
+      "ValueError": 1,
+      "illegal_character": 1
+    }
+  }
+}

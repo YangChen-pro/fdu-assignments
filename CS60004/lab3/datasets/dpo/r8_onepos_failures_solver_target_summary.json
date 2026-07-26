@@ -1,0 +1,27 @@
+{
+  "source": "lab3/outputs/eval/dpo_r8_sft_pass32_onepos_ep2_raw_test500_single.single.jsonl",
+  "num_base_failures": 284,
+  "base_reasons": {
+    "missing_answer": 256,
+    "illegal_character": 2,
+    "ValueError": 1,
+    "number_usage_error": 19,
+    "wrong_result": 6
+  },
+  "num_pairs": 1080,
+  "num_train": 1026,
+  "num_valid": 54,
+  "weighted_reasons": {
+    "missing_answer": 1024,
+    "illegal_character": 4,
+    "ValueError": 2,
+    "number_usage_error": 38,
+    "wrong_result": 12
+  },
+  "chosen": "solver_response",
+  "rejected": "onepos_dpo_single_shot_failure",
+  "repeat_policy": {
+    "missing_answer": 4,
+    "other": 2
+  }
+}

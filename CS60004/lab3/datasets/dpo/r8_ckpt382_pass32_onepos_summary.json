@@ -1,0 +1,302 @@
+{
+  "input": "lab3/outputs/eval/thinking_grpo_r8_ckpt382_raw_test500.pass32.jsonl",
+  "train_output": "lab3/datasets/dpo/r8_ckpt382_pass32_onepos_train.jsonl",
+  "valid_output": "lab3/datasets/dpo/r8_ckpt382_pass32_onepos_valid.jsonl",
+  "num_pairs": 4963,
+  "num_train": 4715,
+  "num_valid": 248,
+  "num_skipped_samples": 123,
+  "skipped_samples": [
+    {
+      "id": 3,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 5,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 6,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 23,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 24,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 36,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 37,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 45,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 49,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 56,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 57,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 58,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 60,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 64,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 75,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 79,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 80,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 81,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 87,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 89,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 94,
+      "has_positive": true,
+      "has_negative": false
+    },
+    {
+      "id": 107,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 112,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 127,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 129,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 131,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 134,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 141,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 142,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 145,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 146,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 147,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 150,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 152,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 158,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 164,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 172,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 174,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 178,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 183,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 184,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 185,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 187,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 188,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 194,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 196,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 198,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 203,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 221,
+      "has_positive": false,
+      "has_negative": true
+    },
+    {
+      "id": 226,
+      "has_positive": false,
+      "has_negative": true
+    }
+  ],
+  "rejected_reasons": {
+    "missing_answer": 3450,
+    "illegal_character": 1459,
+    "number_usage_error": 31,
+    "wrong_result": 22,
+    "ValueError": 1
+  },
+  "max_pairs_per_sample": 32,
+  "strategy": "one-negative-per-positive",
+  "pair_count_distribution": {
+    "25": 14,
+    "1": 62,
+    "8": 12,
+    "13": 11,
+    "7": 13,
+    "29": 10,
+    "10": 7,
+    "23": 11,
+    "18": 13,
+    "26": 10,
+    "28": 10,
+    "30": 11,
+    "4": 16,
+    "17": 9,
+    "9": 6,
+    "2": 28,
+    "24": 15,
+    "12": 8,
+    "6": 5,
+    "5": 13,
+    "19": 10,
+    "3": 11,
+    "11": 5,
+    "27": 15,
+    "14": 10,
+    "15": 7,
+    "16": 7,
+    "22": 10,
+    "20": 12,
+    "21": 6
+  }
+}

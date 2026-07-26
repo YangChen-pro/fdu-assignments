@@ -1,0 +1,15 @@
+{
+  "strict_eval_isolation": true,
+  "source": "Task2 synthetic no-eval-prompt GRPO rows with retrieved memories added to the prompt.",
+  "heldout_eval_file": "lab5/public_pack/data/role_interview_eval.jsonl",
+  "input_train": "lab5/outputs/task2/data_synthetic_interview_Qwen3.5-35B-A3B_noevalprompt/grpo_train.jsonl",
+  "input_val": "lab5/outputs/task2/data_synthetic_interview_Qwen3.5-35B-A3B_noevalprompt/grpo_val.jsonl",
+  "num_train": 952,
+  "num_val": 50,
+  "sft_train_file": "lab5/outputs/task3/data_memory_sft_r2/sft_train.jsonl",
+  "sft_val_file": "lab5/outputs/task3/data_memory_sft_r2/sft_val.jsonl",
+  "grpo_train_file": "lab5/outputs/task3/data_memory_sft_r2/grpo_train.jsonl",
+  "grpo_val_file": "lab5/outputs/task3/data_memory_sft_r2/grpo_val.jsonl",
+  "sample_file": "lab5/data_samples/task3_memory_sft_r2_samples.jsonl",
+  "top_k": 5
+}

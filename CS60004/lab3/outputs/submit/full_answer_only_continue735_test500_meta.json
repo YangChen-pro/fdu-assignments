@@ -1,0 +1,22 @@
+{
+  "output_file": "lab3/outputs/submit/full_answer_only_continue735_test500.jsonl",
+  "checkpoint": "lab3/outputs/dpo/full_answer_only_continue_bs112_epoch_continue735/final",
+  "num_samples": 500,
+  "runtime_sec": 675.2908828258514,
+  "generation": {
+    "max_new_tokens": 512,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "do_sample": true,
+    "candidate_count": 512,
+    "use_chat_template": true,
+    "top_k": 20,
+    "min_p": 0,
+    "enable_thinking": false,
+    "presence_penalty": 1.5,
+    "api_base": "http://127.0.0.1:8001/v1",
+    "request_concurrency": 64
+  },
+  "backend": "vllm_api",
+  "rule_fallback": "none"
+}

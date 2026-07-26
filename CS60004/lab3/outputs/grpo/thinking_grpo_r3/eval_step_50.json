@@ -1,0 +1,15 @@
+{
+  "num_samples": 500,
+  "format_rate": 0.398,
+  "expr_valid_rate": 0.334,
+  "accuracy": 0.332,
+  "avg_output_tokens": 132.782,
+  "reasons": {
+    "ok": 166,
+    "missing_answer": 301,
+    "illegal_character": 24,
+    "number_usage_error": 7,
+    "wrong_result": 1,
+    "ValueError": 1
+  }
+}

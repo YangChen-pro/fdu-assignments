@@ -1,0 +1,45 @@
+{
+  "num_samples": 500,
+  "num_records": 500,
+  "ok_count": 500,
+  "pending_count": 0,
+  "baseline_name": "memory_sft_r2_memory",
+  "candidate_name": "memory_sft_r2_grpo_r1_memory",
+  "winner_counts": {
+    "memory_sft_r2_grpo_r1_memory": 258,
+    "memory_sft_r2_memory": 228,
+    "unknown": 2,
+    "tie": 12
+  },
+  "candidate_win_count": 258,
+  "baseline_win_count": 228,
+  "tie_count": 12,
+  "status_counts": {
+    "ok": 500
+  },
+  "avg_scores": {
+    "memory_sft_r2_memory": {
+      "memorisation": 3.154,
+      "values": 4.012,
+      "personality": 3.506,
+      "hallucination": 3.744,
+      "answer_quality": 3.776,
+      "overall": 3.596
+    },
+    "memory_sft_r2_grpo_r1_memory": {
+      "memorisation": 3.2730923694779115,
+      "values": 4.116465863453815,
+      "personality": 3.6506024096385543,
+      "hallucination": 3.6305220883534135,
+      "answer_quality": 3.8674698795180724,
+      "overall": 3.7329317269076303
+    }
+  },
+  "avg_latency_s": 13.6287461643219,
+  "result_file": "lab5/outputs/task3_judge/memory_sft_r2_grpo_r1_memory_vs_memory_sft_r2_memory/judge_results_memory_sft_r2_grpo_r1_memory_vs_memory_sft_r2_memory_500.jsonl",
+  "model": "Qwen3.5-35B-A3B",
+  "base_url": "http://127.0.0.1:8318/v1",
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "memory_details": "lab5/outputs/task3/memory_sft_r2_grpo_r1_memory/details.jsonl"
+}

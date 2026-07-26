@@ -1,0 +1,17 @@
+{
+  "strict_eval_isolation": true,
+  "heldout_eval_file": "lab5/public_pack/data/role_interview_eval.jsonl",
+  "num_characters": 68,
+  "samples_per_character": 16,
+  "num_samples": 1002,
+  "num_train": 952,
+  "num_val": 50,
+  "removed_global_or_same_character_eval_overlap": 7,
+  "source": "Qwen3.5-35B-A3B synthetic interview from persona/scenes/dialogues; held-out eval questions used only for local exact/fuzzy post-filtering, never as generation prompt content",
+  "generated_file": "lab5/outputs/task2/data_synthetic_interview_Qwen3.5-35B-A3B_noevalprompt/generated_qa.jsonl",
+  "train_file": "lab5/outputs/task2/data_synthetic_interview_Qwen3.5-35B-A3B_noevalprompt/sft_train.jsonl",
+  "val_file": "lab5/outputs/task2/data_synthetic_interview_Qwen3.5-35B-A3B_noevalprompt/sft_val.jsonl",
+  "sample_file": "lab5/data_samples/task2_synthetic_interview_Qwen3.5-35B-A3B_noevalprompt_samples.jsonl",
+  "grpo_train_file": "lab5/outputs/task2/data_synthetic_interview_Qwen3.5-35B-A3B_noevalprompt/grpo_train.jsonl",
+  "grpo_val_file": "lab5/outputs/task2/data_synthetic_interview_Qwen3.5-35B-A3B_noevalprompt/grpo_val.jsonl"
+}

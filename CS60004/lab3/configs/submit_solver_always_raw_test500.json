@@ -1,0 +1,12 @@
+{
+  "backend": "vllm_api",
+  "model_name_or_path": "lab3/outputs/dpo/r8_onepos_targeted_failures_ep2/final",
+  "test_file": "lab3/datasets/rl_train_test_datasets/raw_test.json",
+  "output_file": "lab3/outputs/submit/solver_always_raw_test500.jsonl",
+  "meta_file": "lab3/outputs/submit/solver_always_raw_test500_meta.json",
+  "rule_fallback_mode": "always",
+  "generation": {
+    "max_tokens": 1024,
+    "enable_thinking": true
+  }
+}

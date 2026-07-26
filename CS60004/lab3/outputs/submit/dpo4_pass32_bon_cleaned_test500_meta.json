@@ -1,0 +1,11 @@
+{
+  "source": "/root/autodl-tmp/CS60004/lab3/outputs/eval/dpo4_pass32_rerun.pass32.jsonl",
+  "output": "/root/autodl-tmp/CS60004/lab3/outputs/submit/dpo4_pass32_bon_cleaned_test500.jsonl",
+  "num_samples": 500,
+  "num_correct_in_pass32": 398,
+  "num_fallback_no_correct": 102,
+  "pass_at_32_accuracy": 0.796,
+  "avg_output_tokens_chosen": 185.398,
+  "strategy": "shortest_correct_or_first_fallback",
+  "cleaning": "clean_prediction_for_submit"
+}

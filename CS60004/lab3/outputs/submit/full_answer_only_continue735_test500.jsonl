@@ -1,0 +1,500 @@
+{"id": 1, "prediction": "<answer>79 - 60 + 17</answer>"}
+{"id": 2, "prediction": "<answer>11*(82 - 80) + 34</answer>"}
+{"id": 3, "prediction": "<answer>51 - 60 + 35 - 4</answer>"}
+{"id": 4, "prediction": "<answer> (96 - 98) + 1 + 34 </answer>"}
+{"id": 5, "prediction": "<answer>46 - 9 - 56 + 49</answer>"}
+{"id": 6, "prediction": "<answer>63 - 46 - 21 + 15</answer>"}
+{"id": 7, "prediction": "<answer>40 - 20 - 14</answer>"}
+{"id": 8, "prediction": "<answer> 84 - (34 + 83) + 72 </answer>"}
+{"id": 9, "prediction": "<answer>78 - 50 + 45</answer>"}
+{"id": 10, "prediction": "<answer>26*92 - 12 - 3</answer>"}
+{"id": 11, "prediction": "<answer>46 + 23 - 90 + 46</answer>"}
+{"id": 12, "prediction": "<answer>51 + 86 - 42 - 14</answer>"}
+{"id": 13, "prediction": "<answer>37 + 1 + 30</answer>"}
+{"id": 14, "prediction": "<answer>54 + 57 - 63 + 51</answer>"}
+{"id": 15, "prediction": "<answer>8*31 - 38</answer>"}
+{"id": 16, "prediction": "<answer> 80 - 54 + 51 </answer>"}
+{"id": 17, "prediction": "<answer>60 + 90 - 67</answer>"}
+{"id": 18, "prediction": "<answer>12 + 28 - 39 - 2</answer>"}
+{"id": 19, "prediction": "<answer>21*14 - 35 + 1</answer>"}
+{"id": 20, "prediction": "<answer>6 + 48 - 18</answer>"}
+{"id": 21, "prediction": "<answer> 2 * (36 + 14) </answer>"}
+{"id": 22, "prediction": "<answer>9*53 - 4 - 1</answer>"}
+{"id": 23, "prediction": "<answer>28 - 23 - 23 + 20</answer>"}
+{"id": 24, "prediction": "<answer>93 - 81 - 5 + 36</answer>"}
+{"id": 25, "prediction": "<answer>9*47 - 16</answer>"}
+{"id": 26, "prediction": "<answer>68 - 50 - 17 + 64</answer>"}
+{"id": 27, "prediction": "<answer>69 - 55 + 38 - 68</answer>"}
+{"id": 28, "prediction": "<answer> 93 - 56 + 24 - 11 </answer>"}
+{"id": 29, "prediction": "<answer> 91 - 36 - 7 </answer>"}
+{"id": 30, "prediction": "<answer>98 - 71 - 78</answer>"}
+{"id": 31, "prediction": "<answer>19 + 96 - 1</answer>"}
+{"id": 32, "prediction": "<answer>96 - 69 + 26</answer>"}
+{"id": 33, "prediction": "<answer>3*25 - 48</answer>"}
+{"id": 34, "prediction": "<answer> 95 - 43 - 33 </answer>"}
+{"id": 35, "prediction": "<answer>70 - 51 - 35</answer>"}
+{"id": 36, "prediction": "<answer>92 - 7 - 6</answer>"}
+{"id": 37, "prediction": "<answer>28 + 69 - 91 - 24</answer>"}
+{"id": 38, "prediction": "<answer>97 - 57 + 98</answer>"}
+{"id": 39, "prediction": "<answer>87 - 59 + 13 - 58</answer>"}
+{"id": 40, "prediction": "<answer>24*7 - 94 + 15</answer>"}
+{"id": 41, "prediction": "<answer> 26 + 26 - 81 + 20 </answer>"}
+{"id": 42, "prediction": "<answer>10*57 - 4</answer>"}
+{"id": 43, "prediction": "<answer>83 - 27 + 51 - 21</answer>"}
+{"id": 44, "prediction": "<answer>64 - 57 + 61</answer>"}
+{"id": 45, "prediction": "<answer>73 - 52 + 67 - 28</answer>"}
+{"id": 46, "prediction": "<answer> 74 + (82 - 4 * 20) </answer>"}
+{"id": 47, "prediction": "<answer> 85 - 61 - 11 </answer>"}
+{"id": 48, "prediction": "<answer>47 - 13 = 34</answer>"}
+{"id": 49, "prediction": "<answer> 5*(55-22)+7 </answer>"}
+{"id": 50, "prediction": "<answer> 79 - (50 / 2) + 15 </answer>"}
+{"id": 51, "prediction": "<answer>39 + 66 - 74</answer>"}
+{"id": 52, "prediction": "<answer>72 + 82 - 70</answer>"}
+{"id": 53, "prediction": "<answer> 38 + 50 - 50 + 23 </answer>"}
+{"id": 54, "prediction": "<answer>95 - 69 + 20</answer>"}
+{"id": 55, "prediction": "<answer>97 + 25 - 76 - 99</answer>"}
+{"id": 56, "prediction": "<answer>11*(85-51)+15</answer>"}
+{"id": 57, "prediction": "<answer>68 - 52 + 39 - 20</answer>"}
+{"id": 58, "prediction": "<answer>70 + 15 - 57</answer>"}
+{"id": 59, "prediction": "<answer>25 + 81 - 85 - 1</answer>"}
+{"id": 60, "prediction": "<answer>93 - 85 - 60 + 9</answer>"}
+{"id": 61, "prediction": "<answer>9 * 12 + 10</answer>"}
+{"id": 62, "prediction": "<answer>82 - 31 - 10</answer>"}
+{"id": 63, "prediction": "<answer>31 + 46 - 33</answer>"}
+{"id": 64, "prediction": "<answer>79</answer>"}
+{"id": 65, "prediction": "<answer>27 + 11 + 17</answer>"}
+{"id": 66, "prediction": "<answer> 40 + 19 - 46 - 4 </answer>"}
+{"id": 67, "prediction": "<answer>7*56 - 88 + 28</answer>"}
+{"id": 68, "prediction": "<answer>9 + 51 - 75 + 37</answer>"}
+{"id": 69, "prediction": "<answer> 99 - 67 + 56 - 2 </answer>"}
+{"id": 70, "prediction": "<answer> 3*(17 - (68 / 34)) </answer>"}
+{"id": 71, "prediction": "<answer>87 - 43 - 39 - 86</answer>"}
+{"id": 72, "prediction": "<answer>38 + 84 - 5 - 33</answer>"}
+{"id": 73, "prediction": "<answer>85 - 64 - 34</answer>"}
+{"id": 74, "prediction": "<answer>20 + 7 - 11 - 78</answer>"}
+{"id": 75, "prediction": "<answer>97 - 4 - 2</answer>"}
+{"id": 76, "prediction": "<answer>56 - 66 + 71 - 11</answer>"}
+{"id": 77, "prediction": "<answer> 49 - 34 + 6 </answer>"}
+{"id": 78, "prediction": "<answer>47 - (52 / 13)</answer>"}
+{"id": 79, "prediction": "<answer>94 - 5*2 + 91</answer>"}
+{"id": 80, "prediction": "<answer>73 - 76 + 6 - 70</answer>"}
+{"id": 81, "prediction": "<answer>78 - 62 + 39 - 10</answer>"}
+{"id": 82, "prediction": "<answer> 72 + 53 - 90 </answer>"}
+{"id": 83, "prediction": "<answer> (94 - 48) / 2 </answer>"}
+{"id": 84, "prediction": "<answer>48 - 48 + 19</answer>"}
+{"id": 85, "prediction": "<answer>62 + 32 + 3</answer>"}
+{"id": 86, "prediction": "<answer>3*27 + 35</answer>"}
+{"id": 87, "prediction": "<answer>26 + 52 - 19 - 2</answer>"}
+{"id": 88, "prediction": "<answer>61 - 27 - 16</answer>"}
+{"id": 89, "prediction": "<answer> 98 - (6 * 39) + 27 </answer>"}
+{"id": 90, "prediction": "<answer>71 - 98 + 25 + 90</answer>"}
+{"id": 91, "prediction": "<answer>18 + 71 - 43</answer>"}
+{"id": 92, "prediction": "<answer>73 - 90 + 29 - 35</answer>"}
+{"id": 93, "prediction": "<answer>78 - 19 - 16</answer>"}
+{"id": 94, "prediction": "<answer>91 - 66 + 61</answer>"}
+{"id": 95, "prediction": "<answer>12*(78-54)/1</answer>"}
+{"id": 96, "prediction": "<answer>87 - 3*27 + 15</answer>"}
+{"id": 97, "prediction": "<answer> 82 + 56 - 9 - 45 </answer>"}
+{"id": 98, "prediction": "<answer>91 - 23 - 1</answer>"}
+{"id": 99, "prediction": "<answer>52 + 25 - 51</answer>"}
+{"id": 100, "prediction": "<answer>83 + 88 - 87</answer>"}
+{"id": 101, "prediction": "<answer>18 + 90 - 11</answer>"}
+{"id": 102, "prediction": "<answer>26 + 71 - 78 - 50</answer>"}
+{"id": 103, "prediction": "<answer>27 + 19 - 32 - 57</answer>"}
+{"id": 104, "prediction": "<answer> 55 + 46 - 39 </answer>"}
+{"id": 105, "prediction": "<answer>98 - 82 + 16</answer>"}
+{"id": 106, "prediction": "<answer>63 - 61 + 38</answer>"}
+{"id": 107, "prediction": "<answer>80 - 55 + 74 - 53</answer>"}
+{"id": 108, "prediction": "<answer>98 - 94 / 2</answer>"}
+{"id": 109, "prediction": "<answer>40 - 17 + 10</answer>"}
+{"id": 110, "prediction": "<answer>11*55 - 28</answer>"}
+{"id": 111, "prediction": "<answer>51 + 60 - 18</answer>"}
+{"id": 112, "prediction": "<answer>75 - 81 + 9 - 39</answer>"}
+{"id": 113, "prediction": "<answer>73 - 70 / 70</answer>"}
+{"id": 114, "prediction": "<answer> 66 - 23 - 14 + 25 </answer>"}
+{"id": 115, "prediction": "<answer>73 - 14 - 70</answer>"}
+{"id": 116, "prediction": "<answer>38 + 17 - 86 + 15</answer>"}
+{"id": 117, "prediction": "<answer>24 + 90 - 87 - 24</answer>"}
+{"id": 118, "prediction": "<answer> 36 - (7 + 15) </answer>"}
+{"id": 119, "prediction": "<answer>78 - 86 + 7</answer>"}
+{"id": 120, "prediction": "<answer>63 + 88 - 16 - 6</answer>"}
+{"id": 121, "prediction": "<answer>78 + 64 - 57</answer>"}
+{"id": 122, "prediction": "<answer>4*80 - 52 - 32</answer>"}
+{"id": 123, "prediction": "<answer> 80 + 53 - 33 </answer>"}
+{"id": 124, "prediction": "<answer> 69 - 52 + 4 </answer>"}
+{"id": 125, "prediction": "<answer> 94 - (3 * 21) </answer>"}
+{"id": 126, "prediction": "<answer>93 - 87 + 92</answer>"}
+{"id": 127, "prediction": "<answer>30 + 80 - 21 - 10</answer>"}
+{"id": 128, "prediction": "<answer>27 - 23 - 6 + 22</answer>"}
+{"id": 129, "prediction": "<answer>50 + 6 + 60 - 5</answer>"}
+{"id": 130, "prediction": "<answer>65 + 48 - 1 - 64</answer>"}
+{"id": 131, "prediction": "<answer> 92 - (39 + 4) * 2 </answer>"}
+{"id": 132, "prediction": "<answer> (15 - (48 / (35 - 11))) </answer>"}
+{"id": 133, "prediction": "<answer>75 - 17 + 20</answer>"}
+{"id": 134, "prediction": "<answer>54 - 25 - 20 + 2</answer>"}
+{"id": 135, "prediction": "<answer> 73 + 53 - 38 </answer>"}
+{"id": 136, "prediction": "<answer>43 - 59 + 7 + 40</answer>"}
+{"id": 137, "prediction": "<answer>83 + 3 - 79 - 82</answer>"}
+{"id": 138, "prediction": "<answer>31 + 50 - 17 - 12</answer>"}
+{"id": 139, "prediction": "<answer>11*5 - 50/50</answer>"}
+{"id": 140, "prediction": "<answer>75 - 67 + 28</answer>"}
+{"id": 141, "prediction": "<answer> 63 - 42 + 30 </answer>"}
+{"id": 142, "prediction": "<answer>35 + 14 - 60 / 3</answer>"}
+{"id": 143, "prediction": "<answer>84 - 33 - 29</answer>"}
+{"id": 144, "prediction": "<answer>11 + 72 - 47</answer>"}
+{"id": 145, "prediction": "<answer>62 - 82 + 58 - 24</answer>"}
+{"id": 146, "prediction": "<answer>40 + 54 - 78 - 20</answer>"}
+{"id": 147, "prediction": "<answer>69 - 30 - 25 - 36</answer>"}
+{"id": 148, "prediction": "<answer> 99 - 78 + 50 </answer>"}
+{"id": 149, "prediction": "<answer> 94 - 75 + 65 - 50 </answer>"}
+{"id": 150, "prediction": "<answer>93 - 98 + 41 - 90</answer>"}
+{"id": 151, "prediction": "<answer>78 - 66 + 57</answer>"}
+{"id": 152, "prediction": "<answer>31 + 62 - 55 - 86</answer>"}
+{"id": 153, "prediction": "<answer>39 - 66 + 7 - 14</answer>"}
+{"id": 154, "prediction": "<answer> 27 + 13 - 29 + 20 </answer>"}
+{"id": 155, "prediction": "<answer>35 + 88 - 98 - 34</answer>"}
+{"id": 156, "prediction": "<answer>90 - 5*9 + 20</answer>"}
+{"id": 157, "prediction": "<answer> 11*(87-53)+1 </answer>"}
+{"id": 158, "prediction": "<answer>36 + 41 - 56 - 45</answer>"}
+{"id": 159, "prediction": "<answer>98 - 49 - 92</answer>"}
+{"id": 160, "prediction": "<answer>70 - 9 - 15 + 73</answer>"}
+{"id": 161, "prediction": "<answer>68 - 76 + 65</answer>"}
+{"id": 162, "prediction": "<answer>59 - 78 + 52</answer>"}
+{"id": 163, "prediction": "<answer>75 - 95 + 42 - 4</answer>"}
+{"id": 164, "prediction": "<answer> 88 - 24 - 22 + 20 </answer>"}
+{"id": 165, "prediction": "<answer> 75 - 42 - 19 + 5 </answer>"}
+{"id": 166, "prediction": "<answer>75 - 34 - (2 * 43)</answer>"}
+{"id": 167, "prediction": "<answer>27*1 + 70</answer>"}
+{"id": 168, "prediction": "<answer>6*17 - 39</answer>"}
+{"id": 169, "prediction": "<answer>25 + 50 - 57 - 38</answer>"}
+{"id": 170, "prediction": "<answer>86 + 49 - 42</answer>"}
+{"id": 171, "prediction": "<answer>34 - 56 + 54</answer>"}
+{"id": 172, "prediction": "<answer>40 + 56 - 9 - 71</answer>"}
+{"id": 173, "prediction": "<answer>39 + 37 - 48</answer>"}
+{"id": 174, "prediction": "<answer>28 + 52 - 70 - 83</answer>"}
+{"id": 175, "prediction": "<answer> 6 * (3 + 2) </answer>"}
+{"id": 176, "prediction": "<answer>10 * 4 + 3</answer>"}
+{"id": 177, "prediction": "<answer>10*(84-57+31)</answer>"}
+{"id": 178, "prediction": "<answer>8*22 - 9 + 13</answer>"}
+{"id": 179, "prediction": "<answer>84 - 70 + 37</answer>"}
+{"id": 180, "prediction": "<answer>1*40 + 23 - 3</answer>"}
+{"id": 181, "prediction": "<answer>2 * 32 - 76</answer>"}
+{"id": 182, "prediction": "<answer>42 - 3*45</answer>"}
+{"id": 183, "prediction": "<answer>76 + 98 - 44 - 76</answer>"}
+{"id": 184, "prediction": "<answer>43 - 75 + 64 - 22</answer>"}
+{"id": 185, "prediction": "<answer>24 + 31 - 84 - 46</answer>"}
+{"id": 186, "prediction": "<answer> 92 + 6 - 18 - 21 </answer>"}
+{"id": 187, "prediction": "<answer>45 + 91 - 45 - 5</answer>"}
+{"id": 188, "prediction": "<answer> 46 - (9 * 23 / 69) </answer>"}
+{"id": 189, "prediction": "<answer> 18 + (2 / 1) </answer>"}
+{"id": 190, "prediction": "<answer>42 + 12 - 3 - 64</answer>"}
+{"id": 191, "prediction": "<answer> (79 - 98 + 75) </answer>"}
+{"id": 192, "prediction": "<answer>49 + 93 - 42</answer>"}
+{"id": 193, "prediction": "<answer>16*(90-59)+51</answer>"}
+{"id": 194, "prediction": "<answer> 90 - 83 + 42 - 18 </answer>"}
+{"id": 195, "prediction": "<answer>89</answer>"}
+{"id": 196, "prediction": "<answer> 36 - (9 + 26) + 34 </answer>"}
+{"id": 197, "prediction": "<answer>12*50 - 72 - 10</answer>"}
+{"id": 198, "prediction": "<answer>79 - 65 + 42</answer>"}
+{"id": 199, "prediction": "<answer>20*(99-88)+2</answer>"}
+{"id": 200, "prediction": "<answer>21 + 80 - 48</answer>"}
+{"id": 201, "prediction": "<answer> 62 + 31 - 93 + 79 </answer>"}
+{"id": 202, "prediction": "<answer>73 - 66 + 61</answer>"}
+{"id": 203, "prediction": "<answer>83 - 90 + 1 + 42</answer>"}
+{"id": 204, "prediction": "<answer>74 - 31 = 43</answer>"}
+{"id": 205, "prediction": "<answer>32 - 24 + 13</answer>"}
+{"id": 206, "prediction": "<answer>86 - 24 - 65 + 82</answer>"}
+{"id": 207, "prediction": "<answer>8 * 56 - 17</answer>"}
+{"id": 208, "prediction": "<answer>77 - 11 + 10</answer>"}
+{"id": 209, "prediction": "<answer> (85 - 79) + 97 - 11 </answer>"}
+{"id": 210, "prediction": "<answer>36 + 41 - 29 - 35</answer>"}
+{"id": 211, "prediction": "<answer>26*3 + 49</answer>"}
+{"id": 212, "prediction": "<answer> 47 + 39 - 9 - 45 </answer>"}
+{"id": 213, "prediction": "<answer>68 - 27 + 45 - 18</answer>"}
+{"id": 214, "prediction": "<answer> (56 - 45) + 79 </answer>"}
+{"id": 215, "prediction": "<answer>90 - 41 + 25 - 9</answer>"}
+{"id": 216, "prediction": "<answer>4*92 - 59</answer>"}
+{"id": 217, "prediction": "<answer>44 - 61 + 21 - 38</answer>"}
+{"id": 218, "prediction": "<answer>26 + 85 - 25</answer>"}
+{"id": 219, "prediction": "<answer>10*(58-30)+8</answer>"}
+{"id": 220, "prediction": "<answer>18 + 58 - 1</answer>"}
+{"id": 221, "prediction": "<answer>30 - (88 / 4) + 6</answer>"}
+{"id": 222, "prediction": "<answer>8 + 93 - 3</answer>"}
+{"id": 223, "prediction": "<answer>30 + 28 - 42</answer>"}
+{"id": 224, "prediction": "<answer>45 + 20 - 3 - 26</answer>"}
+{"id": 225, "prediction": "<answer>51 + 84 - 3</answer>"}
+{"id": 226, "prediction": "<answer>68 - 46 - 44 + 62</answer>"}
+{"id": 227, "prediction": "<answer>92 - 26 / 13</answer>"}
+{"id": 228, "prediction": "<answer> 53 - (36 / 6) </answer>"}
+{"id": 229, "prediction": "<answer>56 + 56 - 9 - 10</answer>"}
+{"id": 230, "prediction": "<answer>48 + 31 - 28</answer>"}
+{"id": 231, "prediction": "<answer>51 + 12 - 9</answer>"}
+{"id": 232, "prediction": "<answer>43 - 57 + 32</answer>"}
+{"id": 233, "prediction": "<answer>41 + 68 - 18</answer>"}
+{"id": 234, "prediction": "<answer>41 + 26 - 82 + 92</answer>"}
+{"id": 235, "prediction": "<answer>4 * 36 / 72</answer>"}
+{"id": 236, "prediction": "<answer>52 - 61 + 30</answer>"}
+{"id": 237, "prediction": "<answer>68 - 34 - 2 + 16</answer>"}
+{"id": 238, "prediction": "<answer>98 - 27 + 92</answer>"}
+{"id": 239, "prediction": "<answer>68 - 9 - 63 + 60</answer>"}
+{"id": 240, "prediction": "<answer>24 + 1 + 24</answer>"}
+{"id": 241, "prediction": "<answer>46 + 34 - 44</answer>"}
+{"id": 242, "prediction": "<answer> 36 - 49 + 15 - 26 </answer>"}
+{"id": 243, "prediction": "<answer> (87 - 72) + 55 </answer>"}
+{"id": 244, "prediction": "<answer>13 + 51 - 24</answer>"}
+{"id": 245, "prediction": "<answer>29</answer>"}
+{"id": 246, "prediction": "<answer>64 - 35 - 9 + 11</answer>"}
+{"id": 247, "prediction": "<answer> 81 + (98 - 4) - 2 </answer>"}
+{"id": 248, "prediction": "<answer>90 - 35 + 98</answer>"}
+{"id": 249, "prediction": "<answer> 96 - (83 - 13) + 68 </answer>"}
+{"id": 250, "prediction": "<answer>64 - 22 - 20</answer>"}
+{"id": 251, "prediction": "<answer>33*51 - 47 - 12</answer>"}
+{"id": 252, "prediction": "<answer>90 - 65 - 14 + 24</answer>"}
+{"id": 253, "prediction": "<answer>18*3 + 42 - 25</answer>"}
+{"id": 254, "prediction": "<answer> 56 - 39 + 10 - 16 </answer>"}
+{"id": 255, "prediction": "<answer>45 - 75 + 35 - 1</answer>"}
+{"id": 256, "prediction": "<answer>81 - 44 + 18</answer>"}
+{"id": 257, "prediction": "<answer>6*93 - 9</answer>"}
+{"id": 258, "prediction": "<answer>48 + 66 - 90 - 2</answer>"}
+{"id": 259, "prediction": "<answer>16*75 - 15</answer>"}
+{"id": 260, "prediction": "<answer>38 + 80 - 73</answer>"}
+{"id": 261, "prediction": "<answer>13*5 - 64 + 65</answer>"}
+{"id": 262, "prediction": "<answer>31 - (42 / 6)</answer>"}
+{"id": 263, "prediction": "<answer> (95 - 41) + 4 * 2 </answer>"}
+{"id": 264, "prediction": "<answer>94 - 72 + 39 - 11</answer>"}
+{"id": 265, "prediction": "<answer> 77 + 63 - 2 - 17 </answer>"}
+{"id": 266, "prediction": "<answer>73 - 41 - 41</answer>"}
+{"id": 267, "prediction": "<answer>97 - 72 + 1</answer>"}
+{"id": 268, "prediction": "<answer>97 - 54 - 50 + 2</answer>"}
+{"id": 269, "prediction": "<answer>5*46 - 30 - 17</answer>"}
+{"id": 270, "prediction": "<answer>68 + 5 * 17 - 5</answer>"}
+{"id": 271, "prediction": "<answer>46 - (7 + 7)</answer>"}
+{"id": 272, "prediction": "<answer>87 - 64 - 16 + 48</answer>"}
+{"id": 273, "prediction": "<answer>99 - 62 + 39</answer>"}
+{"id": 274, "prediction": "<answer>74 + 25 - 24</answer>"}
+{"id": 275, "prediction": "<answer>38 - 70 + 31</answer>"}
+{"id": 276, "prediction": "<answer> 75 - (42 - 26) </answer>"}
+{"id": 277, "prediction": "<answer>8*(71-68)+19</answer>"}
+{"id": 278, "prediction": "<answer>64 + 24 - 51 - 68</answer>"}
+{"id": 279, "prediction": "<answer>35 - 87 + 67</answer>"}
+{"id": 280, "prediction": "<answer> 88 - (52 + 22) </answer>"}
+{"id": 281, "prediction": "<answer>64 - 38 - 9 + 55</answer>"}
+{"id": 282, "prediction": "<answer>80 + 92 - 8</answer>"}
+{"id": 283, "prediction": "<answer> 82 - (98 - 51) + 28 </answer>"}
+{"id": 284, "prediction": "<answer>3 * 95 - 71 - 4</answer>"}
+{"id": 285, "prediction": "<answer>92</answer>"}
+{"id": 286, "prediction": "<answer>90 - 73 + 9</answer>"}
+{"id": 287, "prediction": "<answer>18*83 - 15</answer>"}
+{"id": 288, "prediction": "<answer>14*88 - 57 - 4</answer>"}
+{"id": 289, "prediction": "<answer>53 + 65 - 50 - 3</answer>"}
+{"id": 290, "prediction": "<answer>18 * 20 - 7</answer>"}
+{"id": 291, "prediction": "<answer>83 - 62 - 18 + 28</answer>"}
+{"id": 292, "prediction": "<answer>47 - 82 + 13 - 88</answer>"}
+{"id": 293, "prediction": "<answer>99 - 80 / 2 + 14</answer>"}
+{"id": 294, "prediction": "<answer> 53 + 78 - 53 - 50 </answer>"}
+{"id": 295, "prediction": "<answer> 59 + 42 - 15 </answer>"}
+{"id": 296, "prediction": "<answer>54 + 44 - 2</answer>"}
+{"id": 297, "prediction": "<answer>20 + 22 - 40</answer>"}
+{"id": 298, "prediction": "<answer> 90 - 32 - (66 / 33)</answer>"}
+{"id": 299, "prediction": "<answer>92 - 60 - 51 + 18</answer>"}
+{"id": 300, "prediction": "<answer>37 - 24 + 33 - 76</answer>"}
+{"id": 301, "prediction": "<answer>7*2 + (34 - 29)</answer>"}
+{"id": 302, "prediction": "<answer>87 + 74 - 83</answer>"}
+{"id": 303, "prediction": "<answer>89 - 91 + 37 - 70</answer>"}
+{"id": 304, "prediction": "<answer>32 + 80 - 25</answer>"}
+{"id": 305, "prediction": "<answer> 77 + (85 - 38) - 24 </answer>"}
+{"id": 306, "prediction": "<answer>92</answer>"}
+{"id": 307, "prediction": "<answer> 93 - 86 + 36 </answer>"}
+{"id": 308, "prediction": "<answer>42 - 25 - 25 + 74</answer>"}
+{"id": 309, "prediction": "<answer> 72 - 57 + 60 </answer>"}
+{"id": 310, "prediction": "<answer> (57 - 9) + 52 </answer>"}
+{"id": 311, "prediction": "<answer>69 - 58 + 63</answer>"}
+{"id": 312, "prediction": "<answer>42 - 47 + 40</answer>"}
+{"id": 313, "prediction": "<answer>85 - 25 + 88</answer>"}
+{"id": 314, "prediction": "<answer>73 + 80 - 88 - 40</answer>"}
+{"id": 315, "prediction": "<answer>81 + 80 - 88</answer>"}
+{"id": 316, "prediction": "<answer>61 + 87 - 64</answer>"}
+{"id": 317, "prediction": "<answer>4 * 76 - 68</answer>"}
+{"id": 318, "prediction": "<answer>75 - 32 - 25</answer>"}
+{"id": 319, "prediction": "<answer>94 - 60 - 23 + 68</answer>"}
+{"id": 320, "prediction": "<answer>97 - 92 - 95 + 96</answer>"}
+{"id": 321, "prediction": "<answer> 69 + 48 - 22 </answer>"}
+{"id": 322, "prediction": "<answer> (74 - 40) + 20 </answer>"}
+{"id": 323, "prediction": "<answer>80 - 62 - 8</answer>"}
+{"id": 324, "prediction": "<answer> 83 - 42 + 34 </answer>"}
+{"id": 325, "prediction": "<answer>38 + 90 - 34 - 19</answer>"}
+{"id": 326, "prediction": "<answer>72 - 1 * 20</answer>"}
+{"id": 327, "prediction": "<answer>16 * 31 - 2</answer>"}
+{"id": 328, "prediction": "<answer>14*30 - 2 - 10</answer>"}
+{"id": 329, "prediction": "<answer>48 + 1 - 34 - 73</answer>"}
+{"id": 330, "prediction": "<answer>86 - 41 - 86</answer>"}
+{"id": 331, "prediction": "<answer> (98 - 63) + 16 - 49 </answer>"}
+{"id": 332, "prediction": "<answer>65 - 42 + 62</answer>"}
+{"id": 333, "prediction": "<answer>3*45 - 44 - 28</answer>"}
+{"id": 334, "prediction": "<answer>61 + 20 - 15</answer>"}
+{"id": 335, "prediction": "<answer>11*23 - 94 - 86</answer>"}
+{"id": 336, "prediction": "<answer>14*5 - 24 - 40</answer>"}
+{"id": 337, "prediction": "<answer>80 - 50 + 2 + 84</answer>"}
+{"id": 338, "prediction": "<answer>23 + 59 - 25</answer>"}
+{"id": 339, "prediction": "<answer>48 - 58 + 37 - 42</answer>"}
+{"id": 340, "prediction": "<answer>9*37 - 29</answer>"}
+{"id": 341, "prediction": "<answer>53 - 94 + 2</answer>"}
+{"id": 342, "prediction": "<answer> 3 * 6 + 72 - 18 </answer>"}
+{"id": 343, "prediction": "<answer>70 + 83 - 79 - 74</answer>"}
+{"id": 344, "prediction": "<answer>23*5 - 65 + 8</answer>"}
+{"id": 345, "prediction": "<answer>70 - 58 + 23 - 8</answer>"}
+{"id": 346, "prediction": "<answer>54</answer>"}
+{"id": 347, "prediction": "<answer>7 * 3 - 80 + 74</answer>"}
+{"id": 348, "prediction": "<answer>82 - 95 + 7 - 23</answer>"}
+{"id": 349, "prediction": "<answer>91 - 60 - 6</answer>"}
+{"id": 350, "prediction": "<answer>66 + 82 - 52</answer>"}
+{"id": 351, "prediction": "<answer>81 - 54 / 6</answer>"}
+{"id": 352, "prediction": "<answer>97 - 27 + 2</answer>"}
+{"id": 353, "prediction": "<answer>68 + 75 - 4</answer>"}
+{"id": 354, "prediction": "<answer>75 - 6 - 41</answer>"}
+{"id": 355, "prediction": "<answer> 49 + (42 - 37) </answer>"}
+{"id": 356, "prediction": "<answer>65 - 49 - 47 + 62</answer>"}
+{"id": 357, "prediction": "<answer>29 + 85 - 89</answer>"}
+{"id": 358, "prediction": "<answer>74 + 54 - 69</answer>"}
+{"id": 359, "prediction": "<answer> (84 - 60) + 38 </answer>"}
+{"id": 360, "prediction": "<answer> 81 - (55 + 13) </answer>"}
+{"id": 361, "prediction": "<answer>83 + 58 - 67</answer>"}
+{"id": 362, "prediction": "<answer>61 + 59 - 33</answer>"}
+{"id": 363, "prediction": "<answer>39 + 22 - 35</answer>"}
+{"id": 364, "prediction": "<answer>99 + 92 - 9 - 5</answer>"}
+{"id": 365, "prediction": "<answer>9*6 + 51</answer>"}
+{"id": 366, "prediction": "<answer> 50 - (26 - 16) </answer>"}
+{"id": 367, "prediction": "<answer> 55 - 32 - 34 + 22 </answer>"}
+{"id": 368, "prediction": "<answer>51 - 74 + 73</answer>"}
+{"id": 369, "prediction": "<answer>23 - 61 + 2 - 3</answer>"}
+{"id": 370, "prediction": "<answer>83 + 48 - 32</answer>"}
+{"id": 371, "prediction": "<answer>8*27 - 77 + 41</answer>"}
+{"id": 372, "prediction": "<answer> (92 - 55) + 60 </answer>"}
+{"id": 373, "prediction": "<answer>95 - 35 = 60</answer>"}
+{"id": 374, "prediction": "<answer>11*66 - 48</answer>"}
+{"id": 375, "prediction": "<answer>2*8 - 36 + 75</answer>"}
+{"id": 376, "prediction": "<answer> 81 - 77 + 38 </answer>"}
+{"id": 377, "prediction": "<answer>56</answer>"}
+{"id": 378, "prediction": "<answer>76 - 98 + 21 - 19</answer>"}
+{"id": 379, "prediction": "<answer>7*91 - 8</answer>"}
+{"id": 380, "prediction": "<answer> 71 - 41 + 17 </answer>"}
+{"id": 381, "prediction": "<answer>97 - 84 + 67 - 91</answer>"}
+{"id": 382, "prediction": "<answer>62 - 86 + 12 - 26</answer>"}
+{"id": 383, "prediction": "<answer>3 * 52 - 48 + 7</answer>"}
+{"id": 384, "prediction": "<answer>63 + 90 - 80 - 94</answer>"}
+{"id": 385, "prediction": "<answer>23 + 89 - 36 - 16</answer>"}
+{"id": 386, "prediction": "<answer>7*13 - 58 - 14</answer>"}
+{"id": 387, "prediction": "<answer>45 + 12 - 40 - 1</answer>"}
+{"id": 388, "prediction": "<answer>47</answer>"}
+{"id": 389, "prediction": "<answer>82 + 63 - 83 - 18</answer>"}
+{"id": 390, "prediction": "<answer>83 - 72 + 5 - 23</answer>"}
+{"id": 391, "prediction": "<answer>94 - 68 - 33 + 13</answer>"}
+{"id": 392, "prediction": "<answer> (96 - 83) + 14 </answer>"}
+{"id": 393, "prediction": "<answer>32 + 47 - 74 + 4</answer>"}
+{"id": 394, "prediction": "<answer>14*58 - 99 - 41</answer>"}
+{"id": 395, "prediction": "<answer> 58 - (25 + 1) </answer>"}
+{"id": 396, "prediction": "<answer>59 - 11 * 1</answer>"}
+{"id": 397, "prediction": "<answer>5*61 - 39 - 13</answer>"}
+{"id": 398, "prediction": "<answer>6*29 + 50 - 2</answer>"}
+{"id": 399, "prediction": "<answer> 76 - 52 + 44 - 2 </answer>"}
+{"id": 400, "prediction": "<answer>24*19 - 40 - 23</answer>"}
+{"id": 401, "prediction": "<answer>45 - 78 + 2 + 73 - 16</answer>"}
+{"id": 402, "prediction": "<answer> 74 - 69 - 52 + 7 + 49 </answer>"}
+{"id": 403, "prediction": "<answer> (56 - 92) + (8 - 43) + 55 </answer>"}
+{"id": 404, "prediction": "<answer> (62 - 47) + (90 - 37 - 25) </answer>"}
+{"id": 405, "prediction": "<answer>62 - 57 + 48 - 72 + 90</answer>"}
+{"id": 406, "prediction": "<answer>81 + 97 - 76 - 54 - 12</answer>"}
+{"id": 407, "prediction": "<answer>79 - 63 + 84 - 66 - 31</answer>"}
+{"id": 408, "prediction": "<answer>84 - 98 + 64 - 58 + 49</answer>"}
+{"id": 409, "prediction": "<answer> (54 - 60 + 44 - 46 + 98) </answer>"}
+{"id": 410, "prediction": "<answer> (98 - 76) * (3 + 35 - 27) </answer>"}
+{"id": 411, "prediction": "<answer>42 + 23 - 10 - 1 - 38</answer>"}
+{"id": 412, "prediction": "<answer> 5*(55-81)+36-15 </answer>"}
+{"id": 413, "prediction": "<answer>99 - 8 - 15 - 36 + 92</answer>"}
+{"id": 414, "prediction": "<answer> 61 + 35 = 96 </answer>"}
+{"id": 415, "prediction": "<answer>94 - 56 - 71 + 52 + 66</answer>"}
+{"id": 416, "prediction": "<answer>79 - (37 + 24) + 17 - 71</answer>"}
+{"id": 417, "prediction": "<answer> (93 - 67) + (66 - 17 - 34) </answer>"}
+{"id": 418, "prediction": "<answer>82 - 4*23 - 42 + 72</answer>"}
+{"id": 419, "prediction": "<answer>31 + 4 - 22 - 40 + 33</answer>"}
+{"id": 420, "prediction": "<answer>3*27 - 44 + 74 - 3</answer>"}
+{"id": 421, "prediction": "<answer> 93 - 51 + 7 - 8 </answer>"}
+{"id": 422, "prediction": "<answer>88 - 52 + 23 - 46 + 33</answer>"}
+{"id": 423, "prediction": "<answer> (84 - 6) + (54 - 19 - 87) </answer>"}
+{"id": 424, "prediction": "<answer>95 - 39 - 21 - 70 + 38</answer>"}
+{"id": 425, "prediction": "<answer>31 - 69 + 53 - 6 - 4</answer>"}
+{"id": 426, "prediction": "<answer>94 - 58 + 2 - 25</answer>"}
+{"id": 427, "prediction": "<answer> (77 - 51) + (46 - 42) + 24 </answer>"}
+{"id": 428, "prediction": "<answer>86 - 77 + 16 - 27 + 55</answer>"}
+{"id": 429, "prediction": "<answer>12*(97-45)+49-21</answer>"}
+{"id": 430, "prediction": "<answer>94 + 12 - 95 - 45 - 76</answer>"}
+{"id": 431, "prediction": "<answer>79 - 88 + 16 - 69 + 74</answer>"}
+{"id": 432, "prediction": "<answer>80 - (86 / (80 / 40)) + 25</answer>"}
+{"id": 433, "prediction": "<answer> 6*(77-9)/3 + 7 </answer>"}
+{"id": 434, "prediction": "<answer> 78 - 67 + 45 - 34 - 24 </answer>"}
+{"id": 435, "prediction": "<answer> (87 - 60) + (22 - 20) + 42 </answer>"}
+{"id": 436, "prediction": "<answer> (69 - 58) + (55 - 42 - 1) </answer>"}
+{"id": 437, "prediction": "<answer> 60 + 27 - (50 - (26 - 20)) </answer>"}
+{"id": 438, "prediction": "<answer> 86 - (90 - 71) + 29 - 44 </answer>"}
+{"id": 439, "prediction": "<answer>67 + 15 - 89 + 93 - 66</answer>"}
+{"id": 440, "prediction": "<answer>8 + 93 - 27 - 54 + 35</answer>"}
+{"id": 441, "prediction": "<answer>49 + 72 - 39 - 13 - 61</answer>"}
+{"id": 442, "prediction": "<answer>94 - 53 - 42 + 44 - 35</answer>"}
+{"id": 443, "prediction": "<answer>33 + 9 + (55 - 41) - 94</answer>"}
+{"id": 444, "prediction": "<answer>81 + 36 - 28 - 49 + 35</answer>"}
+{"id": 445, "prediction": "<answer>93 - 34 - 68 + 36 - 82</answer>"}
+{"id": 446, "prediction": "<answer>8 + 54 - 13 - 24 - 66</answer>"}
+{"id": 447, "prediction": "<answer>63 - 41 - (44 / (13 - 2))</answer>"}
+{"id": 448, "prediction": "<answer>70 - 34 = 36</answer>"}
+{"id": 449, "prediction": "<answer>59 + 33</answer>"}
+{"id": 450, "prediction": "<answer> 67 - (56 + 41) + 54 - 62 </answer>"}
+{"id": 451, "prediction": "<answer>66 - 43 - (30 + 27 - 43)</answer>"}
+{"id": 452, "prediction": "<answer>40 + 85 - 21 - 76 - 37</answer>"}
+{"id": 453, "prediction": "<answer>33 + 42 - 95 + 77 - 56</answer>"}
+{"id": 454, "prediction": "<answer>85 - 83 + 8</answer>"}
+{"id": 455, "prediction": "<answer>66 - 96 + 52 - 56 + 44</answer>"}
+{"id": 456, "prediction": "<answer> (46 + 83 - 91) + 44 - 21 </answer>"}
+{"id": 457, "prediction": "<answer> (97 - 95) * (22 - 42 + 92) </answer>"}
+{"id": 458, "prediction": "<answer> (98 - 78) * (67 - (35 + 1)) </answer>"}
+{"id": 459, "prediction": "<answer> 46 + 73 - 1 - 14 - 30 </answer>"}
+{"id": 460, "prediction": "<answer> (88 - 69 + 31 - 26 - 45) </answer>"}
+{"id": 461, "prediction": "<answer>61 - 73 + 8 + 39 - 4</answer>"}
+{"id": 462, "prediction": "<answer>100 - 99 = 1</answer>"}
+{"id": 463, "prediction": "<answer> (93 - 21) + (64 - 59 - 22) </answer>"}
+{"id": 464, "prediction": "<answer>3*28 - 60 + 40 - 75</answer>"}
+{"id": 465, "prediction": "<answer> (14 + 75 - 2) * 42 / 18 </answer>"}
+{"id": 466, "prediction": "<answer>20*40 - 62 - 35 - 19</answer>"}
+{"id": 467, "prediction": "<answer>97 - 55 = 42</answer>"}
+{"id": 468, "prediction": "<answer>45 + 37 - 94 + 38 - 72</answer>"}
+{"id": 469, "prediction": "<answer>92 + 18 - 57 - 88 + 31</answer>"}
+{"id": 470, "prediction": "<answer>79 - 57 + (10 - (38 - 78))</answer>"}
+{"id": 471, "prediction": "<answer>48 + 22 - 12 - 81 + 69</answer>"}
+{"id": 472, "prediction": "<answer>80 - 79 + 51 - 48 - 83</answer>"}
+{"id": 473, "prediction": "<answer> 88 - (54 + 37) + 21 - 37 </answer>"}
+{"id": 474, "prediction": "<answer>88 - 50 + 48 / 36</answer>"}
+{"id": 475, "prediction": "<answer> 68 - (92 + 55) + 98 - 6</answer>"}
+{"id": 476, "prediction": "<answer>96 - 79 + 10 + 11 - 17</answer>"}
+{"id": 477, "prediction": "<answer>7*35 - 90 - 69 - 33</answer>"}
+{"id": 478, "prediction": "<answer>6*96 - 78 - 99 + 4</answer>"}
+{"id": 479, "prediction": "<answer> (59 - 35) + (83 - 46 - 21) </answer>"}
+{"id": 480, "prediction": "<answer>12*76 - 86 - 61 - 18</answer>"}
+{"id": 481, "prediction": "<answer>83 - 56 + 18 - 52 + 13</answer>"}
+{"id": 482, "prediction": "<answer>14*2+17-3</answer>"}
+{"id": 483, "prediction": "<answer>42 + 16 - 85 + 62 - 47</answer>"}
+{"id": 484, "prediction": "<answer>76 + 41 - 36 + 47 - 77</answer>"}
+{"id": 485, "prediction": "<answer>83 - 94 + 68 - 61 + 58</answer>"}
+{"id": 486, "prediction": "<answer>2 * 52 - 83 + 24 - 11</answer>"}
+{"id": 487, "prediction": "<answer> 40 - (7 + 17) + 25 - 4 </answer>"}
+{"id": 488, "prediction": "<answer>85 - 99 + 60 - 43</answer>"}
+{"id": 489, "prediction": "<answer> (60 - 8) + (97 - 85 - 16) </answer>"}
+{"id": 490, "prediction": "<answer>29 + 100 - 57 - 97 - 21</answer>"}
+{"id": 491, "prediction": "<answer>8 + 42 - 97 + 13 - 95</answer>"}
+{"id": 492, "prediction": "<answer> (60 - 50) + (7 * 41) - 60 </answer>"}
+{"id": 493, "prediction": "<answer>55 + 32 + 85 - 46 - 28</answer>"}
+{"id": 494, "prediction": "<answer>81 + 57 - 74 - 27 - 50</answer>"}
+{"id": 495, "prediction": "<answer> 93 + 43 - 83 - 69 - 97 </answer>"}
+{"id": 496, "prediction": "<answer> 76 - 59 - 43 + 18 + 46 </answer>"}
+{"id": 497, "prediction": "<answer> ((78 - 68) * (14 - 77)) + 84 </answer>"}
+{"id": 498, "prediction": "<answer>43 + 64 - 74 + 80 - 35</answer>"}
+{"id": 499, "prediction": "<answer>41 - 62 + 33 - 7 - 49</answer>"}
+{"id": 500, "prediction": "<answer>94 - 75 + 32 - 72</answer>"}

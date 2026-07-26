@@ -1,0 +1,55 @@
+{
+  "checkpoint": "/root/autodl-tmp/CS60004/lab3/outputs/dpo/r8_onepos_targeted_failures_ep2/final",
+  "test_file": "lab3/datasets/rl_train_test_datasets/raw_test.json",
+  "num_samples": 500,
+  "candidate_count": 1,
+  "runtime_sec": 140.5987868309021,
+  "generation": {
+    "api_base": "http://127.0.0.1:8001/v1",
+    "max_tokens": 1024,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "enable_thinking": true,
+    "request_concurrency": 64,
+    "timeout": 600
+  },
+  "single_shot": {
+    "num_samples": 500,
+    "format_rate": 0.504,
+    "expr_valid_rate": 0.476,
+    "accuracy": 0.472,
+    "avg_output_tokens": 150.036,
+    "reasons": {
+      "ok": 236,
+      "missing_answer": 248,
+      "number_usage_error": 12,
+      "wrong_result": 2,
+      "ValueError": 1,
+      "illegal_character": 1
+    }
+  },
+  "pass_at_1": {
+    "num_samples": 500,
+    "format_rate": 0.504,
+    "expr_valid_rate": 0.476,
+    "accuracy": 0.472,
+    "avg_output_tokens": 150.036,
+    "reasons": {
+      "ok": 236,
+      "missing_answer": 248,
+      "number_usage_error": 12,
+      "wrong_result": 2,
+      "ValueError": 1,
+      "illegal_character": 1
+    }
+  },
+  "files": {
+    "single_predictions": "lab3/outputs/eval/dpo_r8_onepos_targeted_failures_ep2_raw_test500_single.single.jsonl",
+    "passk_candidates": "lab3/outputs/eval/dpo_r8_onepos_targeted_failures_ep2_raw_test500_single.pass1.jsonl",
+    "correct_messages": "lab3/outputs/eval/dpo_r8_onepos_targeted_failures_ep2_raw_test500_single.pass1.correct_messages.jsonl",
+    "summary": "lab3/outputs/eval/dpo_r8_onepos_targeted_failures_ep2_raw_test500_single.summary.json"
+  }
+}

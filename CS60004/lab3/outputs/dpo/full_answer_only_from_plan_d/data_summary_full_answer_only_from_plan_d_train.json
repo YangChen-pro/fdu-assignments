@@ -1,0 +1,289 @@
+{
+  "num_rows": 115826,
+  "chosen": {
+    "num_samples": 115826,
+    "format_rate": 1.0,
+    "expr_valid_rate": 1.0,
+    "accuracy": 1.0,
+    "avg_output_tokens": 3.0,
+    "reasons": {
+      "ok": 115826
+    },
+    "success_examples": [
+      {
+        "prediction": "<answer> (((15*10)-59)-64) </answer>",
+        "numbers": [
+          64,
+          15,
+          59,
+          10
+        ],
+        "target": 27,
+        "sample_id": 85112,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": true,
+          "reason": "ok",
+          "answer": "(((15*10)-59)-64)",
+          "value": 27.0,
+          "output_tokens": 3
+        }
+      },
+      {
+        "prediction": "<answer> ((7*16)-(35+18)) </answer>",
+        "numbers": [
+          7,
+          16,
+          35,
+          18
+        ],
+        "target": 59,
+        "sample_id": 48251,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": true,
+          "reason": "ok",
+          "answer": "((7*16)-(35+18))",
+          "value": 59.0,
+          "output_tokens": 3
+        }
+      },
+      {
+        "prediction": "<answer> ((38+77)/(53-48)) </answer>",
+        "numbers": [
+          48,
+          38,
+          77,
+          53
+        ],
+        "target": 23,
+        "sample_id": 87976,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": true,
+          "reason": "ok",
+          "answer": "((38+77)/(53-48))",
+          "value": 23.0,
+          "output_tokens": 3
+        }
+      },
+      {
+        "prediction": "<answer> (((98*5)/14)-6) </answer>",
+        "numbers": [
+          6,
+          98,
+          14,
+          5
+        ],
+        "target": 29,
+        "sample_id": 18933,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": true,
+          "reason": "ok",
+          "answer": "(((98*5)/14)-6)",
+          "value": 29.0,
+          "output_tokens": 3
+        }
+      },
+      {
+        "prediction": "<answer> (83+((7-78)-1)) </answer>",
+        "numbers": [
+          83,
+          1,
+          78,
+          7
+        ],
+        "target": 11,
+        "sample_id": 99719,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": true,
+          "reason": "ok",
+          "answer": "(83+((7-78)-1))",
+          "value": 11.0,
+          "output_tokens": 3
+        }
+      }
+    ],
+    "failure_examples": []
+  },
+  "rejected": {
+    "num_samples": 115826,
+    "format_rate": 0.7148999361110632,
+    "expr_valid_rate": 0.5724189732875175,
+    "accuracy": 0.0,
+    "avg_output_tokens": 11.8372904183862,
+    "reasons": {
+      "wrong_result": 66301,
+      "number_usage_error": 16503,
+      "missing_answer": 33022
+    },
+    "success_examples": [],
+    "failure_examples": [
+      {
+        "prediction": "<think>This expression uses the numbers but reaches the wrong value.</think>\n<answer> 64 + 15 + 59 + 10 </answer>",
+        "numbers": [
+          64,
+          15,
+          59,
+          10
+        ],
+        "target": 27,
+        "sample_id": 85112,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": false,
+          "reason": "wrong_result",
+          "answer": "64 + 15 + 59 + 10",
+          "value": 148.0,
+          "output_tokens": 19
+        }
+      },
+      {
+        "prediction": "<think>This expression uses the numbers but reaches the wrong value.</think>\n<answer> 7 + 16 + 35 + 18 </answer>",
+        "numbers": [
+          7,
+          16,
+          35,
+          18
+        ],
+        "target": 59,
+        "sample_id": 48251,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": false,
+          "reason": "wrong_result",
+          "answer": "7 + 16 + 35 + 18",
+          "value": 76.0,
+          "output_tokens": 19
+        }
+      },
+      {
+        "prediction": "<think>I reused one number.</think>\n<answer> 48 + 48 </answer>",
+        "numbers": [
+          48,
+          38,
+          77,
+          53
+        ],
+        "target": 23,
+        "sample_id": 87976,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": false,
+          "correct": false,
+          "reason": "number_usage_error",
+          "answer": "48 + 48",
+          "value": null,
+          "output_tokens": 9
+        }
+      },
+      {
+        "prediction": "<think>This expression uses the numbers but reaches the wrong value.</think>\n<answer> 6 + 98 + 14 + 5 </answer>",
+        "numbers": [
+          6,
+          98,
+          14,
+          5
+        ],
+        "target": 29,
+        "sample_id": 18933,
+        "eval": {
+          "format_ok": true,
+          "expr_valid": true,
+          "correct": false,
+          "reason": "wrong_result",
+          "answer": "6 + 98 + 14 + 5",
+          "value": 123.0,
+          "output_tokens": 19
+        }
+      },
+      {
+        "prediction": "<think>The result is unclear.</think>\n<answer> </answer>",
+        "numbers": [
+          83,
+          1,
+          78,
+          7
+        ],
+        "target": 11,
+        "sample_id": 99719,
+        "eval": {
+          "format_ok": false,
+          "expr_valid": false,
+          "correct": false,
+          "reason": "missing_answer",
+          "answer": "",
+          "value": null,
+          "output_tokens": 0
+        }
+      }
+    ]
+  },
+  "skipped": [
+    {
+      "sample_id": 115213,
+      "numbers": [
+        5,
+        35,
+        63,
+        58,
+        14
+      ],
+      "target": 72,
+      "reason": "number_usage_error",
+      "chosen": "<answer> 0 </answer>"
+    },
+    {
+      "sample_id": 109941,
+      "numbers": [
+        29,
+        30,
+        90,
+        48,
+        88
+      ],
+      "target": 77,
+      "reason": "number_usage_error",
+      "chosen": "<answer> 0 </answer>"
+    },
+    {
+      "sample_id": 112663,
+      "numbers": [
+        28,
+        27,
+        37,
+        74,
+        50
+      ],
+      "target": 75,
+      "reason": "number_usage_error",
+      "chosen": "<answer> 0 </answer>"
+    },
+    {
+      "sample_id": 116275,
+      "numbers": [
+        100,
+        75,
+        23,
+        15,
+        6
+      ],
+      "target": 56,
+      "reason": "number_usage_error",
+      "chosen": "<answer> 0 </answer>"
+    }
+  ],
+  "num_skipped": 4,
+  "num_repaired": 0,
+  "chosen_backend": "solver",
+  "rejected_backend": "corrupt"
+}

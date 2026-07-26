@@ -1,0 +1,43 @@
+{
+  "num_samples": 500,
+  "num_records": 500,
+  "ok_count": 500,
+  "pending_count": 0,
+  "baseline_name": "persona",
+  "candidate_name": "sft_distill_memory_greedy",
+  "winner_counts": {
+    "sft_distill_memory_greedy": 285,
+    "persona": 215
+  },
+  "candidate_win_count": 285,
+  "baseline_win_count": 215,
+  "tie_count": 0,
+  "status_counts": {
+    "ok": 500
+  },
+  "avg_scores": {
+    "persona": {
+      "memorisation": 2.488,
+      "values": 3.528,
+      "personality": 2.616,
+      "hallucination": 3.104,
+      "answer_quality": 3.136,
+      "overall": 2.838
+    },
+    "sft_distill_memory_greedy": {
+      "memorisation": 3.048,
+      "values": 3.752,
+      "personality": 2.776,
+      "hallucination": 3.032,
+      "answer_quality": 3.086,
+      "overall": 3.128
+    }
+  },
+  "avg_latency_s": 14.959072677135467,
+  "result_file": "lab5/outputs/task2_judge/sft_distill_memory_greedy_vs_persona_with_memories/judge_results_sft_distill_memory_greedy_vs_persona_500.jsonl",
+  "model": "Qwen3.5-35B-A3B",
+  "base_url": "http://127.0.0.1:8318/v1",
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "memory_details": "lab5/outputs/task1/memory/details.jsonl"
+}

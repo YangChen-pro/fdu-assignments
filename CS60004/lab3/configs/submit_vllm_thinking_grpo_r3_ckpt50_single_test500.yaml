@@ -1,0 +1,24 @@
+{
+  "backend": "vllm_api",
+  "model_name_or_path": "/root/autodl-tmp/CS60004/lab3/outputs/grpo/thinking_grpo_r3/checkpoint-50",
+  "test_file": "lab3/datasets/rl_train_test_datasets/raw_test.json",
+  "output_file": "lab3/outputs/submit/thinking_grpo_r3_ckpt50_single_test500.jsonl",
+  "meta_file": "lab3/outputs/submit/thinking_grpo_r3_ckpt50_single_test500_meta.json",
+  "torch_dtype": "bfloat16",
+  "batch_size": 10,
+  "prompt_template": "Using the numbers {numbers}, create an expression equal to {target}. Use each number exactly once. Allowed: +, -, *, /. Be brief. Put your answer in <answer> expr </answer>.",
+  "generation": {
+    "max_new_tokens": 1024,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "do_sample": true,
+    "candidate_count": 1,
+    "use_chat_template": true,
+    "top_k": 20,
+    "min_p": 0,
+    "enable_thinking": true,
+    "presence_penalty": 0,
+    "api_base": "http://127.0.0.1:8001/v1",
+    "request_concurrency": 64
+  }
+}

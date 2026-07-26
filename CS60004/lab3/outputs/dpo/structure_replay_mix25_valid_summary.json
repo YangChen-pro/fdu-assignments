@@ -1,0 +1,12 @@
+{
+  "base_file": "lab3/datasets/dpo/full_answer_only_from_plan_d_valid.jsonl",
+  "extra_file": "lab3/datasets/dpo/structure_hardneg_from_answer_only_valid.jsonl",
+  "output_file": "lab3/datasets/dpo/structure_replay_mix25_valid.jsonl",
+  "base_rows": 1170,
+  "extra_pool_rows": 1170,
+  "sampled_extra_rows": 292,
+  "extra_ratio": 0.25,
+  "extra_source_plan": "structure_hardneg_from_answer_only",
+  "output_rows": 1462,
+  "seed": 64
+}

@@ -1,0 +1,24 @@
+{
+  "num_samples": 500,
+  "num_records": 500,
+  "ok_count": 500,
+  "pending_count": 0,
+  "concurrency": 4,
+  "max_retries": 2,
+  "avg_latency_s": 17.831042921066285,
+  "winner_counts": {
+    "memory": 284,
+    "tie": 3,
+    "persona": 203,
+    "unknown": 7,
+    "question": 3
+  },
+  "memory_helped_count": 465,
+  "status_counts": {
+    "ok": 500
+  },
+  "result_file": "lab5/outputs/task1_judge/judge_results_500.jsonl",
+  "model": "Qwen3.5-35B-A3B",
+  "max_tokens": 4096,
+  "enable_thinking": true
+}

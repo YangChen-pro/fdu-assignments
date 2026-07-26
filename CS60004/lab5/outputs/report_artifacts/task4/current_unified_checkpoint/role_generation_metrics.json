@@ -1,0 +1,15 @@
+{
+  "mode": "memory",
+  "num_samples": 500,
+  "concurrency": 32,
+  "total_latency_s": 101.6995108127594,
+  "avg_latency_s": 5.14150097990036,
+  "p50_latency_s": 5.239681601524353,
+  "p95_latency_s": 6.324829030036926,
+  "avg_chat_latency_s": 4.937202887535095,
+  "avg_retrieval_latency_s": 0.012996551990509033,
+  "prediction_file": "lab5/outputs/experiments/role_instruction_teacher_grpo_probe100_ckpt100_memory_dedup_voice/predictions.jsonl",
+  "detail_file": "lab5/outputs/experiments/role_instruction_teacher_grpo_probe100_ckpt100_memory_dedup_voice/details.jsonl",
+  "prompt_style": "voice",
+  "memory_layout": "dedup"
+}
