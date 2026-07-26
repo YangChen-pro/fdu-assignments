@@ -5,11 +5,13 @@ from py2neo import Graph
 NEO4J_URL = os.environ.get("NEO4J_URL", "http://localhost:7474")
 NEO4J_AUTH = os.environ.get("NEO4J_AUTH", "none")
 NEO4J_USERNAME = os.environ.get("NEO4J_USERNAME", "neo4j")
-NEO4J_PASSWORD = os.environ.get("NEO4J_PASSWORD", "REMOVED_NEO4J_PASSWORD")
+NEO4J_PASSWORD = os.environ.get("NEO4J_PASSWORD")
 
 if NEO4J_AUTH.strip().lower() == "none":
     graph = Graph(NEO4J_URL)
 else:
+    if not NEO4J_PASSWORD:
+        raise RuntimeError("启用 Neo4j 认证时必须设置 NEO4J_PASSWORD")
     graph = Graph(NEO4J_URL, username=NEO4J_USERNAME, password=NEO4J_PASSWORD)
 
 BOOK_CONFIGS = {
